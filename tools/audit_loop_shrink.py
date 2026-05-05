@@ -59,6 +59,10 @@ def iter_input_files(root: Path) -> Iterable[Path]:
 
 
 def events_from_record(record: dict, source: Path, line_number: int) -> list[Event]:
+    approval_event = event_from_approval_record(record, source, line_number)
+    if approval_event:
+        return [approval_event]
+
     raw_values = [
         record.get("action"),
         record.get("command"),
@@ -87,6 +91,63 @@ def events_from_record(record: dict, source: Path, line_number: int) -> list[Eve
         )
         for text in texts
     ]
+
+
+def event_from_approval_record(record: dict, source: Path, line_number: int) -> Event | None:
+    approval = record.get("approval")
+    if isinstance(approval, dict):
+        merged = {**record, **approval}
+    else:
+        merged = record
+
+    kind_hint = str(merged.get("type") or merged.get("kind") or "").lower()
+    decision = str(merged.get("decision") or merged.get("outcome") or merged.get("status") or "").lower()
+    has_structured_approval_shape = any(
+        key in merged
+        for key in (
+            "approval",
+            "approval_id",
+            "approved",
+            "action_shape",
+            "requested_action",
+            "scope",
+            "grant_scope",
+        )
+    )
+    if kind_hint not in {"approval_log", "approval_event"} and not has_structured_approval_shape:
+        return None
+
+    action = (
+        merged.get("action_shape")
+        or merged.get("requested_action")
+        or merged.get("action")
+        or merged.get("command")
+        or merged.get("tool")
+    )
+    if not str(action or "").strip():
+        return None
+
+    scope = merged.get("scope") or merged.get("grant_scope") or merged.get("resource") or merged.get("target")
+    sink = merged.get("sink") or merged.get("destination")
+    expires = merged.get("expires") or merged.get("expiry") or merged.get("expires_cycle")
+    parts = [f"approve action={action}"]
+    if scope:
+        parts.append(f"scope={scope}")
+    if sink:
+        parts.append(f"sink={sink}")
+    if expires:
+        parts.append(f"expires={expires}")
+
+    text = redact_sensitive(" ".join(str(part) for part in parts))
+    return Event(
+        str(source),
+        line_number,
+        "approval",
+        normalize(text),
+        text,
+        str(merged.get("risk") or "unknown").lower(),
+        str(merged.get("cycle") or ""),
+    )
 
 
 def infer_kind(text: str) -> str:

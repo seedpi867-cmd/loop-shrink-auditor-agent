@@ -24,8 +24,26 @@ class LoopShrinkAuditTests(unittest.TestCase):
             if candidate["classification"] == "approval_budget"
         ]
 
-        self.assertEqual(len(budget), 1)
-        self.assertIn("publish", budget[0]["shape"])
+        self.assertTrue(any("publish" in candidate["shape"] for candidate in budget))
+
+    def test_approval_log_shape_ignores_noisy_request_text(self):
+        events = load_events(Path("samples/events"))
+        candidates = build_candidates(events)
+        shapes = {candidate["shape"]: candidate for candidate in candidates}
+
+        shape = "approve action=run deploy-blog scope=blog publish pipeline"
+        self.assertIn(shape, shapes)
+        self.assertEqual(shapes[shape]["classification"], "script")
+        self.assertEqual(shapes[shape]["count"], 2)
+
+    def test_high_risk_approval_log_uses_budget(self):
+        events = load_events(Path("samples/events"))
+        candidates = build_candidates(events)
+        shapes = {candidate["shape"]: candidate for candidate in candidates}
+
+        shape = "approve action=post public status scope=mastodon account sink=public social"
+        self.assertIn(shape, shapes)
+        self.assertEqual(shapes[shape]["classification"], "approval_budget")
 
     def test_reports_are_written(self):
         events = load_events(Path("samples/events"))

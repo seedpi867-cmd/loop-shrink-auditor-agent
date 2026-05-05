@@ -1,11 +1,11 @@
 {
-  "event_count": 15,
-  "candidate_count": 8,
+  "event_count": 19,
+  "candidate_count": 10,
   "summary": {
-    "approval_budget": 1,
+    "approval_budget": 2,
     "deny_or_quarantine": 1,
     "fixture": 1,
-    "script": 5
+    "script": 6
   },
   "candidates": [
     {
@@ -18,7 +18,7 @@
       "evidence": {
         "first_cycle": 1,
         "latest_cycle": 3,
-        "evidence_age_cycles": 10,
+        "evidence_age_cycles": 14,
         "evidence_expires_cycle": 203,
         "evidence_status": "fresh"
       },
@@ -46,6 +46,37 @@
       ]
     },
     {
+      "id": "f39249f977b0",
+      "classification": "approval_budget",
+      "kind": "approval",
+      "shape": "approve action=post public status scope=mastodon account sink=public social",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 16,
+        "latest_cycle": 17,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 217,
+        "evidence_status": "fresh"
+      },
+      "risk": "high",
+      "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 18,
+          "cycle": "16",
+          "text": "approve action=post public status scope=mastodon account sink=public social"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 19,
+          "cycle": "17",
+          "text": "approve action=post public status scope=mastodon account sink=public social"
+        }
+      ]
+    },
+    {
       "id": "f3195c8fabb9",
       "classification": "approval_budget",
       "kind": "approval",
@@ -55,7 +86,7 @@
       "evidence": {
         "first_cycle": 8,
         "latest_cycle": 9,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 8,
         "evidence_expires_cycle": 209,
         "evidence_status": "fresh"
       },
@@ -86,7 +117,7 @@
       "evidence": {
         "first_cycle": 10,
         "latest_cycle": 11,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 6,
         "evidence_expires_cycle": 211,
         "evidence_status": "fresh"
       },
@@ -117,7 +148,7 @@
       "evidence": {
         "first_cycle": 6,
         "latest_cycle": 7,
-        "evidence_age_cycles": 6,
+        "evidence_age_cycles": 10,
         "evidence_expires_cycle": 207,
         "evidence_status": "fresh"
       },
@@ -139,6 +170,37 @@
       ]
     },
     {
+      "id": "fc1e3e77f7f7",
+      "classification": "script",
+      "kind": "approval",
+      "shape": "approve action=run deploy-blog scope=blog publish pipeline",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 14,
+        "latest_cycle": 15,
+        "evidence_age_cycles": 2,
+        "evidence_expires_cycle": 215,
+        "evidence_status": "fresh"
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 16,
+          "cycle": "14",
+          "text": "approve action=run deploy-blog scope=blog publish pipeline"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 17,
+          "cycle": "15",
+          "text": "approve action=run deploy-blog scope=blog publish pipeline"
+        }
+      ]
+    },
+    {
       "id": "a1a46b6c46fb",
       "classification": "script",
       "kind": "command",
@@ -148,7 +210,7 @@
       "evidence": {
         "first_cycle": 4,
         "latest_cycle": 5,
-        "evidence_age_cycles": 8,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 205,
         "evidence_status": "fresh"
       },
@@ -179,7 +241,7 @@
       "evidence": {
         "first_cycle": 12,
         "latest_cycle": 13,
-        "evidence_age_cycles": 0,
+        "evidence_age_cycles": 4,
         "evidence_expires_cycle": 213,
         "evidence_status": "fresh"
       },
@@ -210,7 +272,7 @@
       "evidence": {
         "first_cycle": 12,
         "latest_cycle": 13,
-        "evidence_age_cycles": 0,
+        "evidence_age_cycles": 4,
         "evidence_expires_cycle": 213,
         "evidence_status": "fresh"
       },
@@ -241,7 +303,7 @@
       "evidence": {
         "first_cycle": 12,
         "latest_cycle": 13,
-        "evidence_age_cycles": 0,
+        "evidence_age_cycles": 4,
         "evidence_expires_cycle": 213,
         "evidence_status": "fresh"
       },

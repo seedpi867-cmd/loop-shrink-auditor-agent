@@ -9,3 +9,7 @@
 {"cycle": 9, "type": "approval", "action": "approve publish public post to mastodon account", "risk": "high"}
 {"cycle": 10, "type": "denial", "decision": "blocked retry after mastodon 403 suspended account", "risk": "medium"}
 {"cycle": 11, "type": "denial", "decision": "blocked retry after mastodon 403 suspended account", "risk": "medium"}
+{"cycle": 12, "type": "command", "command": "rg queued topic blog"}
+{"cycle": 12, "type": "command", "command": "sed -n 1,120p data/blog_queue.txt"}
+{"cycle": 13, "type": "command", "command": "rg queued topic blog"}
+{"cycle": 13, "type": "command", "command": "sed -n 1,120p data/blog_queue.txt"}

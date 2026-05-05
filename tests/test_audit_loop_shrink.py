@@ -38,6 +38,39 @@ class LoopShrinkAuditTests(unittest.TestCase):
         self.assertGreaterEqual(payload["candidate_count"], 4)
         self.assertIn("script", payload["summary"])
 
+    def test_repeated_adjacent_commands_promote_sequence(self):
+        events = load_events(Path("samples/events"))
+        candidates = build_candidates(events)
+        sequences = [
+            candidate
+            for candidate in candidates
+            if candidate["kind"] == "sequence"
+        ]
+
+        self.assertTrue(sequences)
+        self.assertTrue(any("rg queued topic blog -> sed" in candidate["shape"] for candidate in sequences))
+
+    def test_jsonl_action_lists_from_cycle_logs_are_loaded(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "events.jsonl"
+            path.write_text(
+                json.dumps(
+                    {
+                        "cycle": 99,
+                        "actions": [
+                            "refreshed stale mastodon.md",
+                            "refreshed stale email.md",
+                        ],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            events = load_events(path)
+
+        self.assertEqual([event.text for event in events], ["refreshed stale mastodon.md", "refreshed stale email.md"])
+
 
 if __name__ == "__main__":
     unittest.main()

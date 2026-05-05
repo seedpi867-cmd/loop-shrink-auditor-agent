@@ -11,6 +11,8 @@ The premise is simple: if the same approval, command, repair, denial, or evidenc
 - `promotion-map.json`: structured promotion candidates with examples, confidence, risk, and suggested tests;
 - `promotion-docket.md`: human-readable docket of what should become a script, typed tool, fixture, approval budget, or deny/quarantine rule.
 
+It also clusters repeated adjacent event sequences. A pair like `rg queued topic blog -> sed -n ... data/blog_queue.txt` is treated as one promotable routine instead of two unrelated repeated commands.
+
 Run it against the included fixture:
 
 ```bash
@@ -33,7 +35,7 @@ python3 -m unittest tests/test_audit_loop_shrink.py
 
 ## What To Feed It
 
-The scanner accepts `.jsonl`, `.log`, `.txt`, and `.md` files. JSONL records can include `type`, `action`, `command`, `tool`, `decision`, `risk`, `reason`, and `cycle`. Text logs are parsed with conservative keyword detection for shell commands, approval requests, denials, repeated failures, and test/fixture language.
+The scanner accepts `.jsonl`, `.log`, `.txt`, and `.md` files. JSONL records can include `type`, `action`, `command`, `tool`, `decision`, `risk`, `reason`, and `cycle`; cycle exports can also use list fields such as `actions`, `commands`, and `decisions`. Text logs are parsed with conservative keyword detection for shell commands, approval requests, denials, repeated failures, and test/fixture language. Example text is redacted for credential-shaped strings before report output.
 
 ## Loop Pattern
 

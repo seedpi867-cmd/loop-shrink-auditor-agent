@@ -14,6 +14,9 @@ from typing import Iterable
 
 
 PROMOTION_THRESHOLD = 2
+SEQUENCE_MIN_LENGTH = 2
+SEQUENCE_MAX_LENGTH = 3
+SEQUENCE_KINDS = {"approval", "command", "denial", "failure", "fixture", "note", "tool"}
 
 
 @dataclass(frozen=True)
@@ -36,6 +39,14 @@ def normalize(value: str) -> str:
     return value[:220]
 
 
+def redact_sensitive(value: str) -> str:
+    value = re.sub(r"(?i)(app password:?)\s+[a-z0-9 ]+", r"\1 <redacted>", value)
+    value = re.sub(r"(?i)(password|token|secret|credential)(\s*[:=]\s*)\S+", r"\1\2<redacted>", value)
+    value = re.sub(r"\b[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}\b", "<email>", value)
+    value = re.sub(r"\b(?:10|127|172\.(?:1[6-9]|2\d|3[01])|192\.168)\.\d{1,3}\.\d{1,3}\b", "<ip>", value)
+    return value
+
+
 def iter_input_files(root: Path) -> Iterable[Path]:
     if root.is_file():
         yield root
@@ -45,22 +56,35 @@ def iter_input_files(root: Path) -> Iterable[Path]:
             yield path
 
 
-def event_from_record(record: dict, source: Path, line_number: int) -> Event | None:
-    text = str(
-        record.get("action")
-        or record.get("command")
-        or record.get("tool")
-        or record.get("decision")
-        or record.get("message")
-        or ""
-    ).strip()
-    if not text:
-        return None
+def events_from_record(record: dict, source: Path, line_number: int) -> list[Event]:
+    raw_values = [
+        record.get("action"),
+        record.get("command"),
+        record.get("tool"),
+        record.get("decision"),
+        record.get("message"),
+    ]
+    for key in ("actions", "commands", "tools", "decisions", "messages"):
+        value = record.get(key)
+        if isinstance(value, list):
+            raw_values.extend(value)
 
-    kind = str(record.get("type") or record.get("kind") or infer_kind(text)).lower()
+    texts = [redact_sensitive(str(value).strip()) for value in raw_values if str(value or "").strip()]
+    kind_hint = str(record.get("type") or record.get("kind") or "").lower()
     risk = str(record.get("risk") or "unknown").lower()
     cycle = str(record.get("cycle") or "")
-    return Event(str(source), line_number, kind, normalize(text), text, risk, cycle)
+    return [
+        Event(
+            str(source),
+            line_number,
+            kind_hint or infer_kind(text),
+            normalize(text),
+            text,
+            risk,
+            cycle,
+        )
+        for text in texts
+    ]
 
 
 def infer_kind(text: str) -> str:
@@ -81,7 +105,7 @@ def infer_kind(text: str) -> str:
 
 
 def parse_text_line(line: str, source: Path, line_number: int) -> Event | None:
-    text = line.strip()
+    text = redact_sensitive(line.strip())
     if not text or text.startswith("#"):
         return None
     kind = infer_kind(text)
@@ -100,12 +124,14 @@ def load_events(input_path: Path) -> list[Event]:
                         record = json.loads(line)
                     except json.JSONDecodeError:
                         event = parse_text_line(line, path, line_number)
+                        if event:
+                            events.append(event)
                     else:
-                        event = event_from_record(record, path, line_number)
+                        events.extend(events_from_record(record, path, line_number))
                 else:
                     event = parse_text_line(line, path, line_number)
-                if event:
-                    events.append(event)
+                    if event:
+                        events.append(event)
     return events
 
 
@@ -187,7 +213,64 @@ def build_candidates(events: list[Event]) -> list[dict]:
             }
         )
 
+    candidates.extend(build_sequence_candidates(events))
     return sorted(candidates, key=lambda item: (-item["count"], item["classification"], item["shape"]))
+
+
+def sequence_buckets(events: list[Event]) -> dict[tuple[str, str], list[Event]]:
+    buckets: dict[tuple[str, str], list[Event]] = defaultdict(list)
+    for event in events:
+        if event.kind not in SEQUENCE_KINDS:
+            continue
+        buckets[(event.source, event.cycle)].append(event)
+    return buckets
+
+
+def build_sequence_candidates(events: list[Event]) -> list[dict]:
+    sequences: dict[tuple[str, ...], list[list[Event]]] = defaultdict(list)
+    for bucket in sequence_buckets(events).values():
+        if len(bucket) < SEQUENCE_MIN_LENGTH:
+            continue
+        for size in range(SEQUENCE_MIN_LENGTH, SEQUENCE_MAX_LENGTH + 1):
+            if len(bucket) < size:
+                continue
+            for index in range(0, len(bucket) - size + 1):
+                window = bucket[index : index + size]
+                shape = tuple(event.shape for event in window)
+                if len(set(shape)) == 1:
+                    continue
+                sequences[shape].append(window)
+
+    candidates: list[dict] = []
+    for shape_parts, windows in sequences.items():
+        if len(windows) < PROMOTION_THRESHOLD:
+            continue
+        shape = " -> ".join(shape_parts)
+        candidate_id = hashlib.sha256(f"sequence:{shape}".encode("utf-8")).hexdigest()[:12]
+        confidence = min(0.95, 0.4 + 0.1 * len(windows))
+        candidates.append(
+            {
+                "id": candidate_id,
+                "classification": "script",
+                "kind": "sequence",
+                "shape": shape,
+                "count": len(windows),
+                "confidence": round(confidence, 2),
+                "risk": risk_for("script", len(windows)),
+                "suggested_test": suggested_test("script", shape),
+                "examples": [
+                    {
+                        "source": window[0].source,
+                        "line": window[0].line,
+                        "cycle": window[0].cycle,
+                        "text": " -> ".join(event.text for event in window),
+                    }
+                    for window in windows[:5]
+                ],
+            }
+        )
+
+    return candidates
 
 
 def write_reports(candidates: list[dict], events: list[Event], output_dir: Path) -> None:

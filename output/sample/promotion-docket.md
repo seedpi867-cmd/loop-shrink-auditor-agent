@@ -1,14 +1,14 @@
 # Promotion Docket
 
-Events scanned: 11
-Promotion candidates: 5
+Events scanned: 15
+Promotion candidates: 8
 
 ## Summary
 
 - `approval_budget`: 1
 - `deny_or_quarantine`: 1
 - `fixture`: 1
-- `script`: 2
+- `script`: 5
 
 ## script - approve run rg over blog for queued topic
 
@@ -60,3 +60,33 @@ Promotion candidates: 5
 - Examples:
   - `samples/events/cycles.jsonl:4` python3 tools/deploy-blog.sh
   - `samples/events/cycles.jsonl:5` python3 tools/deploy-blog.sh
+
+## script - rg queued topic blog
+
+- Count: 2
+- Confidence: 0.69
+- Risk: low
+- Suggested test: Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:12` rg queued topic blog
+  - `samples/events/cycles.jsonl:14` rg queued topic blog
+
+## script - rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+
+- Count: 2
+- Confidence: 0.6
+- Risk: low
+- Suggested test: Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:12` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+  - `samples/events/cycles.jsonl:14` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+
+## script - sed -n 1,120p data/blog_queue.txt
+
+- Count: 2
+- Confidence: 0.69
+- Risk: low
+- Suggested test: Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:13` sed -n 1,120p data/blog_queue.txt
+  - `samples/events/cycles.jsonl:15` sed -n 1,120p data/blog_queue.txt

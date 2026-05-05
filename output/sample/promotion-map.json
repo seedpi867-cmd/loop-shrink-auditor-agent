@@ -1,11 +1,11 @@
 {
-  "event_count": 11,
-  "candidate_count": 5,
+  "event_count": 15,
+  "candidate_count": 8,
   "summary": {
     "approval_budget": 1,
     "deny_or_quarantine": 1,
     "fixture": 1,
-    "script": 2
+    "script": 5
   },
   "candidates": [
     {
@@ -131,6 +131,78 @@
           "line": 5,
           "cycle": "5",
           "text": "python3 tools/deploy-blog.sh"
+        }
+      ]
+    },
+    {
+      "id": "8c491f2fcad1",
+      "classification": "script",
+      "kind": "command",
+      "shape": "rg queued topic blog",
+      "count": 2,
+      "confidence": 0.69,
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 12,
+          "cycle": "12",
+          "text": "rg queued topic blog"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 14,
+          "cycle": "13",
+          "text": "rg queued topic blog"
+        }
+      ]
+    },
+    {
+      "id": "0a483b9c41ec",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+      "count": 2,
+      "confidence": 0.6,
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 12,
+          "cycle": "12",
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 14,
+          "cycle": "13",
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt"
+        }
+      ]
+    },
+    {
+      "id": "02b12983e034",
+      "classification": "script",
+      "kind": "command",
+      "shape": "sed -n 1,120p data/blog_queue.txt",
+      "count": 2,
+      "confidence": 0.69,
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 13,
+          "cycle": "12",
+          "text": "sed -n 1,120p data/blog_queue.txt"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 15,
+          "cycle": "13",
+          "text": "sed -n 1,120p data/blog_queue.txt"
         }
       ]
     }

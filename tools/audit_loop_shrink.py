@@ -17,6 +17,8 @@ PROMOTION_THRESHOLD = 2
 SEQUENCE_MIN_LENGTH = 2
 SEQUENCE_MAX_LENGTH = 3
 SEQUENCE_KINDS = {"approval", "command", "denial", "failure", "fixture", "note", "tool"}
+FRESH_EVIDENCE_CYCLES = 50
+STALE_EVIDENCE_CYCLES = 200
 
 
 @dataclass(frozen=True)
@@ -165,6 +167,62 @@ def risk_for(classification: str, count: int) -> str:
     return "low"
 
 
+def cycle_number(value: str) -> int | None:
+    if not value:
+        return None
+    match = re.search(r"\d+", str(value))
+    if not match:
+        return None
+    return int(match.group(0))
+
+
+def current_cycle(events: list[Event]) -> int | None:
+    cycles = [cycle for event in events if (cycle := cycle_number(event.cycle)) is not None]
+    if not cycles:
+        return None
+    return max(cycles)
+
+
+def evidence_window(events: list[Event], now_cycle: int | None) -> dict:
+    cycles = [cycle for event in events if (cycle := cycle_number(event.cycle)) is not None]
+    if not cycles or now_cycle is None:
+        return {
+            "first_cycle": None,
+            "latest_cycle": None,
+            "evidence_age_cycles": None,
+            "evidence_expires_cycle": None,
+            "evidence_status": "unknown",
+            "freshness_multiplier": 1.0,
+        }
+
+    first_cycle = min(cycles)
+    latest_cycle = max(cycles)
+    age = max(0, now_cycle - latest_cycle)
+    expires_cycle = latest_cycle + STALE_EVIDENCE_CYCLES
+    if age <= FRESH_EVIDENCE_CYCLES:
+        status = "fresh"
+        multiplier = 1.0
+    elif age <= STALE_EVIDENCE_CYCLES:
+        status = "aging"
+        multiplier = 0.75
+    else:
+        status = "stale"
+        multiplier = 0.45
+
+    return {
+        "first_cycle": first_cycle,
+        "latest_cycle": latest_cycle,
+        "evidence_age_cycles": age,
+        "evidence_expires_cycle": expires_cycle,
+        "evidence_status": status,
+        "freshness_multiplier": multiplier,
+    }
+
+
+def confidence_for(base: float, evidence: dict) -> float:
+    return round(min(0.95, base * evidence["freshness_multiplier"]), 2)
+
+
 def suggested_test(classification: str, shape: str) -> str:
     if classification == "script":
         return f"Add a fixture proving `{shape}` runs idempotently from clean inputs."
@@ -179,6 +237,7 @@ def suggested_test(classification: str, shape: str) -> str:
 
 def build_candidates(events: list[Event]) -> list[dict]:
     groups: dict[tuple[str, str], list[Event]] = defaultdict(list)
+    now_cycle = current_cycle(events)
     for event in events:
         groups[(event.kind, event.shape)].append(event)
 
@@ -189,7 +248,8 @@ def build_candidates(events: list[Event]) -> list[dict]:
         texts = [event.text for event in grouped]
         risks = [event.risk for event in grouped]
         classification = classify(kind, texts, risks)
-        confidence = min(0.95, 0.45 + 0.12 * len(grouped))
+        evidence = evidence_window(grouped, now_cycle)
+        confidence = confidence_for(0.45 + 0.12 * len(grouped), evidence)
         candidate_id = hashlib.sha256(f"{kind}:{shape}".encode("utf-8")).hexdigest()[:12]
         candidates.append(
             {
@@ -198,7 +258,8 @@ def build_candidates(events: list[Event]) -> list[dict]:
                 "kind": kind,
                 "shape": shape,
                 "count": len(grouped),
-                "confidence": round(confidence, 2),
+                "confidence": confidence,
+                "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
                 "risk": risk_for(classification, len(grouped)),
                 "suggested_test": suggested_test(classification, shape),
                 "examples": [
@@ -213,7 +274,7 @@ def build_candidates(events: list[Event]) -> list[dict]:
             }
         )
 
-    candidates.extend(build_sequence_candidates(events))
+    candidates.extend(build_sequence_candidates(events, now_cycle))
     return sorted(candidates, key=lambda item: (-item["count"], item["classification"], item["shape"]))
 
 
@@ -226,7 +287,7 @@ def sequence_buckets(events: list[Event]) -> dict[tuple[str, str], list[Event]]:
     return buckets
 
 
-def build_sequence_candidates(events: list[Event]) -> list[dict]:
+def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> list[dict]:
     sequences: dict[tuple[str, ...], list[list[Event]]] = defaultdict(list)
     for bucket in sequence_buckets(events).values():
         if len(bucket) < SEQUENCE_MIN_LENGTH:
@@ -247,7 +308,9 @@ def build_sequence_candidates(events: list[Event]) -> list[dict]:
             continue
         shape = " -> ".join(shape_parts)
         candidate_id = hashlib.sha256(f"sequence:{shape}".encode("utf-8")).hexdigest()[:12]
-        confidence = min(0.95, 0.4 + 0.1 * len(windows))
+        window_events = [event for window in windows for event in window]
+        evidence = evidence_window(window_events, now_cycle)
+        confidence = confidence_for(0.4 + 0.1 * len(windows), evidence)
         candidates.append(
             {
                 "id": candidate_id,
@@ -255,7 +318,8 @@ def build_sequence_candidates(events: list[Event]) -> list[dict]:
                 "kind": "sequence",
                 "shape": shape,
                 "count": len(windows),
-                "confidence": round(confidence, 2),
+                "confidence": confidence,
+                "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
                 "risk": risk_for("script", len(windows)),
                 "suggested_test": suggested_test("script", shape),
                 "examples": [
@@ -305,6 +369,11 @@ def write_reports(candidates: list[dict], events: list[Event], output_dir: Path)
                 "",
                 f"- Count: {candidate['count']}",
                 f"- Confidence: {candidate['confidence']}",
+                f"- Evidence: {candidate['evidence']['evidence_status']}"
+                f" (first cycle {candidate['evidence']['first_cycle']},"
+                f" latest cycle {candidate['evidence']['latest_cycle']},"
+                f" age {candidate['evidence']['evidence_age_cycles']},"
+                f" expires cycle {candidate['evidence']['evidence_expires_cycle']})",
                 f"- Risk: {candidate['risk']}",
                 f"- Suggested test: {candidate['suggested_test']}",
                 "- Examples:",

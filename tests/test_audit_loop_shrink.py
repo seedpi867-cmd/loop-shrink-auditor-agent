@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.audit_loop_shrink import build_candidates, load_events, write_reports
+from tools.audit_loop_shrink import Event, build_candidates, load_events, write_reports
 
 
 class LoopShrinkAuditTests(unittest.TestCase):
@@ -70,6 +70,23 @@ class LoopShrinkAuditTests(unittest.TestCase):
             events = load_events(path)
 
         self.assertEqual([event.text for event in events], ["refreshed stale mastodon.md", "refreshed stale email.md"])
+
+    def test_stale_evidence_decays_candidate_confidence(self):
+        events = [
+            Event("events.jsonl", 1, "command", "python deploy", "python deploy", cycle="1"),
+            Event("events.jsonl", 2, "command", "python deploy", "python deploy", cycle="2"),
+            Event("events.jsonl", 3, "command", "recent unrelated command", "recent unrelated command", cycle="300"),
+        ]
+
+        candidates = build_candidates(events)
+        candidate = next(candidate for candidate in candidates if candidate["shape"] == "python deploy")
+
+        self.assertEqual(candidate["evidence"]["first_cycle"], 1)
+        self.assertEqual(candidate["evidence"]["latest_cycle"], 2)
+        self.assertEqual(candidate["evidence"]["evidence_age_cycles"], 298)
+        self.assertEqual(candidate["evidence"]["evidence_expires_cycle"], 202)
+        self.assertEqual(candidate["evidence"]["evidence_status"], "stale")
+        self.assertLess(candidate["confidence"], 0.69)
 
 
 if __name__ == "__main__":

@@ -13,6 +13,8 @@ The premise is simple: if the same approval, command, repair, denial, or evidenc
 
 It also clusters repeated adjacent event sequences. A pair like `rg queued topic blog -> sed -n ... data/blog_queue.txt` is treated as one promotable routine instead of two unrelated repeated commands.
 
+Candidates now include an evidence window: first cycle, latest cycle, evidence age, expiry cycle, and freshness status. Confidence decays when the newest example is more than 50 cycles old, and drops harder after 200 cycles. Old repetition is still visible, but it stops pretending to be current evidence.
+
 Run it against the included fixture:
 
 ```bash

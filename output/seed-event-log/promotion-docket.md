@@ -1,18 +1,19 @@
 # Promotion Docket
 
-Events scanned: 2000
-Promotion candidates: 295
+Events scanned: 2044
+Promotion candidates: 297
 
 ## Summary
 
-- `fixture`: 79
-- `script`: 215
+- `fixture`: 80
+- `script`: 216
 - `typed_tool`: 1
 
 ## fixture - refreshed stale mastodon.md
 
-- Count: 247
+- Count: 255
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `refreshed stale mastodon.md`.
 - Examples:
@@ -24,8 +25,9 @@ Promotion candidates: 295
 
 ## fixture - refreshed stale email.md
 
-- Count: 212
+- Count: 220
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `refreshed stale email.md`.
 - Examples:
@@ -37,8 +39,9 @@ Promotion candidates: 295
 
 ## script - refreshed stale mastodon.md -> refreshed stale email.md
 
-- Count: 207
+- Count: 215
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -52,6 +55,7 @@ Promotion candidates: 295
 
 - Count: 184
 - Confidence: 0.95
+- Evidence: aging (first cycle 335, latest cycle 559, age 59, expires cycle 759)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `compacted memory (202 lines)`.
 - Examples:
@@ -63,8 +67,9 @@ Promotion candidates: 295
 
 ## fixture - posted to mastodon
 
-- Count: 151
+- Count: 156
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `posted to mastodon`.
 - Examples:
@@ -76,8 +81,9 @@ Promotion candidates: 295
 
 ## fixture - rebuilt feeds
 
-- Count: 151
+- Count: 156
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `rebuilt feeds`.
 - Examples:
@@ -89,8 +95,9 @@ Promotion candidates: 295
 
 ## script - posted to mastodon -> rebuilt feeds
 
-- Count: 151
+- Count: 156
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -104,6 +111,7 @@ Promotion candidates: 295
 
 - Count: 146
 - Confidence: 0.95
+- Evidence: aging (first cycle 335, latest cycle 559, age 59, expires cycle 759)
 - Risk: medium
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -117,6 +125,7 @@ Promotion candidates: 295
 
 - Count: 122
 - Confidence: 0.95
+- Evidence: aging (first cycle 335, latest cycle 559, age 59, expires cycle 759)
 - Risk: medium
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -128,8 +137,9 @@ Promotion candidates: 295
 
 ## fixture - boosted starved drive create
 
-- Count: 76
+- Count: 77
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 612, age 6, expires cycle 812)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive create`.
 - Examples:
@@ -143,6 +153,7 @@ Promotion candidates: 295
 
 - Count: 73
 - Confidence: 0.95
+- Evidence: aging (first cycle 335, latest cycle 450, age 168, expires cycle 650)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive express`.
 - Examples:
@@ -156,6 +167,7 @@ Promotion candidates: 295
 
 - Count: 73
 - Confidence: 0.95
+- Evidence: aging (first cycle 343, latest cycle 559, age 59, expires cycle 759)
 - Risk: medium
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -169,6 +181,7 @@ Promotion candidates: 295
 
 - Count: 73
 - Confidence: 0.95
+- Evidence: aging (first cycle 343, latest cycle 559, age 59, expires cycle 759)
 - Risk: medium
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -178,23 +191,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:14` rebuilt feeds -> compacted memory (202 lines)
   - `/home/seed/data/event_log.jsonl:21` rebuilt feeds -> compacted memory (202 lines)
 
-## script - rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
-
-- Count: 68
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:7` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:8` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:9` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:14` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:21` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
-
 ## script - refreshed stale email.md -> boosted starved drive create
 
-- Count: 68
+- Count: 69
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 612, age 6, expires cycle 812)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -206,8 +207,9 @@ Promotion candidates: 295
 
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
 
-- Count: 68
+- Count: 69
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 612, age 6, expires cycle 812)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -217,10 +219,25 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:5` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
   - `/home/seed/data/event_log.jsonl:6` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
 
+## script - rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
+
+- Count: 68
+- Confidence: 0.95
+- Evidence: aging (first cycle 343, latest cycle 559, age 59, expires cycle 759)
+- Risk: medium
+- Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:7` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:8` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:9` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:14` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:21` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
+
 ## fixture - logged bug + added fix task
 
 - Count: 67
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 600, age 18, expires cycle 800)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `logged bug + added fix task`.
 - Examples:
@@ -232,8 +249,9 @@ Promotion candidates: 295
 
 ## fixture - boosted starved drive explore
 
-- Count: 61
+- Count: 62
 - Confidence: 0.95
+- Evidence: fresh (first cycle 368, latest cycle 612, age 6, expires cycle 812)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive explore`.
 - Examples:
@@ -247,6 +265,7 @@ Promotion candidates: 295
 
 - Count: 49
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 585, age 33, expires cycle 785)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive order`.
 - Examples:
@@ -260,6 +279,7 @@ Promotion candidates: 295
 
 - Count: 47
 - Confidence: 0.95
+- Evidence: aging (first cycle 342, latest cycle 557, age 61, expires cycle 757)
 - Risk: medium
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -273,6 +293,7 @@ Promotion candidates: 295
 
 - Count: 46
 - Confidence: 0.95
+- Evidence: aging (first cycle 513, latest cycle 558, age 60, expires cycle 758)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 155`.
 - Examples:
@@ -286,6 +307,7 @@ Promotion candidates: 295
 
 - Count: 46
 - Confidence: 0.95
+- Evidence: stale (first cycle 335, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
@@ -295,10 +317,25 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:10` boosted starved drive express -> boosted starved drive order
   - `/home/seed/data/event_log.jsonl:12` boosted starved drive express -> boosted starved drive order
 
+## fixture - flagged research for potential essay
+
+- Count: 45
+- Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 616, age 2, expires cycle 816)
+- Risk: medium
+- Suggested test: Add positive and negative evidence cases for `flagged research for potential essay`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:1` flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:2` flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:9` flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:10` flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:14` flagged research for potential essay
+
 ## script - posted to mastodon -> rebuilt feeds -> logged bug + added fix task
 
 - Count: 45
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 600, age 18, expires cycle 800)
 - Risk: medium
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.
 - Examples:
@@ -312,6 +349,7 @@ Promotion candidates: 295
 
 - Count: 45
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 600, age 18, expires cycle 800)
 - Risk: medium
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.
 - Examples:
@@ -321,23 +359,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:18` rebuilt feeds -> logged bug + added fix task
   - `/home/seed/data/event_log.jsonl:22` rebuilt feeds -> logged bug + added fix task
 
-## fixture - flagged research for potential essay
-
-- Count: 42
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add positive and negative evidence cases for `flagged research for potential essay`.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:1` flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:2` flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:9` flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:10` flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:14` flagged research for potential essay
-
 ## script - boosted starved drive create -> boosted starved drive explore
 
-- Count: 42
+- Count: 43
 - Confidence: 0.95
+- Evidence: fresh (first cycle 368, latest cycle 612, age 6, expires cycle 812)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -351,6 +377,7 @@ Promotion candidates: 295
 
 - Count: 39
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 610, age 8, expires cycle 810)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `archived completed tasks`.
 - Examples:
@@ -364,6 +391,7 @@ Promotion candidates: 295
 
 - Count: 39
 - Confidence: 0.95
+- Evidence: stale (first cycle 368, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive understand`.
 - Examples:
@@ -377,6 +405,7 @@ Promotion candidates: 295
 
 - Count: 39
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 610, age 8, expires cycle 810)
 - Risk: medium
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -390,6 +419,7 @@ Promotion candidates: 295
 
 - Count: 39
 - Confidence: 0.95
+- Evidence: stale (first cycle 368, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive understand -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -403,6 +433,7 @@ Promotion candidates: 295
 
 - Count: 38
 - Confidence: 0.95
+- Evidence: aging (first cycle 346, latest cycle 557, age 61, expires cycle 757)
 - Risk: medium
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -414,8 +445,9 @@ Promotion candidates: 295
 
 ## script - refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
 
-- Count: 37
+- Count: 38
 - Confidence: 0.95
+- Evidence: fresh (first cycle 368, latest cycle 612, age 6, expires cycle 812)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -429,6 +461,7 @@ Promotion candidates: 295
 
 - Count: 34
 - Confidence: 0.95
+- Evidence: aging (first cycle 336, latest cycle 553, age 65, expires cycle 753)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `compacted memory (201 lines)`.
 - Examples:
@@ -442,6 +475,7 @@ Promotion candidates: 295
 
 - Count: 32
 - Confidence: 0.95
+- Evidence: aging (first cycle 342, latest cycle 556, age 62, expires cycle 756)
 - Risk: medium
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -455,6 +489,7 @@ Promotion candidates: 295
 
 - Count: 31
 - Confidence: 0.95
+- Evidence: fresh (first cycle 342, latest cycle 610, age 8, expires cycle 810)
 - Risk: medium
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -468,6 +503,7 @@ Promotion candidates: 295
 
 - Count: 30
 - Confidence: 0.95
+- Evidence: aging (first cycle 336, latest cycle 553, age 65, expires cycle 753)
 - Risk: medium
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -481,6 +517,7 @@ Promotion candidates: 295
 
 - Count: 30
 - Confidence: 0.95
+- Evidence: aging (first cycle 342, latest cycle 540, age 78, expires cycle 740)
 - Risk: medium
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
@@ -494,6 +531,7 @@ Promotion candidates: 295
 
 - Count: 30
 - Confidence: 0.95
+- Evidence: aging (first cycle 342, latest cycle 540, age 78, expires cycle 740)
 - Risk: medium
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -507,6 +545,7 @@ Promotion candidates: 295
 
 - Count: 28
 - Confidence: 0.95
+- Evidence: stale (first cycle 369, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive understand -> boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
@@ -520,6 +559,7 @@ Promotion candidates: 295
 
 - Count: 27
 - Confidence: 0.95
+- Evidence: stale (first cycle 335, latest cycle 367, age 251, expires cycle 567)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -533,6 +573,7 @@ Promotion candidates: 295
 
 - Count: 27
 - Confidence: 0.95
+- Evidence: aging (first cycle 336, latest cycle 549, age 69, expires cycle 749)
 - Risk: medium
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -546,6 +587,7 @@ Promotion candidates: 295
 
 - Count: 25
 - Confidence: 0.95
+- Evidence: stale (first cycle 335, latest cycle 366, age 252, expires cycle 566)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -559,6 +601,7 @@ Promotion candidates: 295
 
 - Count: 24
 - Confidence: 0.95
+- Evidence: stale (first cycle 368, latest cycle 408, age 210, expires cycle 608)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
@@ -572,6 +615,7 @@ Promotion candidates: 295
 
 - Count: 24
 - Confidence: 0.95
+- Evidence: stale (first cycle 368, latest cycle 408, age 210, expires cycle 608)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive understand -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -585,6 +629,7 @@ Promotion candidates: 295
 
 - Count: 23
 - Confidence: 0.95
+- Evidence: aging (first cycle 381, latest cycle 418, age 200, expires cycle 618)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive preserve`.
 - Examples:
@@ -598,6 +643,7 @@ Promotion candidates: 295
 
 - Count: 23
 - Confidence: 0.95
+- Evidence: stale (first cycle 368, latest cycle 408, age 210, expires cycle 608)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
@@ -609,8 +655,9 @@ Promotion candidates: 295
 
 ## fixture - refreshed stale trends.md
 
-- Count: 21
+- Count: 22
 - Confidence: 0.95
+- Evidence: fresh (first cycle 338, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `refreshed stale trends.md`.
 - Examples:
@@ -624,6 +671,7 @@ Promotion candidates: 295
 
 - Count: 19
 - Confidence: 0.95
+- Evidence: fresh (first cycle 338, latest cycle 609, age 9, expires cycle 809)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `refreshed stale outreach.md`.
 - Examples:
@@ -637,6 +685,7 @@ Promotion candidates: 295
 
 - Count: 18
 - Confidence: 0.95
+- Evidence: stale (first cycle 381, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
@@ -650,6 +699,7 @@ Promotion candidates: 295
 
 - Count: 18
 - Confidence: 0.95
+- Evidence: stale (first cycle 381, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
@@ -659,10 +709,25 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:52` boosted starved drive explore -> boosted starved drive preserve
   - `/home/seed/data/event_log.jsonl:53` boosted starved drive explore -> boosted starved drive preserve
 
+## script - refreshed stale email.md -> flagged research for potential essay
+
+- Count: 18
+- Confidence: 0.95
+- Evidence: fresh (first cycle 351, latest cycle 616, age 2, expires cycle 816)
+- Risk: medium
+- Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:15` refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:88` refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:98` refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:108` refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:118` refreshed stale email.md -> flagged research for potential essay
+
 ## script - refreshed stale email.md -> refreshed stale trends.md
 
-- Count: 17
+- Count: 18
 - Confidence: 0.95
+- Evidence: fresh (first cycle 338, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
@@ -674,8 +739,9 @@ Promotion candidates: 295
 
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
 
-- Count: 17
+- Count: 18
 - Confidence: 0.95
+- Evidence: fresh (first cycle 338, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
@@ -685,23 +751,25 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:71` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
   - `/home/seed/data/event_log.jsonl:99` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
 
-## script - refreshed stale email.md -> flagged research for potential essay
+## script - refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
 
-- Count: 16
+- Count: 17
 - Confidence: 0.95
+- Evidence: fresh (first cycle 351, latest cycle 616, age 2, expires cycle 816)
 - Risk: medium
-- Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
+- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
-  - `/home/seed/data/event_log.jsonl:15` refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:88` refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:98` refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:108` refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:118` refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:15` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:98` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:108` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:118` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:128` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
 
 ## script - boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive understand
 
 - Count: 15
-- Confidence: 0.95
+- Confidence: 0.85
+- Evidence: stale (first cycle 381, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
@@ -714,7 +782,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> boosted starved drive understand
 
 - Count: 15
-- Confidence: 0.95
+- Confidence: 0.85
+- Evidence: stale (first cycle 381, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
@@ -727,7 +796,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> boosted starved drive understand -> boosted starved drive express
 
 - Count: 15
-- Confidence: 0.95
+- Confidence: 0.85
+- Evidence: stale (first cycle 381, latest cycle 410, age 208, expires cycle 610)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive understand -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -741,6 +811,7 @@ Promotion candidates: 295
 
 - Count: 15
 - Confidence: 0.95
+- Evidence: fresh (first cycle 394, latest cycle 601, age 17, expires cycle 801)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -754,6 +825,7 @@ Promotion candidates: 295
 
 - Count: 15
 - Confidence: 0.95
+- Evidence: fresh (first cycle 394, latest cycle 601, age 17, expires cycle 801)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -763,23 +835,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:109` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore
   - `/home/seed/data/event_log.jsonl:121` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore
 
-## script - refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
-
-- Count: 15
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:15` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:98` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:108` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:118` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
-  - `/home/seed/data/event_log.jsonl:128` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
-
 ## script - boosted starved drive create -> boosted starved drive express -> boosted starved drive order
 
 - Count: 14
-- Confidence: 0.95
+- Confidence: 0.81
+- Evidence: stale (first cycle 335, latest cycle 367, age 251, expires cycle 567)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
@@ -789,23 +849,53 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:10` boosted starved drive create -> boosted starved drive express -> boosted starved drive order
   - `/home/seed/data/event_log.jsonl:12` boosted starved drive create -> boosted starved drive express -> boosted starved drive order
 
-## fixture - task_completion streak at 170
+## script - posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md
 
-- Count: 13
+- Count: 14
 - Confidence: 0.95
+- Evidence: fresh (first cycle 562, latest cycle 618, age 0, expires cycle 818)
 - Risk: medium
-- Suggested test: Add positive and negative evidence cases for `task_completion streak at 170`.
+- Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
-  - `/home/seed/data/event_log.jsonl:74` task_completion streak at 170
-  - `/home/seed/data/event_log.jsonl:75` task_completion streak at 170
-  - `/home/seed/data/event_log.jsonl:76` task_completion streak at 170
-  - `/home/seed/data/event_log.jsonl:77` task_completion streak at 170
-  - `/home/seed/data/event_log.jsonl:78` task_completion streak at 170
+  - `/home/seed/data/event_log.jsonl:225` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:226` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:227` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:229` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:247` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
+
+## script - rebuilt feeds -> refreshed stale mastodon.md
+
+- Count: 14
+- Confidence: 0.95
+- Evidence: fresh (first cycle 562, latest cycle 618, age 0, expires cycle 818)
+- Risk: medium
+- Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:225` rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:226` rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:227` rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:229` rebuilt feeds -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:247` rebuilt feeds -> refreshed stale mastodon.md
+
+## script - rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
+
+- Count: 14
+- Confidence: 0.95
+- Evidence: fresh (first cycle 562, latest cycle 618, age 0, expires cycle 818)
+- Risk: medium
+- Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:225` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:226` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:227` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:229` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:247` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
 
 ## fixture - boosted starved drive connect
 
-- Count: 12
+- Count: 13
 - Confidence: 0.95
+- Evidence: fresh (first cycle 440, latest cycle 611, age 7, expires cycle 811)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive connect`.
 - Examples:
@@ -815,10 +905,25 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:135` boosted starved drive connect
   - `/home/seed/data/event_log.jsonl:150` boosted starved drive connect
 
+## fixture - task_completion streak at 170
+
+- Count: 13
+- Confidence: 0.95
+- Evidence: aging (first cycle 410, latest cycle 422, age 196, expires cycle 622)
+- Risk: medium
+- Suggested test: Add positive and negative evidence cases for `task_completion streak at 170`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:74` task_completion streak at 170
+  - `/home/seed/data/event_log.jsonl:75` task_completion streak at 170
+  - `/home/seed/data/event_log.jsonl:76` task_completion streak at 170
+  - `/home/seed/data/event_log.jsonl:77` task_completion streak at 170
+  - `/home/seed/data/event_log.jsonl:78` task_completion streak at 170
+
 ## fixture - publishing streak at 170
 
 - Count: 12
 - Confidence: 0.95
+- Evidence: aging (first cycle 410, latest cycle 421, age 197, expires cycle 621)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 170`.
 - Examples:
@@ -832,6 +937,7 @@ Promotion candidates: 295
 
 - Count: 12
 - Confidence: 0.95
+- Evidence: fresh (first cycle 335, latest cycle 585, age 33, expires cycle 785)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive order -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -845,6 +951,7 @@ Promotion candidates: 295
 
 - Count: 12
 - Confidence: 0.95
+- Evidence: aging (first cycle 349, latest cycle 545, age 73, expires cycle 745)
 - Risk: medium
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -858,6 +965,7 @@ Promotion candidates: 295
 
 - Count: 12
 - Confidence: 0.95
+- Evidence: aging (first cycle 349, latest cycle 545, age 73, expires cycle 745)
 - Risk: medium
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -871,6 +979,7 @@ Promotion candidates: 295
 
 - Count: 12
 - Confidence: 0.95
+- Evidence: aging (first cycle 410, latest cycle 421, age 197, expires cycle 621)
 - Risk: medium
 - Suggested test: Add a fixture proving `publishing streak at 170 -> task_completion streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -884,6 +993,7 @@ Promotion candidates: 295
 
 - Count: 11
 - Confidence: 0.95
+- Evidence: aging (first cycle 364, latest cycle 553, age 65, expires cycle 753)
 - Risk: medium
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -897,6 +1007,7 @@ Promotion candidates: 295
 
 - Count: 11
 - Confidence: 0.95
+- Evidence: aging (first cycle 364, latest cycle 553, age 65, expires cycle 753)
 - Risk: medium
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -910,6 +1021,7 @@ Promotion candidates: 295
 
 - Count: 11
 - Confidence: 0.95
+- Evidence: aging (first cycle 364, latest cycle 553, age 65, expires cycle 753)
 - Risk: medium
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -923,6 +1035,7 @@ Promotion candidates: 295
 
 - Count: 11
 - Confidence: 0.95
+- Evidence: fresh (first cycle 338, latest cycle 609, age 9, expires cycle 809)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
@@ -936,6 +1049,7 @@ Promotion candidates: 295
 
 - Count: 10
 - Confidence: 0.95
+- Evidence: fresh (first cycle 339, latest cycle 599, age 19, expires cycle 799)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `broke idle — boosted create + added urgent write task`.
 - Examples:
@@ -948,7 +1062,8 @@ Promotion candidates: 295
 ## script - boosted starved drive express -> boosted starved drive order -> flagged research for potential essay
 
 - Count: 10
-- Confidence: 0.95
+- Confidence: 0.63
+- Evidence: stale (first cycle 335, latest cycle 405, age 213, expires cycle 605)
 - Risk: medium
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -962,6 +1077,7 @@ Promotion candidates: 295
 
 - Count: 9
 - Confidence: 0.95
+- Evidence: aging (first cycle 444, latest cycle 452, age 166, expires cycle 652)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 150`.
 - Examples:
@@ -971,23 +1087,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:111` version_control streak at 150
   - `/home/seed/data/event_log.jsonl:112` version_control streak at 150
 
-## script - posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md
-
-- Count: 9
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:225` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:226` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:227` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:229` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:247` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
-
 ## script - rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
 
 - Count: 9
 - Confidence: 0.95
+- Evidence: aging (first cycle 349, latest cycle 545, age 73, expires cycle 745)
 - Risk: medium
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -997,36 +1101,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:63` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
   - `/home/seed/data/event_log.jsonl:129` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
 
-## script - rebuilt feeds -> refreshed stale mastodon.md
-
-- Count: 9
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:225` rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:226` rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:227` rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:229` rebuilt feeds -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:247` rebuilt feeds -> refreshed stale mastodon.md
-
-## script - rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
-
-- Count: 9
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:225` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:226` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:227` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:229` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:247` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
-
 ## script - refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md
 
 - Count: 9
 - Confidence: 0.95
+- Evidence: fresh (first cycle 338, latest cycle 609, age 9, expires cycle 809)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
@@ -1040,6 +1119,7 @@ Promotion candidates: 295
 
 - Count: 8
 - Confidence: 0.95
+- Evidence: fresh (first cycle 596, latest cycle 603, age 15, expires cycle 803)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 170`.
 - Examples:
@@ -1053,6 +1133,7 @@ Promotion candidates: 295
 
 - Count: 7
 - Confidence: 0.95
+- Evidence: fresh (first cycle 592, latest cycle 598, age 20, expires cycle 798)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `writing streak at 265`.
 - Examples:
@@ -1065,7 +1146,8 @@ Promotion candidates: 295
 ## script - logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
 
 - Count: 7
-- Confidence: 0.95
+- Confidence: 0.83
+- Evidence: aging (first cycle 342, latest cycle 492, age 126, expires cycle 692)
 - Risk: medium
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
@@ -1075,23 +1157,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:40` logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
   - `/home/seed/data/event_log.jsonl:136` logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
 
-## fixture - 9 outreach opportunities flagged
-
-- Count: 6
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add positive and negative evidence cases for `9 outreach opportunities flagged`.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:12` 9 outreach opportunities flagged
-  - `/home/seed/data/event_log.jsonl:32` 9 outreach opportunities flagged
-  - `/home/seed/data/event_log.jsonl:40` 9 outreach opportunities flagged
-  - `/home/seed/data/event_log.jsonl:41` 9 outreach opportunities flagged
-  - `/home/seed/data/event_log.jsonl:55` 9 outreach opportunities flagged
-
 ## script - refreshed stale email.md -> boosted starved drive connect
 
-- Count: 6
+- Count: 7
 - Confidence: 0.95
+- Evidence: fresh (first cycle 440, latest cycle 611, age 7, expires cycle 811)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
@@ -1101,23 +1171,11 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:165` refreshed stale email.md -> boosted starved drive connect
   - `/home/seed/data/event_log.jsonl:181` refreshed stale email.md -> boosted starved drive connect
 
-## script - refreshed stale email.md -> refreshed stale outreach.md
-
-- Count: 6
-- Confidence: 0.95
-- Risk: medium
-- Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:31` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:100` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:123` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:144` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:187` refreshed stale email.md -> refreshed stale outreach.md
-
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
 
-- Count: 6
+- Count: 7
 - Confidence: 0.95
+- Evidence: fresh (first cycle 440, latest cycle 611, age 7, expires cycle 811)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
@@ -1127,10 +1185,39 @@ Promotion candidates: 295
   - `/home/seed/data/event_log.jsonl:165` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
   - `/home/seed/data/event_log.jsonl:181` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
 
+## fixture - 9 outreach opportunities flagged
+
+- Count: 6
+- Confidence: 0.53
+- Evidence: stale (first cycle 348, latest cycle 398, age 220, expires cycle 598)
+- Risk: medium
+- Suggested test: Add positive and negative evidence cases for `9 outreach opportunities flagged`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:12` 9 outreach opportunities flagged
+  - `/home/seed/data/event_log.jsonl:32` 9 outreach opportunities flagged
+  - `/home/seed/data/event_log.jsonl:40` 9 outreach opportunities flagged
+  - `/home/seed/data/event_log.jsonl:41` 9 outreach opportunities flagged
+  - `/home/seed/data/event_log.jsonl:55` 9 outreach opportunities flagged
+
+## script - refreshed stale email.md -> refreshed stale outreach.md
+
+- Count: 6
+- Confidence: 0.75
+- Evidence: aging (first cycle 367, latest cycle 566, age 52, expires cycle 766)
+- Risk: medium
+- Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:31` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:100` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:123` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:144` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:187` refreshed stale email.md -> refreshed stale outreach.md
+
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
 
 - Count: 6
-- Confidence: 0.95
+- Confidence: 0.75
+- Evidence: aging (first cycle 367, latest cycle 566, age 52, expires cycle 766)
 - Risk: medium
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
@@ -1143,7 +1230,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 175
 
 - Count: 5
-- Confidence: 0.95
+- Confidence: 0.79
+- Evidence: aging (first cycle 433, latest cycle 437, age 181, expires cycle 637)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 175`.
 - Examples:
@@ -1156,7 +1244,8 @@ Promotion candidates: 295
 ## fixture - version_control streak at 145
 
 - Count: 5
-- Confidence: 0.95
+- Confidence: 0.79
+- Evidence: aging (first cycle 418, latest cycle 422, age 196, expires cycle 622)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 145`.
 - Examples:
@@ -1169,7 +1258,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 170
 
 - Count: 5
-- Confidence: 0.95
+- Confidence: 0.79
+- Evidence: aging (first cycle 428, latest cycle 432, age 186, expires cycle 632)
 - Risk: medium
 - Suggested test: Add positive and negative evidence cases for `writing streak at 170`.
 - Examples:
@@ -1182,7 +1272,8 @@ Promotion candidates: 295
 ## script - task_completion streak at 170 -> version_control streak at 145
 
 - Count: 5
-- Confidence: 0.9
+- Confidence: 0.68
+- Evidence: aging (first cycle 418, latest cycle 422, age 196, expires cycle 622)
 - Risk: medium
 - Suggested test: Add a fixture proving `task_completion streak at 170 -> version_control streak at 145` runs idempotently from clean inputs.
 - Examples:
@@ -1196,6 +1287,7 @@ Promotion candidates: 295
 
 - Count: 4
 - Confidence: 0.93
+- Evidence: fresh (first cycle 464, latest cycle 603, age 15, expires cycle 803)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `noted 6 new visitors`.
 - Examples:
@@ -1207,7 +1299,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 240
 
 - Count: 4
-- Confidence: 0.93
+- Confidence: 0.7
+- Evidence: aging (first cycle 535, latest cycle 538, age 80, expires cycle 738)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 240`.
 - Examples:
@@ -1219,7 +1312,8 @@ Promotion candidates: 295
 ## fixture - task_completion streak at 190
 
 - Count: 4
-- Confidence: 0.93
+- Confidence: 0.7
+- Evidence: aging (first cycle 456, latest cycle 459, age 159, expires cycle 659)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 190`.
 - Examples:
@@ -1231,7 +1325,8 @@ Promotion candidates: 295
 ## fixture - task_completion streak at 215
 
 - Count: 4
-- Confidence: 0.93
+- Confidence: 0.7
+- Evidence: aging (first cycle 513, latest cycle 516, age 102, expires cycle 716)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 215`.
 - Examples:
@@ -1243,7 +1338,8 @@ Promotion candidates: 295
 ## fixture - task_completion streak at 230
 
 - Count: 4
-- Confidence: 0.93
+- Confidence: 0.7
+- Evidence: aging (first cycle 561, latest cycle 564, age 54, expires cycle 764)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 230`.
 - Examples:
@@ -1255,7 +1351,8 @@ Promotion candidates: 295
 ## script - boosted starved drive create -> boosted starved drive express -> flagged research for potential essay
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.36
+- Evidence: stale (first cycle 345, latest cycle 366, age 252, expires cycle 566)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -1267,7 +1364,8 @@ Promotion candidates: 295
 ## script - boosted starved drive express -> flagged research for potential essay
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.36
+- Evidence: stale (first cycle 345, latest cycle 366, age 252, expires cycle 566)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive express -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -1279,7 +1377,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive create
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.36
+- Evidence: stale (first cycle 408, latest cycle 411, age 207, expires cycle 611)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -1291,7 +1390,8 @@ Promotion candidates: 295
 ## script - flagged research for potential essay -> publishing streak at 170
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.36
+- Evidence: stale (first cycle 411, latest cycle 415, age 203, expires cycle 615)
 - Risk: low
 - Suggested test: Add a fixture proving `flagged research for potential essay -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -1303,7 +1403,8 @@ Promotion candidates: 295
 ## script - flagged research for potential essay -> publishing streak at 170 -> task_completion streak at 170
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.36
+- Evidence: stale (first cycle 411, latest cycle 415, age 203, expires cycle 615)
 - Risk: low
 - Suggested test: Add a fixture proving `flagged research for potential essay -> publishing streak at 170 -> task_completion streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -1315,7 +1416,8 @@ Promotion candidates: 295
 ## script - flagged research for potential essay -> version_control streak at 155
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.6
+- Evidence: aging (first cycle 520, latest cycle 555, age 63, expires cycle 755)
 - Risk: low
 - Suggested test: Add a fixture proving `flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1328,6 +1430,7 @@ Promotion candidates: 295
 
 - Count: 4
 - Confidence: 0.8
+- Evidence: fresh (first cycle 464, latest cycle 603, age 15, expires cycle 803)
 - Risk: low
 - Suggested test: Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -1340,6 +1443,7 @@ Promotion candidates: 295
 
 - Count: 4
 - Confidence: 0.8
+- Evidence: fresh (first cycle 464, latest cycle 603, age 15, expires cycle 803)
 - Risk: low
 - Suggested test: Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -1351,7 +1455,8 @@ Promotion candidates: 295
 ## script - publishing streak at 170 -> task_completion streak at 170 -> version_control streak at 145
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.6
+- Evidence: aging (first cycle 418, latest cycle 421, age 197, expires cycle 621)
 - Risk: low
 - Suggested test: Add a fixture proving `publishing streak at 170 -> task_completion streak at 170 -> version_control streak at 145` runs idempotently from clean inputs.
 - Examples:
@@ -1363,7 +1468,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> boosted starved drive create
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.36
+- Evidence: stale (first cycle 408, latest cycle 411, age 207, expires cycle 611)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -1376,6 +1482,7 @@ Promotion candidates: 295
 
 - Count: 4
 - Confidence: 0.8
+- Evidence: fresh (first cycle 412, latest cycle 595, age 23, expires cycle 795)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -1388,6 +1495,7 @@ Promotion candidates: 295
 
 - Count: 4
 - Confidence: 0.8
+- Evidence: fresh (first cycle 427, latest cycle 582, age 36, expires cycle 782)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
@@ -1399,7 +1507,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> version_control streak at 155
 
 - Count: 4
-- Confidence: 0.8
+- Confidence: 0.6
+- Evidence: aging (first cycle 540, latest cycle 552, age 66, expires cycle 752)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1411,7 +1520,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 220
 
 - Count: 3
-- Confidence: 0.81
+- Confidence: 0.61
+- Evidence: aging (first cycle 502, latest cycle 504, age 114, expires cycle 704)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 220`.
 - Examples:
@@ -1422,7 +1532,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 225
 
 - Count: 3
-- Confidence: 0.81
+- Confidence: 0.61
+- Evidence: aging (first cycle 511, latest cycle 513, age 105, expires cycle 713)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 225`.
 - Examples:
@@ -1433,7 +1544,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 235
 
 - Count: 3
-- Confidence: 0.81
+- Confidence: 0.61
+- Evidence: aging (first cycle 524, latest cycle 526, age 92, expires cycle 726)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 235`.
 - Examples:
@@ -1444,7 +1556,8 @@ Promotion candidates: 295
 ## fixture - task_completion streak at 205
 
 - Count: 3
-- Confidence: 0.81
+- Confidence: 0.61
+- Evidence: aging (first cycle 492, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 205`.
 - Examples:
@@ -1455,7 +1568,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 250
 
 - Count: 3
-- Confidence: 0.81
+- Confidence: 0.61
+- Evidence: aging (first cycle 556, latest cycle 558, age 60, expires cycle 758)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 250`.
 - Examples:
@@ -1466,7 +1580,8 @@ Promotion candidates: 295
 ## script - boosted starved drive explore -> boosted starved drive connect
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 457, latest cycle 527, age 91, expires cycle 727)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
@@ -1477,7 +1592,8 @@ Promotion candidates: 295
 ## script - boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive express
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 403, latest cycle 407, age 211, expires cycle 607)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -1488,7 +1604,8 @@ Promotion candidates: 295
 ## script - boosted starved drive explore -> version_control streak at 155
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 529, latest cycle 541, age 77, expires cycle 741)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive explore -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1499,7 +1616,8 @@ Promotion candidates: 295
 ## script - boosted starved drive express -> 9 outreach opportunities flagged
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 368, latest cycle 391, age 227, expires cycle 591)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive express -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
@@ -1510,7 +1628,8 @@ Promotion candidates: 295
 ## script - boosted starved drive express -> boosted starved drive order -> 9 outreach opportunities flagged
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 348, latest cycle 398, age 220, expires cycle 598)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
@@ -1521,7 +1640,8 @@ Promotion candidates: 295
 ## script - boosted starved drive order -> 9 outreach opportunities flagged
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 348, latest cycle 398, age 220, expires cycle 598)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive order -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
@@ -1532,7 +1652,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> boosted starved drive express
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 403, latest cycle 407, age 211, expires cycle 607)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
@@ -1543,7 +1664,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> boosted starved drive express -> boosted starved drive order
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 403, latest cycle 407, age 211, expires cycle 607)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
@@ -1554,7 +1676,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> publishing streak at 170
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 413, latest cycle 418, age 200, expires cycle 618)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -1565,7 +1688,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> publishing streak at 170 -> task_completion streak at 170
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 413, latest cycle 418, age 200, expires cycle 618)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> publishing streak at 170 -> task_completion streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -1576,7 +1700,8 @@ Promotion candidates: 295
 ## script - boosted starved drive understand -> boosted starved drive express -> 9 outreach opportunities flagged
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 368, latest cycle 391, age 227, expires cycle 591)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive understand -> boosted starved drive express -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
@@ -1587,7 +1712,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale email.md
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 423, latest cycle 425, age 193, expires cycle 625)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -1598,7 +1724,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale mastodon.md -> flagged research for potential essay
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 412, latest cycle 555, age 63, expires cycle 755)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -1609,7 +1736,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 542, latest cycle 552, age 66, expires cycle 752)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1620,7 +1748,8 @@ Promotion candidates: 295
 ## script - publishing streak at 235 -> version_control streak at 155
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 524, latest cycle 526, age 92, expires cycle 726)
 - Risk: low
 - Suggested test: Add a fixture proving `publishing streak at 235 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1631,7 +1760,8 @@ Promotion candidates: 295
 ## script - rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 438, latest cycle 482, age 136, expires cycle 682)
 - Risk: low
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
@@ -1642,7 +1772,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 457, latest cycle 527, age 91, expires cycle 727)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
@@ -1653,7 +1784,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 520, latest cycle 531, age 87, expires cycle 731)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1664,7 +1796,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> boosted starved drive create -> boosted starved drive explore
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.32
+- Evidence: stale (first cycle 408, latest cycle 410, age 208, expires cycle 610)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -1676,6 +1809,7 @@ Promotion candidates: 295
 
 - Count: 3
 - Confidence: 0.7
+- Evidence: fresh (first cycle 432, latest cycle 584, age 34, expires cycle 784)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -1686,7 +1820,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> boosted starved drive preserve
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 413, latest cycle 418, age 200, expires cycle 618)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
@@ -1697,7 +1832,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> boosted starved drive preserve -> publishing streak at 170
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 413, latest cycle 418, age 200, expires cycle 618)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive preserve -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -1708,7 +1844,8 @@ Promotion candidates: 295
 ## script - refreshed stale outreach.md -> flagged research for potential essay
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 480, latest cycle 566, age 52, expires cycle 766)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -1719,7 +1856,8 @@ Promotion candidates: 295
 ## script - task_completion streak at 215 -> version_control streak at 155
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 513, latest cycle 515, age 103, expires cycle 715)
 - Risk: low
 - Suggested test: Add a fixture proving `task_completion streak at 215 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1730,7 +1868,8 @@ Promotion candidates: 295
 ## script - writing streak at 250 -> version_control streak at 155
 
 - Count: 3
-- Confidence: 0.7
+- Confidence: 0.53
+- Evidence: aging (first cycle 556, latest cycle 558, age 60, expires cycle 758)
 - Risk: low
 - Suggested test: Add a fixture proving `writing streak at 250 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -1742,6 +1881,7 @@ Promotion candidates: 295
 
 - Count: 3
 - Confidence: 0.7
+- Evidence: fresh (first cycle 596, latest cycle 598, age 20, expires cycle 798)
 - Risk: low
 - Suggested test: Add a fixture proving `writing streak at 265 -> version_control streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -1752,7 +1892,8 @@ Promotion candidates: 295
 ## fixture - 8 outreach opportunities flagged
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 339, latest cycle 420, age 198, expires cycle 620)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `8 outreach opportunities flagged`.
 - Examples:
@@ -1762,7 +1903,8 @@ Promotion candidates: 295
 ## fixture - celebrated 1 new star(s)!
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 481, latest cycle 521, age 97, expires cycle 721)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `celebrated 1 new star(s)!`.
 - Examples:
@@ -1772,7 +1914,8 @@ Promotion candidates: 295
 ## fixture - compacted memory (203 lines)
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 441, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `compacted memory (203 lines)`.
 - Examples:
@@ -1782,7 +1925,8 @@ Promotion candidates: 295
 ## fixture - deployed a-clone-is-a-more-honest-demo
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 358, latest cycle 359, age 259, expires cycle 559)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed a-clone-is-a-more-honest-demo`.
 - Examples:
@@ -1792,7 +1936,8 @@ Promotion candidates: 295
 ## fixture - deployed awb-agent-review
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 480, latest cycle 482, age 136, expires cycle 682)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed awb-agent-review`.
 - Examples:
@@ -1802,7 +1947,8 @@ Promotion candidates: 295
 ## fixture - deployed babyagi-had-a-queue-seed-has-a-metabolism
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 359, latest cycle 360, age 258, expires cycle 560)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed babyagi-had-a-queue-seed-has-a-metabolism`.
 - Examples:
@@ -1812,7 +1958,8 @@ Promotion candidates: 295
 ## fixture - deployed context-is-a-diet
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 342, latest cycle 343, age 275, expires cycle 543)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed context-is-a-diet`.
 - Examples:
@@ -1822,7 +1969,8 @@ Promotion candidates: 295
 ## fixture - deployed first-sight-is-a-security-boundary
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 357, latest cycle 358, age 260, expires cycle 558)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed first-sight-is-a-security-boundary`.
 - Examples:
@@ -1832,7 +1980,8 @@ Promotion candidates: 295
 ## fixture - deployed four-environment-variables
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 459, latest cycle 476, age 142, expires cycle 676)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed four-environment-variables`.
 - Examples:
@@ -1842,7 +1991,8 @@ Promotion candidates: 295
 ## fixture - deployed inbound-is-not-outbound
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 408, latest cycle 409, age 209, expires cycle 609)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed inbound-is-not-outbound`.
 - Examples:
@@ -1852,7 +2002,8 @@ Promotion candidates: 295
 ## fixture - deployed onboarding-is-a-production-boundary
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 394, latest cycle 395, age 223, expires cycle 595)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed onboarding-is-a-production-boundary`.
 - Examples:
@@ -1862,7 +2013,8 @@ Promotion candidates: 295
 ## fixture - deployed product-pages-got-a-narrator
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 410, latest cycle 411, age 207, expires cycle 611)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed product-pages-got-a-narrator`.
 - Examples:
@@ -1872,7 +2024,8 @@ Promotion candidates: 295
 ## fixture - deployed read-only-is-not-propagation
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 371, latest cycle 372, age 246, expires cycle 572)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed read-only-is-not-propagation`.
 - Examples:
@@ -1882,7 +2035,8 @@ Promotion candidates: 295
 ## fixture - deployed social-presence-has-three-fuses
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 403, latest cycle 404, age 214, expires cycle 604)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed social-presence-has-three-fuses`.
 - Examples:
@@ -1892,7 +2046,8 @@ Promotion candidates: 295
 ## fixture - deployed the-benchmark-is-not-the-deployment
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 370, latest cycle 371, age 247, expires cycle 571)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-benchmark-is-not-the-deployment`.
 - Examples:
@@ -1902,7 +2057,8 @@ Promotion candidates: 295
 ## fixture - deployed the-bottleneck-moved-to-concrete
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 409, latest cycle 410, age 208, expires cycle 610)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-bottleneck-moved-to-concrete`.
 - Examples:
@@ -1912,7 +2068,8 @@ Promotion candidates: 295
 ## fixture - deployed the-boundary-ledger-is-the-repo
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 344, latest cycle 345, age 273, expires cycle 545)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-boundary-ledger-is-the-repo`.
 - Examples:
@@ -1922,7 +2079,8 @@ Promotion candidates: 295
 ## fixture - deployed the-compiler-is-an-institutional-memory
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 386, latest cycle 387, age 231, expires cycle 587)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-compiler-is-an-institutional-memory`.
 - Examples:
@@ -1932,7 +2090,8 @@ Promotion candidates: 295
 ## fixture - deployed the-firewall-is-a-receipt-machine
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 349, latest cycle 350, age 268, expires cycle 550)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-firewall-is-a-receipt-machine`.
 - Examples:
@@ -1942,7 +2101,8 @@ Promotion candidates: 295
 ## fixture - deployed the-policy-decision-point-has-to-be-outside-the-agent
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 364, latest cycle 365, age 253, expires cycle 565)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-policy-decision-point-has-to-be-outside-the-agent`.
 - Examples:
@@ -1952,7 +2112,8 @@ Promotion candidates: 295
 ## fixture - deployed the-protocol-is-not-the-receipt
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 382, latest cycle 383, age 235, expires cycle 583)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-protocol-is-not-the-receipt`.
 - Examples:
@@ -1962,7 +2123,8 @@ Promotion candidates: 295
 ## fixture - deployed the-refusal-is-not-the-boundary
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 373, latest cycle 374, age 244, expires cycle 574)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed the-refusal-is-not-the-boundary`.
 - Examples:
@@ -1972,7 +2134,8 @@ Promotion candidates: 295
 ## fixture - deployed twenty-four-hours-to-commodity
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 407, latest cycle 408, age 210, expires cycle 608)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed twenty-four-hours-to-commodity`.
 - Examples:
@@ -1982,7 +2145,8 @@ Promotion candidates: 295
 ## fixture - deployed who-demotes-the-confident-entry
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 413, latest cycle 414, age 204, expires cycle 614)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `deployed who-demotes-the-confident-entry`.
 - Examples:
@@ -1992,7 +2156,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 165
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 404, latest cycle 405, age 213, expires cycle 605)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 165`.
 - Examples:
@@ -2002,7 +2167,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 185
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 452, latest cycle 453, age 165, expires cycle 653)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 185`.
 - Examples:
@@ -2012,7 +2178,8 @@ Promotion candidates: 295
 ## fixture - publishing streak at 215
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 494, latest cycle 495, age 123, expires cycle 695)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 215`.
 - Examples:
@@ -2023,6 +2190,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 600, latest cycle 601, age 17, expires cycle 801)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 270`.
 - Examples:
@@ -2033,6 +2201,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 606, latest cycle 607, age 11, expires cycle 807)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 275`.
 - Examples:
@@ -2042,7 +2211,8 @@ Promotion candidates: 295
 ## fixture - research streak at 210
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 462, latest cycle 463, age 155, expires cycle 663)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `research streak at 210`.
 - Examples:
@@ -2052,7 +2222,8 @@ Promotion candidates: 295
 ## fixture - research streak at 290
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 543, latest cycle 544, age 74, expires cycle 744)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `research streak at 290`.
 - Examples:
@@ -2062,7 +2233,8 @@ Promotion candidates: 295
 ## fixture - task_completion streak at 175
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 427, latest cycle 428, age 190, expires cycle 628)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 175`.
 - Examples:
@@ -2072,7 +2244,8 @@ Promotion candidates: 295
 ## fixture - version_control streak at 120
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 390, latest cycle 391, age 227, expires cycle 591)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 120`.
 - Examples:
@@ -2082,7 +2255,8 @@ Promotion candidates: 295
 ## fixture - version_control streak at 80
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 344, latest cycle 345, age 273, expires cycle 545)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 80`.
 - Examples:
@@ -2092,7 +2266,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 115
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 355, latest cycle 356, age 262, expires cycle 556)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 115`.
 - Examples:
@@ -2102,7 +2277,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 120
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 361, latest cycle 362, age 256, expires cycle 562)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 120`.
 - Examples:
@@ -2112,7 +2288,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 190
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 465, latest cycle 466, age 152, expires cycle 666)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 190`.
 - Examples:
@@ -2122,7 +2299,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 195
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 472, latest cycle 473, age 145, expires cycle 673)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 195`.
 - Examples:
@@ -2132,7 +2310,8 @@ Promotion candidates: 295
 ## fixture - writing streak at 215
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 498, latest cycle 499, age 119, expires cycle 699)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 215`.
 - Examples:
@@ -2142,17 +2321,30 @@ Promotion candidates: 295
 ## fixture - writing streak at 225
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.52
+- Evidence: aging (first cycle 516, latest cycle 517, age 101, expires cycle 717)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `writing streak at 225`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:179` writing streak at 225
   - `/home/seed/data/event_log.jsonl:180` writing streak at 225
 
+## fixture - writing streak at 275
+
+- Count: 2
+- Confidence: 0.69
+- Evidence: fresh (first cycle 614, latest cycle 615, age 3, expires cycle 815)
+- Risk: low
+- Suggested test: Add positive and negative evidence cases for `writing streak at 275`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:258` writing streak at 275
+  - `/home/seed/data/event_log.jsonl:259` writing streak at 275
+
 ## script - archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive explore
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 432, latest cycle 584, age 34, expires cycle 784)
 - Risk: low
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
@@ -2163,6 +2355,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 583, latest cycle 585, age 33, expires cycle 785)
 - Risk: low
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
@@ -2172,7 +2365,8 @@ Promotion candidates: 295
 ## script - boosted starved drive create -> boosted starved drive connect
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 562, latest cycle 565, age 53, expires cycle 765)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
@@ -2182,17 +2376,30 @@ Promotion candidates: 295
 ## script - boosted starved drive create -> boosted starved drive express -> broke idle — boosted create + added urgent write task
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 339, latest cycle 342, age 276, expires cycle 542)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` boosted starved drive create -> boosted starved drive express -> broke idle — boosted create + added urgent write task
   - `/home/seed/data/event_log.jsonl:6` boosted starved drive create -> boosted starved drive express -> broke idle — boosted create + added urgent write task
 
-## script - boosted starved drive express -> boosted starved drive order -> broke idle — boosted create + added urgent write task
+## script - boosted starved drive explore -> flagged research for potential essay
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 482, latest cycle 612, age 6, expires cycle 812)
+- Risk: low
+- Suggested test: Add a fixture proving `boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:146` boosted starved drive explore -> flagged research for potential essay
+  - `/home/seed/data/event_log.jsonl:256` boosted starved drive explore -> flagged research for potential essay
+
+## script - boosted starved drive express -> boosted starved drive order -> broke idle — boosted create + added urgent write task
+
+- Count: 2
+- Confidence: 0.27
+- Evidence: stale (first cycle 393, latest cycle 394, age 224, expires cycle 594)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
@@ -2202,7 +2409,8 @@ Promotion candidates: 295
 ## script - boosted starved drive express -> broke idle — boosted create + added urgent write task
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 339, latest cycle 342, age 276, expires cycle 542)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive express -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
@@ -2212,7 +2420,8 @@ Promotion candidates: 295
 ## script - boosted starved drive express -> version_control streak at 150
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 448, latest cycle 450, age 168, expires cycle 650)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive express -> version_control streak at 150` runs idempotently from clean inputs.
 - Examples:
@@ -2222,7 +2431,8 @@ Promotion candidates: 295
 ## script - boosted starved drive order -> broke idle — boosted create + added urgent write task
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 393, latest cycle 394, age 224, expires cycle 594)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive order -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
@@ -2232,7 +2442,8 @@ Promotion candidates: 295
 ## script - boosted starved drive order -> flagged research for potential essay -> publishing streak at 165
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 404, latest cycle 405, age 213, expires cycle 605)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive order -> flagged research for potential essay -> publishing streak at 165` runs idempotently from clean inputs.
 - Examples:
@@ -2242,7 +2453,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> flagged research for potential essay
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 411, latest cycle 415, age 203, expires cycle 615)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -2252,7 +2464,8 @@ Promotion candidates: 295
 ## script - boosted starved drive preserve -> flagged research for potential essay -> publishing streak at 170
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 411, latest cycle 415, age 203, expires cycle 615)
 - Risk: low
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> flagged research for potential essay -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -2262,7 +2475,8 @@ Promotion candidates: 295
 ## script - compacted memory (201 lines) -> archived completed tasks
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 431, latest cycle 432, age 186, expires cycle 632)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
@@ -2272,7 +2486,8 @@ Promotion candidates: 295
 ## script - compacted memory (201 lines) -> archived completed tasks -> refreshed stale mastodon.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 431, latest cycle 432, age 186, expires cycle 632)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -2282,7 +2497,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> noted 6 new visitors
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 464, latest cycle 478, age 140, expires cycle 678)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> noted 6 new visitors` runs idempotently from clean inputs.
 - Examples:
@@ -2292,7 +2508,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> noted 6 new visitors -> refreshed stale mastodon.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 464, latest cycle 478, age 140, expires cycle 678)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> noted 6 new visitors -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -2302,7 +2519,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive preserve
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 413, latest cycle 417, age 201, expires cycle 617)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
@@ -2312,7 +2530,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale outreach.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 415, latest cycle 543, age 75, expires cycle 743)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
@@ -2322,7 +2541,8 @@ Promotion candidates: 295
 ## script - compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale trends.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 541, latest cycle 556, age 62, expires cycle 756)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
@@ -2332,7 +2552,8 @@ Promotion candidates: 295
 ## script - compacted memory (203 lines) -> refreshed stale mastodon.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 441, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (203 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -2342,7 +2563,8 @@ Promotion candidates: 295
 ## script - compacted memory (203 lines) -> refreshed stale mastodon.md -> refreshed stale email.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 441, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add a fixture proving `compacted memory (203 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -2352,7 +2574,8 @@ Promotion candidates: 295
 ## script - deployed a-clone-is-a-more-honest-demo -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 358, latest cycle 359, age 259, expires cycle 559)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed a-clone-is-a-more-honest-demo -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2362,7 +2585,8 @@ Promotion candidates: 295
 ## script - deployed a-clone-is-a-more-honest-demo -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 358, latest cycle 359, age 259, expires cycle 559)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed a-clone-is-a-more-honest-demo -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2372,7 +2596,8 @@ Promotion candidates: 295
 ## script - deployed approval-fatigue-is-a-systems-bug
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 366, latest cycle 367, age 251, expires cycle 567)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed approval-fatigue-is-a-systems-bug` runs idempotently from clean inputs.
 - Examples:
@@ -2382,7 +2607,8 @@ Promotion candidates: 295
 ## script - deployed approval-fatigue-is-a-systems-bug -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 366, latest cycle 367, age 251, expires cycle 567)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed approval-fatigue-is-a-systems-bug -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2392,7 +2618,8 @@ Promotion candidates: 295
 ## script - deployed approval-fatigue-is-a-systems-bug -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 366, latest cycle 367, age 251, expires cycle 567)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed approval-fatigue-is-a-systems-bug -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2402,7 +2629,8 @@ Promotion candidates: 295
 ## script - deployed approval-is-a-scarce-bandwidth-problem
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 353, latest cycle 354, age 264, expires cycle 554)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed approval-is-a-scarce-bandwidth-problem` runs idempotently from clean inputs.
 - Examples:
@@ -2412,7 +2640,8 @@ Promotion candidates: 295
 ## script - deployed approval-is-a-scarce-bandwidth-problem -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 353, latest cycle 354, age 264, expires cycle 554)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed approval-is-a-scarce-bandwidth-problem -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2422,7 +2651,8 @@ Promotion candidates: 295
 ## script - deployed approval-is-a-scarce-bandwidth-problem -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 353, latest cycle 354, age 264, expires cycle 554)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed approval-is-a-scarce-bandwidth-problem -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2432,7 +2662,8 @@ Promotion candidates: 295
 ## script - deployed awb-agent-review -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 480, latest cycle 482, age 136, expires cycle 682)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed awb-agent-review -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2442,7 +2673,8 @@ Promotion candidates: 295
 ## script - deployed awb-agent-review -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 480, latest cycle 482, age 136, expires cycle 682)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed awb-agent-review -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2452,7 +2684,8 @@ Promotion candidates: 295
 ## script - deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 359, latest cycle 360, age 258, expires cycle 560)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2462,7 +2695,8 @@ Promotion candidates: 295
 ## script - deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 359, latest cycle 360, age 258, expires cycle 560)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2472,7 +2706,8 @@ Promotion candidates: 295
 ## script - deployed context-is-a-diet -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 342, latest cycle 343, age 275, expires cycle 543)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed context-is-a-diet -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2482,7 +2717,8 @@ Promotion candidates: 295
 ## script - deployed context-is-a-diet -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 342, latest cycle 343, age 275, expires cycle 543)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed context-is-a-diet -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2492,7 +2728,8 @@ Promotion candidates: 295
 ## script - deployed first-sight-is-a-security-boundary -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 357, latest cycle 358, age 260, expires cycle 558)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed first-sight-is-a-security-boundary -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2502,7 +2739,8 @@ Promotion candidates: 295
 ## script - deployed first-sight-is-a-security-boundary -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 357, latest cycle 358, age 260, expires cycle 558)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed first-sight-is-a-security-boundary -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2512,7 +2750,8 @@ Promotion candidates: 295
 ## script - deployed four-environment-variables -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 459, latest cycle 476, age 142, expires cycle 676)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed four-environment-variables -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2522,7 +2761,8 @@ Promotion candidates: 295
 ## script - deployed four-environment-variables -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 459, latest cycle 476, age 142, expires cycle 676)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed four-environment-variables -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2532,7 +2772,8 @@ Promotion candidates: 295
 ## script - deployed inbound-is-not-outbound -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 408, latest cycle 409, age 209, expires cycle 609)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed inbound-is-not-outbound -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2542,7 +2783,8 @@ Promotion candidates: 295
 ## script - deployed inbound-is-not-outbound -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 408, latest cycle 409, age 209, expires cycle 609)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed inbound-is-not-outbound -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2552,7 +2794,8 @@ Promotion candidates: 295
 ## script - deployed onboarding-is-a-production-boundary -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 394, latest cycle 395, age 223, expires cycle 595)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed onboarding-is-a-production-boundary -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2562,7 +2805,8 @@ Promotion candidates: 295
 ## script - deployed onboarding-is-a-production-boundary -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 394, latest cycle 395, age 223, expires cycle 595)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed onboarding-is-a-production-boundary -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2572,7 +2816,8 @@ Promotion candidates: 295
 ## script - deployed product-pages-got-a-narrator -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 410, latest cycle 411, age 207, expires cycle 611)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed product-pages-got-a-narrator -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2582,7 +2827,8 @@ Promotion candidates: 295
 ## script - deployed product-pages-got-a-narrator -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 410, latest cycle 411, age 207, expires cycle 611)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed product-pages-got-a-narrator -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2592,7 +2838,8 @@ Promotion candidates: 295
 ## script - deployed read-only-is-not-propagation -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 371, latest cycle 372, age 246, expires cycle 572)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed read-only-is-not-propagation -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2602,7 +2849,8 @@ Promotion candidates: 295
 ## script - deployed read-only-is-not-propagation -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 371, latest cycle 372, age 246, expires cycle 572)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed read-only-is-not-propagation -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2612,7 +2860,8 @@ Promotion candidates: 295
 ## script - deployed social-presence-has-three-fuses -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 403, latest cycle 404, age 214, expires cycle 604)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed social-presence-has-three-fuses -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2622,7 +2871,8 @@ Promotion candidates: 295
 ## script - deployed social-presence-has-three-fuses -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 403, latest cycle 404, age 214, expires cycle 604)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed social-presence-has-three-fuses -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2632,7 +2882,8 @@ Promotion candidates: 295
 ## script - deployed the-benchmark-is-not-the-deployment -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 370, latest cycle 371, age 247, expires cycle 571)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-benchmark-is-not-the-deployment -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2642,7 +2893,8 @@ Promotion candidates: 295
 ## script - deployed the-benchmark-is-not-the-deployment -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 370, latest cycle 371, age 247, expires cycle 571)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-benchmark-is-not-the-deployment -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2652,7 +2904,8 @@ Promotion candidates: 295
 ## script - deployed the-bottleneck-moved-to-concrete -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 409, latest cycle 410, age 208, expires cycle 610)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-bottleneck-moved-to-concrete -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2662,7 +2915,8 @@ Promotion candidates: 295
 ## script - deployed the-bottleneck-moved-to-concrete -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 409, latest cycle 410, age 208, expires cycle 610)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-bottleneck-moved-to-concrete -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2672,7 +2926,8 @@ Promotion candidates: 295
 ## script - deployed the-boundary-ledger-is-the-repo -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 344, latest cycle 345, age 273, expires cycle 545)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-boundary-ledger-is-the-repo -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2682,7 +2937,8 @@ Promotion candidates: 295
 ## script - deployed the-boundary-ledger-is-the-repo -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 344, latest cycle 345, age 273, expires cycle 545)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-boundary-ledger-is-the-repo -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2692,7 +2948,8 @@ Promotion candidates: 295
 ## script - deployed the-compiler-is-an-institutional-memory -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 386, latest cycle 387, age 231, expires cycle 587)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-compiler-is-an-institutional-memory -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2702,7 +2959,8 @@ Promotion candidates: 295
 ## script - deployed the-compiler-is-an-institutional-memory -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 386, latest cycle 387, age 231, expires cycle 587)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-compiler-is-an-institutional-memory -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2712,7 +2970,8 @@ Promotion candidates: 295
 ## script - deployed the-firewall-is-a-receipt-machine -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 349, latest cycle 350, age 268, expires cycle 550)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-firewall-is-a-receipt-machine -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2722,7 +2981,8 @@ Promotion candidates: 295
 ## script - deployed the-firewall-is-a-receipt-machine -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 349, latest cycle 350, age 268, expires cycle 550)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-firewall-is-a-receipt-machine -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2732,7 +2992,8 @@ Promotion candidates: 295
 ## script - deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 364, latest cycle 365, age 253, expires cycle 565)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2742,7 +3003,8 @@ Promotion candidates: 295
 ## script - deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 364, latest cycle 365, age 253, expires cycle 565)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2752,7 +3014,8 @@ Promotion candidates: 295
 ## script - deployed the-protocol-is-not-the-receipt -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 382, latest cycle 383, age 235, expires cycle 583)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-protocol-is-not-the-receipt -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2762,7 +3025,8 @@ Promotion candidates: 295
 ## script - deployed the-protocol-is-not-the-receipt -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 382, latest cycle 383, age 235, expires cycle 583)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-protocol-is-not-the-receipt -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2772,7 +3036,8 @@ Promotion candidates: 295
 ## script - deployed the-refusal-is-not-the-boundary -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 373, latest cycle 374, age 244, expires cycle 574)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-refusal-is-not-the-boundary -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2782,7 +3047,8 @@ Promotion candidates: 295
 ## script - deployed the-refusal-is-not-the-boundary -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 373, latest cycle 374, age 244, expires cycle 574)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed the-refusal-is-not-the-boundary -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2792,7 +3058,8 @@ Promotion candidates: 295
 ## script - deployed tool-latency-is-organisational-memory-loss -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 395, latest cycle 396, age 222, expires cycle 596)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed tool-latency-is-organisational-memory-loss -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2802,7 +3069,8 @@ Promotion candidates: 295
 ## script - deployed tool-latency-is-organisational-memory-loss -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 395, latest cycle 396, age 222, expires cycle 596)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed tool-latency-is-organisational-memory-loss -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2812,7 +3080,8 @@ Promotion candidates: 295
 ## script - deployed twenty-four-hours-to-commodity -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 407, latest cycle 408, age 210, expires cycle 608)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed twenty-four-hours-to-commodity -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2822,7 +3091,8 @@ Promotion candidates: 295
 ## script - deployed twenty-four-hours-to-commodity -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 407, latest cycle 408, age 210, expires cycle 608)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed twenty-four-hours-to-commodity -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2832,7 +3102,8 @@ Promotion candidates: 295
 ## script - deployed who-demotes-the-confident-entry -> posted to mastodon
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 413, latest cycle 414, age 204, expires cycle 614)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed who-demotes-the-confident-entry -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
@@ -2842,7 +3113,8 @@ Promotion candidates: 295
 ## script - deployed who-demotes-the-confident-entry -> posted to mastodon -> rebuilt feeds
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 413, latest cycle 414, age 204, expires cycle 614)
 - Risk: low
 - Suggested test: Add a fixture proving `deployed who-demotes-the-confident-entry -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
@@ -2853,6 +3125,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 424, latest cycle 585, age 33, expires cycle 785)
 - Risk: low
 - Suggested test: Add a fixture proving `flagged research for potential essay -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
@@ -2862,7 +3135,8 @@ Promotion candidates: 295
 ## script - flagged research for potential essay -> publishing streak at 165
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 404, latest cycle 405, age 213, expires cycle 605)
 - Risk: low
 - Suggested test: Add a fixture proving `flagged research for potential essay -> publishing streak at 165` runs idempotently from clean inputs.
 - Examples:
@@ -2873,6 +3147,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 583, latest cycle 585, age 33, expires cycle 785)
 - Risk: low
 - Suggested test: Add a fixture proving `logged bug + added fix task -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
@@ -2883,6 +3158,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 583, latest cycle 585, age 33, expires cycle 785)
 - Risk: low
 - Suggested test: Add a fixture proving `logged bug + added fix task -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -2892,7 +3168,8 @@ Promotion candidates: 295
 ## script - logged bug + added fix task -> compacted memory (203 lines)
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 441, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (203 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -2902,7 +3179,8 @@ Promotion candidates: 295
 ## script - logged bug + added fix task -> compacted memory (203 lines) -> refreshed stale mastodon.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 441, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (203 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -2913,6 +3191,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 565, latest cycle 568, age 50, expires cycle 768)
 - Risk: low
 - Suggested test: Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
@@ -2923,6 +3202,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 565, latest cycle 568, age 50, expires cycle 768)
 - Risk: low
 - Suggested test: Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
@@ -2932,7 +3212,8 @@ Promotion candidates: 295
 ## script - publishing streak at 240 -> version_control streak at 155
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 535, latest cycle 536, age 82, expires cycle 736)
 - Risk: low
 - Suggested test: Add a fixture proving `publishing streak at 240 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -2943,6 +3224,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 600, latest cycle 601, age 17, expires cycle 801)
 - Risk: low
 - Suggested test: Add a fixture proving `publishing streak at 270 -> version_control streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -2952,7 +3234,8 @@ Promotion candidates: 295
 ## script - rebuilt feeds -> logged bug + added fix task -> compacted memory (203 lines)
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 441, latest cycle 494, age 124, expires cycle 694)
 - Risk: low
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (203 lines)` runs idempotently from clean inputs.
 - Examples:
@@ -2962,7 +3245,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 562, latest cycle 565, age 53, expires cycle 765)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
@@ -2973,6 +3257,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 425, latest cycle 599, age 19, expires cycle 799)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
@@ -2982,7 +3267,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> publishing streak at 185
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 452, latest cycle 453, age 165, expires cycle 653)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 185` runs idempotently from clean inputs.
 - Examples:
@@ -2992,7 +3278,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> publishing streak at 215
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 494, latest cycle 495, age 123, expires cycle 695)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 215` runs idempotently from clean inputs.
 - Examples:
@@ -3002,7 +3289,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> publishing streak at 235
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 525, latest cycle 526, age 92, expires cycle 726)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 235` runs idempotently from clean inputs.
 - Examples:
@@ -3012,7 +3300,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> publishing streak at 235 -> version_control streak at 155
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 525, latest cycle 526, age 92, expires cycle 726)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 235 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -3022,7 +3311,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> publishing streak at 240
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 536, latest cycle 538, age 80, expires cycle 738)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 240` runs idempotently from clean inputs.
 - Examples:
@@ -3033,6 +3323,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 606, latest cycle 607, age 11, expires cycle 807)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 275` runs idempotently from clean inputs.
 - Examples:
@@ -3042,7 +3333,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> refreshed stale outreach.md -> flagged research for potential essay
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 480, latest cycle 566, age 52, expires cycle 766)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
@@ -3052,7 +3344,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> refreshed stale trends.md -> boosted starved drive create
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 359, latest cycle 407, age 211, expires cycle 607)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -3062,7 +3355,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> research streak at 210
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 462, latest cycle 463, age 155, expires cycle 663)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> research streak at 210` runs idempotently from clean inputs.
 - Examples:
@@ -3072,7 +3366,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> task_completion streak at 215
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 515, latest cycle 516, age 102, expires cycle 716)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> task_completion streak at 215` runs idempotently from clean inputs.
 - Examples:
@@ -3082,7 +3377,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> version_control streak at 155
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 534, latest cycle 546, age 72, expires cycle 746)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -3092,7 +3388,8 @@ Promotion candidates: 295
 ## script - refreshed stale email.md -> writing streak at 190
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 465, latest cycle 466, age 152, expires cycle 666)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale email.md -> writing streak at 190` runs idempotently from clean inputs.
 - Examples:
@@ -3103,6 +3400,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 583, latest cycle 585, age 33, expires cycle 785)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
@@ -3112,7 +3410,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> flagged research for potential essay -> publishing streak at 170
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 412, latest cycle 414, age 204, expires cycle 614)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> flagged research for potential essay -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -3122,7 +3421,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 185
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 452, latest cycle 453, age 165, expires cycle 653)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 185` runs idempotently from clean inputs.
 - Examples:
@@ -3132,7 +3432,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 215
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 494, latest cycle 495, age 123, expires cycle 695)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 215` runs idempotently from clean inputs.
 - Examples:
@@ -3142,7 +3443,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 235
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 525, latest cycle 526, age 92, expires cycle 726)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 235` runs idempotently from clean inputs.
 - Examples:
@@ -3152,7 +3454,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 240
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 536, latest cycle 538, age 80, expires cycle 738)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 240` runs idempotently from clean inputs.
 - Examples:
@@ -3163,6 +3466,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 606, latest cycle 607, age 11, expires cycle 807)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 275` runs idempotently from clean inputs.
 - Examples:
@@ -3172,7 +3476,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> research streak at 210
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 462, latest cycle 463, age 155, expires cycle 663)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> research streak at 210` runs idempotently from clean inputs.
 - Examples:
@@ -3182,7 +3487,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> task_completion streak at 215
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 515, latest cycle 516, age 102, expires cycle 716)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> task_completion streak at 215` runs idempotently from clean inputs.
 - Examples:
@@ -3192,7 +3498,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> version_control streak at 155
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 534, latest cycle 546, age 72, expires cycle 746)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -3202,7 +3509,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 190
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 465, latest cycle 466, age 152, expires cycle 666)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 190` runs idempotently from clean inputs.
 - Examples:
@@ -3212,7 +3520,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale outreach.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 415, latest cycle 543, age 75, expires cycle 743)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
@@ -3222,7 +3531,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> refreshed stale trends.md -> refreshed stale outreach.md
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 427, latest cycle 556, age 62, expires cycle 756)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
@@ -3232,7 +3542,8 @@ Promotion candidates: 295
 ## script - refreshed stale mastodon.md -> writing streak at 170
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 429, latest cycle 430, age 188, expires cycle 630)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> writing streak at 170` runs idempotently from clean inputs.
 - Examples:
@@ -3243,6 +3554,7 @@ Promotion candidates: 295
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 593, latest cycle 594, age 24, expires cycle 794)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> writing streak at 265` runs idempotently from clean inputs.
 - Examples:
@@ -3252,7 +3564,8 @@ Promotion candidates: 295
 ## script - refreshed stale outreach.md -> boosted starved drive create
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 367, latest cycle 390, age 228, expires cycle 590)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale outreach.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -3262,7 +3575,8 @@ Promotion candidates: 295
 ## script - refreshed stale trends.md -> boosted starved drive create
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.27
+- Evidence: stale (first cycle 359, latest cycle 407, age 211, expires cycle 607)
 - Risk: low
 - Suggested test: Add a fixture proving `refreshed stale trends.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
@@ -3272,7 +3586,8 @@ Promotion candidates: 295
 ## script - research streak at 290 -> version_control streak at 155
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 543, latest cycle 544, age 74, expires cycle 744)
 - Risk: low
 - Suggested test: Add a fixture proving `research streak at 290 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -3282,7 +3597,8 @@ Promotion candidates: 295
 ## script - writing streak at 225 -> version_control streak at 155
 
 - Count: 2
-- Confidence: 0.6
+- Confidence: 0.45
+- Evidence: aging (first cycle 516, latest cycle 517, age 101, expires cycle 717)
 - Risk: low
 - Suggested test: Add a fixture proving `writing streak at 225 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
@@ -3292,7 +3608,8 @@ Promotion candidates: 295
 ## typed_tool - deployed tool-latency-is-organisational-memory-loss
 
 - Count: 2
-- Confidence: 0.69
+- Confidence: 0.31
+- Evidence: stale (first cycle 395, latest cycle 396, age 222, expires cycle 596)
 - Risk: low
 - Suggested test: Add schema validation and receipt checks for `deployed tool-latency-is-organisational-memory-loss`.
 - Examples:

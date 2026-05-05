@@ -15,6 +15,13 @@
       "shape": "approve run rg over blog for queued topic",
       "count": 3,
       "confidence": 0.81,
+      "evidence": {
+        "first_cycle": 1,
+        "latest_cycle": 3,
+        "evidence_age_cycles": 10,
+        "evidence_expires_cycle": 203,
+        "evidence_status": "fresh"
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.",
       "examples": [
@@ -45,6 +52,13 @@
       "shape": "approve publish public post to mastodon account",
       "count": 2,
       "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 8,
+        "latest_cycle": 9,
+        "evidence_age_cycles": 4,
+        "evidence_expires_cycle": 209,
+        "evidence_status": "fresh"
+      },
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.",
       "examples": [
@@ -69,6 +83,13 @@
       "shape": "blocked retry after mastodon 403 suspended account",
       "count": 2,
       "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 10,
+        "latest_cycle": 11,
+        "evidence_age_cycles": 2,
+        "evidence_expires_cycle": 211,
+        "evidence_status": "fresh"
+      },
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.",
       "examples": [
@@ -93,6 +114,13 @@
       "shape": "expected output includes promotion-map json",
       "count": 2,
       "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 6,
+        "latest_cycle": 7,
+        "evidence_age_cycles": 6,
+        "evidence_expires_cycle": 207,
+        "evidence_status": "fresh"
+      },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `expected output includes promotion-map json`.",
       "examples": [
@@ -117,6 +145,13 @@
       "shape": "python3 tools/deploy-blog.sh",
       "count": 2,
       "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 4,
+        "latest_cycle": 5,
+        "evidence_age_cycles": 8,
+        "evidence_expires_cycle": 205,
+        "evidence_status": "fresh"
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.",
       "examples": [
@@ -141,6 +176,13 @@
       "shape": "rg queued topic blog",
       "count": 2,
       "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 12,
+        "latest_cycle": 13,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 213,
+        "evidence_status": "fresh"
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
       "examples": [
@@ -165,6 +207,13 @@
       "shape": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
       "count": 2,
       "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 12,
+        "latest_cycle": 13,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 213,
+        "evidence_status": "fresh"
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
       "examples": [
@@ -189,6 +238,13 @@
       "shape": "sed -n 1,120p data/blog_queue.txt",
       "count": 2,
       "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 12,
+        "latest_cycle": 13,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 213,
+        "evidence_status": "fresh"
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
       "examples": [

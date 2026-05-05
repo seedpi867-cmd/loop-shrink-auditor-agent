@@ -14,6 +14,7 @@ Promotion candidates: 8
 
 - Count: 3
 - Confidence: 0.81
+- Evidence: fresh (first cycle 1, latest cycle 3, age 10, expires cycle 203)
 - Risk: low
 - Suggested test: Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.
 - Examples:
@@ -25,6 +26,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 8, latest cycle 9, age 4, expires cycle 209)
 - Risk: high
 - Suggested test: Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.
 - Examples:
@@ -35,6 +37,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 10, latest cycle 11, age 2, expires cycle 211)
 - Risk: medium
 - Suggested test: Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.
 - Examples:
@@ -45,6 +48,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 6, latest cycle 7, age 6, expires cycle 207)
 - Risk: low
 - Suggested test: Add positive and negative evidence cases for `expected output includes promotion-map json`.
 - Examples:
@@ -55,6 +59,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 4, latest cycle 5, age 8, expires cycle 205)
 - Risk: low
 - Suggested test: Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.
 - Examples:
@@ -65,6 +70,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 12, latest cycle 13, age 0, expires cycle 213)
 - Risk: low
 - Suggested test: Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.
 - Examples:
@@ -75,6 +81,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.6
+- Evidence: fresh (first cycle 12, latest cycle 13, age 0, expires cycle 213)
 - Risk: low
 - Suggested test: Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
 - Examples:
@@ -85,6 +92,7 @@ Promotion candidates: 8
 
 - Count: 2
 - Confidence: 0.69
+- Evidence: fresh (first cycle 12, latest cycle 13, age 0, expires cycle 213)
 - Risk: low
 - Suggested test: Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
 - Examples:

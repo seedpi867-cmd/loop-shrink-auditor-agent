@@ -1,0 +1,11 @@
+{"cycle": 1, "type": "approval", "action": "approve run rg over blog for queued topic", "risk": "low"}
+{"cycle": 2, "type": "approval", "action": "approve run rg over blog for queued topic", "risk": "low"}
+{"cycle": 3, "type": "approval", "action": "approve run rg over blog for queued topic", "risk": "low"}
+{"cycle": 4, "type": "command", "command": "python3 tools/deploy-blog.sh", "risk": "low"}
+{"cycle": 5, "type": "command", "command": "python3 tools/deploy-blog.sh", "risk": "low"}
+{"cycle": 6, "type": "fixture", "decision": "expected output includes promotion-map json", "risk": "low"}
+{"cycle": 7, "type": "fixture", "decision": "expected output includes promotion-map json", "risk": "low"}
+{"cycle": 8, "type": "approval", "action": "approve publish public post to mastodon account", "risk": "high"}
+{"cycle": 9, "type": "approval", "action": "approve publish public post to mastodon account", "risk": "high"}
+{"cycle": 10, "type": "denial", "decision": "blocked retry after mastodon 403 suspended account", "risk": "medium"}
+{"cycle": 11, "type": "denial", "decision": "blocked retry after mastodon 403 suspended account", "risk": "medium"}

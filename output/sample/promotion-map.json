@@ -1,0 +1,138 @@
+{
+  "event_count": 11,
+  "candidate_count": 5,
+  "summary": {
+    "approval_budget": 1,
+    "deny_or_quarantine": 1,
+    "fixture": 1,
+    "script": 2
+  },
+  "candidates": [
+    {
+      "id": "27bc84d6ff76",
+      "classification": "script",
+      "kind": "approval",
+      "shape": "approve run rg over blog for queued topic",
+      "count": 3,
+      "confidence": 0.81,
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 1,
+          "cycle": "1",
+          "text": "approve run rg over blog for queued topic"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 2,
+          "cycle": "2",
+          "text": "approve run rg over blog for queued topic"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 3,
+          "cycle": "3",
+          "text": "approve run rg over blog for queued topic"
+        }
+      ]
+    },
+    {
+      "id": "f3195c8fabb9",
+      "classification": "approval_budget",
+      "kind": "approval",
+      "shape": "approve publish public post to mastodon account",
+      "count": 2,
+      "confidence": 0.69,
+      "risk": "high",
+      "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 8,
+          "cycle": "8",
+          "text": "approve publish public post to mastodon account"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 9,
+          "cycle": "9",
+          "text": "approve publish public post to mastodon account"
+        }
+      ]
+    },
+    {
+      "id": "62bb9e0fb144",
+      "classification": "deny_or_quarantine",
+      "kind": "denial",
+      "shape": "blocked retry after mastodon 403 suspended account",
+      "count": 2,
+      "confidence": 0.69,
+      "risk": "medium",
+      "suggested_test": "Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 10,
+          "cycle": "10",
+          "text": "blocked retry after mastodon 403 suspended account"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 11,
+          "cycle": "11",
+          "text": "blocked retry after mastodon 403 suspended account"
+        }
+      ]
+    },
+    {
+      "id": "84ac2ae7a367",
+      "classification": "fixture",
+      "kind": "fixture",
+      "shape": "expected output includes promotion-map json",
+      "count": 2,
+      "confidence": 0.69,
+      "risk": "low",
+      "suggested_test": "Add positive and negative evidence cases for `expected output includes promotion-map json`.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 6,
+          "cycle": "6",
+          "text": "expected output includes promotion-map json"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 7,
+          "cycle": "7",
+          "text": "expected output includes promotion-map json"
+        }
+      ]
+    },
+    {
+      "id": "a1a46b6c46fb",
+      "classification": "script",
+      "kind": "command",
+      "shape": "python3 tools/deploy-blog.sh",
+      "count": 2,
+      "confidence": 0.69,
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 4,
+          "cycle": "4",
+          "text": "python3 tools/deploy-blog.sh"
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 5,
+          "cycle": "5",
+          "text": "python3 tools/deploy-blog.sh"
+        }
+      ]
+    }
+  ]
+}

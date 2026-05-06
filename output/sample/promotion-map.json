@@ -7,6 +7,19 @@
     "fixture": 2,
     "script": 10
   },
+  "gate_summary": {
+    "blocked": 12,
+    "passed": 0,
+    "condition_bound": 2,
+    "missing_environment": 8,
+    "not_required": 2,
+    "by_status": {
+      "blocked_narrow_environment": 4,
+      "condition_bound": 2,
+      "needs_environment_record": 8,
+      "not_required": 2
+    }
+  },
   "candidates": [
     {
       "id": "27bc84d6ff76",

@@ -1,10 +1,21 @@
 {
-  "event_count": 2218,
-  "candidate_count": 310,
+  "event_count": 2244,
+  "candidate_count": 320,
   "summary": {
-    "fixture": 84,
-    "script": 225,
+    "fixture": 87,
+    "script": 232,
     "typed_tool": 1
+  },
+  "gate_summary": {
+    "blocked": 233,
+    "passed": 0,
+    "condition_bound": 0,
+    "missing_environment": 233,
+    "not_required": 87,
+    "by_status": {
+      "needs_environment_record": 233,
+      "not_required": 87
+    }
   },
   "candidates": [
     {
@@ -12,13 +23,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "refreshed stale mastodon.md",
-      "count": 287,
+      "count": 291,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -78,13 +89,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "refreshed stale email.md",
-      "count": 252,
+      "count": 256,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -144,13 +155,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "refreshed stale mastodon.md -> refreshed stale email.md",
-      "count": 247,
+      "count": 251,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -219,7 +230,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 559,
-        "evidence_age_cycles": 91,
+        "evidence_age_cycles": 98,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -280,13 +291,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "posted to mastodon",
-      "count": 178,
+      "count": 181,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 342,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -346,13 +357,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "rebuilt feeds",
-      "count": 178,
+      "count": 181,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 342,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -412,13 +423,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "posted to mastodon -> rebuilt feeds",
-      "count": 178,
+      "count": 181,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 342,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -487,7 +498,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 559,
-        "evidence_age_cycles": 91,
+        "evidence_age_cycles": 98,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -557,7 +568,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 559,
-        "evidence_age_cycles": 91,
+        "evidence_age_cycles": 98,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -622,13 +633,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "boosted starved drive create",
-      "count": 79,
+      "count": 81,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 645,
-        "evidence_age_cycles": 5,
-        "evidence_expires_cycle": 845,
+        "latest_cycle": 656,
+        "evidence_age_cycles": 1,
+        "evidence_expires_cycle": 856,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -693,9 +704,9 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 450,
-        "evidence_age_cycles": 200,
+        "evidence_age_cycles": 207,
         "evidence_expires_cycle": 650,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -759,7 +770,7 @@
       "evidence": {
         "first_cycle": 343,
         "latest_cycle": 559,
-        "evidence_age_cycles": 91,
+        "evidence_age_cycles": 98,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -829,7 +840,7 @@
       "evidence": {
         "first_cycle": 343,
         "latest_cycle": 559,
-        "evidence_age_cycles": 91,
+        "evidence_age_cycles": 98,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -894,13 +905,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "refreshed stale email.md -> boosted starved drive create",
-      "count": 70,
+      "count": 72,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 620,
-        "evidence_age_cycles": 30,
-        "evidence_expires_cycle": 820,
+        "latest_cycle": 656,
+        "evidence_age_cycles": 1,
+        "evidence_expires_cycle": 856,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -964,13 +975,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create",
-      "count": 70,
+      "count": 72,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 620,
-        "evidence_age_cycles": 30,
-        "evidence_expires_cycle": 820,
+        "latest_cycle": 656,
+        "evidence_age_cycles": 1,
+        "evidence_expires_cycle": 856,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -1039,7 +1050,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 627,
-        "evidence_age_cycles": 23,
+        "evidence_age_cycles": 30,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -1105,7 +1116,7 @@
       "evidence": {
         "first_cycle": 343,
         "latest_cycle": 559,
-        "evidence_age_cycles": 91,
+        "evidence_age_cycles": 98,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1170,13 +1181,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "boosted starved drive explore",
-      "count": 63,
+      "count": 65,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 368,
-        "latest_cycle": 645,
-        "evidence_age_cycles": 5,
-        "evidence_expires_cycle": 845,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -1241,7 +1252,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 649,
-        "evidence_age_cycles": 1,
+        "evidence_age_cycles": 8,
         "evidence_expires_cycle": 849,
         "evidence_status": "fresh"
       },
@@ -1302,13 +1313,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "flagged research for potential essay",
-      "count": 49,
+      "count": 50,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 335,
-        "latest_cycle": 644,
-        "evidence_age_cycles": 6,
-        "evidence_expires_cycle": 844,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -1373,7 +1384,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 557,
-        "evidence_age_cycles": 93,
+        "evidence_age_cycles": 100,
         "evidence_expires_cycle": 757,
         "evidence_status": "aging"
       },
@@ -1443,7 +1454,7 @@
       "evidence": {
         "first_cycle": 513,
         "latest_cycle": 558,
-        "evidence_age_cycles": 92,
+        "evidence_age_cycles": 99,
         "evidence_expires_cycle": 758,
         "evidence_status": "aging"
       },
@@ -1509,7 +1520,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -1570,6 +1581,76 @@
       ]
     },
     {
+      "id": "0bb6559325e0",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "boosted starved drive create -> boosted starved drive explore",
+      "count": 45,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 368,
+        "latest_cycle": 650,
+        "evidence_age_cycles": 7,
+        "evidence_expires_cycle": 850,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 32,
+          "cycle": "368",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 33,
+          "cycle": "369",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 34,
+          "cycle": "370",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 35,
+          "cycle": "371",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 36,
+          "cycle": "372",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "057dc5daf4b6",
       "classification": "script",
       "kind": "sequence",
@@ -1579,9 +1660,9 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 600,
-        "evidence_age_cycles": 50,
+        "evidence_age_cycles": 57,
         "evidence_expires_cycle": 800,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -1649,9 +1730,9 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 600,
-        "evidence_age_cycles": 50,
+        "evidence_age_cycles": 57,
         "evidence_expires_cycle": 800,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -1710,76 +1791,6 @@
       ]
     },
     {
-      "id": "0bb6559325e0",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "boosted starved drive create -> boosted starved drive explore",
-      "count": 44,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 368,
-        "latest_cycle": 645,
-        "evidence_age_cycles": 5,
-        "evidence_expires_cycle": 845,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 32,
-          "cycle": "368",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 33,
-          "cycle": "369",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 34,
-          "cycle": "370",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 35,
-          "cycle": "371",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 36,
-          "cycle": "372",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        }
-      ]
-    },
-    {
       "id": "e847b41a4ad9",
       "classification": "fixture",
       "kind": "note",
@@ -1789,7 +1800,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 610,
-        "evidence_age_cycles": 40,
+        "evidence_age_cycles": 47,
         "evidence_expires_cycle": 810,
         "evidence_status": "fresh"
       },
@@ -1855,7 +1866,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -1921,7 +1932,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 610,
-        "evidence_age_cycles": 40,
+        "evidence_age_cycles": 47,
         "evidence_expires_cycle": 810,
         "evidence_status": "fresh"
       },
@@ -1991,7 +2002,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -2052,157 +2063,17 @@
       ]
     },
     {
-      "id": "762613b8a2e1",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-      "count": 38,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 346,
-        "latest_cycle": 557,
-        "evidence_age_cycles": 93,
-        "evidence_expires_cycle": 757,
-        "evidence_status": "aging"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 10,
-          "cycle": "346",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 11,
-          "cycle": "347",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 17,
-          "cycle": "353",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 20,
-          "cycle": "356",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 22,
-          "cycle": "358",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {}
-        }
-      ]
-    },
-    {
-      "id": "86dc8c5e0abb",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
-      "count": 38,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 368,
-        "latest_cycle": 612,
-        "evidence_age_cycles": 38,
-        "evidence_expires_cycle": 812,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 32,
-          "cycle": "368",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 33,
-          "cycle": "369",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 34,
-          "cycle": "370",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 35,
-          "cycle": "371",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 36,
-          "cycle": "372",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
-          "environment": {}
-        }
-      ]
-    },
-    {
       "id": "ad0190a1ca64",
       "classification": "script",
       "kind": "sequence",
       "shape": "posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md",
-      "count": 36,
+      "count": 39,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 562,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -2266,13 +2137,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "rebuilt feeds -> refreshed stale mastodon.md",
-      "count": 36,
+      "count": 39,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 562,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -2336,13 +2207,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md",
-      "count": 36,
+      "count": 39,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 562,
-        "latest_cycle": 650,
+        "latest_cycle": 657,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 850,
+        "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -2402,6 +2273,146 @@
       ]
     },
     {
+      "id": "86dc8c5e0abb",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+      "count": 39,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 368,
+        "latest_cycle": 650,
+        "evidence_age_cycles": 7,
+        "evidence_expires_cycle": 850,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 32,
+          "cycle": "368",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 33,
+          "cycle": "369",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 34,
+          "cycle": "370",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 35,
+          "cycle": "371",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 36,
+          "cycle": "372",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "762613b8a2e1",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+      "count": 38,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 346,
+        "latest_cycle": 557,
+        "evidence_age_cycles": 100,
+        "evidence_expires_cycle": 757,
+        "evidence_status": "aging"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 10,
+          "cycle": "346",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 11,
+          "cycle": "347",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 17,
+          "cycle": "353",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 20,
+          "cycle": "356",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 22,
+          "cycle": "358",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "268950a4fb0c",
       "classification": "fixture",
       "kind": "note",
@@ -2411,7 +2422,7 @@
       "evidence": {
         "first_cycle": 336,
         "latest_cycle": 553,
-        "evidence_age_cycles": 97,
+        "evidence_age_cycles": 104,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -2477,7 +2488,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 556,
-        "evidence_age_cycles": 94,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 756,
         "evidence_status": "aging"
       },
@@ -2547,7 +2558,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 610,
-        "evidence_age_cycles": 40,
+        "evidence_age_cycles": 47,
         "evidence_expires_cycle": 810,
         "evidence_status": "fresh"
       },
@@ -2617,7 +2628,7 @@
       "evidence": {
         "first_cycle": 336,
         "latest_cycle": 553,
-        "evidence_age_cycles": 97,
+        "evidence_age_cycles": 104,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -2687,7 +2698,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 540,
-        "evidence_age_cycles": 110,
+        "evidence_age_cycles": 117,
         "evidence_expires_cycle": 740,
         "evidence_status": "aging"
       },
@@ -2757,7 +2768,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 540,
-        "evidence_age_cycles": 110,
+        "evidence_age_cycles": 117,
         "evidence_expires_cycle": 740,
         "evidence_status": "aging"
       },
@@ -2827,7 +2838,7 @@
       "evidence": {
         "first_cycle": 369,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -2897,7 +2908,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 367,
-        "evidence_age_cycles": 283,
+        "evidence_age_cycles": 290,
         "evidence_expires_cycle": 567,
         "evidence_status": "stale"
       },
@@ -2967,7 +2978,7 @@
       "evidence": {
         "first_cycle": 336,
         "latest_cycle": 549,
-        "evidence_age_cycles": 101,
+        "evidence_age_cycles": 108,
         "evidence_expires_cycle": 749,
         "evidence_status": "aging"
       },
@@ -3037,7 +3048,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 366,
-        "evidence_age_cycles": 284,
+        "evidence_age_cycles": 291,
         "evidence_expires_cycle": 566,
         "evidence_status": "stale"
       },
@@ -3107,7 +3118,7 @@
       "evidence": {
         "first_cycle": 338,
         "latest_cycle": 642,
-        "evidence_age_cycles": 8,
+        "evidence_age_cycles": 15,
         "evidence_expires_cycle": 842,
         "evidence_status": "fresh"
       },
@@ -3173,7 +3184,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 408,
-        "evidence_age_cycles": 242,
+        "evidence_age_cycles": 249,
         "evidence_expires_cycle": 608,
         "evidence_status": "stale"
       },
@@ -3243,7 +3254,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 408,
-        "evidence_age_cycles": 242,
+        "evidence_age_cycles": 249,
         "evidence_expires_cycle": 608,
         "evidence_status": "stale"
       },
@@ -3313,7 +3324,7 @@
       "evidence": {
         "first_cycle": 381,
         "latest_cycle": 418,
-        "evidence_age_cycles": 232,
+        "evidence_age_cycles": 239,
         "evidence_expires_cycle": 618,
         "evidence_status": "stale"
       },
@@ -3379,7 +3390,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 408,
-        "evidence_age_cycles": 242,
+        "evidence_age_cycles": 249,
         "evidence_expires_cycle": 608,
         "evidence_status": "stale"
       },
@@ -3449,7 +3460,7 @@
       "evidence": {
         "first_cycle": 338,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -3515,7 +3526,7 @@
       "evidence": {
         "first_cycle": 351,
         "latest_cycle": 644,
-        "evidence_age_cycles": 6,
+        "evidence_age_cycles": 13,
         "evidence_expires_cycle": 844,
         "evidence_status": "fresh"
       },
@@ -3585,7 +3596,7 @@
       "evidence": {
         "first_cycle": 338,
         "latest_cycle": 642,
-        "evidence_age_cycles": 8,
+        "evidence_age_cycles": 15,
         "evidence_expires_cycle": 842,
         "evidence_status": "fresh"
       },
@@ -3655,7 +3666,7 @@
       "evidence": {
         "first_cycle": 351,
         "latest_cycle": 644,
-        "evidence_age_cycles": 6,
+        "evidence_age_cycles": 13,
         "evidence_expires_cycle": 844,
         "evidence_status": "fresh"
       },
@@ -3725,7 +3736,7 @@
       "evidence": {
         "first_cycle": 338,
         "latest_cycle": 642,
-        "evidence_age_cycles": 8,
+        "evidence_age_cycles": 15,
         "evidence_expires_cycle": 842,
         "evidence_status": "fresh"
       },
@@ -3790,13 +3801,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "boosted starved drive connect",
-      "count": 18,
+      "count": 19,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 440,
-        "latest_cycle": 646,
-        "evidence_age_cycles": 4,
-        "evidence_expires_cycle": 846,
+        "latest_cycle": 656,
+        "evidence_age_cycles": 1,
+        "evidence_expires_cycle": 856,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
@@ -3861,7 +3872,7 @@
       "evidence": {
         "first_cycle": 381,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -3931,7 +3942,7 @@
       "evidence": {
         "first_cycle": 381,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -3992,6 +4003,146 @@
       ]
     },
     {
+      "id": "f6bbdc2b7cc7",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> boosted starved drive explore",
+      "count": 16,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 394,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 58,
+          "cycle": "394",
+          "text": "refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 101,
+          "cycle": "437",
+          "text": "refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 107,
+          "cycle": "443",
+          "text": "refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 109,
+          "cycle": "445",
+          "text": "refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 121,
+          "cycle": "457",
+          "text": "refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "cb467d641593",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
+      "count": 16,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 394,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 58,
+          "cycle": "394",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 101,
+          "cycle": "437",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 107,
+          "cycle": "443",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 109,
+          "cycle": "445",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 121,
+          "cycle": "457",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "26453bb8810c",
       "classification": "script",
       "kind": "sequence",
@@ -4001,7 +4152,7 @@
       "evidence": {
         "first_cycle": 381,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -4071,7 +4222,7 @@
       "evidence": {
         "first_cycle": 381,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -4141,7 +4292,7 @@
       "evidence": {
         "first_cycle": 381,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -4202,146 +4353,6 @@
       ]
     },
     {
-      "id": "f6bbdc2b7cc7",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "refreshed stale email.md -> boosted starved drive explore",
-      "count": 15,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 394,
-        "latest_cycle": 601,
-        "evidence_age_cycles": 49,
-        "evidence_expires_cycle": 801,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 58,
-          "cycle": "394",
-          "text": "refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 101,
-          "cycle": "437",
-          "text": "refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 107,
-          "cycle": "443",
-          "text": "refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 109,
-          "cycle": "445",
-          "text": "refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 121,
-          "cycle": "457",
-          "text": "refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        }
-      ]
-    },
-    {
-      "id": "cb467d641593",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
-      "count": 15,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 394,
-        "latest_cycle": 601,
-        "evidence_age_cycles": 49,
-        "evidence_expires_cycle": 801,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 58,
-          "cycle": "394",
-          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 101,
-          "cycle": "437",
-          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 107,
-          "cycle": "443",
-          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 109,
-          "cycle": "445",
-          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 121,
-          "cycle": "457",
-          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore",
-          "environment": {}
-        }
-      ]
-    },
-    {
       "id": "2f371f107b25",
       "classification": "script",
       "kind": "sequence",
@@ -4351,7 +4362,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 367,
-        "evidence_age_cycles": 283,
+        "evidence_age_cycles": 290,
         "evidence_expires_cycle": 567,
         "evidence_status": "stale"
       },
@@ -4421,7 +4432,7 @@
       "evidence": {
         "first_cycle": 410,
         "latest_cycle": 422,
-        "evidence_age_cycles": 228,
+        "evidence_age_cycles": 235,
         "evidence_expires_cycle": 622,
         "evidence_status": "stale"
       },
@@ -4487,7 +4498,7 @@
       "evidence": {
         "first_cycle": 410,
         "latest_cycle": 421,
-        "evidence_age_cycles": 229,
+        "evidence_age_cycles": 236,
         "evidence_expires_cycle": 621,
         "evidence_status": "stale"
       },
@@ -4553,7 +4564,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 585,
-        "evidence_age_cycles": 65,
+        "evidence_age_cycles": 72,
         "evidence_expires_cycle": 785,
         "evidence_status": "aging"
       },
@@ -4623,7 +4634,7 @@
       "evidence": {
         "first_cycle": 349,
         "latest_cycle": 545,
-        "evidence_age_cycles": 105,
+        "evidence_age_cycles": 112,
         "evidence_expires_cycle": 745,
         "evidence_status": "aging"
       },
@@ -4693,7 +4704,7 @@
       "evidence": {
         "first_cycle": 349,
         "latest_cycle": 545,
-        "evidence_age_cycles": 105,
+        "evidence_age_cycles": 112,
         "evidence_expires_cycle": 745,
         "evidence_status": "aging"
       },
@@ -4763,7 +4774,7 @@
       "evidence": {
         "first_cycle": 410,
         "latest_cycle": 421,
-        "evidence_age_cycles": 229,
+        "evidence_age_cycles": 236,
         "evidence_expires_cycle": 621,
         "evidence_status": "stale"
       },
@@ -4833,7 +4844,7 @@
       "evidence": {
         "first_cycle": 338,
         "latest_cycle": 634,
-        "evidence_age_cycles": 16,
+        "evidence_age_cycles": 23,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -4903,7 +4914,7 @@
       "evidence": {
         "first_cycle": 364,
         "latest_cycle": 553,
-        "evidence_age_cycles": 97,
+        "evidence_age_cycles": 104,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -4973,7 +4984,7 @@
       "evidence": {
         "first_cycle": 364,
         "latest_cycle": 553,
-        "evidence_age_cycles": 97,
+        "evidence_age_cycles": 104,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -5043,7 +5054,7 @@
       "evidence": {
         "first_cycle": 364,
         "latest_cycle": 553,
-        "evidence_age_cycles": 97,
+        "evidence_age_cycles": 104,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -5113,7 +5124,7 @@
       "evidence": {
         "first_cycle": 339,
         "latest_cycle": 599,
-        "evidence_age_cycles": 51,
+        "evidence_age_cycles": 58,
         "evidence_expires_cycle": 799,
         "evidence_status": "aging"
       },
@@ -5179,7 +5190,7 @@
       "evidence": {
         "first_cycle": 335,
         "latest_cycle": 405,
-        "evidence_age_cycles": 245,
+        "evidence_age_cycles": 252,
         "evidence_expires_cycle": 605,
         "evidence_status": "stale"
       },
@@ -5249,7 +5260,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 646,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 11,
         "evidence_expires_cycle": 846,
         "evidence_status": "fresh"
       },
@@ -5319,7 +5330,7 @@
       "evidence": {
         "first_cycle": 338,
         "latest_cycle": 634,
-        "evidence_age_cycles": 16,
+        "evidence_age_cycles": 23,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -5389,7 +5400,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 646,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 11,
         "evidence_expires_cycle": 846,
         "evidence_status": "fresh"
       },
@@ -5455,13 +5466,13 @@
       "kind": "note",
       "shape": "version_control streak at 150",
       "count": 9,
-      "confidence": 0.95,
+      "confidence": 0.69,
       "evidence": {
         "first_cycle": 444,
         "latest_cycle": 452,
-        "evidence_age_cycles": 198,
+        "evidence_age_cycles": 205,
         "evidence_expires_cycle": 652,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -5525,7 +5536,7 @@
       "evidence": {
         "first_cycle": 349,
         "latest_cycle": 545,
-        "evidence_age_cycles": 105,
+        "evidence_age_cycles": 112,
         "evidence_expires_cycle": 745,
         "evidence_status": "aging"
       },
@@ -5595,9 +5606,9 @@
       "evidence": {
         "first_cycle": 596,
         "latest_cycle": 603,
-        "evidence_age_cycles": 47,
+        "evidence_age_cycles": 54,
         "evidence_expires_cycle": 803,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -5661,7 +5672,7 @@
       "evidence": {
         "first_cycle": 367,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -5731,7 +5742,7 @@
       "evidence": {
         "first_cycle": 367,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -5801,7 +5812,7 @@
       "evidence": {
         "first_cycle": 592,
         "latest_cycle": 598,
-        "evidence_age_cycles": 52,
+        "evidence_age_cycles": 59,
         "evidence_expires_cycle": 798,
         "evidence_status": "aging"
       },
@@ -5867,7 +5878,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 492,
-        "evidence_age_cycles": 158,
+        "evidence_age_cycles": 165,
         "evidence_expires_cycle": 692,
         "evidence_status": "aging"
       },
@@ -5937,7 +5948,7 @@
       "evidence": {
         "first_cycle": 348,
         "latest_cycle": 398,
-        "evidence_age_cycles": 252,
+        "evidence_age_cycles": 259,
         "evidence_expires_cycle": 598,
         "evidence_status": "stale"
       },
@@ -6003,7 +6014,7 @@
       "evidence": {
         "first_cycle": 433,
         "latest_cycle": 437,
-        "evidence_age_cycles": 213,
+        "evidence_age_cycles": 220,
         "evidence_expires_cycle": 637,
         "evidence_status": "stale"
       },
@@ -6069,7 +6080,7 @@
       "evidence": {
         "first_cycle": 418,
         "latest_cycle": 422,
-        "evidence_age_cycles": 228,
+        "evidence_age_cycles": 235,
         "evidence_expires_cycle": 622,
         "evidence_status": "stale"
       },
@@ -6135,7 +6146,7 @@
       "evidence": {
         "first_cycle": 428,
         "latest_cycle": 432,
-        "evidence_age_cycles": 218,
+        "evidence_age_cycles": 225,
         "evidence_expires_cycle": 632,
         "evidence_status": "stale"
       },
@@ -6201,7 +6212,7 @@
       "evidence": {
         "first_cycle": 418,
         "latest_cycle": 422,
-        "evidence_age_cycles": 228,
+        "evidence_age_cycles": 235,
         "evidence_expires_cycle": 622,
         "evidence_status": "stale"
       },
@@ -6267,13 +6278,13 @@
       "kind": "note",
       "shape": "noted 6 new visitors",
       "count": 4,
-      "confidence": 0.93,
+      "confidence": 0.7,
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 603,
-        "evidence_age_cycles": 47,
+        "evidence_age_cycles": 54,
         "evidence_expires_cycle": 803,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -6330,7 +6341,7 @@
       "evidence": {
         "first_cycle": 535,
         "latest_cycle": 538,
-        "evidence_age_cycles": 112,
+        "evidence_age_cycles": 119,
         "evidence_expires_cycle": 738,
         "evidence_status": "aging"
       },
@@ -6389,7 +6400,7 @@
       "evidence": {
         "first_cycle": 456,
         "latest_cycle": 459,
-        "evidence_age_cycles": 191,
+        "evidence_age_cycles": 198,
         "evidence_expires_cycle": 659,
         "evidence_status": "aging"
       },
@@ -6448,7 +6459,7 @@
       "evidence": {
         "first_cycle": 513,
         "latest_cycle": 516,
-        "evidence_age_cycles": 134,
+        "evidence_age_cycles": 141,
         "evidence_expires_cycle": 716,
         "evidence_status": "aging"
       },
@@ -6507,7 +6518,7 @@
       "evidence": {
         "first_cycle": 561,
         "latest_cycle": 564,
-        "evidence_age_cycles": 86,
+        "evidence_age_cycles": 93,
         "evidence_expires_cycle": 764,
         "evidence_status": "aging"
       },
@@ -6557,6 +6568,69 @@
       ]
     },
     {
+      "id": "c0c939626e14",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "boosted starved drive create -> boosted starved drive connect",
+      "count": 4,
+      "confidence": 0.8,
+      "evidence": {
+        "first_cycle": 562,
+        "latest_cycle": 656,
+        "evidence_age_cycles": 1,
+        "evidence_expires_cycle": 856,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 225,
+          "cycle": "562",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 228,
+          "cycle": "565",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 264,
+          "cycle": "620",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 297,
+          "cycle": "656",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "d5cf69060906",
       "classification": "script",
       "kind": "sequence",
@@ -6566,7 +6640,7 @@
       "evidence": {
         "first_cycle": 345,
         "latest_cycle": 366,
-        "evidence_age_cycles": 284,
+        "evidence_age_cycles": 291,
         "evidence_expires_cycle": 566,
         "evidence_status": "stale"
       },
@@ -6629,7 +6703,7 @@
       "evidence": {
         "first_cycle": 457,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -6692,7 +6766,7 @@
       "evidence": {
         "first_cycle": 345,
         "latest_cycle": 366,
-        "evidence_age_cycles": 284,
+        "evidence_age_cycles": 291,
         "evidence_expires_cycle": 566,
         "evidence_status": "stale"
       },
@@ -6755,7 +6829,7 @@
       "evidence": {
         "first_cycle": 408,
         "latest_cycle": 411,
-        "evidence_age_cycles": 239,
+        "evidence_age_cycles": 246,
         "evidence_expires_cycle": 611,
         "evidence_status": "stale"
       },
@@ -6818,7 +6892,7 @@
       "evidence": {
         "first_cycle": 411,
         "latest_cycle": 415,
-        "evidence_age_cycles": 235,
+        "evidence_age_cycles": 242,
         "evidence_expires_cycle": 615,
         "evidence_status": "stale"
       },
@@ -6881,7 +6955,7 @@
       "evidence": {
         "first_cycle": 411,
         "latest_cycle": 415,
-        "evidence_age_cycles": 235,
+        "evidence_age_cycles": 242,
         "evidence_expires_cycle": 615,
         "evidence_status": "stale"
       },
@@ -6944,7 +7018,7 @@
       "evidence": {
         "first_cycle": 520,
         "latest_cycle": 555,
-        "evidence_age_cycles": 95,
+        "evidence_age_cycles": 102,
         "evidence_expires_cycle": 755,
         "evidence_status": "aging"
       },
@@ -7003,13 +7077,13 @@
       "kind": "sequence",
       "shape": "noted 6 new visitors -> refreshed stale mastodon.md",
       "count": 4,
-      "confidence": 0.8,
+      "confidence": 0.6,
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 603,
-        "evidence_age_cycles": 47,
+        "evidence_age_cycles": 54,
         "evidence_expires_cycle": 803,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -7066,13 +7140,13 @@
       "kind": "sequence",
       "shape": "noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md",
       "count": 4,
-      "confidence": 0.8,
+      "confidence": 0.6,
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 603,
-        "evidence_age_cycles": 47,
+        "evidence_age_cycles": 54,
         "evidence_expires_cycle": 803,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -7133,7 +7207,7 @@
       "evidence": {
         "first_cycle": 418,
         "latest_cycle": 421,
-        "evidence_age_cycles": 229,
+        "evidence_age_cycles": 236,
         "evidence_expires_cycle": 621,
         "evidence_status": "stale"
       },
@@ -7187,6 +7261,69 @@
       ]
     },
     {
+      "id": "2dcfde708004",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+      "count": 4,
+      "confidence": 0.8,
+      "evidence": {
+        "first_cycle": 562,
+        "latest_cycle": 656,
+        "evidence_age_cycles": 1,
+        "evidence_expires_cycle": 856,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 225,
+          "cycle": "562",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 228,
+          "cycle": "565",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 264,
+          "cycle": "620",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 297,
+          "cycle": "656",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "39c20a0c34ad",
       "classification": "script",
       "kind": "sequence",
@@ -7196,7 +7333,7 @@
       "evidence": {
         "first_cycle": 408,
         "latest_cycle": 411,
-        "evidence_age_cycles": 239,
+        "evidence_age_cycles": 246,
         "evidence_expires_cycle": 611,
         "evidence_status": "stale"
       },
@@ -7259,7 +7396,7 @@
       "evidence": {
         "first_cycle": 412,
         "latest_cycle": 595,
-        "evidence_age_cycles": 55,
+        "evidence_age_cycles": 62,
         "evidence_expires_cycle": 795,
         "evidence_status": "aging"
       },
@@ -7322,7 +7459,7 @@
       "evidence": {
         "first_cycle": 427,
         "latest_cycle": 582,
-        "evidence_age_cycles": 68,
+        "evidence_age_cycles": 75,
         "evidence_expires_cycle": 782,
         "evidence_status": "aging"
       },
@@ -7385,7 +7522,7 @@
       "evidence": {
         "first_cycle": 540,
         "latest_cycle": 552,
-        "evidence_age_cycles": 98,
+        "evidence_age_cycles": 105,
         "evidence_expires_cycle": 752,
         "evidence_status": "aging"
       },
@@ -7448,7 +7585,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 634,
-        "evidence_age_cycles": 16,
+        "evidence_age_cycles": 23,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -7511,7 +7648,7 @@
       "evidence": {
         "first_cycle": 502,
         "latest_cycle": 504,
-        "evidence_age_cycles": 146,
+        "evidence_age_cycles": 153,
         "evidence_expires_cycle": 704,
         "evidence_status": "aging"
       },
@@ -7563,7 +7700,7 @@
       "evidence": {
         "first_cycle": 511,
         "latest_cycle": 513,
-        "evidence_age_cycles": 137,
+        "evidence_age_cycles": 144,
         "evidence_expires_cycle": 713,
         "evidence_status": "aging"
       },
@@ -7615,7 +7752,7 @@
       "evidence": {
         "first_cycle": 524,
         "latest_cycle": 526,
-        "evidence_age_cycles": 124,
+        "evidence_age_cycles": 131,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -7667,7 +7804,7 @@
       "evidence": {
         "first_cycle": 646,
         "latest_cycle": 648,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 9,
         "evidence_expires_cycle": 848,
         "evidence_status": "fresh"
       },
@@ -7719,7 +7856,7 @@
       "evidence": {
         "first_cycle": 492,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -7771,7 +7908,7 @@
       "evidence": {
         "first_cycle": 628,
         "latest_cycle": 630,
-        "evidence_age_cycles": 20,
+        "evidence_age_cycles": 27,
         "evidence_expires_cycle": 830,
         "evidence_status": "fresh"
       },
@@ -7823,7 +7960,7 @@
       "evidence": {
         "first_cycle": 556,
         "latest_cycle": 558,
-        "evidence_age_cycles": 92,
+        "evidence_age_cycles": 99,
         "evidence_expires_cycle": 758,
         "evidence_status": "aging"
       },
@@ -7875,7 +8012,7 @@
       "evidence": {
         "first_cycle": 626,
         "latest_cycle": 628,
-        "evidence_age_cycles": 22,
+        "evidence_age_cycles": 29,
         "evidence_expires_cycle": 828,
         "evidence_status": "fresh"
       },
@@ -7918,29 +8055,25 @@
       ]
     },
     {
-      "id": "c0c939626e14",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "boosted starved drive create -> boosted starved drive connect",
+      "id": "ac251929d545",
+      "classification": "fixture",
+      "kind": "note",
+      "shape": "writing streak at 300",
       "count": 3,
-      "confidence": 0.7,
+      "confidence": 0.81,
       "evidence": {
-        "first_cycle": 562,
-        "latest_cycle": 620,
-        "evidence_age_cycles": 30,
-        "evidence_expires_cycle": 820,
+        "first_cycle": 650,
+        "latest_cycle": 651,
+        "evidence_age_cycles": 6,
+        "evidence_expires_cycle": 851,
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
       "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
         "status": "missing",
@@ -7948,27 +8081,27 @@
         "sources": []
       },
       "risk": "low",
-      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "suggested_test": "Add positive and negative evidence cases for `writing streak at 300`.",
       "examples": [
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 225,
-          "cycle": "562",
-          "text": "boosted starved drive create -> boosted starved drive connect",
+          "line": 294,
+          "cycle": "650",
+          "text": "writing streak at 300",
           "environment": {}
         },
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 228,
-          "cycle": "565",
-          "text": "boosted starved drive create -> boosted starved drive connect",
+          "line": 295,
+          "cycle": "650",
+          "text": "writing streak at 300",
           "environment": {}
         },
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 264,
-          "cycle": "620",
-          "text": "boosted starved drive create -> boosted starved drive connect",
+          "line": 296,
+          "cycle": "651",
+          "text": "writing streak at 300",
           "environment": {}
         }
       ]
@@ -7983,7 +8116,7 @@
       "evidence": {
         "first_cycle": 403,
         "latest_cycle": 407,
-        "evidence_age_cycles": 243,
+        "evidence_age_cycles": 250,
         "evidence_expires_cycle": 607,
         "evidence_status": "stale"
       },
@@ -8030,6 +8163,62 @@
       ]
     },
     {
+      "id": "31e5a47b240d",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "boosted starved drive explore -> flagged research for potential essay",
+      "count": 3,
+      "confidence": 0.7,
+      "evidence": {
+        "first_cycle": 482,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 146,
+          "cycle": "482",
+          "text": "boosted starved drive explore -> flagged research for potential essay",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 256,
+          "cycle": "612",
+          "text": "boosted starved drive explore -> flagged research for potential essay",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 298,
+          "cycle": "657",
+          "text": "boosted starved drive explore -> flagged research for potential essay",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "8baf62e4b33c",
       "classification": "script",
       "kind": "sequence",
@@ -8039,7 +8228,7 @@
       "evidence": {
         "first_cycle": 529,
         "latest_cycle": 541,
-        "evidence_age_cycles": 109,
+        "evidence_age_cycles": 116,
         "evidence_expires_cycle": 741,
         "evidence_status": "aging"
       },
@@ -8095,7 +8284,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 391,
-        "evidence_age_cycles": 259,
+        "evidence_age_cycles": 266,
         "evidence_expires_cycle": 591,
         "evidence_status": "stale"
       },
@@ -8151,7 +8340,7 @@
       "evidence": {
         "first_cycle": 348,
         "latest_cycle": 398,
-        "evidence_age_cycles": 252,
+        "evidence_age_cycles": 259,
         "evidence_expires_cycle": 598,
         "evidence_status": "stale"
       },
@@ -8207,7 +8396,7 @@
       "evidence": {
         "first_cycle": 348,
         "latest_cycle": 398,
-        "evidence_age_cycles": 252,
+        "evidence_age_cycles": 259,
         "evidence_expires_cycle": 598,
         "evidence_status": "stale"
       },
@@ -8263,7 +8452,7 @@
       "evidence": {
         "first_cycle": 403,
         "latest_cycle": 407,
-        "evidence_age_cycles": 243,
+        "evidence_age_cycles": 250,
         "evidence_expires_cycle": 607,
         "evidence_status": "stale"
       },
@@ -8319,7 +8508,7 @@
       "evidence": {
         "first_cycle": 403,
         "latest_cycle": 407,
-        "evidence_age_cycles": 243,
+        "evidence_age_cycles": 250,
         "evidence_expires_cycle": 607,
         "evidence_status": "stale"
       },
@@ -8375,7 +8564,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 418,
-        "evidence_age_cycles": 232,
+        "evidence_age_cycles": 239,
         "evidence_expires_cycle": 618,
         "evidence_status": "stale"
       },
@@ -8431,7 +8620,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 418,
-        "evidence_age_cycles": 232,
+        "evidence_age_cycles": 239,
         "evidence_expires_cycle": 618,
         "evidence_status": "stale"
       },
@@ -8487,7 +8676,7 @@
       "evidence": {
         "first_cycle": 368,
         "latest_cycle": 391,
-        "evidence_age_cycles": 259,
+        "evidence_age_cycles": 266,
         "evidence_expires_cycle": 591,
         "evidence_status": "stale"
       },
@@ -8543,7 +8732,7 @@
       "evidence": {
         "first_cycle": 423,
         "latest_cycle": 425,
-        "evidence_age_cycles": 225,
+        "evidence_age_cycles": 232,
         "evidence_expires_cycle": 625,
         "evidence_status": "stale"
       },
@@ -8599,7 +8788,7 @@
       "evidence": {
         "first_cycle": 412,
         "latest_cycle": 555,
-        "evidence_age_cycles": 95,
+        "evidence_age_cycles": 102,
         "evidence_expires_cycle": 755,
         "evidence_status": "aging"
       },
@@ -8655,7 +8844,7 @@
       "evidence": {
         "first_cycle": 542,
         "latest_cycle": 552,
-        "evidence_age_cycles": 98,
+        "evidence_age_cycles": 105,
         "evidence_expires_cycle": 752,
         "evidence_status": "aging"
       },
@@ -8711,7 +8900,7 @@
       "evidence": {
         "first_cycle": 565,
         "latest_cycle": 627,
-        "evidence_age_cycles": 23,
+        "evidence_age_cycles": 30,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -8767,7 +8956,7 @@
       "evidence": {
         "first_cycle": 565,
         "latest_cycle": 627,
-        "evidence_age_cycles": 23,
+        "evidence_age_cycles": 30,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -8823,7 +9012,7 @@
       "evidence": {
         "first_cycle": 524,
         "latest_cycle": 526,
-        "evidence_age_cycles": 124,
+        "evidence_age_cycles": 131,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -8879,7 +9068,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 482,
-        "evidence_age_cycles": 168,
+        "evidence_age_cycles": 175,
         "evidence_expires_cycle": 682,
         "evidence_status": "aging"
       },
@@ -8926,62 +9115,6 @@
       ]
     },
     {
-      "id": "2dcfde708004",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-      "count": 3,
-      "confidence": 0.7,
-      "evidence": {
-        "first_cycle": 562,
-        "latest_cycle": 620,
-        "evidence_age_cycles": 30,
-        "evidence_expires_cycle": 820,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 225,
-          "cycle": "562",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 228,
-          "cycle": "565",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 264,
-          "cycle": "620",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {}
-        }
-      ]
-    },
-    {
       "id": "433b05ea7839",
       "classification": "script",
       "kind": "sequence",
@@ -8991,7 +9124,7 @@
       "evidence": {
         "first_cycle": 457,
         "latest_cycle": 527,
-        "evidence_age_cycles": 123,
+        "evidence_age_cycles": 130,
         "evidence_expires_cycle": 727,
         "evidence_status": "aging"
       },
@@ -9047,7 +9180,7 @@
       "evidence": {
         "first_cycle": 520,
         "latest_cycle": 531,
-        "evidence_age_cycles": 119,
+        "evidence_age_cycles": 126,
         "evidence_expires_cycle": 731,
         "evidence_status": "aging"
       },
@@ -9103,7 +9236,7 @@
       "evidence": {
         "first_cycle": 408,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -9159,7 +9292,7 @@
       "evidence": {
         "first_cycle": 432,
         "latest_cycle": 584,
-        "evidence_age_cycles": 66,
+        "evidence_age_cycles": 73,
         "evidence_expires_cycle": 784,
         "evidence_status": "aging"
       },
@@ -9215,7 +9348,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 418,
-        "evidence_age_cycles": 232,
+        "evidence_age_cycles": 239,
         "evidence_expires_cycle": 618,
         "evidence_status": "stale"
       },
@@ -9271,7 +9404,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 418,
-        "evidence_age_cycles": 232,
+        "evidence_age_cycles": 239,
         "evidence_expires_cycle": 618,
         "evidence_status": "stale"
       },
@@ -9327,7 +9460,7 @@
       "evidence": {
         "first_cycle": 367,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -9383,7 +9516,7 @@
       "evidence": {
         "first_cycle": 513,
         "latest_cycle": 515,
-        "evidence_age_cycles": 135,
+        "evidence_age_cycles": 142,
         "evidence_expires_cycle": 715,
         "evidence_status": "aging"
       },
@@ -9439,7 +9572,7 @@
       "evidence": {
         "first_cycle": 556,
         "latest_cycle": 558,
-        "evidence_age_cycles": 92,
+        "evidence_age_cycles": 99,
         "evidence_expires_cycle": 758,
         "evidence_status": "aging"
       },
@@ -9495,7 +9628,7 @@
       "evidence": {
         "first_cycle": 596,
         "latest_cycle": 598,
-        "evidence_age_cycles": 52,
+        "evidence_age_cycles": 59,
         "evidence_expires_cycle": 798,
         "evidence_status": "aging"
       },
@@ -9551,7 +9684,7 @@
       "evidence": {
         "first_cycle": 339,
         "latest_cycle": 420,
-        "evidence_age_cycles": 230,
+        "evidence_age_cycles": 237,
         "evidence_expires_cycle": 620,
         "evidence_status": "stale"
       },
@@ -9596,7 +9729,7 @@
       "evidence": {
         "first_cycle": 481,
         "latest_cycle": 521,
-        "evidence_age_cycles": 129,
+        "evidence_age_cycles": 136,
         "evidence_expires_cycle": 721,
         "evidence_status": "aging"
       },
@@ -9641,7 +9774,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -9686,7 +9819,7 @@
       "evidence": {
         "first_cycle": 358,
         "latest_cycle": 359,
-        "evidence_age_cycles": 291,
+        "evidence_age_cycles": 298,
         "evidence_expires_cycle": 559,
         "evidence_status": "stale"
       },
@@ -9731,7 +9864,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 482,
-        "evidence_age_cycles": 168,
+        "evidence_age_cycles": 175,
         "evidence_expires_cycle": 682,
         "evidence_status": "aging"
       },
@@ -9776,7 +9909,7 @@
       "evidence": {
         "first_cycle": 359,
         "latest_cycle": 360,
-        "evidence_age_cycles": 290,
+        "evidence_age_cycles": 297,
         "evidence_expires_cycle": 560,
         "evidence_status": "stale"
       },
@@ -9821,7 +9954,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 343,
-        "evidence_age_cycles": 307,
+        "evidence_age_cycles": 314,
         "evidence_expires_cycle": 543,
         "evidence_status": "stale"
       },
@@ -9866,7 +9999,7 @@
       "evidence": {
         "first_cycle": 357,
         "latest_cycle": 358,
-        "evidence_age_cycles": 292,
+        "evidence_age_cycles": 299,
         "evidence_expires_cycle": 558,
         "evidence_status": "stale"
       },
@@ -9911,7 +10044,7 @@
       "evidence": {
         "first_cycle": 459,
         "latest_cycle": 476,
-        "evidence_age_cycles": 174,
+        "evidence_age_cycles": 181,
         "evidence_expires_cycle": 676,
         "evidence_status": "aging"
       },
@@ -9956,7 +10089,7 @@
       "evidence": {
         "first_cycle": 408,
         "latest_cycle": 409,
-        "evidence_age_cycles": 241,
+        "evidence_age_cycles": 248,
         "evidence_expires_cycle": 609,
         "evidence_status": "stale"
       },
@@ -10001,7 +10134,7 @@
       "evidence": {
         "first_cycle": 394,
         "latest_cycle": 395,
-        "evidence_age_cycles": 255,
+        "evidence_age_cycles": 262,
         "evidence_expires_cycle": 595,
         "evidence_status": "stale"
       },
@@ -10046,7 +10179,7 @@
       "evidence": {
         "first_cycle": 410,
         "latest_cycle": 411,
-        "evidence_age_cycles": 239,
+        "evidence_age_cycles": 246,
         "evidence_expires_cycle": 611,
         "evidence_status": "stale"
       },
@@ -10091,7 +10224,7 @@
       "evidence": {
         "first_cycle": 371,
         "latest_cycle": 372,
-        "evidence_age_cycles": 278,
+        "evidence_age_cycles": 285,
         "evidence_expires_cycle": 572,
         "evidence_status": "stale"
       },
@@ -10136,7 +10269,7 @@
       "evidence": {
         "first_cycle": 403,
         "latest_cycle": 404,
-        "evidence_age_cycles": 246,
+        "evidence_age_cycles": 253,
         "evidence_expires_cycle": 604,
         "evidence_status": "stale"
       },
@@ -10181,7 +10314,7 @@
       "evidence": {
         "first_cycle": 370,
         "latest_cycle": 371,
-        "evidence_age_cycles": 279,
+        "evidence_age_cycles": 286,
         "evidence_expires_cycle": 571,
         "evidence_status": "stale"
       },
@@ -10226,7 +10359,7 @@
       "evidence": {
         "first_cycle": 409,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -10271,7 +10404,7 @@
       "evidence": {
         "first_cycle": 344,
         "latest_cycle": 345,
-        "evidence_age_cycles": 305,
+        "evidence_age_cycles": 312,
         "evidence_expires_cycle": 545,
         "evidence_status": "stale"
       },
@@ -10316,7 +10449,7 @@
       "evidence": {
         "first_cycle": 386,
         "latest_cycle": 387,
-        "evidence_age_cycles": 263,
+        "evidence_age_cycles": 270,
         "evidence_expires_cycle": 587,
         "evidence_status": "stale"
       },
@@ -10361,7 +10494,7 @@
       "evidence": {
         "first_cycle": 349,
         "latest_cycle": 350,
-        "evidence_age_cycles": 300,
+        "evidence_age_cycles": 307,
         "evidence_expires_cycle": 550,
         "evidence_status": "stale"
       },
@@ -10406,7 +10539,7 @@
       "evidence": {
         "first_cycle": 364,
         "latest_cycle": 365,
-        "evidence_age_cycles": 285,
+        "evidence_age_cycles": 292,
         "evidence_expires_cycle": 565,
         "evidence_status": "stale"
       },
@@ -10451,7 +10584,7 @@
       "evidence": {
         "first_cycle": 382,
         "latest_cycle": 383,
-        "evidence_age_cycles": 267,
+        "evidence_age_cycles": 274,
         "evidence_expires_cycle": 583,
         "evidence_status": "stale"
       },
@@ -10496,7 +10629,7 @@
       "evidence": {
         "first_cycle": 373,
         "latest_cycle": 374,
-        "evidence_age_cycles": 276,
+        "evidence_age_cycles": 283,
         "evidence_expires_cycle": 574,
         "evidence_status": "stale"
       },
@@ -10532,6 +10665,51 @@
       ]
     },
     {
+      "id": "62b0a872ae3c",
+      "classification": "fixture",
+      "kind": "note",
+      "shape": "deployed the-script-still-needs-a-caller",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 650,
+        "latest_cycle": 650,
+        "evidence_age_cycles": 7,
+        "evidence_expires_cycle": 850,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add positive and negative evidence cases for `deployed the-script-still-needs-a-caller`.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 294,
+          "cycle": "650",
+          "text": "deployed the-script-still-needs-a-caller",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 295,
+          "cycle": "650",
+          "text": "deployed the-script-still-needs-a-caller",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "a37c683f8077",
       "classification": "fixture",
       "kind": "note",
@@ -10541,7 +10719,7 @@
       "evidence": {
         "first_cycle": 407,
         "latest_cycle": 408,
-        "evidence_age_cycles": 242,
+        "evidence_age_cycles": 249,
         "evidence_expires_cycle": 608,
         "evidence_status": "stale"
       },
@@ -10577,6 +10755,51 @@
       ]
     },
     {
+      "id": "6eb60c330e33",
+      "classification": "fixture",
+      "kind": "note",
+      "shape": "deployed when-ideas-are-free-killing-them-is-the-job",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 656,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add positive and negative evidence cases for `deployed when-ideas-are-free-killing-them-is-the-job`.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 297,
+          "cycle": "656",
+          "text": "deployed when-ideas-are-free-killing-them-is-the-job",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 298,
+          "cycle": "657",
+          "text": "deployed when-ideas-are-free-killing-them-is-the-job",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "cc57bfcf3100",
       "classification": "fixture",
       "kind": "note",
@@ -10586,7 +10809,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 414,
-        "evidence_age_cycles": 236,
+        "evidence_age_cycles": 243,
         "evidence_expires_cycle": 614,
         "evidence_status": "stale"
       },
@@ -10631,7 +10854,7 @@
       "evidence": {
         "first_cycle": 404,
         "latest_cycle": 405,
-        "evidence_age_cycles": 245,
+        "evidence_age_cycles": 252,
         "evidence_expires_cycle": 605,
         "evidence_status": "stale"
       },
@@ -10672,13 +10895,13 @@
       "kind": "note",
       "shape": "publishing streak at 185",
       "count": 2,
-      "confidence": 0.52,
+      "confidence": 0.31,
       "evidence": {
         "first_cycle": 452,
         "latest_cycle": 453,
-        "evidence_age_cycles": 197,
+        "evidence_age_cycles": 204,
         "evidence_expires_cycle": 653,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -10721,7 +10944,7 @@
       "evidence": {
         "first_cycle": 494,
         "latest_cycle": 495,
-        "evidence_age_cycles": 155,
+        "evidence_age_cycles": 162,
         "evidence_expires_cycle": 695,
         "evidence_status": "aging"
       },
@@ -10762,13 +10985,13 @@
       "kind": "note",
       "shape": "publishing streak at 270",
       "count": 2,
-      "confidence": 0.69,
+      "confidence": 0.52,
       "evidence": {
         "first_cycle": 600,
         "latest_cycle": 601,
-        "evidence_age_cycles": 49,
+        "evidence_age_cycles": 56,
         "evidence_expires_cycle": 801,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -10811,7 +11034,7 @@
       "evidence": {
         "first_cycle": 606,
         "latest_cycle": 607,
-        "evidence_age_cycles": 43,
+        "evidence_age_cycles": 50,
         "evidence_expires_cycle": 807,
         "evidence_status": "fresh"
       },
@@ -10856,7 +11079,7 @@
       "evidence": {
         "first_cycle": 462,
         "latest_cycle": 463,
-        "evidence_age_cycles": 187,
+        "evidence_age_cycles": 194,
         "evidence_expires_cycle": 663,
         "evidence_status": "aging"
       },
@@ -10901,7 +11124,7 @@
       "evidence": {
         "first_cycle": 543,
         "latest_cycle": 544,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 113,
         "evidence_expires_cycle": 744,
         "evidence_status": "aging"
       },
@@ -10946,7 +11169,7 @@
       "evidence": {
         "first_cycle": 427,
         "latest_cycle": 428,
-        "evidence_age_cycles": 222,
+        "evidence_age_cycles": 229,
         "evidence_expires_cycle": 628,
         "evidence_status": "stale"
       },
@@ -10991,7 +11214,7 @@
       "evidence": {
         "first_cycle": 645,
         "latest_cycle": 646,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 11,
         "evidence_expires_cycle": 846,
         "evidence_status": "fresh"
       },
@@ -11036,7 +11259,7 @@
       "evidence": {
         "first_cycle": 390,
         "latest_cycle": 391,
-        "evidence_age_cycles": 259,
+        "evidence_age_cycles": 266,
         "evidence_expires_cycle": 591,
         "evidence_status": "stale"
       },
@@ -11081,7 +11304,7 @@
       "evidence": {
         "first_cycle": 344,
         "latest_cycle": 345,
-        "evidence_age_cycles": 305,
+        "evidence_age_cycles": 312,
         "evidence_expires_cycle": 545,
         "evidence_status": "stale"
       },
@@ -11126,7 +11349,7 @@
       "evidence": {
         "first_cycle": 355,
         "latest_cycle": 356,
-        "evidence_age_cycles": 294,
+        "evidence_age_cycles": 301,
         "evidence_expires_cycle": 556,
         "evidence_status": "stale"
       },
@@ -11171,7 +11394,7 @@
       "evidence": {
         "first_cycle": 361,
         "latest_cycle": 362,
-        "evidence_age_cycles": 288,
+        "evidence_age_cycles": 295,
         "evidence_expires_cycle": 562,
         "evidence_status": "stale"
       },
@@ -11216,7 +11439,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 466,
-        "evidence_age_cycles": 184,
+        "evidence_age_cycles": 191,
         "evidence_expires_cycle": 666,
         "evidence_status": "aging"
       },
@@ -11261,7 +11484,7 @@
       "evidence": {
         "first_cycle": 472,
         "latest_cycle": 473,
-        "evidence_age_cycles": 177,
+        "evidence_age_cycles": 184,
         "evidence_expires_cycle": 673,
         "evidence_status": "aging"
       },
@@ -11306,7 +11529,7 @@
       "evidence": {
         "first_cycle": 498,
         "latest_cycle": 499,
-        "evidence_age_cycles": 151,
+        "evidence_age_cycles": 158,
         "evidence_expires_cycle": 699,
         "evidence_status": "aging"
       },
@@ -11351,7 +11574,7 @@
       "evidence": {
         "first_cycle": 516,
         "latest_cycle": 517,
-        "evidence_age_cycles": 133,
+        "evidence_age_cycles": 140,
         "evidence_expires_cycle": 717,
         "evidence_status": "aging"
       },
@@ -11396,7 +11619,7 @@
       "evidence": {
         "first_cycle": 614,
         "latest_cycle": 615,
-        "evidence_age_cycles": 35,
+        "evidence_age_cycles": 42,
         "evidence_expires_cycle": 815,
         "evidence_status": "fresh"
       },
@@ -11441,7 +11664,7 @@
       "evidence": {
         "first_cycle": 432,
         "latest_cycle": 584,
-        "evidence_age_cycles": 66,
+        "evidence_age_cycles": 73,
         "evidence_expires_cycle": 784,
         "evidence_status": "aging"
       },
@@ -11490,7 +11713,7 @@
       "evidence": {
         "first_cycle": 583,
         "latest_cycle": 585,
-        "evidence_age_cycles": 65,
+        "evidence_age_cycles": 72,
         "evidence_expires_cycle": 785,
         "evidence_status": "aging"
       },
@@ -11539,7 +11762,7 @@
       "evidence": {
         "first_cycle": 339,
         "latest_cycle": 342,
-        "evidence_age_cycles": 308,
+        "evidence_age_cycles": 315,
         "evidence_expires_cycle": 542,
         "evidence_status": "stale"
       },
@@ -11579,55 +11802,6 @@
       ]
     },
     {
-      "id": "31e5a47b240d",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "boosted starved drive explore -> flagged research for potential essay",
-      "count": 2,
-      "confidence": 0.6,
-      "evidence": {
-        "first_cycle": 482,
-        "latest_cycle": 612,
-        "evidence_age_cycles": 38,
-        "evidence_expires_cycle": 812,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 146,
-          "cycle": "482",
-          "text": "boosted starved drive explore -> flagged research for potential essay",
-          "environment": {}
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 256,
-          "cycle": "612",
-          "text": "boosted starved drive explore -> flagged research for potential essay",
-          "environment": {}
-        }
-      ]
-    },
-    {
       "id": "6f9be47ec0e0",
       "classification": "script",
       "kind": "sequence",
@@ -11637,7 +11811,7 @@
       "evidence": {
         "first_cycle": 393,
         "latest_cycle": 394,
-        "evidence_age_cycles": 256,
+        "evidence_age_cycles": 263,
         "evidence_expires_cycle": 594,
         "evidence_status": "stale"
       },
@@ -11686,7 +11860,7 @@
       "evidence": {
         "first_cycle": 339,
         "latest_cycle": 342,
-        "evidence_age_cycles": 308,
+        "evidence_age_cycles": 315,
         "evidence_expires_cycle": 542,
         "evidence_status": "stale"
       },
@@ -11731,13 +11905,13 @@
       "kind": "sequence",
       "shape": "boosted starved drive express -> version_control streak at 150",
       "count": 2,
-      "confidence": 0.45,
+      "confidence": 0.27,
       "evidence": {
         "first_cycle": 448,
         "latest_cycle": 450,
-        "evidence_age_cycles": 200,
+        "evidence_age_cycles": 207,
         "evidence_expires_cycle": 650,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -11784,7 +11958,7 @@
       "evidence": {
         "first_cycle": 393,
         "latest_cycle": 394,
-        "evidence_age_cycles": 256,
+        "evidence_age_cycles": 263,
         "evidence_expires_cycle": 594,
         "evidence_status": "stale"
       },
@@ -11833,7 +12007,7 @@
       "evidence": {
         "first_cycle": 404,
         "latest_cycle": 405,
-        "evidence_age_cycles": 245,
+        "evidence_age_cycles": 252,
         "evidence_expires_cycle": 605,
         "evidence_status": "stale"
       },
@@ -11882,7 +12056,7 @@
       "evidence": {
         "first_cycle": 411,
         "latest_cycle": 415,
-        "evidence_age_cycles": 235,
+        "evidence_age_cycles": 242,
         "evidence_expires_cycle": 615,
         "evidence_status": "stale"
       },
@@ -11931,7 +12105,7 @@
       "evidence": {
         "first_cycle": 411,
         "latest_cycle": 415,
-        "evidence_age_cycles": 235,
+        "evidence_age_cycles": 242,
         "evidence_expires_cycle": 615,
         "evidence_status": "stale"
       },
@@ -11980,7 +12154,7 @@
       "evidence": {
         "first_cycle": 431,
         "latest_cycle": 432,
-        "evidence_age_cycles": 218,
+        "evidence_age_cycles": 225,
         "evidence_expires_cycle": 632,
         "evidence_status": "stale"
       },
@@ -12029,7 +12203,7 @@
       "evidence": {
         "first_cycle": 431,
         "latest_cycle": 432,
-        "evidence_age_cycles": 218,
+        "evidence_age_cycles": 225,
         "evidence_expires_cycle": 632,
         "evidence_status": "stale"
       },
@@ -12078,7 +12252,7 @@
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 478,
-        "evidence_age_cycles": 172,
+        "evidence_age_cycles": 179,
         "evidence_expires_cycle": 678,
         "evidence_status": "aging"
       },
@@ -12127,7 +12301,7 @@
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 478,
-        "evidence_age_cycles": 172,
+        "evidence_age_cycles": 179,
         "evidence_expires_cycle": 678,
         "evidence_status": "aging"
       },
@@ -12176,7 +12350,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 417,
-        "evidence_age_cycles": 233,
+        "evidence_age_cycles": 240,
         "evidence_expires_cycle": 617,
         "evidence_status": "stale"
       },
@@ -12225,7 +12399,7 @@
       "evidence": {
         "first_cycle": 415,
         "latest_cycle": 543,
-        "evidence_age_cycles": 107,
+        "evidence_age_cycles": 114,
         "evidence_expires_cycle": 743,
         "evidence_status": "aging"
       },
@@ -12274,7 +12448,7 @@
       "evidence": {
         "first_cycle": 541,
         "latest_cycle": 556,
-        "evidence_age_cycles": 94,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 756,
         "evidence_status": "aging"
       },
@@ -12323,7 +12497,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -12372,7 +12546,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -12421,7 +12595,7 @@
       "evidence": {
         "first_cycle": 358,
         "latest_cycle": 359,
-        "evidence_age_cycles": 291,
+        "evidence_age_cycles": 298,
         "evidence_expires_cycle": 559,
         "evidence_status": "stale"
       },
@@ -12470,7 +12644,7 @@
       "evidence": {
         "first_cycle": 358,
         "latest_cycle": 359,
-        "evidence_age_cycles": 291,
+        "evidence_age_cycles": 298,
         "evidence_expires_cycle": 559,
         "evidence_status": "stale"
       },
@@ -12519,7 +12693,7 @@
       "evidence": {
         "first_cycle": 366,
         "latest_cycle": 367,
-        "evidence_age_cycles": 283,
+        "evidence_age_cycles": 290,
         "evidence_expires_cycle": 567,
         "evidence_status": "stale"
       },
@@ -12568,7 +12742,7 @@
       "evidence": {
         "first_cycle": 366,
         "latest_cycle": 367,
-        "evidence_age_cycles": 283,
+        "evidence_age_cycles": 290,
         "evidence_expires_cycle": 567,
         "evidence_status": "stale"
       },
@@ -12617,7 +12791,7 @@
       "evidence": {
         "first_cycle": 366,
         "latest_cycle": 367,
-        "evidence_age_cycles": 283,
+        "evidence_age_cycles": 290,
         "evidence_expires_cycle": 567,
         "evidence_status": "stale"
       },
@@ -12666,7 +12840,7 @@
       "evidence": {
         "first_cycle": 353,
         "latest_cycle": 354,
-        "evidence_age_cycles": 296,
+        "evidence_age_cycles": 303,
         "evidence_expires_cycle": 554,
         "evidence_status": "stale"
       },
@@ -12715,7 +12889,7 @@
       "evidence": {
         "first_cycle": 353,
         "latest_cycle": 354,
-        "evidence_age_cycles": 296,
+        "evidence_age_cycles": 303,
         "evidence_expires_cycle": 554,
         "evidence_status": "stale"
       },
@@ -12764,7 +12938,7 @@
       "evidence": {
         "first_cycle": 353,
         "latest_cycle": 354,
-        "evidence_age_cycles": 296,
+        "evidence_age_cycles": 303,
         "evidence_expires_cycle": 554,
         "evidence_status": "stale"
       },
@@ -12813,7 +12987,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 482,
-        "evidence_age_cycles": 168,
+        "evidence_age_cycles": 175,
         "evidence_expires_cycle": 682,
         "evidence_status": "aging"
       },
@@ -12862,7 +13036,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 482,
-        "evidence_age_cycles": 168,
+        "evidence_age_cycles": 175,
         "evidence_expires_cycle": 682,
         "evidence_status": "aging"
       },
@@ -12911,7 +13085,7 @@
       "evidence": {
         "first_cycle": 359,
         "latest_cycle": 360,
-        "evidence_age_cycles": 290,
+        "evidence_age_cycles": 297,
         "evidence_expires_cycle": 560,
         "evidence_status": "stale"
       },
@@ -12960,7 +13134,7 @@
       "evidence": {
         "first_cycle": 359,
         "latest_cycle": 360,
-        "evidence_age_cycles": 290,
+        "evidence_age_cycles": 297,
         "evidence_expires_cycle": 560,
         "evidence_status": "stale"
       },
@@ -13009,7 +13183,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 343,
-        "evidence_age_cycles": 307,
+        "evidence_age_cycles": 314,
         "evidence_expires_cycle": 543,
         "evidence_status": "stale"
       },
@@ -13058,7 +13232,7 @@
       "evidence": {
         "first_cycle": 342,
         "latest_cycle": 343,
-        "evidence_age_cycles": 307,
+        "evidence_age_cycles": 314,
         "evidence_expires_cycle": 543,
         "evidence_status": "stale"
       },
@@ -13107,7 +13281,7 @@
       "evidence": {
         "first_cycle": 357,
         "latest_cycle": 358,
-        "evidence_age_cycles": 292,
+        "evidence_age_cycles": 299,
         "evidence_expires_cycle": 558,
         "evidence_status": "stale"
       },
@@ -13156,7 +13330,7 @@
       "evidence": {
         "first_cycle": 357,
         "latest_cycle": 358,
-        "evidence_age_cycles": 292,
+        "evidence_age_cycles": 299,
         "evidence_expires_cycle": 558,
         "evidence_status": "stale"
       },
@@ -13205,7 +13379,7 @@
       "evidence": {
         "first_cycle": 459,
         "latest_cycle": 476,
-        "evidence_age_cycles": 174,
+        "evidence_age_cycles": 181,
         "evidence_expires_cycle": 676,
         "evidence_status": "aging"
       },
@@ -13254,7 +13428,7 @@
       "evidence": {
         "first_cycle": 459,
         "latest_cycle": 476,
-        "evidence_age_cycles": 174,
+        "evidence_age_cycles": 181,
         "evidence_expires_cycle": 676,
         "evidence_status": "aging"
       },
@@ -13303,7 +13477,7 @@
       "evidence": {
         "first_cycle": 408,
         "latest_cycle": 409,
-        "evidence_age_cycles": 241,
+        "evidence_age_cycles": 248,
         "evidence_expires_cycle": 609,
         "evidence_status": "stale"
       },
@@ -13352,7 +13526,7 @@
       "evidence": {
         "first_cycle": 408,
         "latest_cycle": 409,
-        "evidence_age_cycles": 241,
+        "evidence_age_cycles": 248,
         "evidence_expires_cycle": 609,
         "evidence_status": "stale"
       },
@@ -13401,7 +13575,7 @@
       "evidence": {
         "first_cycle": 394,
         "latest_cycle": 395,
-        "evidence_age_cycles": 255,
+        "evidence_age_cycles": 262,
         "evidence_expires_cycle": 595,
         "evidence_status": "stale"
       },
@@ -13450,7 +13624,7 @@
       "evidence": {
         "first_cycle": 394,
         "latest_cycle": 395,
-        "evidence_age_cycles": 255,
+        "evidence_age_cycles": 262,
         "evidence_expires_cycle": 595,
         "evidence_status": "stale"
       },
@@ -13499,7 +13673,7 @@
       "evidence": {
         "first_cycle": 410,
         "latest_cycle": 411,
-        "evidence_age_cycles": 239,
+        "evidence_age_cycles": 246,
         "evidence_expires_cycle": 611,
         "evidence_status": "stale"
       },
@@ -13548,7 +13722,7 @@
       "evidence": {
         "first_cycle": 410,
         "latest_cycle": 411,
-        "evidence_age_cycles": 239,
+        "evidence_age_cycles": 246,
         "evidence_expires_cycle": 611,
         "evidence_status": "stale"
       },
@@ -13597,7 +13771,7 @@
       "evidence": {
         "first_cycle": 371,
         "latest_cycle": 372,
-        "evidence_age_cycles": 278,
+        "evidence_age_cycles": 285,
         "evidence_expires_cycle": 572,
         "evidence_status": "stale"
       },
@@ -13646,7 +13820,7 @@
       "evidence": {
         "first_cycle": 371,
         "latest_cycle": 372,
-        "evidence_age_cycles": 278,
+        "evidence_age_cycles": 285,
         "evidence_expires_cycle": 572,
         "evidence_status": "stale"
       },
@@ -13695,7 +13869,7 @@
       "evidence": {
         "first_cycle": 403,
         "latest_cycle": 404,
-        "evidence_age_cycles": 246,
+        "evidence_age_cycles": 253,
         "evidence_expires_cycle": 604,
         "evidence_status": "stale"
       },
@@ -13744,7 +13918,7 @@
       "evidence": {
         "first_cycle": 403,
         "latest_cycle": 404,
-        "evidence_age_cycles": 246,
+        "evidence_age_cycles": 253,
         "evidence_expires_cycle": 604,
         "evidence_status": "stale"
       },
@@ -13793,7 +13967,7 @@
       "evidence": {
         "first_cycle": 370,
         "latest_cycle": 371,
-        "evidence_age_cycles": 279,
+        "evidence_age_cycles": 286,
         "evidence_expires_cycle": 571,
         "evidence_status": "stale"
       },
@@ -13842,7 +14016,7 @@
       "evidence": {
         "first_cycle": 370,
         "latest_cycle": 371,
-        "evidence_age_cycles": 279,
+        "evidence_age_cycles": 286,
         "evidence_expires_cycle": 571,
         "evidence_status": "stale"
       },
@@ -13891,7 +14065,7 @@
       "evidence": {
         "first_cycle": 409,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -13940,7 +14114,7 @@
       "evidence": {
         "first_cycle": 409,
         "latest_cycle": 410,
-        "evidence_age_cycles": 240,
+        "evidence_age_cycles": 247,
         "evidence_expires_cycle": 610,
         "evidence_status": "stale"
       },
@@ -13989,7 +14163,7 @@
       "evidence": {
         "first_cycle": 344,
         "latest_cycle": 345,
-        "evidence_age_cycles": 305,
+        "evidence_age_cycles": 312,
         "evidence_expires_cycle": 545,
         "evidence_status": "stale"
       },
@@ -14038,7 +14212,7 @@
       "evidence": {
         "first_cycle": 344,
         "latest_cycle": 345,
-        "evidence_age_cycles": 305,
+        "evidence_age_cycles": 312,
         "evidence_expires_cycle": 545,
         "evidence_status": "stale"
       },
@@ -14087,7 +14261,7 @@
       "evidence": {
         "first_cycle": 386,
         "latest_cycle": 387,
-        "evidence_age_cycles": 263,
+        "evidence_age_cycles": 270,
         "evidence_expires_cycle": 587,
         "evidence_status": "stale"
       },
@@ -14136,7 +14310,7 @@
       "evidence": {
         "first_cycle": 386,
         "latest_cycle": 387,
-        "evidence_age_cycles": 263,
+        "evidence_age_cycles": 270,
         "evidence_expires_cycle": 587,
         "evidence_status": "stale"
       },
@@ -14185,7 +14359,7 @@
       "evidence": {
         "first_cycle": 349,
         "latest_cycle": 350,
-        "evidence_age_cycles": 300,
+        "evidence_age_cycles": 307,
         "evidence_expires_cycle": 550,
         "evidence_status": "stale"
       },
@@ -14234,7 +14408,7 @@
       "evidence": {
         "first_cycle": 349,
         "latest_cycle": 350,
-        "evidence_age_cycles": 300,
+        "evidence_age_cycles": 307,
         "evidence_expires_cycle": 550,
         "evidence_status": "stale"
       },
@@ -14283,7 +14457,7 @@
       "evidence": {
         "first_cycle": 364,
         "latest_cycle": 365,
-        "evidence_age_cycles": 285,
+        "evidence_age_cycles": 292,
         "evidence_expires_cycle": 565,
         "evidence_status": "stale"
       },
@@ -14332,7 +14506,7 @@
       "evidence": {
         "first_cycle": 364,
         "latest_cycle": 365,
-        "evidence_age_cycles": 285,
+        "evidence_age_cycles": 292,
         "evidence_expires_cycle": 565,
         "evidence_status": "stale"
       },
@@ -14381,7 +14555,7 @@
       "evidence": {
         "first_cycle": 382,
         "latest_cycle": 383,
-        "evidence_age_cycles": 267,
+        "evidence_age_cycles": 274,
         "evidence_expires_cycle": 583,
         "evidence_status": "stale"
       },
@@ -14430,7 +14604,7 @@
       "evidence": {
         "first_cycle": 382,
         "latest_cycle": 383,
-        "evidence_age_cycles": 267,
+        "evidence_age_cycles": 274,
         "evidence_expires_cycle": 583,
         "evidence_status": "stale"
       },
@@ -14479,7 +14653,7 @@
       "evidence": {
         "first_cycle": 373,
         "latest_cycle": 374,
-        "evidence_age_cycles": 276,
+        "evidence_age_cycles": 283,
         "evidence_expires_cycle": 574,
         "evidence_status": "stale"
       },
@@ -14528,7 +14702,7 @@
       "evidence": {
         "first_cycle": 373,
         "latest_cycle": 374,
-        "evidence_age_cycles": 276,
+        "evidence_age_cycles": 283,
         "evidence_expires_cycle": 574,
         "evidence_status": "stale"
       },
@@ -14568,6 +14742,104 @@
       ]
     },
     {
+      "id": "e19075f8695a",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "deployed the-script-still-needs-a-caller -> posted to mastodon",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 650,
+        "latest_cycle": 650,
+        "evidence_age_cycles": 7,
+        "evidence_expires_cycle": 850,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `deployed the-script-still-needs-a-caller -> posted to mastodon` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 294,
+          "cycle": "650",
+          "text": "deployed the-script-still-needs-a-caller -> posted to Mastodon",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 295,
+          "cycle": "650",
+          "text": "deployed the-script-still-needs-a-caller -> posted to Mastodon",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "86bc440fe298",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "deployed the-script-still-needs-a-caller -> posted to mastodon -> rebuilt feeds",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 650,
+        "latest_cycle": 650,
+        "evidence_age_cycles": 7,
+        "evidence_expires_cycle": 850,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `deployed the-script-still-needs-a-caller -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 294,
+          "cycle": "650",
+          "text": "deployed the-script-still-needs-a-caller -> posted to Mastodon -> rebuilt feeds",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 295,
+          "cycle": "650",
+          "text": "deployed the-script-still-needs-a-caller -> posted to Mastodon -> rebuilt feeds",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "ba0940a299b9",
       "classification": "script",
       "kind": "sequence",
@@ -14577,7 +14849,7 @@
       "evidence": {
         "first_cycle": 395,
         "latest_cycle": 396,
-        "evidence_age_cycles": 254,
+        "evidence_age_cycles": 261,
         "evidence_expires_cycle": 596,
         "evidence_status": "stale"
       },
@@ -14626,7 +14898,7 @@
       "evidence": {
         "first_cycle": 395,
         "latest_cycle": 396,
-        "evidence_age_cycles": 254,
+        "evidence_age_cycles": 261,
         "evidence_expires_cycle": 596,
         "evidence_status": "stale"
       },
@@ -14675,7 +14947,7 @@
       "evidence": {
         "first_cycle": 407,
         "latest_cycle": 408,
-        "evidence_age_cycles": 242,
+        "evidence_age_cycles": 249,
         "evidence_expires_cycle": 608,
         "evidence_status": "stale"
       },
@@ -14724,7 +14996,7 @@
       "evidence": {
         "first_cycle": 407,
         "latest_cycle": 408,
-        "evidence_age_cycles": 242,
+        "evidence_age_cycles": 249,
         "evidence_expires_cycle": 608,
         "evidence_status": "stale"
       },
@@ -14764,6 +15036,104 @@
       ]
     },
     {
+      "id": "cdfc303f42fc",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "deployed when-ideas-are-free-killing-them-is-the-job -> posted to mastodon",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 656,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `deployed when-ideas-are-free-killing-them-is-the-job -> posted to mastodon` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 297,
+          "cycle": "656",
+          "text": "deployed when-ideas-are-free-killing-them-is-the-job -> posted to Mastodon",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 298,
+          "cycle": "657",
+          "text": "deployed when-ideas-are-free-killing-them-is-the-job -> posted to Mastodon",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "5749b6421c2a",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "deployed when-ideas-are-free-killing-them-is-the-job -> posted to mastodon -> rebuilt feeds",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 656,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `deployed when-ideas-are-free-killing-them-is-the-job -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 297,
+          "cycle": "656",
+          "text": "deployed when-ideas-are-free-killing-them-is-the-job -> posted to Mastodon -> rebuilt feeds",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 298,
+          "cycle": "657",
+          "text": "deployed when-ideas-are-free-killing-them-is-the-job -> posted to Mastodon -> rebuilt feeds",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "84d7d5385ca3",
       "classification": "script",
       "kind": "sequence",
@@ -14773,7 +15143,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 414,
-        "evidence_age_cycles": 236,
+        "evidence_age_cycles": 243,
         "evidence_expires_cycle": 614,
         "evidence_status": "stale"
       },
@@ -14822,7 +15192,7 @@
       "evidence": {
         "first_cycle": 413,
         "latest_cycle": 414,
-        "evidence_age_cycles": 236,
+        "evidence_age_cycles": 243,
         "evidence_expires_cycle": 614,
         "evidence_status": "stale"
       },
@@ -14871,7 +15241,7 @@
       "evidence": {
         "first_cycle": 424,
         "latest_cycle": 585,
-        "evidence_age_cycles": 65,
+        "evidence_age_cycles": 72,
         "evidence_expires_cycle": 785,
         "evidence_status": "aging"
       },
@@ -14920,7 +15290,7 @@
       "evidence": {
         "first_cycle": 404,
         "latest_cycle": 405,
-        "evidence_age_cycles": 245,
+        "evidence_age_cycles": 252,
         "evidence_expires_cycle": 605,
         "evidence_status": "stale"
       },
@@ -14969,7 +15339,7 @@
       "evidence": {
         "first_cycle": 583,
         "latest_cycle": 585,
-        "evidence_age_cycles": 65,
+        "evidence_age_cycles": 72,
         "evidence_expires_cycle": 785,
         "evidence_status": "aging"
       },
@@ -15018,7 +15388,7 @@
       "evidence": {
         "first_cycle": 583,
         "latest_cycle": 585,
-        "evidence_age_cycles": 65,
+        "evidence_age_cycles": 72,
         "evidence_expires_cycle": 785,
         "evidence_status": "aging"
       },
@@ -15067,7 +15437,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -15116,7 +15486,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -15165,7 +15535,7 @@
       "evidence": {
         "first_cycle": 535,
         "latest_cycle": 536,
-        "evidence_age_cycles": 114,
+        "evidence_age_cycles": 121,
         "evidence_expires_cycle": 736,
         "evidence_status": "aging"
       },
@@ -15210,13 +15580,13 @@
       "kind": "sequence",
       "shape": "publishing streak at 270 -> version_control streak at 170",
       "count": 2,
-      "confidence": 0.6,
+      "confidence": 0.45,
       "evidence": {
         "first_cycle": 600,
         "latest_cycle": 601,
-        "evidence_age_cycles": 49,
+        "evidence_age_cycles": 56,
         "evidence_expires_cycle": 801,
-        "evidence_status": "fresh"
+        "evidence_status": "aging"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -15263,7 +15633,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 156,
+        "evidence_age_cycles": 163,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -15303,6 +15673,55 @@
       ]
     },
     {
+      "id": "cbaf9fc8cd81",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> boosted starved drive explore -> flagged research for potential essay",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 482,
+        "latest_cycle": 657,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 857,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 146,
+          "cycle": "482",
+          "text": "refreshed stale email.md -> boosted starved drive explore -> flagged research for potential essay",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 298,
+          "cycle": "657",
+          "text": "refreshed stale email.md -> boosted starved drive explore -> flagged research for potential essay",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "21bae2020ab7",
       "classification": "script",
       "kind": "sequence",
@@ -15312,7 +15731,7 @@
       "evidence": {
         "first_cycle": 356,
         "latest_cycle": 649,
-        "evidence_age_cycles": 1,
+        "evidence_age_cycles": 8,
         "evidence_expires_cycle": 849,
         "evidence_status": "fresh"
       },
@@ -15361,7 +15780,7 @@
       "evidence": {
         "first_cycle": 425,
         "latest_cycle": 599,
-        "evidence_age_cycles": 51,
+        "evidence_age_cycles": 58,
         "evidence_expires_cycle": 799,
         "evidence_status": "aging"
       },
@@ -15406,13 +15825,13 @@
       "kind": "sequence",
       "shape": "refreshed stale email.md -> publishing streak at 185",
       "count": 2,
-      "confidence": 0.45,
+      "confidence": 0.27,
       "evidence": {
         "first_cycle": 452,
         "latest_cycle": 453,
-        "evidence_age_cycles": 197,
+        "evidence_age_cycles": 204,
         "evidence_expires_cycle": 653,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -15459,7 +15878,7 @@
       "evidence": {
         "first_cycle": 494,
         "latest_cycle": 495,
-        "evidence_age_cycles": 155,
+        "evidence_age_cycles": 162,
         "evidence_expires_cycle": 695,
         "evidence_status": "aging"
       },
@@ -15508,7 +15927,7 @@
       "evidence": {
         "first_cycle": 525,
         "latest_cycle": 526,
-        "evidence_age_cycles": 124,
+        "evidence_age_cycles": 131,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -15557,7 +15976,7 @@
       "evidence": {
         "first_cycle": 525,
         "latest_cycle": 526,
-        "evidence_age_cycles": 124,
+        "evidence_age_cycles": 131,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -15606,7 +16025,7 @@
       "evidence": {
         "first_cycle": 536,
         "latest_cycle": 538,
-        "evidence_age_cycles": 112,
+        "evidence_age_cycles": 119,
         "evidence_expires_cycle": 738,
         "evidence_status": "aging"
       },
@@ -15655,7 +16074,7 @@
       "evidence": {
         "first_cycle": 606,
         "latest_cycle": 607,
-        "evidence_age_cycles": 43,
+        "evidence_age_cycles": 50,
         "evidence_expires_cycle": 807,
         "evidence_status": "fresh"
       },
@@ -15704,7 +16123,7 @@
       "evidence": {
         "first_cycle": 648,
         "latest_cycle": 648,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 9,
         "evidence_expires_cycle": 848,
         "evidence_status": "fresh"
       },
@@ -15753,7 +16172,7 @@
       "evidence": {
         "first_cycle": 367,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -15802,7 +16221,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 566,
-        "evidence_age_cycles": 84,
+        "evidence_age_cycles": 91,
         "evidence_expires_cycle": 766,
         "evidence_status": "aging"
       },
@@ -15851,7 +16270,7 @@
       "evidence": {
         "first_cycle": 359,
         "latest_cycle": 407,
-        "evidence_age_cycles": 243,
+        "evidence_age_cycles": 250,
         "evidence_expires_cycle": 607,
         "evidence_status": "stale"
       },
@@ -15900,7 +16319,7 @@
       "evidence": {
         "first_cycle": 462,
         "latest_cycle": 463,
-        "evidence_age_cycles": 187,
+        "evidence_age_cycles": 194,
         "evidence_expires_cycle": 663,
         "evidence_status": "aging"
       },
@@ -15949,7 +16368,7 @@
       "evidence": {
         "first_cycle": 515,
         "latest_cycle": 516,
-        "evidence_age_cycles": 134,
+        "evidence_age_cycles": 141,
         "evidence_expires_cycle": 716,
         "evidence_status": "aging"
       },
@@ -15998,7 +16417,7 @@
       "evidence": {
         "first_cycle": 534,
         "latest_cycle": 546,
-        "evidence_age_cycles": 104,
+        "evidence_age_cycles": 111,
         "evidence_expires_cycle": 746,
         "evidence_status": "aging"
       },
@@ -16047,7 +16466,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 466,
-        "evidence_age_cycles": 184,
+        "evidence_age_cycles": 191,
         "evidence_expires_cycle": 666,
         "evidence_status": "aging"
       },
@@ -16096,7 +16515,7 @@
       "evidence": {
         "first_cycle": 626,
         "latest_cycle": 627,
-        "evidence_age_cycles": 23,
+        "evidence_age_cycles": 30,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -16136,6 +16555,55 @@
       ]
     },
     {
+      "id": "3d88fe1c42e3",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> writing streak at 300",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 650,
+        "latest_cycle": 651,
+        "evidence_age_cycles": 6,
+        "evidence_expires_cycle": 851,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> writing streak at 300` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 294,
+          "cycle": "650",
+          "text": "refreshed stale email.md -> writing streak at 300",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 296,
+          "cycle": "651",
+          "text": "refreshed stale email.md -> writing streak at 300",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "489f3e5a77f3",
       "classification": "script",
       "kind": "sequence",
@@ -16145,7 +16613,7 @@
       "evidence": {
         "first_cycle": 583,
         "latest_cycle": 585,
-        "evidence_age_cycles": 65,
+        "evidence_age_cycles": 72,
         "evidence_expires_cycle": 785,
         "evidence_status": "aging"
       },
@@ -16194,7 +16662,7 @@
       "evidence": {
         "first_cycle": 412,
         "latest_cycle": 414,
-        "evidence_age_cycles": 236,
+        "evidence_age_cycles": 243,
         "evidence_expires_cycle": 614,
         "evidence_status": "stale"
       },
@@ -16243,7 +16711,7 @@
       "evidence": {
         "first_cycle": 356,
         "latest_cycle": 649,
-        "evidence_age_cycles": 1,
+        "evidence_age_cycles": 8,
         "evidence_expires_cycle": 849,
         "evidence_status": "fresh"
       },
@@ -16288,13 +16756,13 @@
       "kind": "sequence",
       "shape": "refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 185",
       "count": 2,
-      "confidence": 0.45,
+      "confidence": 0.27,
       "evidence": {
         "first_cycle": 452,
         "latest_cycle": 453,
-        "evidence_age_cycles": 197,
+        "evidence_age_cycles": 204,
         "evidence_expires_cycle": 653,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {},
       "promotion_gate": {
@@ -16341,7 +16809,7 @@
       "evidence": {
         "first_cycle": 494,
         "latest_cycle": 495,
-        "evidence_age_cycles": 155,
+        "evidence_age_cycles": 162,
         "evidence_expires_cycle": 695,
         "evidence_status": "aging"
       },
@@ -16390,7 +16858,7 @@
       "evidence": {
         "first_cycle": 525,
         "latest_cycle": 526,
-        "evidence_age_cycles": 124,
+        "evidence_age_cycles": 131,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -16439,7 +16907,7 @@
       "evidence": {
         "first_cycle": 536,
         "latest_cycle": 538,
-        "evidence_age_cycles": 112,
+        "evidence_age_cycles": 119,
         "evidence_expires_cycle": 738,
         "evidence_status": "aging"
       },
@@ -16488,7 +16956,7 @@
       "evidence": {
         "first_cycle": 606,
         "latest_cycle": 607,
-        "evidence_age_cycles": 43,
+        "evidence_age_cycles": 50,
         "evidence_expires_cycle": 807,
         "evidence_status": "fresh"
       },
@@ -16537,7 +17005,7 @@
       "evidence": {
         "first_cycle": 648,
         "latest_cycle": 648,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 9,
         "evidence_expires_cycle": 848,
         "evidence_status": "fresh"
       },
@@ -16586,7 +17054,7 @@
       "evidence": {
         "first_cycle": 462,
         "latest_cycle": 463,
-        "evidence_age_cycles": 187,
+        "evidence_age_cycles": 194,
         "evidence_expires_cycle": 663,
         "evidence_status": "aging"
       },
@@ -16635,7 +17103,7 @@
       "evidence": {
         "first_cycle": 515,
         "latest_cycle": 516,
-        "evidence_age_cycles": 134,
+        "evidence_age_cycles": 141,
         "evidence_expires_cycle": 716,
         "evidence_status": "aging"
       },
@@ -16684,7 +17152,7 @@
       "evidence": {
         "first_cycle": 534,
         "latest_cycle": 546,
-        "evidence_age_cycles": 104,
+        "evidence_age_cycles": 111,
         "evidence_expires_cycle": 746,
         "evidence_status": "aging"
       },
@@ -16733,7 +17201,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 466,
-        "evidence_age_cycles": 184,
+        "evidence_age_cycles": 191,
         "evidence_expires_cycle": 666,
         "evidence_status": "aging"
       },
@@ -16782,7 +17250,7 @@
       "evidence": {
         "first_cycle": 626,
         "latest_cycle": 627,
-        "evidence_age_cycles": 23,
+        "evidence_age_cycles": 30,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -16822,6 +17290,55 @@
       ]
     },
     {
+      "id": "6b795e015b60",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 300",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 650,
+        "latest_cycle": 651,
+        "evidence_age_cycles": 6,
+        "evidence_expires_cycle": 851,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 300` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 294,
+          "cycle": "650",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 300",
+          "environment": {}
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 296,
+          "cycle": "651",
+          "text": "refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 300",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "c8f4127ec2e1",
       "classification": "script",
       "kind": "sequence",
@@ -16831,7 +17348,7 @@
       "evidence": {
         "first_cycle": 415,
         "latest_cycle": 543,
-        "evidence_age_cycles": 107,
+        "evidence_age_cycles": 114,
         "evidence_expires_cycle": 743,
         "evidence_status": "aging"
       },
@@ -16880,7 +17397,7 @@
       "evidence": {
         "first_cycle": 427,
         "latest_cycle": 556,
-        "evidence_age_cycles": 94,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 756,
         "evidence_status": "aging"
       },
@@ -16929,7 +17446,7 @@
       "evidence": {
         "first_cycle": 429,
         "latest_cycle": 430,
-        "evidence_age_cycles": 220,
+        "evidence_age_cycles": 227,
         "evidence_expires_cycle": 630,
         "evidence_status": "stale"
       },
@@ -16978,7 +17495,7 @@
       "evidence": {
         "first_cycle": 593,
         "latest_cycle": 594,
-        "evidence_age_cycles": 56,
+        "evidence_age_cycles": 63,
         "evidence_expires_cycle": 794,
         "evidence_status": "aging"
       },
@@ -17027,7 +17544,7 @@
       "evidence": {
         "first_cycle": 390,
         "latest_cycle": 645,
-        "evidence_age_cycles": 5,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -17076,7 +17593,7 @@
       "evidence": {
         "first_cycle": 359,
         "latest_cycle": 407,
-        "evidence_age_cycles": 243,
+        "evidence_age_cycles": 250,
         "evidence_expires_cycle": 607,
         "evidence_status": "stale"
       },
@@ -17125,7 +17642,7 @@
       "evidence": {
         "first_cycle": 535,
         "latest_cycle": 634,
-        "evidence_age_cycles": 16,
+        "evidence_age_cycles": 23,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -17174,7 +17691,7 @@
       "evidence": {
         "first_cycle": 543,
         "latest_cycle": 544,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 113,
         "evidence_expires_cycle": 744,
         "evidence_status": "aging"
       },
@@ -17223,7 +17740,7 @@
       "evidence": {
         "first_cycle": 516,
         "latest_cycle": 517,
-        "evidence_age_cycles": 133,
+        "evidence_age_cycles": 140,
         "evidence_expires_cycle": 717,
         "evidence_status": "aging"
       },
@@ -17272,7 +17789,7 @@
       "evidence": {
         "first_cycle": 395,
         "latest_cycle": 396,
-        "evidence_age_cycles": 254,
+        "evidence_age_cycles": 261,
         "evidence_expires_cycle": 596,
         "evidence_status": "stale"
       },

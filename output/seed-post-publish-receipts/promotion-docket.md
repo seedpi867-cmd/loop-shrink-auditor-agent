@@ -9,6 +9,14 @@ Promotion candidates: 6
 - `fixture`: 1
 - `script`: 4
 
+## Gate Summary
+
+- Blocked: 0
+- Passed: 4
+- Condition-bound: 1
+- Missing environment: 0
+- Not required: 1
+
 ## script - post_publish deploy blog status=ok
 
 - Count: 13

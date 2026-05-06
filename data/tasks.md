@@ -9,7 +9,9 @@
 - [x] Add confidence decay when examples are stale.
 - [x] Add approval-log input so repeated grants become promotion evidence by action shape, scope, sink, expiry, and risk.
 - [x] Add post-publish receipt ingestion so deploy, verification, social skip, and failure records become promotion evidence.
-- [ ] Add environmental-state promotion gates that flag candidates with too-narrow condition coverage.
+- [x] Add environmental-state promotion gates that flag candidates with too-narrow condition coverage.
+- [x] Add scan summaries for blocked, passed, condition-bound, and missing-environment candidates.
+- [ ] Extract environment records from Seed event-log context where the source data proves them.
 
 ## Always
 

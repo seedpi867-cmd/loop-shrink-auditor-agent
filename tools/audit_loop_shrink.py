@@ -583,13 +583,31 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
     return candidates
 
 
+def gate_summary(candidates: list[dict]) -> dict:
+    statuses = Counter(candidate["promotion_gate"]["status"] for candidate in candidates)
+    blocked = sum(
+        1 for candidate in candidates if candidate["promotion_gate"]["blocks_promotion"]
+    )
+    missing_environment = statuses.get("needs_environment_record", 0)
+    return {
+        "blocked": blocked,
+        "passed": statuses.get("passes_environment_gate", 0),
+        "condition_bound": statuses.get("condition_bound", 0),
+        "missing_environment": missing_environment,
+        "not_required": statuses.get("not_required", 0),
+        "by_status": dict(sorted(statuses.items())),
+    }
+
+
 def write_reports(candidates: list[dict], events: list[Event], output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     summary = Counter(candidate["classification"] for candidate in candidates)
+    gates = gate_summary(candidates)
     payload = {
         "event_count": len(events),
         "candidate_count": len(candidates),
         "summary": dict(sorted(summary.items())),
+        "gate_summary": gates,
         "candidates": candidates,
     }
     (output_dir / "promotion-map.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
@@ -607,6 +625,19 @@ def write_reports(candidates: list[dict], events: list[Event], output_dir: Path)
         for classification, count in sorted(summary.items()):
             lines.append(f"- `{classification}`: {count}")
         lines.append("")
+
+    lines.extend(
+        [
+            "## Gate Summary",
+            "",
+            f"- Blocked: {gates['blocked']}",
+            f"- Passed: {gates['passed']}",
+            f"- Condition-bound: {gates['condition_bound']}",
+            f"- Missing environment: {gates['missing_environment']}",
+            f"- Not required: {gates['not_required']}",
+            "",
+        ]
+    )
 
     for candidate in candidates:
         lines.extend(
@@ -635,6 +666,35 @@ def write_reports(candidates: list[dict], events: list[Event], output_dir: Path)
 
     (output_dir / "promotion-docket.md").write_text("\n".join(lines), encoding="utf-8")
 
+    summary_lines = [
+        "# Scan Summary",
+        "",
+        f"Events scanned: {len(events)}",
+        f"Promotion candidates: {len(candidates)}",
+        "",
+        "## Candidate Classes",
+        "",
+    ]
+    if summary:
+        for classification, count in sorted(summary.items()):
+            summary_lines.append(f"- `{classification}`: {count}")
+    else:
+        summary_lines.append("- none")
+    summary_lines.extend(
+        [
+            "",
+            "## Promotion Gates",
+            "",
+            f"- Blocked: {gates['blocked']}",
+            f"- Passed: {gates['passed']}",
+            f"- Condition-bound: {gates['condition_bound']}",
+            f"- Missing environment: {gates['missing_environment']}",
+            f"- Not required: {gates['not_required']}",
+            "",
+        ]
+    )
+    (output_dir / "scan-summary.md").write_text("\n".join(summary_lines), encoding="utf-8")
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -645,7 +705,12 @@ def main() -> int:
     events = load_events(Path(args.input))
     candidates = build_candidates(events)
     write_reports(candidates, events, Path(args.output))
-    print(f"scanned {len(events)} events; wrote {len(candidates)} promotion candidates to {args.output}")
+    gates = gate_summary(candidates)
+    print(
+        f"scanned {len(events)} events; wrote {len(candidates)} promotion candidates to {args.output}; "
+        f"gates blocked={gates['blocked']} passed={gates['passed']} "
+        f"condition_bound={gates['condition_bound']} missing_environment={gates['missing_environment']}"
+    )
     return 0
 
 

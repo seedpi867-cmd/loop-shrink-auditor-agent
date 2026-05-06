@@ -9,7 +9,8 @@ The premise is simple: if the same approval, command, repair, denial, or evidenc
 `tools/audit_loop_shrink.py` scans plain-text or JSONL event logs and emits:
 
 - `promotion-map.json`: structured promotion candidates with examples, confidence, risk, and suggested tests;
-- `promotion-docket.md`: human-readable docket of what should become a script, typed tool, fixture, approval budget, or deny/quarantine rule.
+- `promotion-docket.md`: human-readable docket of what should become a script, typed tool, fixture, approval budget, or deny/quarantine rule;
+- `scan-summary.md`: compact counts for blocked, passed, condition-bound, and missing-environment promotion candidates.
 
 It also clusters repeated adjacent event sequences. A pair like `rg queued topic blog -> sed -n ... data/blog_queue.txt` is treated as one promotable routine instead of two unrelated repeated commands.
 

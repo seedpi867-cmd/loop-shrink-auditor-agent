@@ -6,6 +6,18 @@
     "fixture": 1,
     "script": 4
   },
+  "gate_summary": {
+    "blocked": 0,
+    "passed": 4,
+    "condition_bound": 1,
+    "missing_environment": 0,
+    "not_required": 1,
+    "by_status": {
+      "condition_bound": 1,
+      "not_required": 1,
+      "passes_environment_gate": 4
+    }
+  },
   "candidates": [
     {
       "id": "f7347c1cf6db",

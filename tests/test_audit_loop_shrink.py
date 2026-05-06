@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.audit_loop_shrink import Event, build_candidates, load_events, write_reports
+from tools.audit_loop_shrink import Event, build_candidates, gate_summary, load_events, write_reports
 
 
 class LoopShrinkAuditTests(unittest.TestCase):
@@ -52,9 +52,30 @@ class LoopShrinkAuditTests(unittest.TestCase):
             output = Path(tmp)
             write_reports(candidates, events, output)
             payload = json.loads((output / "promotion-map.json").read_text())
+            scan_summary = (output / "scan-summary.md").read_text()
 
         self.assertGreaterEqual(payload["candidate_count"], 4)
         self.assertIn("script", payload["summary"])
+        self.assertIn("gate_summary", payload)
+        self.assertIn("- Blocked:", scan_summary)
+        self.assertIn("- Missing environment:", scan_summary)
+
+    def test_gate_summary_counts_promotion_states(self):
+        candidates = [
+            {"promotion_gate": {"status": "needs_environment_record", "blocks_promotion": True}},
+            {"promotion_gate": {"status": "passes_environment_gate", "blocks_promotion": False}},
+            {"promotion_gate": {"status": "condition_bound", "blocks_promotion": False}},
+            {"promotion_gate": {"status": "blocked_narrow_environment", "blocks_promotion": True}},
+            {"promotion_gate": {"status": "not_required", "blocks_promotion": False}},
+        ]
+
+        summary = gate_summary(candidates)
+
+        self.assertEqual(summary["blocked"], 2)
+        self.assertEqual(summary["passed"], 1)
+        self.assertEqual(summary["condition_bound"], 1)
+        self.assertEqual(summary["missing_environment"], 1)
+        self.assertEqual(summary["not_required"], 1)
 
     def test_repeated_adjacent_commands_promote_sequence(self):
         events = load_events(Path("samples/events"))

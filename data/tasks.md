@@ -8,7 +8,8 @@
 - [x] Add sequence clustering for multi-command routines.
 - [x] Add confidence decay when examples are stale.
 - [x] Add approval-log input so repeated grants become promotion evidence by action shape, scope, sink, expiry, and risk.
-- [ ] Add a receipt-emitting command for post-publish routines promoted by approval-log evidence.
+- [x] Add post-publish receipt ingestion so deploy, verification, social skip, and failure records become promotion evidence.
+- [ ] Add environmental-state promotion gates that flag candidates with too-narrow condition coverage.
 
 ## Always
 

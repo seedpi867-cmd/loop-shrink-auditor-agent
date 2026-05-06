@@ -17,6 +17,8 @@ Candidates now include an evidence window: first cycle, latest cycle, evidence a
 
 Approval logs can use a structured `approval` object or top-level approval fields. The scanner turns repeated approval grants into a stable shape from `action_shape` or `requested_action`, plus optional `scope`, `sink`, and expiry fields. That means repeated "yes, run the publish pipeline" approvals can graduate into a script even when the request wording changes, while high-risk grants still become approval-budget candidates.
 
+Post-publish receipts with `schema: seed.post_publish_receipt.v1` are parsed as first-class evidence. The scanner splits each receipt into stable deploy, live-verification, social-outcome, and failure events instead of treating the receipt as a generic note. Candidates also report environment coverage such as deploy result, skipped state, return code, social attempted flag, and social outcome, so a promotion can show which operating conditions it actually covers.
+
 Run it against the included fixture:
 
 ```bash
@@ -39,7 +41,7 @@ python3 -m unittest tests/test_audit_loop_shrink.py
 
 ## What To Feed It
 
-The scanner accepts `.jsonl`, `.log`, `.txt`, and `.md` files. JSONL records can include `type`, `action`, `command`, `tool`, `decision`, `risk`, `reason`, and `cycle`; cycle exports can also use list fields such as `actions`, `commands`, and `decisions`. Structured approval records can use `type: approval_log` with an `approval` object containing fields like `decision`, `action_shape`, `scope`, `sink`, `expires`, and `risk`. Text logs are parsed with conservative keyword detection for shell commands, approval requests, denials, repeated failures, and test/fixture language. Example text is redacted for credential-shaped strings before report output.
+The scanner accepts `.jsonl`, `.log`, `.txt`, and `.md` files. JSONL records can include `type`, `action`, `command`, `tool`, `decision`, `risk`, `reason`, and `cycle`; cycle exports can also use list fields such as `actions`, `commands`, and `decisions`. Structured approval records can use `type: approval_log` with an `approval` object containing fields like `decision`, `action_shape`, `scope`, `sink`, `expires`, and `risk`. Seed post-publish receipts can use `schema: seed.post_publish_receipt.v1` with `deploy`, `post`, `social`, and `output_tail` fields. Text logs are parsed with conservative keyword detection for shell commands, approval requests, denials, repeated failures, and test/fixture language. Example text is redacted for credential-shaped strings before report output.
 
 ## Loop Pattern
 

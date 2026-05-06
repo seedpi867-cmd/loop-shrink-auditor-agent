@@ -1,11 +1,11 @@
 {
-  "event_count": 19,
-  "candidate_count": 10,
+  "event_count": 25,
+  "candidate_count": 16,
   "summary": {
     "approval_budget": 2,
-    "deny_or_quarantine": 1,
-    "fixture": 1,
-    "script": 6
+    "deny_or_quarantine": 2,
+    "fixture": 2,
+    "script": 10
   },
   "candidates": [
     {
@@ -18,10 +18,11 @@
       "evidence": {
         "first_cycle": 1,
         "latest_cycle": 3,
-        "evidence_age_cycles": 14,
+        "evidence_age_cycles": 16,
         "evidence_expires_cycle": 203,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.",
       "examples": [
@@ -29,19 +30,22 @@
           "source": "samples/events/cycles.jsonl",
           "line": 1,
           "cycle": "1",
-          "text": "approve run rg over blog for queued topic"
+          "text": "approve run rg over blog for queued topic",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 2,
           "cycle": "2",
-          "text": "approve run rg over blog for queued topic"
+          "text": "approve run rg over blog for queued topic",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 3,
           "cycle": "3",
-          "text": "approve run rg over blog for queued topic"
+          "text": "approve run rg over blog for queued topic",
+          "environment": {}
         }
       ]
     },
@@ -55,10 +59,11 @@
       "evidence": {
         "first_cycle": 16,
         "latest_cycle": 17,
-        "evidence_age_cycles": 0,
+        "evidence_age_cycles": 2,
         "evidence_expires_cycle": 217,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.",
       "examples": [
@@ -66,13 +71,15 @@
           "source": "samples/events/cycles.jsonl",
           "line": 18,
           "cycle": "16",
-          "text": "approve action=post public status scope=mastodon account sink=public social"
+          "text": "approve action=post public status scope=mastodon account sink=public social",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 19,
           "cycle": "17",
-          "text": "approve action=post public status scope=mastodon account sink=public social"
+          "text": "approve action=post public status scope=mastodon account sink=public social",
+          "environment": {}
         }
       ]
     },
@@ -86,10 +93,11 @@
       "evidence": {
         "first_cycle": 8,
         "latest_cycle": 9,
-        "evidence_age_cycles": 8,
+        "evidence_age_cycles": 10,
         "evidence_expires_cycle": 209,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.",
       "examples": [
@@ -97,13 +105,15 @@
           "source": "samples/events/cycles.jsonl",
           "line": 8,
           "cycle": "8",
-          "text": "approve publish public post to mastodon account"
+          "text": "approve publish public post to mastodon account",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 9,
           "cycle": "9",
-          "text": "approve publish public post to mastodon account"
+          "text": "approve publish public post to mastodon account",
+          "environment": {}
         }
       ]
     },
@@ -117,10 +127,11 @@
       "evidence": {
         "first_cycle": 10,
         "latest_cycle": 11,
-        "evidence_age_cycles": 6,
+        "evidence_age_cycles": 8,
         "evidence_expires_cycle": 211,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.",
       "examples": [
@@ -128,13 +139,82 @@
           "source": "samples/events/cycles.jsonl",
           "line": 10,
           "cycle": "10",
-          "text": "blocked retry after mastodon 403 suspended account"
+          "text": "blocked retry after mastodon 403 suspended account",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 11,
           "cycle": "11",
-          "text": "blocked retry after mastodon 403 suspended account"
+          "text": "blocked retry after mastodon 403 suspended account",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "73bbca4b1363",
+      "classification": "deny_or_quarantine",
+      "kind": "denial",
+      "shape": "post_publish social outcome=skipped_account_suspended",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 18,
+        "latest_cycle": 19,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 219,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false"
+        ],
+        "social_outcome": [
+          "skipped_account_suspended"
+        ]
+      },
+      "risk": "medium",
+      "suggested_test": "Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 20,
+          "cycle": "18",
+          "text": "post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 21,
+          "cycle": "19",
+          "text": "post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
         }
       ]
     },
@@ -148,10 +228,11 @@
       "evidence": {
         "first_cycle": 6,
         "latest_cycle": 7,
-        "evidence_age_cycles": 10,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 207,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `expected output includes promotion-map json`.",
       "examples": [
@@ -159,13 +240,82 @@
           "source": "samples/events/cycles.jsonl",
           "line": 6,
           "cycle": "6",
-          "text": "expected output includes promotion-map json"
+          "text": "expected output includes promotion-map json",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 7,
           "cycle": "7",
-          "text": "expected output includes promotion-map json"
+          "text": "expected output includes promotion-map json",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "ae247d1aab65",
+      "classification": "fixture",
+      "kind": "fixture",
+      "shape": "post_publish verify live blog post",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 18,
+        "latest_cycle": 19,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 219,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false"
+        ],
+        "social_outcome": [
+          "skipped_account_suspended"
+        ]
+      },
+      "risk": "low",
+      "suggested_test": "Add positive and negative evidence cases for `post_publish verify live blog post`.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 20,
+          "cycle": "18",
+          "text": "post_publish verify live blog post",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 21,
+          "cycle": "19",
+          "text": "post_publish verify live blog post",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
         }
       ]
     },
@@ -179,10 +329,11 @@
       "evidence": {
         "first_cycle": 14,
         "latest_cycle": 15,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 4,
         "evidence_expires_cycle": 215,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.",
       "examples": [
@@ -190,13 +341,283 @@
           "source": "samples/events/cycles.jsonl",
           "line": 16,
           "cycle": "14",
-          "text": "approve action=run deploy-blog scope=blog publish pipeline"
+          "text": "approve action=run deploy-blog scope=blog publish pipeline",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 17,
           "cycle": "15",
-          "text": "approve action=run deploy-blog scope=blog publish pipeline"
+          "text": "approve action=run deploy-blog scope=blog publish pipeline",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "f7347c1cf6db",
+      "classification": "script",
+      "kind": "command",
+      "shape": "post_publish deploy blog status=ok",
+      "count": 2,
+      "confidence": 0.69,
+      "evidence": {
+        "first_cycle": 18,
+        "latest_cycle": 19,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 219,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false"
+        ],
+        "social_outcome": [
+          "skipped_account_suspended"
+        ]
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 20,
+          "cycle": "18",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 21,
+          "cycle": "19",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f5e5b1476e36",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "post_publish deploy blog status=ok -> post_publish verify live blog post",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 18,
+        "latest_cycle": 19,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 219,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false"
+        ],
+        "social_outcome": [
+          "skipped_account_suspended"
+        ]
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 20,
+          "cycle": "18",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 21,
+          "cycle": "19",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b8d57e1da186",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 18,
+        "latest_cycle": 19,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 219,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false"
+        ],
+        "social_outcome": [
+          "skipped_account_suspended"
+        ]
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 20,
+          "cycle": "18",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 21,
+          "cycle": "19",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ca973645c62e",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended",
+      "count": 2,
+      "confidence": 0.6,
+      "evidence": {
+        "first_cycle": 18,
+        "latest_cycle": 19,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 219,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false"
+        ],
+        "social_outcome": [
+          "skipped_account_suspended"
+        ]
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 20,
+          "cycle": "18",
+          "text": "post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 21,
+          "cycle": "19",
+          "text": "post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
         }
       ]
     },
@@ -210,10 +631,11 @@
       "evidence": {
         "first_cycle": 4,
         "latest_cycle": 5,
-        "evidence_age_cycles": 12,
+        "evidence_age_cycles": 14,
         "evidence_expires_cycle": 205,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.",
       "examples": [
@@ -221,13 +643,15 @@
           "source": "samples/events/cycles.jsonl",
           "line": 4,
           "cycle": "4",
-          "text": "python3 tools/deploy-blog.sh"
+          "text": "python3 tools/deploy-blog.sh",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 5,
           "cycle": "5",
-          "text": "python3 tools/deploy-blog.sh"
+          "text": "python3 tools/deploy-blog.sh",
+          "environment": {}
         }
       ]
     },
@@ -241,10 +665,11 @@
       "evidence": {
         "first_cycle": 12,
         "latest_cycle": 13,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 6,
         "evidence_expires_cycle": 213,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
       "examples": [
@@ -252,13 +677,15 @@
           "source": "samples/events/cycles.jsonl",
           "line": 12,
           "cycle": "12",
-          "text": "rg queued topic blog"
+          "text": "rg queued topic blog",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 14,
           "cycle": "13",
-          "text": "rg queued topic blog"
+          "text": "rg queued topic blog",
+          "environment": {}
         }
       ]
     },
@@ -272,10 +699,11 @@
       "evidence": {
         "first_cycle": 12,
         "latest_cycle": 13,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 6,
         "evidence_expires_cycle": 213,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
       "examples": [
@@ -283,13 +711,15 @@
           "source": "samples/events/cycles.jsonl",
           "line": 12,
           "cycle": "12",
-          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt"
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 14,
           "cycle": "13",
-          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt"
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
         }
       ]
     },
@@ -303,10 +733,11 @@
       "evidence": {
         "first_cycle": 12,
         "latest_cycle": 13,
-        "evidence_age_cycles": 4,
+        "evidence_age_cycles": 6,
         "evidence_expires_cycle": 213,
         "evidence_status": "fresh"
       },
+      "environment_coverage": {},
       "risk": "low",
       "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
       "examples": [
@@ -314,13 +745,15 @@
           "source": "samples/events/cycles.jsonl",
           "line": 13,
           "cycle": "12",
-          "text": "sed -n 1,120p data/blog_queue.txt"
+          "text": "sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
           "line": 15,
           "cycle": "13",
-          "text": "sed -n 1,120p data/blog_queue.txt"
+          "text": "sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
         }
       ]
     }

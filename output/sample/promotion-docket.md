@@ -1,21 +1,22 @@
 # Promotion Docket
 
-Events scanned: 19
-Promotion candidates: 10
+Events scanned: 25
+Promotion candidates: 16
 
 ## Summary
 
 - `approval_budget`: 2
-- `deny_or_quarantine`: 1
-- `fixture`: 1
-- `script`: 6
+- `deny_or_quarantine`: 2
+- `fixture`: 2
+- `script`: 10
 
 ## script - approve run rg over blog for queued topic
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 1, latest cycle 3, age 14, expires cycle 203)
+- Evidence: fresh (first cycle 1, latest cycle 3, age 16, expires cycle 203)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:1` approve run rg over blog for queued topic
@@ -26,8 +27,9 @@ Promotion candidates: 10
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 16, latest cycle 17, age 0, expires cycle 217)
+- Evidence: fresh (first cycle 16, latest cycle 17, age 2, expires cycle 217)
 - Risk: high
+- Environment coverage: {}
 - Suggested test: Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.
 - Examples:
   - `samples/events/cycles.jsonl:18` approve action=post public status scope=mastodon account sink=public social
@@ -37,8 +39,9 @@ Promotion candidates: 10
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 8, latest cycle 9, age 8, expires cycle 209)
+- Evidence: fresh (first cycle 8, latest cycle 9, age 10, expires cycle 209)
 - Risk: high
+- Environment coverage: {}
 - Suggested test: Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.
 - Examples:
   - `samples/events/cycles.jsonl:8` approve publish public post to mastodon account
@@ -48,41 +51,117 @@ Promotion candidates: 10
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 10, latest cycle 11, age 6, expires cycle 211)
+- Evidence: fresh (first cycle 10, latest cycle 11, age 8, expires cycle 211)
 - Risk: medium
+- Environment coverage: {}
 - Suggested test: Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.
 - Examples:
   - `samples/events/cycles.jsonl:10` blocked retry after mastodon 403 suspended account
   - `samples/events/cycles.jsonl:11` blocked retry after mastodon 403 suspended account
 
+## deny_or_quarantine - post_publish social outcome=skipped_account_suspended
+
+- Count: 2
+- Confidence: 0.69
+- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
+- Risk: medium
+- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
+- Suggested test: Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.
+- Examples:
+  - `samples/events/cycles.jsonl:20` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+  - `samples/events/cycles.jsonl:21` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+
 ## fixture - expected output includes promotion-map json
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 6, latest cycle 7, age 10, expires cycle 207)
+- Evidence: fresh (first cycle 6, latest cycle 7, age 12, expires cycle 207)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add positive and negative evidence cases for `expected output includes promotion-map json`.
 - Examples:
   - `samples/events/cycles.jsonl:6` expected output includes promotion-map json
   - `samples/events/cycles.jsonl:7` expected output includes promotion-map json
 
+## fixture - post_publish verify live blog post
+
+- Count: 2
+- Confidence: 0.69
+- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
+- Risk: low
+- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
+- Suggested test: Add positive and negative evidence cases for `post_publish verify live blog post`.
+- Examples:
+  - `samples/events/cycles.jsonl:20` post_publish verify live blog post
+  - `samples/events/cycles.jsonl:21` post_publish verify live blog post
+
 ## script - approve action=run deploy-blog scope=blog publish pipeline
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 14, latest cycle 15, age 2, expires cycle 215)
+- Evidence: fresh (first cycle 14, latest cycle 15, age 4, expires cycle 215)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:16` approve action=run deploy-blog scope=blog publish pipeline
   - `samples/events/cycles.jsonl:17` approve action=run deploy-blog scope=blog publish pipeline
 
+## script - post_publish deploy blog status=ok
+
+- Count: 2
+- Confidence: 0.69
+- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
+- Risk: low
+- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
+- Suggested test: Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:20` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
+  - `samples/events/cycles.jsonl:21` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
+
+## script - post_publish deploy blog status=ok -> post_publish verify live blog post
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
+- Risk: low
+- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
+- Suggested test: Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:20` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post
+  - `samples/events/cycles.jsonl:21` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post
+
+## script - post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
+- Risk: low
+- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
+- Suggested test: Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:20` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+  - `samples/events/cycles.jsonl:21` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+
+## script - post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
+- Risk: low
+- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
+- Suggested test: Add a fixture proving `post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:20` post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+  - `samples/events/cycles.jsonl:21` post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+
 ## script - python3 tools/deploy-blog.sh
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 4, latest cycle 5, age 12, expires cycle 205)
+- Evidence: fresh (first cycle 4, latest cycle 5, age 14, expires cycle 205)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:4` python3 tools/deploy-blog.sh
@@ -92,8 +171,9 @@ Promotion candidates: 10
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 12, latest cycle 13, age 4, expires cycle 213)
+- Evidence: fresh (first cycle 12, latest cycle 13, age 6, expires cycle 213)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:12` rg queued topic blog
@@ -103,8 +183,9 @@ Promotion candidates: 10
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 12, latest cycle 13, age 4, expires cycle 213)
+- Evidence: fresh (first cycle 12, latest cycle 13, age 6, expires cycle 213)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:12` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
@@ -114,8 +195,9 @@ Promotion candidates: 10
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 12, latest cycle 13, age 4, expires cycle 213)
+- Evidence: fresh (first cycle 12, latest cycle 13, age 6, expires cycle 213)
 - Risk: low
+- Environment coverage: {}
 - Suggested test: Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:13` sed -n 1,120p data/blog_queue.txt

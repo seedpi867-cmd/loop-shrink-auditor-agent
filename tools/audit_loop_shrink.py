@@ -10,7 +10,7 @@ import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable
+from typing import Any, Iterable
 
 
 PROMOTION_THRESHOLD = 2
@@ -30,6 +30,7 @@ class Event:
     text: str
     risk: str = "unknown"
     cycle: str = ""
+    environment: dict[str, str] | None = None
 
 
 def normalize(value: str) -> str:
@@ -59,6 +60,10 @@ def iter_input_files(root: Path) -> Iterable[Path]:
 
 
 def events_from_record(record: dict, source: Path, line_number: int) -> list[Event]:
+    post_publish_events = events_from_post_publish_receipt(record, source, line_number)
+    if post_publish_events:
+        return post_publish_events
+
     approval_event = event_from_approval_record(record, source, line_number)
     if approval_event:
         return [approval_event]
@@ -91,6 +96,106 @@ def events_from_record(record: dict, source: Path, line_number: int) -> list[Eve
         )
         for text in texts
     ]
+
+
+def events_from_post_publish_receipt(record: dict, source: Path, line_number: int) -> list[Event]:
+    if record.get("schema") != "seed.post_publish_receipt.v1":
+        return []
+
+    deploy = record.get("deploy") if isinstance(record.get("deploy"), dict) else {}
+    social = record.get("social") if isinstance(record.get("social"), dict) else {}
+    post = record.get("post") if isinstance(record.get("post"), dict) else {}
+    output_tail = str(record.get("output_tail") or "")
+    cycle = str(record.get("cycle") or "")
+    environment = compact_environment(
+        {
+            "deploy_ok": deploy.get("ok"),
+            "deploy_skipped": deploy.get("skipped"),
+            "deploy_returncode": deploy.get("returncode"),
+            "social_attempted": social.get("attempted"),
+            "social_outcome": social.get("outcome"),
+            "post_slug_present": bool(post.get("slug")),
+        }
+    )
+    deploy_status = "ok" if deploy.get("ok") else "failed"
+
+    events = [
+        Event(
+            str(source),
+            line_number,
+            "command",
+            f"post_publish deploy blog status={deploy_status}",
+            redact_sensitive(
+                "post_publish deploy blog"
+                f" command={deploy.get('command') or '<unknown>'}"
+                f" ok={deploy.get('ok')}"
+                f" skipped={deploy.get('skipped')}"
+            ),
+            "low" if deploy.get("ok") else "medium",
+            cycle,
+            environment,
+        )
+    ]
+
+    if deploy.get("ok") and ("[verify] live:" in output_tail or deploy.get("skipped")):
+        events.append(
+            Event(
+                str(source),
+                line_number,
+                "fixture",
+                "post_publish verify live blog post",
+                "post_publish verify live blog post",
+                "low",
+                cycle,
+                environment,
+            )
+        )
+
+    social_outcome = str(social.get("outcome") or "").strip()
+    if social_outcome:
+        social_kind = "denial" if "skip" in social_outcome or "suspend" in social_outcome else "tool"
+        events.append(
+            Event(
+                str(source),
+                line_number,
+                social_kind,
+                f"post_publish social outcome={normalize(social_outcome)}",
+                redact_sensitive(
+                    "post_publish social"
+                    f" attempted={social.get('attempted')}"
+                    f" outcome={social_outcome}"
+                    f" reason={social.get('reason') or ''}"
+                ),
+                "medium" if social_kind == "denial" else "low",
+                cycle,
+                environment,
+            )
+        )
+
+    if not deploy.get("ok"):
+        events.append(
+            Event(
+                str(source),
+                line_number,
+                "failure",
+                "post_publish deploy failed",
+                redact_sensitive(f"post_publish deploy failed tail={output_tail[-180:]}"),
+                "medium",
+                cycle,
+                environment,
+            )
+        )
+
+    return events
+
+
+def compact_environment(values: dict[str, Any]) -> dict[str, str]:
+    environment: dict[str, str] = {}
+    for key, value in values.items():
+        if value is None:
+            continue
+        environment[key] = normalize(str(value))
+    return environment
 
 
 def event_from_approval_record(record: dict, source: Path, line_number: int) -> Event | None:
@@ -280,6 +385,14 @@ def evidence_window(events: list[Event], now_cycle: int | None) -> dict:
     }
 
 
+def environment_coverage(events: list[Event]) -> dict[str, list[str]]:
+    coverage: dict[str, set[str]] = defaultdict(set)
+    for event in events:
+        for key, value in (event.environment or {}).items():
+            coverage[key].add(value)
+    return {key: sorted(values) for key, values in sorted(coverage.items())}
+
+
 def confidence_for(base: float, evidence: dict) -> float:
     return round(min(0.95, base * evidence["freshness_multiplier"]), 2)
 
@@ -321,6 +434,7 @@ def build_candidates(events: list[Event]) -> list[dict]:
                 "count": len(grouped),
                 "confidence": confidence,
                 "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
+                "environment_coverage": environment_coverage(grouped),
                 "risk": risk_for(classification, len(grouped)),
                 "suggested_test": suggested_test(classification, shape),
                 "examples": [
@@ -329,6 +443,7 @@ def build_candidates(events: list[Event]) -> list[dict]:
                         "line": event.line,
                         "cycle": event.cycle,
                         "text": event.text,
+                        "environment": event.environment or {},
                     }
                     for event in grouped[:5]
                 ],
@@ -381,6 +496,7 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
                 "count": len(windows),
                 "confidence": confidence,
                 "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
+                "environment_coverage": environment_coverage(window_events),
                 "risk": risk_for("script", len(windows)),
                 "suggested_test": suggested_test("script", shape),
                 "examples": [
@@ -389,6 +505,7 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
                         "line": window[0].line,
                         "cycle": window[0].cycle,
                         "text": " -> ".join(event.text for event in window),
+                        "environment": window[0].environment or {},
                     }
                     for window in windows[:5]
                 ],
@@ -436,6 +553,7 @@ def write_reports(candidates: list[dict], events: list[Event], output_dir: Path)
                 f" age {candidate['evidence']['evidence_age_cycles']},"
                 f" expires cycle {candidate['evidence']['evidence_expires_cycle']})",
                 f"- Risk: {candidate['risk']}",
+                f"- Environment coverage: {candidate['environment_coverage'] or {}}",
                 f"- Suggested test: {candidate['suggested_test']}",
                 "- Examples:",
             ]

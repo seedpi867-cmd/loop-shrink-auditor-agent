@@ -106,6 +106,51 @@ class LoopShrinkAuditTests(unittest.TestCase):
         self.assertEqual(candidate["evidence"]["evidence_status"], "stale")
         self.assertLess(candidate["confidence"], 0.69)
 
+    def test_post_publish_receipts_are_first_class_evidence(self):
+        events = load_events(Path("samples/events"))
+        candidates = build_candidates(events)
+        shapes = {candidate["shape"]: candidate for candidate in candidates}
+
+        self.assertIn("post_publish deploy blog status=ok", shapes)
+        self.assertEqual(shapes["post_publish deploy blog status=ok"]["classification"], "script")
+        self.assertEqual(
+            shapes["post_publish deploy blog status=ok"]["environment_coverage"]["social_outcome"],
+            ["skipped_account_suspended"],
+        )
+
+        social_shape = "post_publish social outcome=skipped_account_suspended"
+        self.assertIn(social_shape, shapes)
+        self.assertEqual(shapes[social_shape]["classification"], "deny_or_quarantine")
+
+    def test_post_publish_receipt_failure_is_not_lost_as_note(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "receipts.jsonl"
+            receipt = {
+                "schema": "seed.post_publish_receipt.v1",
+                "cycle": 638,
+                "deploy": {
+                    "command": "the-agent-as-compiler",
+                    "ok": False,
+                    "returncode": 127,
+                    "skipped": False,
+                },
+                "output_tail": "[Errno 2] No such file or directory: 'the-agent-as-compiler'",
+                "post": {"slug": "434"},
+                "social": {
+                    "attempted": False,
+                    "outcome": "skipped_account_suspended",
+                    "reason": "tasks.md records disabled-login state",
+                },
+            }
+            path.write_text(json.dumps(receipt) + "\n", encoding="utf-8")
+
+            events = load_events(path)
+
+        self.assertTrue(any(event.shape == "post_publish deploy failed" for event in events))
+        failure = next(event for event in events if event.shape == "post_publish deploy failed")
+        self.assertEqual(failure.kind, "failure")
+        self.assertEqual(failure.environment["deploy_ok"], "false")
+
 
 if __name__ == "__main__":
     unittest.main()

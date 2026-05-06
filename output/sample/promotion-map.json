@@ -1,20 +1,20 @@
 {
-  "event_count": 25,
-  "candidate_count": 16,
+  "event_count": 27,
+  "candidate_count": 13,
   "summary": {
     "approval_budget": 2,
     "deny_or_quarantine": 2,
     "fixture": 2,
-    "script": 10
+    "script": 7
   },
   "gate_summary": {
-    "blocked": 12,
+    "blocked": 9,
     "passed": 0,
     "condition_bound": 2,
     "missing_environment": 8,
     "not_required": 2,
     "by_status": {
-      "blocked_narrow_environment": 4,
+      "blocked_narrow_environment": 1,
       "condition_bound": 2,
       "needs_environment_record": 8,
       "not_required": 2
@@ -78,6 +78,174 @@
       ]
     },
     {
+      "id": "8c491f2fcad1",
+      "classification": "script",
+      "kind": "command",
+      "shape": "rg queued topic blog",
+      "count": 3,
+      "confidence": 0.81,
+      "evidence": {
+        "first_cycle": 12,
+        "latest_cycle": 14,
+        "evidence_age_cycles": 5,
+        "evidence_expires_cycle": 214,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 12,
+          "cycle": "12",
+          "text": "rg queued topic blog",
+          "environment": {}
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 14,
+          "cycle": "13",
+          "text": "rg queued topic blog",
+          "environment": {}
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 16,
+          "cycle": "14",
+          "text": "rg queued topic blog",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "0a483b9c41ec",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+      "count": 3,
+      "confidence": 0.7,
+      "evidence": {
+        "first_cycle": 12,
+        "latest_cycle": 14,
+        "evidence_age_cycles": 5,
+        "evidence_expires_cycle": 214,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 12,
+          "cycle": "12",
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 14,
+          "cycle": "13",
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 16,
+          "cycle": "14",
+          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
+        }
+      ]
+    },
+    {
+      "id": "02b12983e034",
+      "classification": "script",
+      "kind": "command",
+      "shape": "sed -n 1,120p data/blog_queue.txt",
+      "count": 3,
+      "confidence": 0.81,
+      "evidence": {
+        "first_cycle": 12,
+        "latest_cycle": 14,
+        "evidence_age_cycles": 5,
+        "evidence_expires_cycle": 214,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 13,
+          "cycle": "12",
+          "text": "sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 15,
+          "cycle": "13",
+          "text": "sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
+        },
+        {
+          "source": "samples/events/cycles.jsonl",
+          "line": 17,
+          "cycle": "14",
+          "text": "sed -n 1,120p data/blog_queue.txt",
+          "environment": {}
+        }
+      ]
+    },
+    {
       "id": "f39249f977b0",
       "classification": "approval_budget",
       "kind": "approval",
@@ -112,14 +280,14 @@
       "examples": [
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 18,
+          "line": 20,
           "cycle": "16",
           "text": "approve action=post public status scope=mastodon account sink=public social",
           "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 19,
+          "line": 21,
           "cycle": "17",
           "text": "approve action=post public status scope=mastodon account sink=public social",
           "environment": {}
@@ -282,7 +450,7 @@
       "examples": [
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 20,
+          "line": 22,
           "cycle": "18",
           "text": "post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
           "environment": {
@@ -296,7 +464,7 @@
         },
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 21,
+          "line": 23,
           "cycle": "19",
           "text": "post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
           "environment": {
@@ -405,7 +573,7 @@
       "examples": [
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 20,
+          "line": 22,
           "cycle": "18",
           "text": "post_publish verify live blog post",
           "environment": {
@@ -419,7 +587,7 @@
         },
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 21,
+          "line": 23,
           "cycle": "19",
           "text": "post_publish verify live blog post",
           "environment": {
@@ -468,14 +636,14 @@
       "examples": [
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 16,
+          "line": 18,
           "cycle": "14",
           "text": "approve action=run deploy-blog scope=blog publish pipeline",
           "environment": {}
         },
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 17,
+          "line": 19,
           "cycle": "15",
           "text": "approve action=run deploy-blog scope=blog publish pipeline",
           "environment": {}
@@ -541,7 +709,7 @@
       "examples": [
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 20,
+          "line": 22,
           "cycle": "18",
           "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
           "environment": {
@@ -555,278 +723,9 @@
         },
         {
           "source": "samples/events/cycles.jsonl",
-          "line": 21,
+          "line": 23,
           "cycle": "19",
           "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        }
-      ]
-    },
-    {
-      "id": "f5e5b1476e36",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "post_publish deploy blog status=ok -> post_publish verify live blog post",
-      "count": 2,
-      "confidence": 0.6,
-      "evidence": {
-        "first_cycle": 18,
-        "latest_cycle": 19,
-        "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 219,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "deploy_ok": [
-          "true"
-        ],
-        "deploy_returncode": [
-          "0"
-        ],
-        "deploy_skipped": [
-          "false"
-        ],
-        "post_slug_present": [
-          "true"
-        ],
-        "social_attempted": [
-          "false"
-        ],
-        "social_outcome": [
-          "skipped_account_suspended"
-        ]
-      },
-      "promotion_gate": {
-        "status": "blocked_narrow_environment",
-        "blocks_promotion": true,
-        "reasons": [
-          "all recorded environment dimensions were observed in only one state"
-        ],
-        "unobserved_critical_variants": [
-          "deploy_ok=not(true)",
-          "deploy_returncode=not(0)",
-          "deploy_skipped=not(false)",
-          "post_slug_present=not(true)",
-          "social_attempted=not(false)",
-          "social_outcome=not(skipped_account_suspended)"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 20,
-          "cycle": "18",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 21,
-          "cycle": "19",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        }
-      ]
-    },
-    {
-      "id": "b8d57e1da186",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended",
-      "count": 2,
-      "confidence": 0.6,
-      "evidence": {
-        "first_cycle": 18,
-        "latest_cycle": 19,
-        "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 219,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "deploy_ok": [
-          "true"
-        ],
-        "deploy_returncode": [
-          "0"
-        ],
-        "deploy_skipped": [
-          "false"
-        ],
-        "post_slug_present": [
-          "true"
-        ],
-        "social_attempted": [
-          "false"
-        ],
-        "social_outcome": [
-          "skipped_account_suspended"
-        ]
-      },
-      "promotion_gate": {
-        "status": "blocked_narrow_environment",
-        "blocks_promotion": true,
-        "reasons": [
-          "all recorded environment dimensions were observed in only one state"
-        ],
-        "unobserved_critical_variants": [
-          "deploy_ok=not(true)",
-          "deploy_returncode=not(0)",
-          "deploy_skipped=not(false)",
-          "post_slug_present=not(true)",
-          "social_attempted=not(false)",
-          "social_outcome=not(skipped_account_suspended)"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "observed",
-        "observed_negative_kinds": [
-          "denial"
-        ],
-        "sources": [
-          "samples/events/cycles.jsonl"
-        ]
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 20,
-          "cycle": "18",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 21,
-          "cycle": "19",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        }
-      ]
-    },
-    {
-      "id": "ca973645c62e",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended",
-      "count": 2,
-      "confidence": 0.6,
-      "evidence": {
-        "first_cycle": 18,
-        "latest_cycle": 19,
-        "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 219,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "deploy_ok": [
-          "true"
-        ],
-        "deploy_returncode": [
-          "0"
-        ],
-        "deploy_skipped": [
-          "false"
-        ],
-        "post_slug_present": [
-          "true"
-        ],
-        "social_attempted": [
-          "false"
-        ],
-        "social_outcome": [
-          "skipped_account_suspended"
-        ]
-      },
-      "promotion_gate": {
-        "status": "blocked_narrow_environment",
-        "blocks_promotion": true,
-        "reasons": [
-          "all recorded environment dimensions were observed in only one state"
-        ],
-        "unobserved_critical_variants": [
-          "deploy_ok=not(true)",
-          "deploy_returncode=not(0)",
-          "deploy_skipped=not(false)",
-          "post_slug_present=not(true)",
-          "social_attempted=not(false)",
-          "social_outcome=not(skipped_account_suspended)"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "observed",
-        "observed_negative_kinds": [
-          "denial"
-        ],
-        "sources": [
-          "samples/events/cycles.jsonl"
-        ]
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 20,
-          "cycle": "18",
-          "text": "post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 21,
-          "cycle": "19",
-          "text": "post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state",
           "environment": {
             "deploy_ok": "true",
             "deploy_skipped": "false",
@@ -883,153 +782,6 @@
           "line": 5,
           "cycle": "5",
           "text": "python3 tools/deploy-blog.sh",
-          "environment": {}
-        }
-      ]
-    },
-    {
-      "id": "8c491f2fcad1",
-      "classification": "script",
-      "kind": "command",
-      "shape": "rg queued topic blog",
-      "count": 2,
-      "confidence": 0.69,
-      "evidence": {
-        "first_cycle": 12,
-        "latest_cycle": 13,
-        "evidence_age_cycles": 6,
-        "evidence_expires_cycle": 213,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 12,
-          "cycle": "12",
-          "text": "rg queued topic blog",
-          "environment": {}
-        },
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 14,
-          "cycle": "13",
-          "text": "rg queued topic blog",
-          "environment": {}
-        }
-      ]
-    },
-    {
-      "id": "0a483b9c41ec",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
-      "count": 2,
-      "confidence": 0.6,
-      "evidence": {
-        "first_cycle": 12,
-        "latest_cycle": 13,
-        "evidence_age_cycles": 6,
-        "evidence_expires_cycle": 213,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 12,
-          "cycle": "12",
-          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
-          "environment": {}
-        },
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 14,
-          "cycle": "13",
-          "text": "rg queued topic blog -> sed -n 1,120p data/blog_queue.txt",
-          "environment": {}
-        }
-      ]
-    },
-    {
-      "id": "02b12983e034",
-      "classification": "script",
-      "kind": "command",
-      "shape": "sed -n 1,120p data/blog_queue.txt",
-      "count": 2,
-      "confidence": 0.69,
-      "evidence": {
-        "first_cycle": 12,
-        "latest_cycle": 13,
-        "evidence_age_cycles": 6,
-        "evidence_expires_cycle": 213,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {},
-      "promotion_gate": {
-        "status": "needs_environment_record",
-        "blocks_promotion": true,
-        "reasons": [
-          "no named operating conditions were recorded for repeated evidence"
-        ],
-        "unobserved_critical_variants": [
-          "account/network/repo/policy/input conditions unknown"
-        ]
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 13,
-          "cycle": "12",
-          "text": "sed -n 1,120p data/blog_queue.txt",
-          "environment": {}
-        },
-        {
-          "source": "samples/events/cycles.jsonl",
-          "line": 15,
-          "cycle": "13",
-          "text": "sed -n 1,120p data/blog_queue.txt",
           "environment": {}
         }
       ]

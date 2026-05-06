@@ -14,6 +14,7 @@ from typing import Any, Iterable
 
 
 PROMOTION_THRESHOLD = 2
+SEQUENCE_PROMOTION_THRESHOLD = 3
 SEQUENCE_MIN_LENGTH = 2
 SEQUENCE_MAX_LENGTH = 3
 SEQUENCE_KINDS = {"approval", "command", "denial", "failure", "fixture", "note", "tool"}
@@ -86,6 +87,7 @@ def events_from_record(record: dict, source: Path, line_number: int) -> list[Eve
     kind_hint = str(record.get("type") or record.get("kind") or "").lower()
     risk = str(record.get("risk") or "unknown").lower()
     cycle = str(record.get("cycle") or "")
+    environment = environment_from_record(record)
     return [
         Event(
             str(source),
@@ -95,6 +97,7 @@ def events_from_record(record: dict, source: Path, line_number: int) -> list[Eve
             text,
             risk,
             cycle,
+            environment,
         )
         for text in texts
     ]
@@ -198,6 +201,42 @@ def compact_environment(values: dict[str, Any]) -> dict[str, str]:
             continue
         environment[key] = normalize(str(value))
     return environment
+
+
+def environment_from_record(record: dict) -> dict[str, str]:
+    values: dict[str, Any] = {}
+    explicit = record.get("environment") or record.get("env")
+    if isinstance(explicit, dict):
+        values.update(explicit)
+
+    for key in (
+        "account",
+        "network",
+        "network_state",
+        "repo",
+        "repository",
+        "phase",
+        "policy",
+        "dependency",
+        "verifier",
+        "returncode",
+        "status",
+        "outcome",
+    ):
+        if key in record:
+            values[key] = record[key]
+
+    event_tags = record.get("events")
+    if isinstance(event_tags, list) and event_tags:
+        normalized_tags = sorted({normalize(str(tag)) for tag in event_tags if str(tag or "").strip()})
+        if normalized_tags:
+            values["cycle_event_tags"] = ",".join(normalized_tags)
+            values["cycle_event_count"] = len(event_tags)
+
+    if "ts" in record:
+        values["timestamp_present"] = True
+
+    return compact_environment(values)
 
 
 def event_from_approval_record(record: dict, source: Path, line_number: int) -> Event | None:
@@ -545,7 +584,7 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
 
     candidates: list[dict] = []
     for shape_parts, windows in sequences.items():
-        if len(windows) < PROMOTION_THRESHOLD:
+        if len(windows) < SEQUENCE_PROMOTION_THRESHOLD:
             continue
         shape = " -> ".join(shape_parts)
         candidate_id = hashlib.sha256(f"sequence:{shape}".encode("utf-8")).hexdigest()[:12]

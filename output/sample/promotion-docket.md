@@ -1,18 +1,18 @@
 # Promotion Docket
 
-Events scanned: 25
-Promotion candidates: 16
+Events scanned: 27
+Promotion candidates: 13
 
 ## Summary
 
 - `approval_budget`: 2
 - `deny_or_quarantine`: 2
 - `fixture`: 2
-- `script`: 10
+- `script`: 7
 
 ## Gate Summary
 
-- Blocked: 12
+- Blocked: 9
 - Passed: 0
 - Condition-bound: 2
 - Missing environment: 8
@@ -33,6 +33,51 @@ Promotion candidates: 16
   - `samples/events/cycles.jsonl:2` approve run rg over blog for queued topic
   - `samples/events/cycles.jsonl:3` approve run rg over blog for queued topic
 
+## script - rg queued topic blog
+
+- Count: 3
+- Confidence: 0.81
+- Evidence: fresh (first cycle 12, latest cycle 14, age 5, expires cycle 214)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:12` rg queued topic blog
+  - `samples/events/cycles.jsonl:14` rg queued topic blog
+  - `samples/events/cycles.jsonl:16` rg queued topic blog
+
+## script - rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+
+- Count: 3
+- Confidence: 0.7
+- Evidence: fresh (first cycle 12, latest cycle 14, age 5, expires cycle 214)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:12` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+  - `samples/events/cycles.jsonl:14` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+  - `samples/events/cycles.jsonl:16` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
+
+## script - sed -n 1,120p data/blog_queue.txt
+
+- Count: 3
+- Confidence: 0.81
+- Evidence: fresh (first cycle 12, latest cycle 14, age 5, expires cycle 214)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
+- Examples:
+  - `samples/events/cycles.jsonl:13` sed -n 1,120p data/blog_queue.txt
+  - `samples/events/cycles.jsonl:15` sed -n 1,120p data/blog_queue.txt
+  - `samples/events/cycles.jsonl:17` sed -n 1,120p data/blog_queue.txt
+
 ## approval_budget - approve action=post public status scope=mastodon account sink=public social
 
 - Count: 2
@@ -44,8 +89,8 @@ Promotion candidates: 16
 - Contradiction coverage: missing
 - Suggested test: Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.
 - Examples:
-  - `samples/events/cycles.jsonl:18` approve action=post public status scope=mastodon account sink=public social
-  - `samples/events/cycles.jsonl:19` approve action=post public status scope=mastodon account sink=public social
+  - `samples/events/cycles.jsonl:20` approve action=post public status scope=mastodon account sink=public social
+  - `samples/events/cycles.jsonl:21` approve action=post public status scope=mastodon account sink=public social
 
 ## approval_budget - approve publish public post to mastodon account
 
@@ -86,8 +131,8 @@ Promotion candidates: 16
 - Contradiction coverage: inherent_negative_signal
 - Suggested test: Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.
 - Examples:
-  - `samples/events/cycles.jsonl:20` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
-  - `samples/events/cycles.jsonl:21` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+  - `samples/events/cycles.jsonl:22` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+  - `samples/events/cycles.jsonl:23` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
 
 ## fixture - expected output includes promotion-map json
 
@@ -114,8 +159,8 @@ Promotion candidates: 16
 - Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `post_publish verify live blog post`.
 - Examples:
-  - `samples/events/cycles.jsonl:20` post_publish verify live blog post
-  - `samples/events/cycles.jsonl:21` post_publish verify live blog post
+  - `samples/events/cycles.jsonl:22` post_publish verify live blog post
+  - `samples/events/cycles.jsonl:23` post_publish verify live blog post
 
 ## script - approve action=run deploy-blog scope=blog publish pipeline
 
@@ -128,8 +173,8 @@ Promotion candidates: 16
 - Contradiction coverage: missing
 - Suggested test: Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.
 - Examples:
-  - `samples/events/cycles.jsonl:16` approve action=run deploy-blog scope=blog publish pipeline
-  - `samples/events/cycles.jsonl:17` approve action=run deploy-blog scope=blog publish pipeline
+  - `samples/events/cycles.jsonl:18` approve action=run deploy-blog scope=blog publish pipeline
+  - `samples/events/cycles.jsonl:19` approve action=run deploy-blog scope=blog publish pipeline
 
 ## script - post_publish deploy blog status=ok
 
@@ -142,50 +187,8 @@ Promotion candidates: 16
 - Contradiction coverage: missing
 - Suggested test: Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.
 - Examples:
-  - `samples/events/cycles.jsonl:20` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
-  - `samples/events/cycles.jsonl:21` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
-
-## script - post_publish deploy blog status=ok -> post_publish verify live blog post
-
-- Count: 2
-- Confidence: 0.6
-- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
-- Risk: low
-- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
-- Promotion gate: blocked_narrow_environment (blocks=True)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.
-- Examples:
-  - `samples/events/cycles.jsonl:20` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post
-  - `samples/events/cycles.jsonl:21` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post
-
-## script - post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended
-
-- Count: 2
-- Confidence: 0.6
-- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
-- Risk: low
-- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
-- Promotion gate: blocked_narrow_environment (blocks=True)
-- Contradiction coverage: observed
-- Suggested test: Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.
-- Examples:
-  - `samples/events/cycles.jsonl:20` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
-  - `samples/events/cycles.jsonl:21` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
-
-## script - post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended
-
-- Count: 2
-- Confidence: 0.6
-- Evidence: fresh (first cycle 18, latest cycle 19, age 0, expires cycle 219)
-- Risk: low
-- Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
-- Promotion gate: blocked_narrow_environment (blocks=True)
-- Contradiction coverage: observed
-- Suggested test: Add a fixture proving `post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.
-- Examples:
-  - `samples/events/cycles.jsonl:20` post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
-  - `samples/events/cycles.jsonl:21` post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
+  - `samples/events/cycles.jsonl:22` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
+  - `samples/events/cycles.jsonl:23` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
 
 ## script - python3 tools/deploy-blog.sh
 
@@ -200,45 +203,3 @@ Promotion candidates: 16
 - Examples:
   - `samples/events/cycles.jsonl:4` python3 tools/deploy-blog.sh
   - `samples/events/cycles.jsonl:5` python3 tools/deploy-blog.sh
-
-## script - rg queued topic blog
-
-- Count: 2
-- Confidence: 0.69
-- Evidence: fresh (first cycle 12, latest cycle 13, age 6, expires cycle 213)
-- Risk: low
-- Environment coverage: {}
-- Promotion gate: needs_environment_record (blocks=True)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.
-- Examples:
-  - `samples/events/cycles.jsonl:12` rg queued topic blog
-  - `samples/events/cycles.jsonl:14` rg queued topic blog
-
-## script - rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
-
-- Count: 2
-- Confidence: 0.6
-- Evidence: fresh (first cycle 12, latest cycle 13, age 6, expires cycle 213)
-- Risk: low
-- Environment coverage: {}
-- Promotion gate: needs_environment_record (blocks=True)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
-- Examples:
-  - `samples/events/cycles.jsonl:12` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
-  - `samples/events/cycles.jsonl:14` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
-
-## script - sed -n 1,120p data/blog_queue.txt
-
-- Count: 2
-- Confidence: 0.69
-- Evidence: fresh (first cycle 12, latest cycle 13, age 6, expires cycle 213)
-- Risk: low
-- Environment coverage: {}
-- Promotion gate: needs_environment_record (blocks=True)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
-- Examples:
-  - `samples/events/cycles.jsonl:13` sed -n 1,120p data/blog_queue.txt
-  - `samples/events/cycles.jsonl:15` sed -n 1,120p data/blog_queue.txt

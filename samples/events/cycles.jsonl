@@ -13,6 +13,8 @@
 {"cycle": 12, "type": "command", "command": "sed -n 1,120p data/blog_queue.txt"}
 {"cycle": 13, "type": "command", "command": "rg queued topic blog"}
 {"cycle": 13, "type": "command", "command": "sed -n 1,120p data/blog_queue.txt"}
+{"cycle": 14, "type": "command", "command": "rg queued topic blog"}
+{"cycle": 14, "type": "command", "command": "sed -n 1,120p data/blog_queue.txt"}
 {"cycle": 14, "type": "approval_log", "approval": {"decision": "approved", "action_shape": "run deploy-blog", "scope": "blog publish pipeline", "risk": "low", "request": "ok to deploy the new essay and rebuild feeds?"}}
 {"cycle": 15, "type": "approval_log", "approval": {"decision": "approved", "action_shape": "run deploy-blog", "scope": "blog publish pipeline", "risk": "low", "request": "approve publish sequence after writing"}}
 {"cycle": 16, "type": "approval_log", "approval": {"decision": "approved", "action_shape": "post public status", "scope": "mastodon account", "sink": "public social", "risk": "high"}}

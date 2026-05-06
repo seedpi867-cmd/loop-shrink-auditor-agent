@@ -89,6 +89,18 @@ class LoopShrinkAuditTests(unittest.TestCase):
         self.assertTrue(sequences)
         self.assertTrue(any("rg queued topic blog -> sed" in candidate["shape"] for candidate in sequences))
 
+    def test_two_adjacent_windows_do_not_promote_sequence(self):
+        events = [
+            Event("events.jsonl", 1, "command", "rg topic", "rg topic", cycle="1"),
+            Event("events.jsonl", 2, "command", "sed file", "sed file", cycle="1"),
+            Event("events.jsonl", 3, "command", "rg topic", "rg topic", cycle="2"),
+            Event("events.jsonl", 4, "command", "sed file", "sed file", cycle="2"),
+        ]
+
+        candidates = build_candidates(events)
+
+        self.assertFalse(any(candidate["kind"] == "sequence" for candidate in candidates))
+
     def test_jsonl_action_lists_from_cycle_logs_are_loaded(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "events.jsonl"
@@ -109,6 +121,49 @@ class LoopShrinkAuditTests(unittest.TestCase):
             events = load_events(path)
 
         self.assertEqual([event.text for event in events], ["refreshed stale mastodon.md", "refreshed stale email.md"])
+
+    def test_cycle_log_actions_carry_event_environment(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "events.jsonl"
+            path.write_text(
+                json.dumps(
+                    {
+                        "cycle": 99,
+                        "ts": "2026-05-06T13:22:00",
+                        "events": ["context_stale", "drive_starved"],
+                        "actions": ["refreshed stale mastodon.md"],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            event = load_events(path)[0]
+
+        self.assertEqual(event.environment["cycle_event_tags"], "context_stale,drive_starved")
+        self.assertEqual(event.environment["cycle_event_count"], "2")
+        self.assertEqual(event.environment["timestamp_present"], "true")
+
+    def test_explicit_record_environment_is_preserved(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "events.jsonl"
+            path.write_text(
+                json.dumps(
+                    {
+                        "cycle": 101,
+                        "type": "command",
+                        "command": "python3 tools/fetch-feed.py",
+                        "environment": {"network_state": "online", "repo": "seed"},
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            event = load_events(path)[0]
+
+        self.assertEqual(event.environment["network_state"], "online")
+        self.assertEqual(event.environment["repo"], "seed")
 
     def test_stale_evidence_decays_candidate_confidence(self):
         events = [

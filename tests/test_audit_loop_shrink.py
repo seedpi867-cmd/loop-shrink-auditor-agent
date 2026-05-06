@@ -117,10 +117,21 @@ class LoopShrinkAuditTests(unittest.TestCase):
             shapes["post_publish deploy blog status=ok"]["environment_coverage"]["social_outcome"],
             ["skipped_account_suspended"],
         )
+        self.assertEqual(
+            shapes["post_publish deploy blog status=ok"]["promotion_gate"]["status"],
+            "blocked_narrow_environment",
+        )
+        self.assertTrue(shapes["post_publish deploy blog status=ok"]["promotion_gate"]["blocks_promotion"])
+        self.assertEqual(
+            shapes["post_publish deploy blog status=ok"]["contradiction_coverage"]["status"],
+            "missing",
+        )
 
         social_shape = "post_publish social outcome=skipped_account_suspended"
         self.assertIn(social_shape, shapes)
         self.assertEqual(shapes[social_shape]["classification"], "deny_or_quarantine")
+        self.assertEqual(shapes[social_shape]["promotion_gate"]["status"], "condition_bound")
+        self.assertFalse(shapes[social_shape]["promotion_gate"]["blocks_promotion"])
 
     def test_post_publish_receipt_failure_is_not_lost_as_note(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -150,6 +161,33 @@ class LoopShrinkAuditTests(unittest.TestCase):
         failure = next(event for event in events if event.shape == "post_publish deploy failed")
         self.assertEqual(failure.kind, "failure")
         self.assertEqual(failure.environment["deploy_ok"], "false")
+
+    def test_environment_gate_passes_when_conditions_vary(self):
+        events = [
+            Event(
+                "events.jsonl",
+                1,
+                "command",
+                "refresh feed",
+                "refresh feed",
+                cycle="1",
+                environment={"network_state": "online"},
+            ),
+            Event(
+                "events.jsonl",
+                2,
+                "command",
+                "refresh feed",
+                "refresh feed",
+                cycle="2",
+                environment={"network_state": "offline"},
+            ),
+        ]
+
+        candidate = build_candidates(events)[0]
+
+        self.assertEqual(candidate["promotion_gate"]["status"], "passes_environment_gate")
+        self.assertFalse(candidate["promotion_gate"]["blocks_promotion"])
 
 
 if __name__ == "__main__":

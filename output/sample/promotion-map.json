@@ -23,6 +23,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.",
       "examples": [
@@ -64,6 +79,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.",
       "examples": [
@@ -98,6 +128,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.",
       "examples": [
@@ -132,6 +177,23 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "condition_bound",
+        "blocks_promotion": false,
+        "reasons": [
+          "negative evidence can be promoted as a bounded quarantine rule"
+        ],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "inherent_negative_signal",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "samples/events/cycles.jsonl"
+        ]
+      },
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.",
       "examples": [
@@ -185,6 +247,23 @@
           "skipped_account_suspended"
         ]
       },
+      "promotion_gate": {
+        "status": "condition_bound",
+        "blocks_promotion": false,
+        "reasons": [
+          "negative evidence can be promoted as a bounded quarantine rule"
+        ],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "inherent_negative_signal",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "samples/events/cycles.jsonl"
+        ]
+      },
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.",
       "examples": [
@@ -233,6 +312,17 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `expected output includes promotion-map json`.",
       "examples": [
@@ -286,6 +376,17 @@
           "skipped_account_suspended"
         ]
       },
+      "promotion_gate": {
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `post_publish verify live blog post`.",
       "examples": [
@@ -334,6 +435,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.",
       "examples": [
@@ -386,6 +502,26 @@
         "social_outcome": [
           "skipped_account_suspended"
         ]
+      },
+      "promotion_gate": {
+        "status": "blocked_narrow_environment",
+        "blocks_promotion": true,
+        "reasons": [
+          "all recorded environment dimensions were observed in only one state"
+        ],
+        "unobserved_critical_variants": [
+          "deploy_ok=not(true)",
+          "deploy_returncode=not(0)",
+          "deploy_skipped=not(false)",
+          "post_slug_present=not(true)",
+          "social_attempted=not(false)",
+          "social_outcome=not(skipped_account_suspended)"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.",
@@ -454,6 +590,26 @@
           "skipped_account_suspended"
         ]
       },
+      "promotion_gate": {
+        "status": "blocked_narrow_environment",
+        "blocks_promotion": true,
+        "reasons": [
+          "all recorded environment dimensions were observed in only one state"
+        ],
+        "unobserved_critical_variants": [
+          "deploy_ok=not(true)",
+          "deploy_returncode=not(0)",
+          "deploy_skipped=not(false)",
+          "post_slug_present=not(true)",
+          "social_attempted=not(false)",
+          "social_outcome=not(skipped_account_suspended)"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.",
       "examples": [
@@ -519,6 +675,30 @@
         ],
         "social_outcome": [
           "skipped_account_suspended"
+        ]
+      },
+      "promotion_gate": {
+        "status": "blocked_narrow_environment",
+        "blocks_promotion": true,
+        "reasons": [
+          "all recorded environment dimensions were observed in only one state"
+        ],
+        "unobserved_critical_variants": [
+          "deploy_ok=not(true)",
+          "deploy_returncode=not(0)",
+          "deploy_skipped=not(false)",
+          "post_slug_present=not(true)",
+          "social_attempted=not(false)",
+          "social_outcome=not(skipped_account_suspended)"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "observed",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "samples/events/cycles.jsonl"
         ]
       },
       "risk": "low",
@@ -588,6 +768,30 @@
           "skipped_account_suspended"
         ]
       },
+      "promotion_gate": {
+        "status": "blocked_narrow_environment",
+        "blocks_promotion": true,
+        "reasons": [
+          "all recorded environment dimensions were observed in only one state"
+        ],
+        "unobserved_critical_variants": [
+          "deploy_ok=not(true)",
+          "deploy_returncode=not(0)",
+          "deploy_skipped=not(false)",
+          "post_slug_present=not(true)",
+          "social_attempted=not(false)",
+          "social_outcome=not(skipped_account_suspended)"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "observed",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "samples/events/cycles.jsonl"
+        ]
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.",
       "examples": [
@@ -636,6 +840,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.",
       "examples": [
@@ -670,6 +889,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
       "examples": [
@@ -704,6 +938,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
       "examples": [
@@ -738,6 +987,21 @@
         "evidence_status": "fresh"
       },
       "environment_coverage": {},
+      "promotion_gate": {
+        "status": "needs_environment_record",
+        "blocks_promotion": true,
+        "reasons": [
+          "no named operating conditions were recorded for repeated evidence"
+        ],
+        "unobserved_critical_variants": [
+          "account/network/repo/policy/input conditions unknown"
+        ]
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
       "risk": "low",
       "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
       "examples": [

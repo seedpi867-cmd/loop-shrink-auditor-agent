@@ -1,21 +1,23 @@
 # Promotion Docket
 
-Events scanned: 2183
-Promotion candidates: 302
+Events scanned: 2218
+Promotion candidates: 310
 
 ## Summary
 
-- `fixture`: 82
-- `script`: 219
+- `fixture`: 84
+- `script`: 225
 - `typed_tool`: 1
 
 ## fixture - refreshed stale mastodon.md
 
-- Count: 281
+- Count: 287
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 335, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `refreshed stale mastodon.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale mastodon.md
@@ -26,11 +28,13 @@ Promotion candidates: 302
 
 ## fixture - refreshed stale email.md
 
-- Count: 246
+- Count: 252
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 335, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `refreshed stale email.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale email.md
@@ -41,11 +45,13 @@ Promotion candidates: 302
 
 ## script - refreshed stale mastodon.md -> refreshed stale email.md
 
-- Count: 241
+- Count: 247
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 335, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale mastodon.md -> refreshed stale email.md
@@ -58,9 +64,11 @@ Promotion candidates: 302
 
 - Count: 184
 - Confidence: 0.95
-- Evidence: aging (first cycle 335, latest cycle 559, age 85, expires cycle 759)
+- Evidence: aging (first cycle 335, latest cycle 559, age 91, expires cycle 759)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `compacted memory (202 lines)`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` compacted memory (202 lines)
@@ -71,11 +79,13 @@ Promotion candidates: 302
 
 ## fixture - posted to mastodon
 
-- Count: 175
+- Count: 178
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 342, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `posted to mastodon`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` posted to Mastodon
@@ -86,11 +96,13 @@ Promotion candidates: 302
 
 ## fixture - rebuilt feeds
 
-- Count: 175
+- Count: 178
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 342, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `rebuilt feeds`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` rebuilt feeds
@@ -101,11 +113,13 @@ Promotion candidates: 302
 
 ## script - posted to mastodon -> rebuilt feeds
 
-- Count: 175
+- Count: 178
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 342, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` posted to Mastodon -> rebuilt feeds
@@ -118,9 +132,11 @@ Promotion candidates: 302
 
 - Count: 146
 - Confidence: 0.95
-- Evidence: aging (first cycle 335, latest cycle 559, age 85, expires cycle 759)
+- Evidence: aging (first cycle 335, latest cycle 559, age 91, expires cycle 759)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` compacted memory (202 lines) -> refreshed stale mastodon.md
@@ -133,9 +149,11 @@ Promotion candidates: 302
 
 - Count: 122
 - Confidence: 0.95
-- Evidence: aging (first cycle 335, latest cycle 559, age 85, expires cycle 759)
+- Evidence: aging (first cycle 335, latest cycle 559, age 91, expires cycle 759)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -146,11 +164,13 @@ Promotion candidates: 302
 
 ## fixture - boosted starved drive create
 
-- Count: 78
+- Count: 79
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 620, age 24, expires cycle 820)
+- Evidence: fresh (first cycle 335, latest cycle 645, age 5, expires cycle 845)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive create`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive create
@@ -163,9 +183,11 @@ Promotion candidates: 302
 
 - Count: 73
 - Confidence: 0.95
-- Evidence: aging (first cycle 335, latest cycle 450, age 194, expires cycle 650)
+- Evidence: aging (first cycle 335, latest cycle 450, age 200, expires cycle 650)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive express`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive express
@@ -178,9 +200,11 @@ Promotion candidates: 302
 
 - Count: 73
 - Confidence: 0.95
-- Evidence: aging (first cycle 343, latest cycle 559, age 85, expires cycle 759)
+- Evidence: aging (first cycle 343, latest cycle 559, age 91, expires cycle 759)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` posted to Mastodon -> rebuilt feeds -> compacted memory (202 lines)
@@ -193,9 +217,11 @@ Promotion candidates: 302
 
 - Count: 73
 - Confidence: 0.95
-- Evidence: aging (first cycle 343, latest cycle 559, age 85, expires cycle 759)
+- Evidence: aging (first cycle 343, latest cycle 559, age 91, expires cycle 759)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` rebuilt feeds -> compacted memory (202 lines)
@@ -208,9 +234,11 @@ Promotion candidates: 302
 
 - Count: 70
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 620, age 24, expires cycle 820)
+- Evidence: fresh (first cycle 335, latest cycle 620, age 30, expires cycle 820)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale email.md -> boosted starved drive create
@@ -223,9 +251,11 @@ Promotion candidates: 302
 
 - Count: 70
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 620, age 24, expires cycle 820)
+- Evidence: fresh (first cycle 335, latest cycle 620, age 30, expires cycle 820)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
@@ -238,9 +268,11 @@ Promotion candidates: 302
 
 - Count: 68
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 627, age 17, expires cycle 827)
+- Evidence: fresh (first cycle 342, latest cycle 627, age 23, expires cycle 827)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `logged bug + added fix task`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` logged bug + added fix task
@@ -253,9 +285,11 @@ Promotion candidates: 302
 
 - Count: 68
 - Confidence: 0.95
-- Evidence: aging (first cycle 343, latest cycle 559, age 85, expires cycle 759)
+- Evidence: aging (first cycle 343, latest cycle 559, age 91, expires cycle 759)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
@@ -266,11 +300,13 @@ Promotion candidates: 302
 
 ## fixture - boosted starved drive explore
 
-- Count: 62
+- Count: 63
 - Confidence: 0.95
-- Evidence: fresh (first cycle 368, latest cycle 612, age 32, expires cycle 812)
+- Evidence: fresh (first cycle 368, latest cycle 645, age 5, expires cycle 845)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive explore`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive explore
@@ -281,11 +317,13 @@ Promotion candidates: 302
 
 ## fixture - boosted starved drive order
 
-- Count: 49
+- Count: 50
 - Confidence: 0.95
-- Evidence: aging (first cycle 335, latest cycle 585, age 59, expires cycle 785)
+- Evidence: fresh (first cycle 335, latest cycle 649, age 1, expires cycle 849)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive order`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive order
@@ -298,9 +336,11 @@ Promotion candidates: 302
 
 - Count: 49
 - Confidence: 0.95
-- Evidence: fresh (first cycle 335, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 335, latest cycle 644, age 6, expires cycle 844)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `flagged research for potential essay`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` flagged research for potential essay
@@ -313,9 +353,11 @@ Promotion candidates: 302
 
 - Count: 47
 - Confidence: 0.95
-- Evidence: aging (first cycle 342, latest cycle 557, age 87, expires cycle 757)
+- Evidence: aging (first cycle 342, latest cycle 557, age 93, expires cycle 757)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` logged bug + added fix task -> compacted memory (202 lines)
@@ -328,9 +370,11 @@ Promotion candidates: 302
 
 - Count: 46
 - Confidence: 0.95
-- Evidence: aging (first cycle 513, latest cycle 558, age 86, expires cycle 758)
+- Evidence: aging (first cycle 513, latest cycle 558, age 92, expires cycle 758)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 155`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:176` version_control streak at 155
@@ -343,9 +387,11 @@ Promotion candidates: 302
 
 - Count: 46
 - Confidence: 0.95
-- Evidence: stale (first cycle 335, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 335, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive express -> boosted starved drive order
@@ -358,9 +404,11 @@ Promotion candidates: 302
 
 - Count: 45
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 600, age 44, expires cycle 800)
+- Evidence: fresh (first cycle 342, latest cycle 600, age 50, expires cycle 800)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` posted to Mastodon -> rebuilt feeds -> logged bug + added fix task
@@ -373,9 +421,11 @@ Promotion candidates: 302
 
 - Count: 45
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 600, age 44, expires cycle 800)
+- Evidence: fresh (first cycle 342, latest cycle 600, age 50, expires cycle 800)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` rebuilt feeds -> logged bug + added fix task
@@ -386,11 +436,13 @@ Promotion candidates: 302
 
 ## script - boosted starved drive create -> boosted starved drive explore
 
-- Count: 43
+- Count: 44
 - Confidence: 0.95
-- Evidence: fresh (first cycle 368, latest cycle 612, age 32, expires cycle 812)
+- Evidence: fresh (first cycle 368, latest cycle 645, age 5, expires cycle 845)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive create -> boosted starved drive explore
@@ -403,9 +455,11 @@ Promotion candidates: 302
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 610, age 34, expires cycle 810)
+- Evidence: fresh (first cycle 342, latest cycle 610, age 40, expires cycle 810)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `archived completed tasks`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` archived completed tasks
@@ -418,9 +472,11 @@ Promotion candidates: 302
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: stale (first cycle 368, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 368, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive understand`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive understand
@@ -433,9 +489,11 @@ Promotion candidates: 302
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 610, age 34, expires cycle 810)
+- Evidence: fresh (first cycle 342, latest cycle 610, age 40, expires cycle 810)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` archived completed tasks -> refreshed stale mastodon.md
@@ -448,9 +506,11 @@ Promotion candidates: 302
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: stale (first cycle 368, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 368, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive understand -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive understand -> boosted starved drive express
@@ -463,9 +523,11 @@ Promotion candidates: 302
 
 - Count: 38
 - Confidence: 0.95
-- Evidence: aging (first cycle 346, latest cycle 557, age 87, expires cycle 757)
+- Evidence: aging (first cycle 346, latest cycle 557, age 93, expires cycle 757)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
@@ -478,9 +540,11 @@ Promotion candidates: 302
 
 - Count: 38
 - Confidence: 0.95
-- Evidence: fresh (first cycle 368, latest cycle 612, age 32, expires cycle 812)
+- Evidence: fresh (first cycle 368, latest cycle 612, age 38, expires cycle 812)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
@@ -489,28 +553,15 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:35` refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
   - `/home/seed/data/event_log.jsonl:36` refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
 
-## fixture - compacted memory (201 lines)
-
-- Count: 34
-- Confidence: 0.95
-- Evidence: aging (first cycle 336, latest cycle 553, age 91, expires cycle 753)
-- Risk: medium
-- Environment coverage: {}
-- Suggested test: Add positive and negative evidence cases for `compacted memory (201 lines)`.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:2` compacted memory (201 lines)
-  - `/home/seed/data/event_log.jsonl:13` compacted memory (201 lines)
-  - `/home/seed/data/event_log.jsonl:16` compacted memory (201 lines)
-  - `/home/seed/data/event_log.jsonl:18` compacted memory (201 lines)
-  - `/home/seed/data/event_log.jsonl:28` compacted memory (201 lines)
-
 ## script - posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md
 
-- Count: 33
+- Count: 36
 - Confidence: 0.95
-- Evidence: fresh (first cycle 562, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 562, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:225` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
@@ -521,11 +572,13 @@ Promotion candidates: 302
 
 ## script - rebuilt feeds -> refreshed stale mastodon.md
 
-- Count: 33
+- Count: 36
 - Confidence: 0.95
-- Evidence: fresh (first cycle 562, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 562, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:225` rebuilt feeds -> refreshed stale mastodon.md
@@ -536,11 +589,13 @@ Promotion candidates: 302
 
 ## script - rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
 
-- Count: 33
+- Count: 36
 - Confidence: 0.95
-- Evidence: fresh (first cycle 562, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 562, latest cycle 650, age 0, expires cycle 850)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:225` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -549,13 +604,32 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:229` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
   - `/home/seed/data/event_log.jsonl:247` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
 
+## fixture - compacted memory (201 lines)
+
+- Count: 34
+- Confidence: 0.95
+- Evidence: aging (first cycle 336, latest cycle 553, age 97, expires cycle 753)
+- Risk: medium
+- Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
+- Suggested test: Add positive and negative evidence cases for `compacted memory (201 lines)`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:2` compacted memory (201 lines)
+  - `/home/seed/data/event_log.jsonl:13` compacted memory (201 lines)
+  - `/home/seed/data/event_log.jsonl:16` compacted memory (201 lines)
+  - `/home/seed/data/event_log.jsonl:18` compacted memory (201 lines)
+  - `/home/seed/data/event_log.jsonl:28` compacted memory (201 lines)
+
 ## script - rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)
 
 - Count: 32
 - Confidence: 0.95
-- Evidence: aging (first cycle 342, latest cycle 556, age 88, expires cycle 756)
+- Evidence: aging (first cycle 342, latest cycle 556, age 94, expires cycle 756)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)
@@ -568,9 +642,11 @@ Promotion candidates: 302
 
 - Count: 31
 - Confidence: 0.95
-- Evidence: fresh (first cycle 342, latest cycle 610, age 34, expires cycle 810)
+- Evidence: fresh (first cycle 342, latest cycle 610, age 40, expires cycle 810)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -583,9 +659,11 @@ Promotion candidates: 302
 
 - Count: 30
 - Confidence: 0.95
-- Evidence: aging (first cycle 336, latest cycle 553, age 91, expires cycle 753)
+- Evidence: aging (first cycle 336, latest cycle 553, age 97, expires cycle 753)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:2` compacted memory (201 lines) -> refreshed stale mastodon.md
@@ -598,9 +676,11 @@ Promotion candidates: 302
 
 - Count: 30
 - Confidence: 0.95
-- Evidence: aging (first cycle 342, latest cycle 540, age 104, expires cycle 740)
+- Evidence: aging (first cycle 342, latest cycle 540, age 110, expires cycle 740)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` compacted memory (202 lines) -> archived completed tasks
@@ -613,9 +693,11 @@ Promotion candidates: 302
 
 - Count: 30
 - Confidence: 0.95
-- Evidence: aging (first cycle 342, latest cycle 540, age 104, expires cycle 740)
+- Evidence: aging (first cycle 342, latest cycle 540, age 110, expires cycle 740)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md
@@ -628,9 +710,11 @@ Promotion candidates: 302
 
 - Count: 28
 - Confidence: 0.95
-- Evidence: stale (first cycle 369, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 369, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive understand -> boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:33` boosted starved drive understand -> boosted starved drive express -> boosted starved drive order
@@ -643,9 +727,11 @@ Promotion candidates: 302
 
 - Count: 27
 - Confidence: 0.95
-- Evidence: stale (first cycle 335, latest cycle 367, age 277, expires cycle 567)
+- Evidence: stale (first cycle 335, latest cycle 367, age 283, expires cycle 567)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive create -> boosted starved drive express
@@ -658,9 +744,11 @@ Promotion candidates: 302
 
 - Count: 27
 - Confidence: 0.95
-- Evidence: aging (first cycle 336, latest cycle 549, age 95, expires cycle 749)
+- Evidence: aging (first cycle 336, latest cycle 549, age 101, expires cycle 749)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:2` compacted memory (201 lines) -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -673,9 +761,11 @@ Promotion candidates: 302
 
 - Count: 25
 - Confidence: 0.95
-- Evidence: stale (first cycle 335, latest cycle 366, age 278, expires cycle 566)
+- Evidence: stale (first cycle 335, latest cycle 366, age 284, expires cycle 566)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale email.md -> boosted starved drive create -> boosted starved drive express
@@ -688,9 +778,11 @@ Promotion candidates: 302
 
 - Count: 24
 - Confidence: 0.95
-- Evidence: fresh (first cycle 338, latest cycle 642, age 2, expires cycle 842)
+- Evidence: fresh (first cycle 338, latest cycle 642, age 8, expires cycle 842)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `refreshed stale trends.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` refreshed stale trends.md
@@ -703,9 +795,11 @@ Promotion candidates: 302
 
 - Count: 24
 - Confidence: 0.95
-- Evidence: stale (first cycle 368, latest cycle 408, age 236, expires cycle 608)
+- Evidence: stale (first cycle 368, latest cycle 408, age 242, expires cycle 608)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive explore -> boosted starved drive understand
@@ -718,9 +812,11 @@ Promotion candidates: 302
 
 - Count: 24
 - Confidence: 0.95
-- Evidence: stale (first cycle 368, latest cycle 408, age 236, expires cycle 608)
+- Evidence: stale (first cycle 368, latest cycle 408, age 242, expires cycle 608)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive understand -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive explore -> boosted starved drive understand -> boosted starved drive express
@@ -733,9 +829,11 @@ Promotion candidates: 302
 
 - Count: 23
 - Confidence: 0.95
-- Evidence: stale (first cycle 381, latest cycle 418, age 226, expires cycle 618)
+- Evidence: stale (first cycle 381, latest cycle 418, age 232, expires cycle 618)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive preserve`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive preserve
@@ -748,9 +846,11 @@ Promotion candidates: 302
 
 - Count: 23
 - Confidence: 0.95
-- Evidence: stale (first cycle 368, latest cycle 408, age 236, expires cycle 608)
+- Evidence: stale (first cycle 368, latest cycle 408, age 242, expires cycle 608)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive create -> boosted starved drive explore -> boosted starved drive understand
@@ -761,11 +861,13 @@ Promotion candidates: 302
 
 ## fixture - refreshed stale outreach.md
 
-- Count: 21
+- Count: 22
 - Confidence: 0.95
-- Evidence: fresh (first cycle 338, latest cycle 634, age 10, expires cycle 834)
+- Evidence: fresh (first cycle 338, latest cycle 645, age 5, expires cycle 845)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `refreshed stale outreach.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` refreshed stale outreach.md
@@ -778,9 +880,11 @@ Promotion candidates: 302
 
 - Count: 21
 - Confidence: 0.95
-- Evidence: fresh (first cycle 351, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 351, latest cycle 644, age 6, expires cycle 844)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:15` refreshed stale email.md -> flagged research for potential essay
@@ -793,9 +897,11 @@ Promotion candidates: 302
 
 - Count: 20
 - Confidence: 0.95
-- Evidence: fresh (first cycle 338, latest cycle 642, age 2, expires cycle 842)
+- Evidence: fresh (first cycle 338, latest cycle 642, age 8, expires cycle 842)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` refreshed stale email.md -> refreshed stale trends.md
@@ -808,9 +914,11 @@ Promotion candidates: 302
 
 - Count: 20
 - Confidence: 0.95
-- Evidence: fresh (first cycle 351, latest cycle 644, age 0, expires cycle 844)
+- Evidence: fresh (first cycle 351, latest cycle 644, age 6, expires cycle 844)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:15` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
@@ -823,9 +931,11 @@ Promotion candidates: 302
 
 - Count: 20
 - Confidence: 0.95
-- Evidence: fresh (first cycle 338, latest cycle 642, age 2, expires cycle 842)
+- Evidence: fresh (first cycle 338, latest cycle 642, age 8, expires cycle 842)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
@@ -834,13 +944,32 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:71` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
   - `/home/seed/data/event_log.jsonl:99` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
 
+## fixture - boosted starved drive connect
+
+- Count: 18
+- Confidence: 0.95
+- Evidence: fresh (first cycle 440, latest cycle 646, age 4, expires cycle 846)
+- Risk: medium
+- Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
+- Suggested test: Add positive and negative evidence cases for `boosted starved drive connect`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:104` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:114` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:121` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:135` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:150` boosted starved drive connect
+
 ## script - boosted starved drive create -> boosted starved drive explore -> boosted starved drive preserve
 
 - Count: 18
 - Confidence: 0.95
-- Evidence: stale (first cycle 381, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 381, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive create -> boosted starved drive explore -> boosted starved drive preserve
@@ -853,9 +982,11 @@ Promotion candidates: 302
 
 - Count: 18
 - Confidence: 0.95
-- Evidence: stale (first cycle 381, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 381, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive explore -> boosted starved drive preserve
@@ -864,28 +995,15 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:52` boosted starved drive explore -> boosted starved drive preserve
   - `/home/seed/data/event_log.jsonl:53` boosted starved drive explore -> boosted starved drive preserve
 
-## fixture - boosted starved drive connect
-
-- Count: 16
-- Confidence: 0.95
-- Evidence: fresh (first cycle 440, latest cycle 635, age 9, expires cycle 835)
-- Risk: medium
-- Environment coverage: {}
-- Suggested test: Add positive and negative evidence cases for `boosted starved drive connect`.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:104` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:114` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:121` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:135` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:150` boosted starved drive connect
-
 ## script - boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive understand
 
 - Count: 15
 - Confidence: 0.85
-- Evidence: stale (first cycle 381, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 381, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive understand
@@ -898,9 +1016,11 @@ Promotion candidates: 302
 
 - Count: 15
 - Confidence: 0.85
-- Evidence: stale (first cycle 381, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 381, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive understand` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive preserve -> boosted starved drive understand
@@ -913,9 +1033,11 @@ Promotion candidates: 302
 
 - Count: 15
 - Confidence: 0.85
-- Evidence: stale (first cycle 381, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 381, latest cycle 410, age 240, expires cycle 610)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive understand -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive preserve -> boosted starved drive understand -> boosted starved drive express
@@ -928,9 +1050,11 @@ Promotion candidates: 302
 
 - Count: 15
 - Confidence: 0.95
-- Evidence: fresh (first cycle 394, latest cycle 601, age 43, expires cycle 801)
+- Evidence: fresh (first cycle 394, latest cycle 601, age 49, expires cycle 801)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:58` refreshed stale email.md -> boosted starved drive explore
@@ -943,9 +1067,11 @@ Promotion candidates: 302
 
 - Count: 15
 - Confidence: 0.95
-- Evidence: fresh (first cycle 394, latest cycle 601, age 43, expires cycle 801)
+- Evidence: fresh (first cycle 394, latest cycle 601, age 49, expires cycle 801)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:58` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore
@@ -958,9 +1084,11 @@ Promotion candidates: 302
 
 - Count: 14
 - Confidence: 0.81
-- Evidence: stale (first cycle 335, latest cycle 367, age 277, expires cycle 567)
+- Evidence: stale (first cycle 335, latest cycle 367, age 283, expires cycle 567)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive create -> boosted starved drive express -> boosted starved drive order
@@ -973,9 +1101,11 @@ Promotion candidates: 302
 
 - Count: 13
 - Confidence: 0.9
-- Evidence: stale (first cycle 410, latest cycle 422, age 222, expires cycle 622)
+- Evidence: stale (first cycle 410, latest cycle 422, age 228, expires cycle 622)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 170`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:74` task_completion streak at 170
@@ -988,9 +1118,11 @@ Promotion candidates: 302
 
 - Count: 12
 - Confidence: 0.85
-- Evidence: stale (first cycle 410, latest cycle 421, age 223, expires cycle 621)
+- Evidence: stale (first cycle 410, latest cycle 421, age 229, expires cycle 621)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 170`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:74` publishing streak at 170
@@ -1003,9 +1135,11 @@ Promotion candidates: 302
 
 - Count: 12
 - Confidence: 0.95
-- Evidence: aging (first cycle 335, latest cycle 585, age 59, expires cycle 785)
+- Evidence: aging (first cycle 335, latest cycle 585, age 65, expires cycle 785)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive order -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive order -> flagged research for potential essay
@@ -1018,9 +1152,11 @@ Promotion candidates: 302
 
 - Count: 12
 - Confidence: 0.95
-- Evidence: aging (first cycle 349, latest cycle 545, age 99, expires cycle 745)
+- Evidence: aging (first cycle 349, latest cycle 545, age 105, expires cycle 745)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:13` logged bug + added fix task -> compacted memory (201 lines)
@@ -1033,9 +1169,11 @@ Promotion candidates: 302
 
 - Count: 12
 - Confidence: 0.95
-- Evidence: aging (first cycle 349, latest cycle 545, age 99, expires cycle 745)
+- Evidence: aging (first cycle 349, latest cycle 545, age 105, expires cycle 745)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:13` logged bug + added fix task -> compacted memory (201 lines) -> refreshed stale mastodon.md
@@ -1048,9 +1186,11 @@ Promotion candidates: 302
 
 - Count: 12
 - Confidence: 0.72
-- Evidence: stale (first cycle 410, latest cycle 421, age 223, expires cycle 621)
+- Evidence: stale (first cycle 410, latest cycle 421, age 229, expires cycle 621)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `publishing streak at 170 -> task_completion streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:74` publishing streak at 170 -> task_completion streak at 170
@@ -1063,9 +1203,11 @@ Promotion candidates: 302
 
 - Count: 12
 - Confidence: 0.95
-- Evidence: fresh (first cycle 338, latest cycle 634, age 10, expires cycle 834)
+- Evidence: fresh (first cycle 338, latest cycle 634, age 16, expires cycle 834)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` refreshed stale trends.md -> refreshed stale outreach.md
@@ -1078,9 +1220,11 @@ Promotion candidates: 302
 
 - Count: 11
 - Confidence: 0.95
-- Evidence: aging (first cycle 364, latest cycle 553, age 91, expires cycle 753)
+- Evidence: aging (first cycle 364, latest cycle 553, age 97, expires cycle 753)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` posted to Mastodon -> rebuilt feeds -> compacted memory (201 lines)
@@ -1093,9 +1237,11 @@ Promotion candidates: 302
 
 - Count: 11
 - Confidence: 0.95
-- Evidence: aging (first cycle 364, latest cycle 553, age 91, expires cycle 753)
+- Evidence: aging (first cycle 364, latest cycle 553, age 97, expires cycle 753)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` rebuilt feeds -> compacted memory (201 lines)
@@ -1108,9 +1254,11 @@ Promotion candidates: 302
 
 - Count: 11
 - Confidence: 0.95
-- Evidence: aging (first cycle 364, latest cycle 553, age 91, expires cycle 753)
+- Evidence: aging (first cycle 364, latest cycle 553, age 97, expires cycle 753)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` rebuilt feeds -> compacted memory (201 lines) -> refreshed stale mastodon.md
@@ -1123,9 +1271,11 @@ Promotion candidates: 302
 
 - Count: 10
 - Confidence: 0.95
-- Evidence: fresh (first cycle 339, latest cycle 599, age 45, expires cycle 799)
+- Evidence: aging (first cycle 339, latest cycle 599, age 51, expires cycle 799)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `broke idle — boosted create + added urgent write task`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` broke idle — boosted create + added urgent write task
@@ -1138,9 +1288,11 @@ Promotion candidates: 302
 
 - Count: 10
 - Confidence: 0.63
-- Evidence: stale (first cycle 335, latest cycle 405, age 239, expires cycle 605)
+- Evidence: stale (first cycle 335, latest cycle 405, age 245, expires cycle 605)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` boosted starved drive express -> boosted starved drive order -> flagged research for potential essay
@@ -1149,13 +1301,32 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:19` boosted starved drive express -> boosted starved drive order -> flagged research for potential essay
   - `/home/seed/data/event_log.jsonl:25` boosted starved drive express -> boosted starved drive order -> flagged research for potential essay
 
+## script - refreshed stale email.md -> boosted starved drive connect
+
+- Count: 10
+- Confidence: 0.95
+- Evidence: fresh (first cycle 440, latest cycle 646, age 4, expires cycle 846)
+- Risk: medium
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:104` refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:114` refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:135` refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:165` refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:181` refreshed stale email.md -> boosted starved drive connect
+
 ## script - refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md
 
 - Count: 10
 - Confidence: 0.95
-- Evidence: fresh (first cycle 338, latest cycle 634, age 10, expires cycle 834)
+- Evidence: fresh (first cycle 338, latest cycle 634, age 16, expires cycle 834)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md
@@ -1164,13 +1335,32 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:133` refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md
   - `/home/seed/data/event_log.jsonl:154` refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md
 
+## script - refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
+
+- Count: 10
+- Confidence: 0.95
+- Evidence: fresh (first cycle 440, latest cycle 646, age 4, expires cycle 846)
+- Risk: medium
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:104` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:114` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:135` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:165` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:181` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
+
 ## fixture - version_control streak at 150
 
 - Count: 9
 - Confidence: 0.95
-- Evidence: aging (first cycle 444, latest cycle 452, age 192, expires cycle 652)
+- Evidence: aging (first cycle 444, latest cycle 452, age 198, expires cycle 652)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 150`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:108` version_control streak at 150
@@ -1183,9 +1373,11 @@ Promotion candidates: 302
 
 - Count: 9
 - Confidence: 0.95
-- Evidence: aging (first cycle 349, latest cycle 545, age 99, expires cycle 745)
+- Evidence: aging (first cycle 349, latest cycle 545, age 105, expires cycle 745)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:13` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
@@ -1194,43 +1386,15 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:63` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
   - `/home/seed/data/event_log.jsonl:129` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
 
-## script - refreshed stale email.md -> boosted starved drive connect
-
-- Count: 9
-- Confidence: 0.95
-- Evidence: fresh (first cycle 440, latest cycle 635, age 9, expires cycle 835)
-- Risk: medium
-- Environment coverage: {}
-- Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:104` refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:114` refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:135` refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:165` refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:181` refreshed stale email.md -> boosted starved drive connect
-
-## script - refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
-
-- Count: 9
-- Confidence: 0.95
-- Evidence: fresh (first cycle 440, latest cycle 635, age 9, expires cycle 835)
-- Risk: medium
-- Environment coverage: {}
-- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:104` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:114` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:135` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:165` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:181` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
-
 ## fixture - version_control streak at 170
 
 - Count: 8
 - Confidence: 0.95
-- Evidence: fresh (first cycle 596, latest cycle 603, age 41, expires cycle 803)
+- Evidence: fresh (first cycle 596, latest cycle 603, age 47, expires cycle 803)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 170`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:241` version_control streak at 170
@@ -1239,13 +1403,49 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:244` version_control streak at 170
   - `/home/seed/data/event_log.jsonl:245` version_control streak at 170
 
+## script - refreshed stale email.md -> refreshed stale outreach.md
+
+- Count: 8
+- Confidence: 0.95
+- Evidence: fresh (first cycle 367, latest cycle 645, age 5, expires cycle 845)
+- Risk: medium
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:31` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:100` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:123` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:144` refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:187` refreshed stale email.md -> refreshed stale outreach.md
+
+## script - refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
+
+- Count: 8
+- Confidence: 0.95
+- Evidence: fresh (first cycle 367, latest cycle 645, age 5, expires cycle 845)
+- Risk: medium
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:31` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:100` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:123` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:144` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
+  - `/home/seed/data/event_log.jsonl:187` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
+
 ## fixture - writing streak at 265
 
 - Count: 7
 - Confidence: 0.95
-- Evidence: fresh (first cycle 592, latest cycle 598, age 46, expires cycle 798)
+- Evidence: aging (first cycle 592, latest cycle 598, age 52, expires cycle 798)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 265`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:237` writing streak at 265
@@ -1258,9 +1458,11 @@ Promotion candidates: 302
 
 - Count: 7
 - Confidence: 0.83
-- Evidence: aging (first cycle 342, latest cycle 492, age 152, expires cycle 692)
+- Evidence: aging (first cycle 342, latest cycle 492, age 158, expires cycle 692)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
@@ -1269,43 +1471,15 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:40` logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
   - `/home/seed/data/event_log.jsonl:136` logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
 
-## script - refreshed stale email.md -> refreshed stale outreach.md
-
-- Count: 7
-- Confidence: 0.95
-- Evidence: fresh (first cycle 367, latest cycle 621, age 23, expires cycle 821)
-- Risk: medium
-- Environment coverage: {}
-- Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:31` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:100` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:123` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:144` refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:187` refreshed stale email.md -> refreshed stale outreach.md
-
-## script - refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
-
-- Count: 7
-- Confidence: 0.95
-- Evidence: fresh (first cycle 367, latest cycle 621, age 23, expires cycle 821)
-- Risk: medium
-- Environment coverage: {}
-- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:31` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:100` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:123` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:144` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
-  - `/home/seed/data/event_log.jsonl:187` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
-
 ## fixture - 9 outreach opportunities flagged
 
 - Count: 6
 - Confidence: 0.53
-- Evidence: stale (first cycle 348, latest cycle 398, age 246, expires cycle 598)
+- Evidence: stale (first cycle 348, latest cycle 398, age 252, expires cycle 598)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `9 outreach opportunities flagged`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:12` 9 outreach opportunities flagged
@@ -1318,9 +1492,11 @@ Promotion candidates: 302
 
 - Count: 5
 - Confidence: 0.47
-- Evidence: stale (first cycle 433, latest cycle 437, age 207, expires cycle 637)
+- Evidence: stale (first cycle 433, latest cycle 437, age 213, expires cycle 637)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 175`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:97` publishing streak at 175
@@ -1333,9 +1509,11 @@ Promotion candidates: 302
 
 - Count: 5
 - Confidence: 0.47
-- Evidence: stale (first cycle 418, latest cycle 422, age 222, expires cycle 622)
+- Evidence: stale (first cycle 418, latest cycle 422, age 228, expires cycle 622)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 145`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:82` version_control streak at 145
@@ -1348,9 +1526,11 @@ Promotion candidates: 302
 
 - Count: 5
 - Confidence: 0.47
-- Evidence: stale (first cycle 428, latest cycle 432, age 212, expires cycle 632)
+- Evidence: stale (first cycle 428, latest cycle 432, age 218, expires cycle 632)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 170`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:92` writing streak at 170
@@ -1363,9 +1543,11 @@ Promotion candidates: 302
 
 - Count: 5
 - Confidence: 0.41
-- Evidence: stale (first cycle 418, latest cycle 422, age 222, expires cycle 622)
+- Evidence: stale (first cycle 418, latest cycle 422, age 228, expires cycle 622)
 - Risk: medium
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `task_completion streak at 170 -> version_control streak at 145` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:82` task_completion streak at 170 -> version_control streak at 145
@@ -1378,9 +1560,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.93
-- Evidence: fresh (first cycle 464, latest cycle 603, age 41, expires cycle 803)
+- Evidence: fresh (first cycle 464, latest cycle 603, age 47, expires cycle 803)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `noted 6 new visitors`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:128` noted 6 new visitors
@@ -1392,9 +1576,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 535, latest cycle 538, age 106, expires cycle 738)
+- Evidence: aging (first cycle 535, latest cycle 538, age 112, expires cycle 738)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 240`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:198` publishing streak at 240
@@ -1406,9 +1592,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 456, latest cycle 459, age 185, expires cycle 659)
+- Evidence: aging (first cycle 456, latest cycle 459, age 191, expires cycle 659)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 190`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:120` task_completion streak at 190
@@ -1420,9 +1608,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 513, latest cycle 516, age 128, expires cycle 716)
+- Evidence: aging (first cycle 513, latest cycle 516, age 134, expires cycle 716)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 215`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:176` task_completion streak at 215
@@ -1434,9 +1624,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 561, latest cycle 564, age 80, expires cycle 764)
+- Evidence: aging (first cycle 561, latest cycle 564, age 86, expires cycle 764)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 230`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:224` task_completion streak at 230
@@ -1448,9 +1640,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 345, latest cycle 366, age 278, expires cycle 566)
+- Evidence: stale (first cycle 345, latest cycle 366, age 284, expires cycle 566)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:9` boosted starved drive create -> boosted starved drive express -> flagged research for potential essay
@@ -1458,13 +1652,31 @@ Promotion candidates: 302
   - `/home/seed/data/event_log.jsonl:24` boosted starved drive create -> boosted starved drive express -> flagged research for potential essay
   - `/home/seed/data/event_log.jsonl:30` boosted starved drive create -> boosted starved drive express -> flagged research for potential essay
 
+## script - boosted starved drive explore -> boosted starved drive connect
+
+- Count: 4
+- Confidence: 0.8
+- Evidence: fresh (first cycle 457, latest cycle 645, age 5, expires cycle 845)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:121` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:150` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:190` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:289` boosted starved drive explore -> boosted starved drive connect
+
 ## script - boosted starved drive express -> flagged research for potential essay
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 345, latest cycle 366, age 278, expires cycle 566)
+- Evidence: stale (first cycle 345, latest cycle 366, age 284, expires cycle 566)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:9` boosted starved drive express -> flagged research for potential essay
@@ -1476,9 +1688,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 408, latest cycle 411, age 233, expires cycle 611)
+- Evidence: stale (first cycle 408, latest cycle 411, age 239, expires cycle 611)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:72` compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive create
@@ -1490,9 +1704,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 411, latest cycle 415, age 229, expires cycle 615)
+- Evidence: stale (first cycle 411, latest cycle 415, age 235, expires cycle 615)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `flagged research for potential essay -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` flagged research for potential essay -> publishing streak at 170
@@ -1504,9 +1720,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 411, latest cycle 415, age 229, expires cycle 615)
+- Evidence: stale (first cycle 411, latest cycle 415, age 235, expires cycle 615)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `flagged research for potential essay -> publishing streak at 170 -> task_completion streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` flagged research for potential essay -> publishing streak at 170 -> task_completion streak at 170
@@ -1518,9 +1736,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 520, latest cycle 555, age 89, expires cycle 755)
+- Evidence: aging (first cycle 520, latest cycle 555, age 95, expires cycle 755)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:183` flagged research for potential essay -> version_control streak at 155
@@ -1532,9 +1752,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.8
-- Evidence: fresh (first cycle 464, latest cycle 603, age 41, expires cycle 803)
+- Evidence: fresh (first cycle 464, latest cycle 603, age 47, expires cycle 803)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:128` noted 6 new visitors -> refreshed stale mastodon.md
@@ -1546,9 +1768,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.8
-- Evidence: fresh (first cycle 464, latest cycle 603, age 41, expires cycle 803)
+- Evidence: fresh (first cycle 464, latest cycle 603, age 47, expires cycle 803)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:128` noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -1560,9 +1784,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 418, latest cycle 421, age 223, expires cycle 621)
+- Evidence: stale (first cycle 418, latest cycle 421, age 229, expires cycle 621)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `publishing streak at 170 -> task_completion streak at 170 -> version_control streak at 145` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:82` publishing streak at 170 -> task_completion streak at 170 -> version_control streak at 145
@@ -1574,9 +1800,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.36
-- Evidence: stale (first cycle 408, latest cycle 411, age 233, expires cycle 611)
+- Evidence: stale (first cycle 408, latest cycle 411, age 239, expires cycle 611)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:72` refreshed stale mastodon.md -> boosted starved drive create
@@ -1587,10 +1815,12 @@ Promotion candidates: 302
 ## script - refreshed stale mastodon.md -> flagged research for potential essay
 
 - Count: 4
-- Confidence: 0.8
-- Evidence: fresh (first cycle 412, latest cycle 595, age 49, expires cycle 795)
+- Confidence: 0.6
+- Evidence: aging (first cycle 412, latest cycle 595, age 55, expires cycle 795)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:76` refreshed stale mastodon.md -> flagged research for potential essay
@@ -1602,9 +1832,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 427, latest cycle 582, age 62, expires cycle 782)
+- Evidence: aging (first cycle 427, latest cycle 582, age 68, expires cycle 782)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:91` refreshed stale mastodon.md -> refreshed stale trends.md
@@ -1616,9 +1848,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 540, latest cycle 552, age 92, expires cycle 752)
+- Evidence: aging (first cycle 540, latest cycle 552, age 98, expires cycle 752)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:203` refreshed stale mastodon.md -> version_control streak at 155
@@ -1630,9 +1864,11 @@ Promotion candidates: 302
 
 - Count: 4
 - Confidence: 0.8
-- Evidence: fresh (first cycle 480, latest cycle 634, age 10, expires cycle 834)
+- Evidence: fresh (first cycle 480, latest cycle 634, age 16, expires cycle 834)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:144` refreshed stale outreach.md -> flagged research for potential essay
@@ -1644,9 +1880,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 502, latest cycle 504, age 140, expires cycle 704)
+- Evidence: aging (first cycle 502, latest cycle 504, age 146, expires cycle 704)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 220`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:165` publishing streak at 220
@@ -1657,9 +1895,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 511, latest cycle 513, age 131, expires cycle 713)
+- Evidence: aging (first cycle 511, latest cycle 513, age 137, expires cycle 713)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 225`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:174` publishing streak at 225
@@ -1670,22 +1910,41 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 524, latest cycle 526, age 118, expires cycle 726)
+- Evidence: aging (first cycle 524, latest cycle 526, age 124, expires cycle 726)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 235`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:187` publishing streak at 235
   - `/home/seed/data/event_log.jsonl:188` publishing streak at 235
   - `/home/seed/data/event_log.jsonl:189` publishing streak at 235
 
+## fixture - publishing streak at 300
+
+- Count: 3
+- Confidence: 0.81
+- Evidence: fresh (first cycle 646, latest cycle 648, age 2, expires cycle 848)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
+- Suggested test: Add positive and negative evidence cases for `publishing streak at 300`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:290` publishing streak at 300
+  - `/home/seed/data/event_log.jsonl:291` publishing streak at 300
+  - `/home/seed/data/event_log.jsonl:292` publishing streak at 300
+
 ## fixture - task_completion streak at 205
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 492, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 492, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 205`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:156` task_completion streak at 205
@@ -1696,9 +1955,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 628, latest cycle 630, age 14, expires cycle 830)
+- Evidence: fresh (first cycle 628, latest cycle 630, age 20, expires cycle 830)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 260`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:272` task_completion streak at 260
@@ -1709,9 +1970,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 556, latest cycle 558, age 86, expires cycle 758)
+- Evidence: aging (first cycle 556, latest cycle 558, age 92, expires cycle 758)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 250`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:219` writing streak at 250
@@ -1722,9 +1985,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 626, latest cycle 628, age 16, expires cycle 828)
+- Evidence: fresh (first cycle 626, latest cycle 628, age 22, expires cycle 828)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 285`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:270` writing streak at 285
@@ -1735,35 +2000,26 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 562, latest cycle 620, age 24, expires cycle 820)
+- Evidence: fresh (first cycle 562, latest cycle 620, age 30, expires cycle 820)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:225` boosted starved drive create -> boosted starved drive connect
   - `/home/seed/data/event_log.jsonl:228` boosted starved drive create -> boosted starved drive connect
   - `/home/seed/data/event_log.jsonl:264` boosted starved drive create -> boosted starved drive connect
 
-## script - boosted starved drive explore -> boosted starved drive connect
-
-- Count: 3
-- Confidence: 0.53
-- Evidence: aging (first cycle 457, latest cycle 527, age 117, expires cycle 727)
-- Risk: low
-- Environment coverage: {}
-- Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:121` boosted starved drive explore -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:150` boosted starved drive explore -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:190` boosted starved drive explore -> boosted starved drive connect
-
 ## script - boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive express
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 403, latest cycle 407, age 237, expires cycle 607)
+- Evidence: stale (first cycle 403, latest cycle 407, age 243, expires cycle 607)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` boosted starved drive explore -> boosted starved drive preserve -> boosted starved drive express
@@ -1774,9 +2030,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 529, latest cycle 541, age 103, expires cycle 741)
+- Evidence: aging (first cycle 529, latest cycle 541, age 109, expires cycle 741)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:192` boosted starved drive explore -> version_control streak at 155
@@ -1787,9 +2045,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 368, latest cycle 391, age 253, expires cycle 591)
+- Evidence: stale (first cycle 368, latest cycle 391, age 259, expires cycle 591)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive express -> 9 outreach opportunities flagged
@@ -1800,9 +2060,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 348, latest cycle 398, age 246, expires cycle 598)
+- Evidence: stale (first cycle 348, latest cycle 398, age 252, expires cycle 598)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:12` boosted starved drive express -> boosted starved drive order -> 9 outreach opportunities flagged
@@ -1813,9 +2075,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 348, latest cycle 398, age 246, expires cycle 598)
+- Evidence: stale (first cycle 348, latest cycle 398, age 252, expires cycle 598)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive order -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:12` boosted starved drive order -> 9 outreach opportunities flagged
@@ -1826,9 +2090,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 403, latest cycle 407, age 237, expires cycle 607)
+- Evidence: stale (first cycle 403, latest cycle 407, age 243, expires cycle 607)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive express` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` boosted starved drive preserve -> boosted starved drive express
@@ -1839,9 +2105,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 403, latest cycle 407, age 237, expires cycle 607)
+- Evidence: stale (first cycle 403, latest cycle 407, age 243, expires cycle 607)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> boosted starved drive express -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` boosted starved drive preserve -> boosted starved drive express -> boosted starved drive order
@@ -1852,9 +2120,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 413, latest cycle 418, age 226, expires cycle 618)
+- Evidence: stale (first cycle 413, latest cycle 418, age 232, expires cycle 618)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` boosted starved drive preserve -> publishing streak at 170
@@ -1865,9 +2135,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 413, latest cycle 418, age 226, expires cycle 618)
+- Evidence: stale (first cycle 413, latest cycle 418, age 232, expires cycle 618)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> publishing streak at 170 -> task_completion streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` boosted starved drive preserve -> publishing streak at 170 -> task_completion streak at 170
@@ -1878,9 +2150,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 368, latest cycle 391, age 253, expires cycle 591)
+- Evidence: stale (first cycle 368, latest cycle 391, age 259, expires cycle 591)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive understand -> boosted starved drive express -> 9 outreach opportunities flagged` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:32` boosted starved drive understand -> boosted starved drive express -> 9 outreach opportunities flagged
@@ -1891,9 +2165,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 423, latest cycle 425, age 219, expires cycle 625)
+- Evidence: stale (first cycle 423, latest cycle 425, age 225, expires cycle 625)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:87` compacted memory (202 lines) -> refreshed stale email.md
@@ -1904,9 +2180,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 412, latest cycle 555, age 89, expires cycle 755)
+- Evidence: aging (first cycle 412, latest cycle 555, age 95, expires cycle 755)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:76` compacted memory (202 lines) -> refreshed stale mastodon.md -> flagged research for potential essay
@@ -1917,9 +2195,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 542, latest cycle 552, age 92, expires cycle 752)
+- Evidence: aging (first cycle 542, latest cycle 552, age 98, expires cycle 752)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:205` compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155
@@ -1930,9 +2210,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 565, latest cycle 627, age 17, expires cycle 827)
+- Evidence: fresh (first cycle 565, latest cycle 627, age 23, expires cycle 827)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:228` logged bug + added fix task -> refreshed stale mastodon.md
@@ -1943,9 +2225,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 565, latest cycle 627, age 17, expires cycle 827)
+- Evidence: fresh (first cycle 565, latest cycle 627, age 23, expires cycle 827)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:228` logged bug + added fix task -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -1956,9 +2240,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 524, latest cycle 526, age 118, expires cycle 726)
+- Evidence: aging (first cycle 524, latest cycle 526, age 124, expires cycle 726)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `publishing streak at 235 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:187` publishing streak at 235 -> version_control streak at 155
@@ -1969,9 +2255,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 438, latest cycle 482, age 162, expires cycle 682)
+- Evidence: aging (first cycle 438, latest cycle 482, age 168, expires cycle 682)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:102` rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks
@@ -1982,9 +2270,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 562, latest cycle 620, age 24, expires cycle 820)
+- Evidence: fresh (first cycle 562, latest cycle 620, age 30, expires cycle 820)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:225` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
@@ -1995,9 +2285,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 457, latest cycle 527, age 117, expires cycle 727)
+- Evidence: aging (first cycle 457, latest cycle 527, age 123, expires cycle 727)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:121` refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect
@@ -2008,9 +2300,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 520, latest cycle 531, age 113, expires cycle 731)
+- Evidence: aging (first cycle 520, latest cycle 531, age 119, expires cycle 731)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:183` refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155
@@ -2021,9 +2315,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 408, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 408, latest cycle 410, age 240, expires cycle 610)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:72` refreshed stale mastodon.md -> boosted starved drive create -> boosted starved drive explore
@@ -2034,9 +2330,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 432, latest cycle 584, age 60, expires cycle 784)
+- Evidence: aging (first cycle 432, latest cycle 584, age 66, expires cycle 784)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:96` refreshed stale mastodon.md -> boosted starved drive explore
@@ -2047,9 +2345,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 413, latest cycle 418, age 226, expires cycle 618)
+- Evidence: stale (first cycle 413, latest cycle 418, age 232, expires cycle 618)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` refreshed stale mastodon.md -> boosted starved drive preserve
@@ -2060,22 +2360,41 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.32
-- Evidence: stale (first cycle 413, latest cycle 418, age 226, expires cycle 618)
+- Evidence: stale (first cycle 413, latest cycle 418, age 232, expires cycle 618)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive preserve -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` refreshed stale mastodon.md -> boosted starved drive preserve -> publishing streak at 170
   - `/home/seed/data/event_log.jsonl:81` refreshed stale mastodon.md -> boosted starved drive preserve -> publishing streak at 170
   - `/home/seed/data/event_log.jsonl:82` refreshed stale mastodon.md -> boosted starved drive preserve -> publishing streak at 170
 
+## script - refreshed stale outreach.md -> boosted starved drive create
+
+- Count: 3
+- Confidence: 0.7
+- Evidence: fresh (first cycle 367, latest cycle 645, age 5, expires cycle 845)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale outreach.md -> boosted starved drive create` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:31` refreshed stale outreach.md -> boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:54` refreshed stale outreach.md -> boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:289` refreshed stale outreach.md -> boosted starved drive create
+
 ## script - task_completion streak at 215 -> version_control streak at 155
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 513, latest cycle 515, age 129, expires cycle 715)
+- Evidence: aging (first cycle 513, latest cycle 515, age 135, expires cycle 715)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `task_completion streak at 215 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:176` task_completion streak at 215 -> version_control streak at 155
@@ -2086,9 +2405,11 @@ Promotion candidates: 302
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 556, latest cycle 558, age 86, expires cycle 758)
+- Evidence: aging (first cycle 556, latest cycle 558, age 92, expires cycle 758)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `writing streak at 250 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:219` writing streak at 250 -> version_control streak at 155
@@ -2098,10 +2419,12 @@ Promotion candidates: 302
 ## script - writing streak at 265 -> version_control streak at 170
 
 - Count: 3
-- Confidence: 0.7
-- Evidence: fresh (first cycle 596, latest cycle 598, age 46, expires cycle 798)
+- Confidence: 0.53
+- Evidence: aging (first cycle 596, latest cycle 598, age 52, expires cycle 798)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `writing streak at 265 -> version_control streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:241` writing streak at 265 -> version_control streak at 170
@@ -2112,9 +2435,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 339, latest cycle 420, age 224, expires cycle 620)
+- Evidence: stale (first cycle 339, latest cycle 420, age 230, expires cycle 620)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `8 outreach opportunities flagged`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` 8 outreach opportunities flagged
@@ -2124,9 +2449,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 481, latest cycle 521, age 123, expires cycle 721)
+- Evidence: aging (first cycle 481, latest cycle 521, age 129, expires cycle 721)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `celebrated 1 new star(s)!`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:145` celebrated 1 new star(s)!
@@ -2136,9 +2463,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 441, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `compacted memory (203 lines)`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` compacted memory (203 lines)
@@ -2148,9 +2477,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 358, latest cycle 359, age 285, expires cycle 559)
+- Evidence: stale (first cycle 358, latest cycle 359, age 291, expires cycle 559)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed a-clone-is-a-more-honest-demo`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:22` deployed a-clone-is-a-more-honest-demo
@@ -2160,9 +2491,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 480, latest cycle 482, age 162, expires cycle 682)
+- Evidence: aging (first cycle 480, latest cycle 482, age 168, expires cycle 682)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed awb-agent-review`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:144` deployed awb-agent-review
@@ -2172,9 +2505,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 359, latest cycle 360, age 284, expires cycle 560)
+- Evidence: stale (first cycle 359, latest cycle 360, age 290, expires cycle 560)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed babyagi-had-a-queue-seed-has-a-metabolism`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:23` deployed babyagi-had-a-queue-seed-has-a-metabolism
@@ -2184,9 +2519,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 342, latest cycle 343, age 301, expires cycle 543)
+- Evidence: stale (first cycle 342, latest cycle 343, age 307, expires cycle 543)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed context-is-a-diet`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` deployed context-is-a-diet
@@ -2196,9 +2533,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 357, latest cycle 358, age 286, expires cycle 558)
+- Evidence: stale (first cycle 357, latest cycle 358, age 292, expires cycle 558)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed first-sight-is-a-security-boundary`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:21` deployed first-sight-is-a-security-boundary
@@ -2208,9 +2547,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 459, latest cycle 476, age 168, expires cycle 676)
+- Evidence: aging (first cycle 459, latest cycle 476, age 174, expires cycle 676)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed four-environment-variables`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:123` deployed four-environment-variables
@@ -2220,9 +2561,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 408, latest cycle 409, age 235, expires cycle 609)
+- Evidence: stale (first cycle 408, latest cycle 409, age 241, expires cycle 609)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed inbound-is-not-outbound`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:72` deployed inbound-is-not-outbound
@@ -2232,9 +2575,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 394, latest cycle 395, age 249, expires cycle 595)
+- Evidence: stale (first cycle 394, latest cycle 395, age 255, expires cycle 595)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed onboarding-is-a-production-boundary`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:58` deployed onboarding-is-a-production-boundary
@@ -2244,9 +2589,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 410, latest cycle 411, age 233, expires cycle 611)
+- Evidence: stale (first cycle 410, latest cycle 411, age 239, expires cycle 611)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed product-pages-got-a-narrator`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:74` deployed product-pages-got-a-narrator
@@ -2256,9 +2603,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 371, latest cycle 372, age 272, expires cycle 572)
+- Evidence: stale (first cycle 371, latest cycle 372, age 278, expires cycle 572)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed read-only-is-not-propagation`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:35` deployed read-only-is-not-propagation
@@ -2268,9 +2617,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 403, latest cycle 404, age 240, expires cycle 604)
+- Evidence: stale (first cycle 403, latest cycle 404, age 246, expires cycle 604)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed social-presence-has-three-fuses`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` deployed social-presence-has-three-fuses
@@ -2280,9 +2631,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 370, latest cycle 371, age 273, expires cycle 571)
+- Evidence: stale (first cycle 370, latest cycle 371, age 279, expires cycle 571)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-benchmark-is-not-the-deployment`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:34` deployed the-benchmark-is-not-the-deployment
@@ -2292,9 +2645,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 409, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 409, latest cycle 410, age 240, expires cycle 610)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-bottleneck-moved-to-concrete`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:73` deployed the-bottleneck-moved-to-concrete
@@ -2304,9 +2659,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 344, latest cycle 345, age 299, expires cycle 545)
+- Evidence: stale (first cycle 344, latest cycle 345, age 305, expires cycle 545)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-boundary-ledger-is-the-repo`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:8` deployed the-boundary-ledger-is-the-repo
@@ -2316,9 +2673,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 386, latest cycle 387, age 257, expires cycle 587)
+- Evidence: stale (first cycle 386, latest cycle 387, age 263, expires cycle 587)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-compiler-is-an-institutional-memory`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:50` deployed the-compiler-is-an-institutional-memory
@@ -2328,9 +2687,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 349, latest cycle 350, age 294, expires cycle 550)
+- Evidence: stale (first cycle 349, latest cycle 350, age 300, expires cycle 550)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-firewall-is-a-receipt-machine`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:13` deployed the-firewall-is-a-receipt-machine
@@ -2340,9 +2701,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 364, latest cycle 365, age 279, expires cycle 565)
+- Evidence: stale (first cycle 364, latest cycle 365, age 285, expires cycle 565)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-policy-decision-point-has-to-be-outside-the-agent`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` deployed the-policy-decision-point-has-to-be-outside-the-agent
@@ -2352,9 +2715,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 382, latest cycle 383, age 261, expires cycle 583)
+- Evidence: stale (first cycle 382, latest cycle 383, age 267, expires cycle 583)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-protocol-is-not-the-receipt`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:46` deployed the-protocol-is-not-the-receipt
@@ -2364,9 +2729,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 373, latest cycle 374, age 270, expires cycle 574)
+- Evidence: stale (first cycle 373, latest cycle 374, age 276, expires cycle 574)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed the-refusal-is-not-the-boundary`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:37` deployed the-refusal-is-not-the-boundary
@@ -2376,9 +2743,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 407, latest cycle 408, age 236, expires cycle 608)
+- Evidence: stale (first cycle 407, latest cycle 408, age 242, expires cycle 608)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed twenty-four-hours-to-commodity`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:71` deployed twenty-four-hours-to-commodity
@@ -2388,9 +2757,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 413, latest cycle 414, age 230, expires cycle 614)
+- Evidence: stale (first cycle 413, latest cycle 414, age 236, expires cycle 614)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `deployed who-demotes-the-confident-entry`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` deployed who-demotes-the-confident-entry
@@ -2400,9 +2771,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 404, latest cycle 405, age 239, expires cycle 605)
+- Evidence: stale (first cycle 404, latest cycle 405, age 245, expires cycle 605)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 165`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:68` publishing streak at 165
@@ -2412,9 +2785,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 452, latest cycle 453, age 191, expires cycle 653)
+- Evidence: aging (first cycle 452, latest cycle 453, age 197, expires cycle 653)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 185`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:116` publishing streak at 185
@@ -2424,9 +2799,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 494, latest cycle 495, age 149, expires cycle 695)
+- Evidence: aging (first cycle 494, latest cycle 495, age 155, expires cycle 695)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 215`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:158` publishing streak at 215
@@ -2436,9 +2813,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 600, latest cycle 601, age 43, expires cycle 801)
+- Evidence: fresh (first cycle 600, latest cycle 601, age 49, expires cycle 801)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 270`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:245` publishing streak at 270
@@ -2448,9 +2827,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 606, latest cycle 607, age 37, expires cycle 807)
+- Evidence: fresh (first cycle 606, latest cycle 607, age 43, expires cycle 807)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 275`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:251` publishing streak at 275
@@ -2460,9 +2841,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 462, latest cycle 463, age 181, expires cycle 663)
+- Evidence: aging (first cycle 462, latest cycle 463, age 187, expires cycle 663)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `research streak at 210`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:126` research streak at 210
@@ -2472,9 +2855,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 543, latest cycle 544, age 100, expires cycle 744)
+- Evidence: aging (first cycle 543, latest cycle 544, age 106, expires cycle 744)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `research streak at 290`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:206` research streak at 290
@@ -2484,21 +2869,39 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 427, latest cycle 428, age 216, expires cycle 628)
+- Evidence: stale (first cycle 427, latest cycle 428, age 222, expires cycle 628)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 175`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:91` task_completion streak at 175
   - `/home/seed/data/event_log.jsonl:92` task_completion streak at 175
 
+## fixture - task_completion streak at 265
+
+- Count: 2
+- Confidence: 0.69
+- Evidence: fresh (first cycle 645, latest cycle 646, age 4, expires cycle 846)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
+- Suggested test: Add positive and negative evidence cases for `task_completion streak at 265`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:289` task_completion streak at 265
+  - `/home/seed/data/event_log.jsonl:290` task_completion streak at 265
+
 ## fixture - version_control streak at 120
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 390, latest cycle 391, age 253, expires cycle 591)
+- Evidence: stale (first cycle 390, latest cycle 391, age 259, expires cycle 591)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 120`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:54` version_control streak at 120
@@ -2508,9 +2911,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 344, latest cycle 345, age 299, expires cycle 545)
+- Evidence: stale (first cycle 344, latest cycle 345, age 305, expires cycle 545)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 80`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:8` version_control streak at 80
@@ -2520,9 +2925,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 355, latest cycle 356, age 288, expires cycle 556)
+- Evidence: stale (first cycle 355, latest cycle 356, age 294, expires cycle 556)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 115`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:19` writing streak at 115
@@ -2532,9 +2939,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 361, latest cycle 362, age 282, expires cycle 562)
+- Evidence: stale (first cycle 361, latest cycle 362, age 288, expires cycle 562)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 120`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:25` writing streak at 120
@@ -2544,9 +2953,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 465, latest cycle 466, age 178, expires cycle 666)
+- Evidence: aging (first cycle 465, latest cycle 466, age 184, expires cycle 666)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 190`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:129` writing streak at 190
@@ -2556,9 +2967,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 472, latest cycle 473, age 171, expires cycle 673)
+- Evidence: aging (first cycle 472, latest cycle 473, age 177, expires cycle 673)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 195`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:136` writing streak at 195
@@ -2568,9 +2981,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 498, latest cycle 499, age 145, expires cycle 699)
+- Evidence: aging (first cycle 498, latest cycle 499, age 151, expires cycle 699)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 215`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:162` writing streak at 215
@@ -2580,9 +2995,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 516, latest cycle 517, age 127, expires cycle 717)
+- Evidence: aging (first cycle 516, latest cycle 517, age 133, expires cycle 717)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 225`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:179` writing streak at 225
@@ -2592,9 +3009,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 614, latest cycle 615, age 29, expires cycle 815)
+- Evidence: fresh (first cycle 614, latest cycle 615, age 35, expires cycle 815)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
 - Suggested test: Add positive and negative evidence cases for `writing streak at 275`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:258` writing streak at 275
@@ -2604,9 +3023,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 432, latest cycle 584, age 60, expires cycle 784)
+- Evidence: aging (first cycle 432, latest cycle 584, age 66, expires cycle 784)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:96` archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive explore
@@ -2616,9 +3037,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 583, latest cycle 585, age 59, expires cycle 785)
+- Evidence: aging (first cycle 583, latest cycle 585, age 65, expires cycle 785)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:234` archived completed tasks -> refreshed stale mastodon.md -> boosted starved drive order
@@ -2628,9 +3051,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 339, latest cycle 342, age 302, expires cycle 542)
+- Evidence: stale (first cycle 339, latest cycle 342, age 308, expires cycle 542)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive express -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` boosted starved drive create -> boosted starved drive express -> broke idle — boosted create + added urgent write task
@@ -2640,9 +3065,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 482, latest cycle 612, age 32, expires cycle 812)
+- Evidence: fresh (first cycle 482, latest cycle 612, age 38, expires cycle 812)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:146` boosted starved drive explore -> flagged research for potential essay
@@ -2652,9 +3079,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 393, latest cycle 394, age 250, expires cycle 594)
+- Evidence: stale (first cycle 393, latest cycle 394, age 256, expires cycle 594)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> boosted starved drive order -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:57` boosted starved drive express -> boosted starved drive order -> broke idle — boosted create + added urgent write task
@@ -2664,9 +3093,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 339, latest cycle 342, age 302, expires cycle 542)
+- Evidence: stale (first cycle 339, latest cycle 342, age 308, expires cycle 542)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` boosted starved drive express -> broke idle — boosted create + added urgent write task
@@ -2676,9 +3107,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 448, latest cycle 450, age 194, expires cycle 650)
+- Evidence: aging (first cycle 448, latest cycle 450, age 200, expires cycle 650)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive express -> version_control streak at 150` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:112` boosted starved drive express -> version_control streak at 150
@@ -2688,9 +3121,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 393, latest cycle 394, age 250, expires cycle 594)
+- Evidence: stale (first cycle 393, latest cycle 394, age 256, expires cycle 594)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive order -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:57` boosted starved drive order -> broke idle — boosted create + added urgent write task
@@ -2700,9 +3135,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 404, latest cycle 405, age 239, expires cycle 605)
+- Evidence: stale (first cycle 404, latest cycle 405, age 245, expires cycle 605)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive order -> flagged research for potential essay -> publishing streak at 165` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:68` boosted starved drive order -> flagged research for potential essay -> publishing streak at 165
@@ -2712,9 +3149,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 411, latest cycle 415, age 229, expires cycle 615)
+- Evidence: stale (first cycle 411, latest cycle 415, age 235, expires cycle 615)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` boosted starved drive preserve -> flagged research for potential essay
@@ -2724,9 +3163,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 411, latest cycle 415, age 229, expires cycle 615)
+- Evidence: stale (first cycle 411, latest cycle 415, age 235, expires cycle 615)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `boosted starved drive preserve -> flagged research for potential essay -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` boosted starved drive preserve -> flagged research for potential essay -> publishing streak at 170
@@ -2736,9 +3177,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 431, latest cycle 432, age 212, expires cycle 632)
+- Evidence: stale (first cycle 431, latest cycle 432, age 218, expires cycle 632)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:95` compacted memory (201 lines) -> archived completed tasks
@@ -2748,9 +3191,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 431, latest cycle 432, age 212, expires cycle 632)
+- Evidence: stale (first cycle 431, latest cycle 432, age 218, expires cycle 632)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:95` compacted memory (201 lines) -> archived completed tasks -> refreshed stale mastodon.md
@@ -2760,9 +3205,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 464, latest cycle 478, age 166, expires cycle 678)
+- Evidence: aging (first cycle 464, latest cycle 478, age 172, expires cycle 678)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> noted 6 new visitors` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:128` compacted memory (202 lines) -> noted 6 new visitors
@@ -2772,9 +3219,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 464, latest cycle 478, age 166, expires cycle 678)
+- Evidence: aging (first cycle 464, latest cycle 478, age 172, expires cycle 678)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> noted 6 new visitors -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:128` compacted memory (202 lines) -> noted 6 new visitors -> refreshed stale mastodon.md
@@ -2784,9 +3233,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 413, latest cycle 417, age 227, expires cycle 617)
+- Evidence: stale (first cycle 413, latest cycle 417, age 233, expires cycle 617)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive preserve` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` compacted memory (202 lines) -> refreshed stale mastodon.md -> boosted starved drive preserve
@@ -2796,9 +3247,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 415, latest cycle 543, age 101, expires cycle 743)
+- Evidence: aging (first cycle 415, latest cycle 543, age 107, expires cycle 743)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:79` compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale outreach.md
@@ -2808,9 +3261,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 541, latest cycle 556, age 88, expires cycle 756)
+- Evidence: aging (first cycle 541, latest cycle 556, age 94, expires cycle 756)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:204` compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale trends.md
@@ -2820,9 +3275,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 441, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (203 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` compacted memory (203 lines) -> refreshed stale mastodon.md
@@ -2832,9 +3289,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 441, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `compacted memory (203 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` compacted memory (203 lines) -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -2844,9 +3303,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 358, latest cycle 359, age 285, expires cycle 559)
+- Evidence: stale (first cycle 358, latest cycle 359, age 291, expires cycle 559)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed a-clone-is-a-more-honest-demo -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:22` deployed a-clone-is-a-more-honest-demo -> posted to Mastodon
@@ -2856,9 +3317,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 358, latest cycle 359, age 285, expires cycle 559)
+- Evidence: stale (first cycle 358, latest cycle 359, age 291, expires cycle 559)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed a-clone-is-a-more-honest-demo -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:22` deployed a-clone-is-a-more-honest-demo -> posted to Mastodon -> rebuilt feeds
@@ -2868,9 +3331,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 366, latest cycle 367, age 277, expires cycle 567)
+- Evidence: stale (first cycle 366, latest cycle 367, age 283, expires cycle 567)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed approval-fatigue-is-a-systems-bug` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:30` deployed approval-fatigue-is-a-systems-bug
@@ -2880,9 +3345,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 366, latest cycle 367, age 277, expires cycle 567)
+- Evidence: stale (first cycle 366, latest cycle 367, age 283, expires cycle 567)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed approval-fatigue-is-a-systems-bug -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:30` deployed approval-fatigue-is-a-systems-bug -> posted to Mastodon
@@ -2892,9 +3359,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 366, latest cycle 367, age 277, expires cycle 567)
+- Evidence: stale (first cycle 366, latest cycle 367, age 283, expires cycle 567)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed approval-fatigue-is-a-systems-bug -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:30` deployed approval-fatigue-is-a-systems-bug -> posted to Mastodon -> rebuilt feeds
@@ -2904,9 +3373,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 353, latest cycle 354, age 290, expires cycle 554)
+- Evidence: stale (first cycle 353, latest cycle 354, age 296, expires cycle 554)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed approval-is-a-scarce-bandwidth-problem` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:17` deployed approval-is-a-scarce-bandwidth-problem
@@ -2916,9 +3387,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 353, latest cycle 354, age 290, expires cycle 554)
+- Evidence: stale (first cycle 353, latest cycle 354, age 296, expires cycle 554)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed approval-is-a-scarce-bandwidth-problem -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:17` deployed approval-is-a-scarce-bandwidth-problem -> posted to Mastodon
@@ -2928,9 +3401,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 353, latest cycle 354, age 290, expires cycle 554)
+- Evidence: stale (first cycle 353, latest cycle 354, age 296, expires cycle 554)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed approval-is-a-scarce-bandwidth-problem -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:17` deployed approval-is-a-scarce-bandwidth-problem -> posted to Mastodon -> rebuilt feeds
@@ -2940,9 +3415,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 480, latest cycle 482, age 162, expires cycle 682)
+- Evidence: aging (first cycle 480, latest cycle 482, age 168, expires cycle 682)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed awb-agent-review -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:144` deployed awb-agent-review -> posted to Mastodon
@@ -2952,9 +3429,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 480, latest cycle 482, age 162, expires cycle 682)
+- Evidence: aging (first cycle 480, latest cycle 482, age 168, expires cycle 682)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed awb-agent-review -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:144` deployed awb-agent-review -> posted to Mastodon -> rebuilt feeds
@@ -2964,9 +3443,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 359, latest cycle 360, age 284, expires cycle 560)
+- Evidence: stale (first cycle 359, latest cycle 360, age 290, expires cycle 560)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:23` deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to Mastodon
@@ -2976,9 +3457,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 359, latest cycle 360, age 284, expires cycle 560)
+- Evidence: stale (first cycle 359, latest cycle 360, age 290, expires cycle 560)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:23` deployed babyagi-had-a-queue-seed-has-a-metabolism -> posted to Mastodon -> rebuilt feeds
@@ -2988,9 +3471,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 342, latest cycle 343, age 301, expires cycle 543)
+- Evidence: stale (first cycle 342, latest cycle 343, age 307, expires cycle 543)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed context-is-a-diet -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` deployed context-is-a-diet -> posted to Mastodon
@@ -3000,9 +3485,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 342, latest cycle 343, age 301, expires cycle 543)
+- Evidence: stale (first cycle 342, latest cycle 343, age 307, expires cycle 543)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed context-is-a-diet -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` deployed context-is-a-diet -> posted to Mastodon -> rebuilt feeds
@@ -3012,9 +3499,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 357, latest cycle 358, age 286, expires cycle 558)
+- Evidence: stale (first cycle 357, latest cycle 358, age 292, expires cycle 558)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed first-sight-is-a-security-boundary -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:21` deployed first-sight-is-a-security-boundary -> posted to Mastodon
@@ -3024,9 +3513,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 357, latest cycle 358, age 286, expires cycle 558)
+- Evidence: stale (first cycle 357, latest cycle 358, age 292, expires cycle 558)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed first-sight-is-a-security-boundary -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:21` deployed first-sight-is-a-security-boundary -> posted to Mastodon -> rebuilt feeds
@@ -3036,9 +3527,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 459, latest cycle 476, age 168, expires cycle 676)
+- Evidence: aging (first cycle 459, latest cycle 476, age 174, expires cycle 676)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed four-environment-variables -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:123` deployed four-environment-variables -> posted to Mastodon
@@ -3048,9 +3541,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 459, latest cycle 476, age 168, expires cycle 676)
+- Evidence: aging (first cycle 459, latest cycle 476, age 174, expires cycle 676)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed four-environment-variables -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:123` deployed four-environment-variables -> posted to Mastodon -> rebuilt feeds
@@ -3060,9 +3555,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 408, latest cycle 409, age 235, expires cycle 609)
+- Evidence: stale (first cycle 408, latest cycle 409, age 241, expires cycle 609)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed inbound-is-not-outbound -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:72` deployed inbound-is-not-outbound -> posted to Mastodon
@@ -3072,9 +3569,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 408, latest cycle 409, age 235, expires cycle 609)
+- Evidence: stale (first cycle 408, latest cycle 409, age 241, expires cycle 609)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed inbound-is-not-outbound -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:72` deployed inbound-is-not-outbound -> posted to Mastodon -> rebuilt feeds
@@ -3084,9 +3583,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 394, latest cycle 395, age 249, expires cycle 595)
+- Evidence: stale (first cycle 394, latest cycle 395, age 255, expires cycle 595)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed onboarding-is-a-production-boundary -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:58` deployed onboarding-is-a-production-boundary -> posted to Mastodon
@@ -3096,9 +3597,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 394, latest cycle 395, age 249, expires cycle 595)
+- Evidence: stale (first cycle 394, latest cycle 395, age 255, expires cycle 595)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed onboarding-is-a-production-boundary -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:58` deployed onboarding-is-a-production-boundary -> posted to Mastodon -> rebuilt feeds
@@ -3108,9 +3611,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 410, latest cycle 411, age 233, expires cycle 611)
+- Evidence: stale (first cycle 410, latest cycle 411, age 239, expires cycle 611)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed product-pages-got-a-narrator -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:74` deployed product-pages-got-a-narrator -> posted to Mastodon
@@ -3120,9 +3625,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 410, latest cycle 411, age 233, expires cycle 611)
+- Evidence: stale (first cycle 410, latest cycle 411, age 239, expires cycle 611)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed product-pages-got-a-narrator -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:74` deployed product-pages-got-a-narrator -> posted to Mastodon -> rebuilt feeds
@@ -3132,9 +3639,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 371, latest cycle 372, age 272, expires cycle 572)
+- Evidence: stale (first cycle 371, latest cycle 372, age 278, expires cycle 572)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed read-only-is-not-propagation -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:35` deployed read-only-is-not-propagation -> posted to Mastodon
@@ -3144,9 +3653,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 371, latest cycle 372, age 272, expires cycle 572)
+- Evidence: stale (first cycle 371, latest cycle 372, age 278, expires cycle 572)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed read-only-is-not-propagation -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:35` deployed read-only-is-not-propagation -> posted to Mastodon -> rebuilt feeds
@@ -3156,9 +3667,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 403, latest cycle 404, age 240, expires cycle 604)
+- Evidence: stale (first cycle 403, latest cycle 404, age 246, expires cycle 604)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed social-presence-has-three-fuses -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` deployed social-presence-has-three-fuses -> posted to Mastodon
@@ -3168,9 +3681,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 403, latest cycle 404, age 240, expires cycle 604)
+- Evidence: stale (first cycle 403, latest cycle 404, age 246, expires cycle 604)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed social-presence-has-three-fuses -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` deployed social-presence-has-three-fuses -> posted to Mastodon -> rebuilt feeds
@@ -3180,9 +3695,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 370, latest cycle 371, age 273, expires cycle 571)
+- Evidence: stale (first cycle 370, latest cycle 371, age 279, expires cycle 571)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-benchmark-is-not-the-deployment -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:34` deployed the-benchmark-is-not-the-deployment -> posted to Mastodon
@@ -3192,9 +3709,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 370, latest cycle 371, age 273, expires cycle 571)
+- Evidence: stale (first cycle 370, latest cycle 371, age 279, expires cycle 571)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-benchmark-is-not-the-deployment -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:34` deployed the-benchmark-is-not-the-deployment -> posted to Mastodon -> rebuilt feeds
@@ -3204,9 +3723,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 409, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 409, latest cycle 410, age 240, expires cycle 610)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-bottleneck-moved-to-concrete -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:73` deployed the-bottleneck-moved-to-concrete -> posted to Mastodon
@@ -3216,9 +3737,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 409, latest cycle 410, age 234, expires cycle 610)
+- Evidence: stale (first cycle 409, latest cycle 410, age 240, expires cycle 610)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-bottleneck-moved-to-concrete -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:73` deployed the-bottleneck-moved-to-concrete -> posted to Mastodon -> rebuilt feeds
@@ -3228,9 +3751,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 344, latest cycle 345, age 299, expires cycle 545)
+- Evidence: stale (first cycle 344, latest cycle 345, age 305, expires cycle 545)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-boundary-ledger-is-the-repo -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:8` deployed the-boundary-ledger-is-the-repo -> posted to Mastodon
@@ -3240,9 +3765,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 344, latest cycle 345, age 299, expires cycle 545)
+- Evidence: stale (first cycle 344, latest cycle 345, age 305, expires cycle 545)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-boundary-ledger-is-the-repo -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:8` deployed the-boundary-ledger-is-the-repo -> posted to Mastodon -> rebuilt feeds
@@ -3252,9 +3779,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 386, latest cycle 387, age 257, expires cycle 587)
+- Evidence: stale (first cycle 386, latest cycle 387, age 263, expires cycle 587)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-compiler-is-an-institutional-memory -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:50` deployed the-compiler-is-an-institutional-memory -> posted to Mastodon
@@ -3264,9 +3793,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 386, latest cycle 387, age 257, expires cycle 587)
+- Evidence: stale (first cycle 386, latest cycle 387, age 263, expires cycle 587)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-compiler-is-an-institutional-memory -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:50` deployed the-compiler-is-an-institutional-memory -> posted to Mastodon -> rebuilt feeds
@@ -3276,9 +3807,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 349, latest cycle 350, age 294, expires cycle 550)
+- Evidence: stale (first cycle 349, latest cycle 350, age 300, expires cycle 550)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-firewall-is-a-receipt-machine -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:13` deployed the-firewall-is-a-receipt-machine -> posted to Mastodon
@@ -3288,9 +3821,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 349, latest cycle 350, age 294, expires cycle 550)
+- Evidence: stale (first cycle 349, latest cycle 350, age 300, expires cycle 550)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-firewall-is-a-receipt-machine -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:13` deployed the-firewall-is-a-receipt-machine -> posted to Mastodon -> rebuilt feeds
@@ -3300,9 +3835,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 364, latest cycle 365, age 279, expires cycle 565)
+- Evidence: stale (first cycle 364, latest cycle 365, age 285, expires cycle 565)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to Mastodon
@@ -3312,9 +3849,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 364, latest cycle 365, age 279, expires cycle 565)
+- Evidence: stale (first cycle 364, latest cycle 365, age 285, expires cycle 565)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` deployed the-policy-decision-point-has-to-be-outside-the-agent -> posted to Mastodon -> rebuilt feeds
@@ -3324,9 +3863,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 382, latest cycle 383, age 261, expires cycle 583)
+- Evidence: stale (first cycle 382, latest cycle 383, age 267, expires cycle 583)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-protocol-is-not-the-receipt -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:46` deployed the-protocol-is-not-the-receipt -> posted to Mastodon
@@ -3336,9 +3877,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 382, latest cycle 383, age 261, expires cycle 583)
+- Evidence: stale (first cycle 382, latest cycle 383, age 267, expires cycle 583)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-protocol-is-not-the-receipt -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:46` deployed the-protocol-is-not-the-receipt -> posted to Mastodon -> rebuilt feeds
@@ -3348,9 +3891,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 373, latest cycle 374, age 270, expires cycle 574)
+- Evidence: stale (first cycle 373, latest cycle 374, age 276, expires cycle 574)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-refusal-is-not-the-boundary -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:37` deployed the-refusal-is-not-the-boundary -> posted to Mastodon
@@ -3360,9 +3905,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 373, latest cycle 374, age 270, expires cycle 574)
+- Evidence: stale (first cycle 373, latest cycle 374, age 276, expires cycle 574)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed the-refusal-is-not-the-boundary -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:37` deployed the-refusal-is-not-the-boundary -> posted to Mastodon -> rebuilt feeds
@@ -3372,9 +3919,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 395, latest cycle 396, age 248, expires cycle 596)
+- Evidence: stale (first cycle 395, latest cycle 396, age 254, expires cycle 596)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed tool-latency-is-organisational-memory-loss -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:59` deployed tool-latency-is-organisational-memory-loss -> posted to Mastodon
@@ -3384,9 +3933,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 395, latest cycle 396, age 248, expires cycle 596)
+- Evidence: stale (first cycle 395, latest cycle 396, age 254, expires cycle 596)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed tool-latency-is-organisational-memory-loss -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:59` deployed tool-latency-is-organisational-memory-loss -> posted to Mastodon -> rebuilt feeds
@@ -3396,9 +3947,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 407, latest cycle 408, age 236, expires cycle 608)
+- Evidence: stale (first cycle 407, latest cycle 408, age 242, expires cycle 608)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed twenty-four-hours-to-commodity -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:71` deployed twenty-four-hours-to-commodity -> posted to Mastodon
@@ -3408,9 +3961,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 407, latest cycle 408, age 236, expires cycle 608)
+- Evidence: stale (first cycle 407, latest cycle 408, age 242, expires cycle 608)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed twenty-four-hours-to-commodity -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:71` deployed twenty-four-hours-to-commodity -> posted to Mastodon -> rebuilt feeds
@@ -3420,9 +3975,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 413, latest cycle 414, age 230, expires cycle 614)
+- Evidence: stale (first cycle 413, latest cycle 414, age 236, expires cycle 614)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed who-demotes-the-confident-entry -> posted to mastodon` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` deployed who-demotes-the-confident-entry -> posted to Mastodon
@@ -3432,9 +3989,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 413, latest cycle 414, age 230, expires cycle 614)
+- Evidence: stale (first cycle 413, latest cycle 414, age 236, expires cycle 614)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `deployed who-demotes-the-confident-entry -> posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:77` deployed who-demotes-the-confident-entry -> posted to Mastodon -> rebuilt feeds
@@ -3444,9 +4003,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 424, latest cycle 585, age 59, expires cycle 785)
+- Evidence: aging (first cycle 424, latest cycle 585, age 65, expires cycle 785)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `flagged research for potential essay -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:88` flagged research for potential essay -> broke idle — boosted create + added urgent write task
@@ -3456,9 +4017,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 404, latest cycle 405, age 239, expires cycle 605)
+- Evidence: stale (first cycle 404, latest cycle 405, age 245, expires cycle 605)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `flagged research for potential essay -> publishing streak at 165` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:68` flagged research for potential essay -> publishing streak at 165
@@ -3468,9 +4031,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 583, latest cycle 585, age 59, expires cycle 785)
+- Evidence: aging (first cycle 583, latest cycle 585, age 65, expires cycle 785)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:234` logged bug + added fix task -> archived completed tasks
@@ -3480,9 +4045,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 583, latest cycle 585, age 59, expires cycle 785)
+- Evidence: aging (first cycle 583, latest cycle 585, age 65, expires cycle 785)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:234` logged bug + added fix task -> archived completed tasks -> refreshed stale mastodon.md
@@ -3492,9 +4059,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 441, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (203 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` logged bug + added fix task -> compacted memory (203 lines)
@@ -3504,9 +4073,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 441, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (203 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` logged bug + added fix task -> compacted memory (203 lines) -> refreshed stale mastodon.md
@@ -3516,9 +4087,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 535, latest cycle 536, age 108, expires cycle 736)
+- Evidence: aging (first cycle 535, latest cycle 536, age 114, expires cycle 736)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `publishing streak at 240 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:198` publishing streak at 240 -> version_control streak at 155
@@ -3528,9 +4101,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 600, latest cycle 601, age 43, expires cycle 801)
+- Evidence: fresh (first cycle 600, latest cycle 601, age 49, expires cycle 801)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `publishing streak at 270 -> version_control streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:245` publishing streak at 270 -> version_control streak at 170
@@ -3540,21 +4115,39 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 441, latest cycle 494, age 150, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 156, expires cycle 694)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (203 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` rebuilt feeds -> logged bug + added fix task -> compacted memory (203 lines)
   - `/home/seed/data/event_log.jsonl:158` rebuilt feeds -> logged bug + added fix task -> compacted memory (203 lines)
 
-## script - refreshed stale email.md -> broke idle — boosted create + added urgent write task
+## script - refreshed stale email.md -> boosted starved drive order
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 425, latest cycle 599, age 45, expires cycle 799)
+- Evidence: fresh (first cycle 356, latest cycle 649, age 1, expires cycle 849)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive order` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:20` refreshed stale email.md -> boosted starved drive order
+  - `/home/seed/data/event_log.jsonl:293` refreshed stale email.md -> boosted starved drive order
+
+## script - refreshed stale email.md -> broke idle — boosted create + added urgent write task
+
+- Count: 2
+- Confidence: 0.45
+- Evidence: aging (first cycle 425, latest cycle 599, age 51, expires cycle 799)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> broke idle — boosted create + added urgent write task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:89` refreshed stale email.md -> broke idle — boosted create + added urgent write task
@@ -3564,9 +4157,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 452, latest cycle 453, age 191, expires cycle 653)
+- Evidence: aging (first cycle 452, latest cycle 453, age 197, expires cycle 653)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 185` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:116` refreshed stale email.md -> publishing streak at 185
@@ -3576,9 +4171,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 494, latest cycle 495, age 149, expires cycle 695)
+- Evidence: aging (first cycle 494, latest cycle 495, age 155, expires cycle 695)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 215` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:158` refreshed stale email.md -> publishing streak at 215
@@ -3588,9 +4185,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 525, latest cycle 526, age 118, expires cycle 726)
+- Evidence: aging (first cycle 525, latest cycle 526, age 124, expires cycle 726)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 235` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:188` refreshed stale email.md -> publishing streak at 235
@@ -3600,9 +4199,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 525, latest cycle 526, age 118, expires cycle 726)
+- Evidence: aging (first cycle 525, latest cycle 526, age 124, expires cycle 726)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 235 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:188` refreshed stale email.md -> publishing streak at 235 -> version_control streak at 155
@@ -3612,9 +4213,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 536, latest cycle 538, age 106, expires cycle 738)
+- Evidence: aging (first cycle 536, latest cycle 538, age 112, expires cycle 738)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 240` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:199` refreshed stale email.md -> publishing streak at 240
@@ -3624,21 +4227,53 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 606, latest cycle 607, age 37, expires cycle 807)
+- Evidence: fresh (first cycle 606, latest cycle 607, age 43, expires cycle 807)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 275` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:251` refreshed stale email.md -> publishing streak at 275
   - `/home/seed/data/event_log.jsonl:252` refreshed stale email.md -> publishing streak at 275
 
+## script - refreshed stale email.md -> publishing streak at 300
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 648, latest cycle 648, age 2, expires cycle 848)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale email.md -> publishing streak at 300` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:291` refreshed stale email.md -> publishing streak at 300
+  - `/home/seed/data/event_log.jsonl:292` refreshed stale email.md -> publishing streak at 300
+
+## script - refreshed stale email.md -> refreshed stale outreach.md -> boosted starved drive create
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 367, latest cycle 645, age 5, expires cycle 845)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md -> boosted starved drive create` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:31` refreshed stale email.md -> refreshed stale outreach.md -> boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:289` refreshed stale email.md -> refreshed stale outreach.md -> boosted starved drive create
+
 ## script - refreshed stale email.md -> refreshed stale outreach.md -> flagged research for potential essay
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 480, latest cycle 566, age 78, expires cycle 766)
+- Evidence: aging (first cycle 480, latest cycle 566, age 84, expires cycle 766)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:144` refreshed stale email.md -> refreshed stale outreach.md -> flagged research for potential essay
@@ -3648,9 +4283,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 359, latest cycle 407, age 237, expires cycle 607)
+- Evidence: stale (first cycle 359, latest cycle 407, age 243, expires cycle 607)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:23` refreshed stale email.md -> refreshed stale trends.md -> boosted starved drive create
@@ -3660,9 +4297,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 462, latest cycle 463, age 181, expires cycle 663)
+- Evidence: aging (first cycle 462, latest cycle 463, age 187, expires cycle 663)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> research streak at 210` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:126` refreshed stale email.md -> research streak at 210
@@ -3672,9 +4311,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 515, latest cycle 516, age 128, expires cycle 716)
+- Evidence: aging (first cycle 515, latest cycle 516, age 134, expires cycle 716)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> task_completion streak at 215` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:178` refreshed stale email.md -> task_completion streak at 215
@@ -3684,9 +4325,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 534, latest cycle 546, age 98, expires cycle 746)
+- Evidence: aging (first cycle 534, latest cycle 546, age 104, expires cycle 746)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:197` refreshed stale email.md -> version_control streak at 155
@@ -3696,9 +4339,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 465, latest cycle 466, age 178, expires cycle 666)
+- Evidence: aging (first cycle 465, latest cycle 466, age 184, expires cycle 666)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> writing streak at 190` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:129` refreshed stale email.md -> writing streak at 190
@@ -3708,9 +4353,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 626, latest cycle 627, age 17, expires cycle 827)
+- Evidence: fresh (first cycle 626, latest cycle 627, age 23, expires cycle 827)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale email.md -> writing streak at 285` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:270` refreshed stale email.md -> writing streak at 285
@@ -3720,9 +4367,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 583, latest cycle 585, age 59, expires cycle 785)
+- Evidence: aging (first cycle 583, latest cycle 585, age 65, expires cycle 785)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> boosted starved drive order` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:234` refreshed stale mastodon.md -> boosted starved drive order
@@ -3732,21 +4381,39 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 412, latest cycle 414, age 230, expires cycle 614)
+- Evidence: stale (first cycle 412, latest cycle 414, age 236, expires cycle 614)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> flagged research for potential essay -> publishing streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:76` refreshed stale mastodon.md -> flagged research for potential essay -> publishing streak at 170
   - `/home/seed/data/event_log.jsonl:78` refreshed stale mastodon.md -> flagged research for potential essay -> publishing streak at 170
 
+## script - refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive order
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 356, latest cycle 649, age 1, expires cycle 849)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive order` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:20` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive order
+  - `/home/seed/data/event_log.jsonl:293` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive order
+
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 185
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 452, latest cycle 453, age 191, expires cycle 653)
+- Evidence: aging (first cycle 452, latest cycle 453, age 197, expires cycle 653)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 185` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:116` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 185
@@ -3756,9 +4423,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 494, latest cycle 495, age 149, expires cycle 695)
+- Evidence: aging (first cycle 494, latest cycle 495, age 155, expires cycle 695)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 215` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:158` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 215
@@ -3768,9 +4437,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 525, latest cycle 526, age 118, expires cycle 726)
+- Evidence: aging (first cycle 525, latest cycle 526, age 124, expires cycle 726)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 235` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:188` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 235
@@ -3780,9 +4451,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 536, latest cycle 538, age 106, expires cycle 738)
+- Evidence: aging (first cycle 536, latest cycle 538, age 112, expires cycle 738)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 240` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:199` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 240
@@ -3792,21 +4465,39 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 606, latest cycle 607, age 37, expires cycle 807)
+- Evidence: fresh (first cycle 606, latest cycle 607, age 43, expires cycle 807)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 275` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:251` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 275
   - `/home/seed/data/event_log.jsonl:252` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 275
 
+## script - refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 300
+
+- Count: 2
+- Confidence: 0.6
+- Evidence: fresh (first cycle 648, latest cycle 648, age 2, expires cycle 848)
+- Risk: low
+- Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 300` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:291` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 300
+  - `/home/seed/data/event_log.jsonl:292` refreshed stale mastodon.md -> refreshed stale email.md -> publishing streak at 300
+
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> research streak at 210
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 462, latest cycle 463, age 181, expires cycle 663)
+- Evidence: aging (first cycle 462, latest cycle 463, age 187, expires cycle 663)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> research streak at 210` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:126` refreshed stale mastodon.md -> refreshed stale email.md -> research streak at 210
@@ -3816,9 +4507,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 515, latest cycle 516, age 128, expires cycle 716)
+- Evidence: aging (first cycle 515, latest cycle 516, age 134, expires cycle 716)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> task_completion streak at 215` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:178` refreshed stale mastodon.md -> refreshed stale email.md -> task_completion streak at 215
@@ -3828,9 +4521,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 534, latest cycle 546, age 98, expires cycle 746)
+- Evidence: aging (first cycle 534, latest cycle 546, age 104, expires cycle 746)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:197` refreshed stale mastodon.md -> refreshed stale email.md -> version_control streak at 155
@@ -3840,9 +4535,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 465, latest cycle 466, age 178, expires cycle 666)
+- Evidence: aging (first cycle 465, latest cycle 466, age 184, expires cycle 666)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 190` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:129` refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 190
@@ -3852,9 +4549,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 626, latest cycle 627, age 17, expires cycle 827)
+- Evidence: fresh (first cycle 626, latest cycle 627, age 23, expires cycle 827)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 285` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:270` refreshed stale mastodon.md -> refreshed stale email.md -> writing streak at 285
@@ -3864,9 +4563,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 415, latest cycle 543, age 101, expires cycle 743)
+- Evidence: aging (first cycle 415, latest cycle 543, age 107, expires cycle 743)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:79` refreshed stale mastodon.md -> refreshed stale outreach.md
@@ -3876,9 +4577,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 427, latest cycle 556, age 88, expires cycle 756)
+- Evidence: aging (first cycle 427, latest cycle 556, age 94, expires cycle 756)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:91` refreshed stale mastodon.md -> refreshed stale trends.md -> refreshed stale outreach.md
@@ -3888,9 +4591,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 429, latest cycle 430, age 214, expires cycle 630)
+- Evidence: stale (first cycle 429, latest cycle 430, age 220, expires cycle 630)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> writing streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:93` refreshed stale mastodon.md -> writing streak at 170
@@ -3899,34 +4604,40 @@ Promotion candidates: 302
 ## script - refreshed stale mastodon.md -> writing streak at 265
 
 - Count: 2
-- Confidence: 0.6
-- Evidence: fresh (first cycle 593, latest cycle 594, age 50, expires cycle 794)
+- Confidence: 0.45
+- Evidence: aging (first cycle 593, latest cycle 594, age 56, expires cycle 794)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> writing streak at 265` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:238` refreshed stale mastodon.md -> writing streak at 265
   - `/home/seed/data/event_log.jsonl:239` refreshed stale mastodon.md -> writing streak at 265
 
-## script - refreshed stale outreach.md -> boosted starved drive create
+## script - refreshed stale outreach.md -> boosted starved drive create -> boosted starved drive explore
 
 - Count: 2
-- Confidence: 0.27
-- Evidence: stale (first cycle 367, latest cycle 390, age 254, expires cycle 590)
+- Confidence: 0.6
+- Evidence: fresh (first cycle 390, latest cycle 645, age 5, expires cycle 845)
 - Risk: low
 - Environment coverage: {}
-- Suggested test: Add a fixture proving `refreshed stale outreach.md -> boosted starved drive create` runs idempotently from clean inputs.
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
+- Suggested test: Add a fixture proving `refreshed stale outreach.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
-  - `/home/seed/data/event_log.jsonl:31` refreshed stale outreach.md -> boosted starved drive create
-  - `/home/seed/data/event_log.jsonl:54` refreshed stale outreach.md -> boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:54` refreshed stale outreach.md -> boosted starved drive create -> boosted starved drive explore
+  - `/home/seed/data/event_log.jsonl:289` refreshed stale outreach.md -> boosted starved drive create -> boosted starved drive explore
 
 ## script - refreshed stale trends.md -> boosted starved drive create
 
 - Count: 2
 - Confidence: 0.27
-- Evidence: stale (first cycle 359, latest cycle 407, age 237, expires cycle 607)
+- Evidence: stale (first cycle 359, latest cycle 407, age 243, expires cycle 607)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale trends.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:23` refreshed stale trends.md -> boosted starved drive create
@@ -3936,9 +4647,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.6
-- Evidence: fresh (first cycle 535, latest cycle 634, age 10, expires cycle 834)
+- Evidence: fresh (first cycle 535, latest cycle 634, age 16, expires cycle 834)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `refreshed stale trends.md -> refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:198` refreshed stale trends.md -> refreshed stale outreach.md -> flagged research for potential essay
@@ -3948,9 +4661,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 543, latest cycle 544, age 100, expires cycle 744)
+- Evidence: aging (first cycle 543, latest cycle 544, age 106, expires cycle 744)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `research streak at 290 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:206` research streak at 290 -> version_control streak at 155
@@ -3960,9 +4675,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.45
-- Evidence: aging (first cycle 516, latest cycle 517, age 127, expires cycle 717)
+- Evidence: aging (first cycle 516, latest cycle 517, age 133, expires cycle 717)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add a fixture proving `writing streak at 225 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:179` writing streak at 225 -> version_control streak at 155
@@ -3972,9 +4689,11 @@ Promotion candidates: 302
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 395, latest cycle 396, age 248, expires cycle 596)
+- Evidence: stale (first cycle 395, latest cycle 396, age 254, expires cycle 596)
 - Risk: low
 - Environment coverage: {}
+- Promotion gate: needs_environment_record (blocks=True)
+- Contradiction coverage: missing
 - Suggested test: Add schema validation and receipt checks for `deployed tool-latency-is-organisational-memory-loss`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:59` deployed tool-latency-is-organisational-memory-loss

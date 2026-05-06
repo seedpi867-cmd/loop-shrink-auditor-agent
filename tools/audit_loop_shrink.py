@@ -19,6 +19,8 @@ SEQUENCE_MAX_LENGTH = 3
 SEQUENCE_KINDS = {"approval", "command", "denial", "failure", "fixture", "note", "tool"}
 FRESH_EVIDENCE_CYCLES = 50
 STALE_EVIDENCE_CYCLES = 200
+ENVIRONMENT_GATED_CLASSIFICATIONS = {"script", "typed_tool", "approval_budget"}
+NEGATIVE_KINDS = {"denial", "failure"}
 
 
 @dataclass(frozen=True)
@@ -393,6 +395,66 @@ def environment_coverage(events: list[Event]) -> dict[str, list[str]]:
     return {key: sorted(values) for key, values in sorted(coverage.items())}
 
 
+def environment_gate(classification: str, coverage: dict[str, list[str]]) -> dict:
+    if classification == "deny_or_quarantine":
+        return {
+            "status": "condition_bound",
+            "blocks_promotion": False,
+            "reasons": ["negative evidence can be promoted as a bounded quarantine rule"],
+            "unobserved_critical_variants": [],
+        }
+
+    if classification not in ENVIRONMENT_GATED_CLASSIFICATIONS:
+        return {
+            "status": "not_required",
+            "blocks_promotion": False,
+            "reasons": [],
+            "unobserved_critical_variants": [],
+        }
+
+    if not coverage:
+        return {
+            "status": "needs_environment_record",
+            "blocks_promotion": True,
+            "reasons": ["no named operating conditions were recorded for repeated evidence"],
+            "unobserved_critical_variants": ["account/network/repo/policy/input conditions unknown"],
+        }
+
+    narrow_keys = [key for key, values in coverage.items() if len(values) == 1]
+    if narrow_keys and len(narrow_keys) == len(coverage):
+        return {
+            "status": "blocked_narrow_environment",
+            "blocks_promotion": True,
+            "reasons": ["all recorded environment dimensions were observed in only one state"],
+            "unobserved_critical_variants": [
+                f"{key}=not({values[0]})" for key, values in coverage.items()
+            ],
+        }
+
+    return {
+        "status": "passes_environment_gate",
+        "blocks_promotion": False,
+        "reasons": [],
+        "unobserved_critical_variants": [],
+    }
+
+
+def contradiction_coverage(classification: str, events: list[Event]) -> dict:
+    observed = sorted({event.kind for event in events if event.kind in NEGATIVE_KINDS})
+    if classification == "deny_or_quarantine":
+        status = "inherent_negative_signal"
+    elif observed:
+        status = "observed"
+    else:
+        status = "missing"
+
+    return {
+        "status": status,
+        "observed_negative_kinds": observed,
+        "sources": sorted({event.source for event in events if event.kind in NEGATIVE_KINDS}),
+    }
+
+
 def confidence_for(base: float, evidence: dict) -> float:
     return round(min(0.95, base * evidence["freshness_multiplier"]), 2)
 
@@ -425,6 +487,7 @@ def build_candidates(events: list[Event]) -> list[dict]:
         evidence = evidence_window(grouped, now_cycle)
         confidence = confidence_for(0.45 + 0.12 * len(grouped), evidence)
         candidate_id = hashlib.sha256(f"{kind}:{shape}".encode("utf-8")).hexdigest()[:12]
+        coverage = environment_coverage(grouped)
         candidates.append(
             {
                 "id": candidate_id,
@@ -434,7 +497,9 @@ def build_candidates(events: list[Event]) -> list[dict]:
                 "count": len(grouped),
                 "confidence": confidence,
                 "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
-                "environment_coverage": environment_coverage(grouped),
+                "environment_coverage": coverage,
+                "promotion_gate": environment_gate(classification, coverage),
+                "contradiction_coverage": contradiction_coverage(classification, grouped),
                 "risk": risk_for(classification, len(grouped)),
                 "suggested_test": suggested_test(classification, shape),
                 "examples": [
@@ -487,6 +552,7 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
         window_events = [event for window in windows for event in window]
         evidence = evidence_window(window_events, now_cycle)
         confidence = confidence_for(0.4 + 0.1 * len(windows), evidence)
+        coverage = environment_coverage(window_events)
         candidates.append(
             {
                 "id": candidate_id,
@@ -496,7 +562,9 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
                 "count": len(windows),
                 "confidence": confidence,
                 "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
-                "environment_coverage": environment_coverage(window_events),
+                "environment_coverage": coverage,
+                "promotion_gate": environment_gate("script", coverage),
+                "contradiction_coverage": contradiction_coverage("script", window_events),
                 "risk": risk_for("script", len(windows)),
                 "suggested_test": suggested_test("script", shape),
                 "examples": [
@@ -554,6 +622,9 @@ def write_reports(candidates: list[dict], events: list[Event], output_dir: Path)
                 f" expires cycle {candidate['evidence']['evidence_expires_cycle']})",
                 f"- Risk: {candidate['risk']}",
                 f"- Environment coverage: {candidate['environment_coverage'] or {}}",
+                f"- Promotion gate: {candidate['promotion_gate']['status']}"
+                f" (blocks={candidate['promotion_gate']['blocks_promotion']})",
+                f"- Contradiction coverage: {candidate['contradiction_coverage']['status']}",
                 f"- Suggested test: {candidate['suggested_test']}",
                 "- Examples:",
             ]

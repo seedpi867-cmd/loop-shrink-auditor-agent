@@ -1,5 +1,5 @@
 {
-  "event_count": 29,
+  "event_count": 41,
   "candidate_count": 6,
   "summary": {
     "deny_or_quarantine": 1,
@@ -8,17 +8,138 @@
   },
   "candidates": [
     {
+      "id": "f7347c1cf6db",
+      "classification": "script",
+      "kind": "command",
+      "shape": "post_publish deploy blog status=ok",
+      "count": 13,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 631,
+        "latest_cycle": 650,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 850,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "deploy_ok": [
+          "true"
+        ],
+        "deploy_returncode": [
+          "0"
+        ],
+        "deploy_skipped": [
+          "false",
+          "true"
+        ],
+        "post_slug_present": [
+          "true"
+        ],
+        "social_attempted": [
+          "false",
+          "true"
+        ],
+        "social_outcome": [
+          "failed",
+          "skipped_account_suspended",
+          "unknown_not_recorded"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
+          "line": 1,
+          "cycle": "631",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "true",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
+          "line": 2,
+          "cycle": "",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
+          "line": 3,
+          "cycle": "636",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
+          "line": 4,
+          "cycle": "637",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "true",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
+          "line": 6,
+          "cycle": "638",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "true",
+            "social_attempted": "false",
+            "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "73bbca4b1363",
       "classification": "deny_or_quarantine",
       "kind": "denial",
       "shape": "post_publish social outcome=skipped_account_suspended",
-      "count": 10,
+      "count": 12,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 631,
-        "latest_cycle": 644,
+        "latest_cycle": 650,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 844,
+        "evidence_expires_cycle": 850,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -42,6 +163,23 @@
         ],
         "social_outcome": [
           "skipped_account_suspended"
+        ]
+      },
+      "promotion_gate": {
+        "status": "condition_bound",
+        "blocks_promotion": false,
+        "reasons": [
+          "negative evidence can be promoted as a bounded quarantine rule"
+        ],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "inherent_negative_signal",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "/home/seed/data/outreach/post-publish-receipts.jsonl"
         ]
       },
       "risk": "medium",
@@ -118,124 +256,17 @@
       ]
     },
     {
-      "id": "f7347c1cf6db",
-      "classification": "script",
-      "kind": "command",
-      "shape": "post_publish deploy blog status=ok",
-      "count": 9,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 631,
-        "latest_cycle": 644,
-        "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 844,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "deploy_ok": [
-          "true"
-        ],
-        "deploy_returncode": [
-          "0"
-        ],
-        "deploy_skipped": [
-          "false",
-          "true"
-        ],
-        "post_slug_present": [
-          "true"
-        ],
-        "social_attempted": [
-          "false"
-        ],
-        "social_outcome": [
-          "skipped_account_suspended"
-        ]
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
-          "line": 1,
-          "cycle": "631",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "true",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
-          "line": 2,
-          "cycle": "",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
-          "line": 3,
-          "cycle": "636",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
-          "line": 4,
-          "cycle": "637",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "true",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
-          "line": 6,
-          "cycle": "638",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "true",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
-        }
-      ]
-    },
-    {
       "id": "ae247d1aab65",
       "classification": "fixture",
       "kind": "fixture",
       "shape": "post_publish verify live blog post",
-      "count": 8,
+      "count": 12,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 631,
-        "latest_cycle": 644,
+        "latest_cycle": 650,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 844,
+        "evidence_expires_cycle": 850,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -253,11 +284,25 @@
           "true"
         ],
         "social_attempted": [
-          "false"
+          "false",
+          "true"
         ],
         "social_outcome": [
-          "skipped_account_suspended"
+          "failed",
+          "skipped_account_suspended",
+          "unknown_not_recorded"
         ]
+      },
+      "promotion_gate": {
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `post_publish verify live blog post`.",
@@ -336,13 +381,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "post_publish deploy blog status=ok -> post_publish verify live blog post",
-      "count": 8,
+      "count": 12,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 631,
-        "latest_cycle": 644,
+        "latest_cycle": 650,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 844,
+        "evidence_expires_cycle": 850,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -360,11 +405,25 @@
           "true"
         ],
         "social_attempted": [
-          "false"
+          "false",
+          "true"
         ],
         "social_outcome": [
-          "skipped_account_suspended"
+          "failed",
+          "skipped_account_suspended",
+          "unknown_not_recorded"
         ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": []
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.",
@@ -379,6 +438,20 @@
             "deploy_skipped": "true",
             "social_attempted": "false",
             "social_outcome": "skipped_account_suspended",
+            "post_slug_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
+          "line": 12,
+          "cycle": "",
+          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post",
+          "environment": {
+            "deploy_ok": "true",
+            "deploy_skipped": "false",
+            "deploy_returncode": "0",
+            "social_attempted": "true",
+            "social_outcome": "failed",
             "post_slug_present": "true"
           }
         },
@@ -421,20 +494,6 @@
             "social_outcome": "skipped_account_suspended",
             "post_slug_present": "true"
           }
-        },
-        {
-          "source": "/home/seed/data/outreach/post-publish-receipts.jsonl",
-          "line": 7,
-          "cycle": "640",
-          "text": "post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False -> post_publish verify live blog post",
-          "environment": {
-            "deploy_ok": "true",
-            "deploy_skipped": "false",
-            "deploy_returncode": "0",
-            "social_attempted": "false",
-            "social_outcome": "skipped_account_suspended",
-            "post_slug_present": "true"
-          }
         }
       ]
     },
@@ -443,13 +502,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended",
-      "count": 8,
+      "count": 10,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 631,
-        "latest_cycle": 644,
+        "latest_cycle": 650,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 844,
+        "evidence_expires_cycle": 850,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -471,6 +530,21 @@
         ],
         "social_outcome": [
           "skipped_account_suspended"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "observed",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "/home/seed/data/outreach/post-publish-receipts.jsonl"
         ]
       },
       "risk": "medium",
@@ -550,13 +624,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended",
-      "count": 8,
+      "count": 10,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 631,
-        "latest_cycle": 644,
+        "latest_cycle": 650,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 844,
+        "evidence_expires_cycle": 850,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -578,6 +652,21 @@
         ],
         "social_outcome": [
           "skipped_account_suspended"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "observed",
+        "observed_negative_kinds": [
+          "denial"
+        ],
+        "sources": [
+          "/home/seed/data/outreach/post-publish-receipts.jsonl"
         ]
       },
       "risk": "medium",

@@ -1,17 +1,17 @@
 # Scan Summary
 
-Events scanned: 1278
-Promotion candidates: 117
+Events scanned: 1288
+Promotion candidates: 118
 
 ## Candidate Classes
 
 - `fixture`: 53
-- `script`: 64
+- `script`: 65
 
 ## Promotion Gates
 
 - Blocked: 0
-- Passed: 64
+- Passed: 65
 - Condition-bound: 0
 - Missing environment: 0
 - Not required: 53

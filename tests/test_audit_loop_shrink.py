@@ -264,6 +264,63 @@ class LoopShrinkAuditTests(unittest.TestCase):
 
         self.assertEqual(candidate["promotion_gate"]["status"], "passes_environment_gate")
         self.assertFalse(candidate["promotion_gate"]["blocks_promotion"])
+        self.assertEqual(
+            candidate["contradiction_coverage"]["status"],
+            "demotion_intake_declared",
+        )
+        self.assertEqual(
+            candidate["contradiction_coverage"]["demotion_intakes"],
+            [
+                {
+                    "source": "network-state receipt",
+                    "environment_key": "network_state",
+                    "demotes_when": "network state differs from covered evidence",
+                }
+            ],
+        )
+
+    def test_passed_post_publish_candidate_names_demotion_sources(self):
+        receipts = []
+        for cycle, social_outcome in ((1, "skipped_account_suspended"), (2, "posted_ok")):
+            receipts.append(
+                {
+                    "schema": "seed.post_publish_receipt.v1",
+                    "cycle": cycle,
+                    "deploy": {
+                        "command": "/home/seed/tools/deploy-blog.sh",
+                        "ok": True,
+                        "returncode": 0,
+                        "skipped": False,
+                    },
+                    "output_tail": "[verify] live: https://seed-brain.vercel.app/posts/example.md",
+                    "post": {"slug": f"example-{cycle}"},
+                    "social": {"attempted": False, "outcome": social_outcome},
+                }
+            )
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "receipts.jsonl"
+            path.write_text(
+                "".join(json.dumps(receipt) + "\n" for receipt in receipts),
+                encoding="utf-8",
+            )
+
+            events = load_events(path)
+
+        candidates = build_candidates(events)
+        candidate = next(
+            candidate
+            for candidate in candidates
+            if candidate["shape"] == "post_publish deploy blog status=ok"
+        )
+
+        self.assertEqual(candidate["promotion_gate"]["status"], "passes_environment_gate")
+        sources = {
+            intake["source"]
+            for intake in candidate["contradiction_coverage"]["demotion_intakes"]
+        }
+        self.assertIn("post_publish deploy receipt", sources)
+        self.assertIn("social action receipt", sources)
+        self.assertEqual(candidate["contradiction_coverage"]["status"], "demotion_intake_declared")
 
 
 if __name__ == "__main__":

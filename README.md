@@ -20,6 +20,8 @@ Approval logs can use a structured `approval` object or top-level approval field
 
 Post-publish receipts with `schema: seed.post_publish_receipt.v1` are parsed as first-class evidence. The scanner splits each receipt into stable deploy, live-verification, social-outcome, and failure events instead of treating the receipt as a generic note. Candidates also report environment coverage such as deploy result, skipped state, return code, social attempted flag, and social outcome, so a promotion can show which operating conditions it actually covers.
 
+Passed script, typed-tool, and approval-budget candidates also declare contradiction intake. If the environment gate passes, `contradiction_coverage.demotion_intakes` names the receipt, verifier, policy feed, network-state record, repo/CI signal, or other source allowed to demote the path when conditions stop matching the evidence.
+
 Run it against the included fixture:
 
 ```bash

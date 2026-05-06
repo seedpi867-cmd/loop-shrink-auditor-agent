@@ -1,30 +1,31 @@
 # Promotion Docket
 
-Events scanned: 1278
-Promotion candidates: 117
+Events scanned: 1288
+Promotion candidates: 118
 
 ## Summary
 
 - `fixture`: 53
-- `script`: 64
+- `script`: 65
 
 ## Gate Summary
 
 - Blocked: 0
-- Passed: 64
+- Passed: 65
 - Condition-bound: 0
 - Missing environment: 0
 - Not required: 53
 
 ## fixture - refreshed stale mastodon.md
 
-- Count: 200
+- Count: 202
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 659, age 0, expires cycle 859)
+- Evidence: fresh (first cycle 438, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,drive_starved,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'bug_found,context_stale,skill_streak', 'context_stale', 'context_stale,drive_starved', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,repo_starred', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak', 'context_stale,skill_streak,task_completed'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,drive_starved,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'bug_found,context_stale,skill_streak', 'context_stale', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,repo_starred', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak', 'context_stale,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `refreshed stale mastodon.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale mastodon.md
@@ -35,13 +36,14 @@ Promotion candidates: 117
 
 ## fixture - refreshed stale email.md
 
-- Count: 178
+- Count: 180
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 659, age 0, expires cycle 859)
+- Evidence: fresh (first cycle 438, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,skill_streak', 'context_stale', 'context_stale,drive_starved', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,repo_starred', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,skill_streak', 'context_stale', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,repo_starred', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `refreshed stale email.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale email.md
@@ -52,13 +54,14 @@ Promotion candidates: 117
 
 ## script - refreshed stale mastodon.md -> refreshed stale email.md
 
-- Count: 178
+- Count: 180
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 659, age 0, expires cycle 859)
+- Evidence: fresh (first cycle 438, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,skill_streak', 'context_stale', 'context_stale,drive_starved', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,repo_starred', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,skill_streak', 'context_stale', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,repo_starred', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` refreshed stale mastodon.md -> refreshed stale email.md
@@ -71,11 +74,12 @@ Promotion candidates: 117
 
 - Count: 124
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 438, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `posted to mastodon`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` posted to Mastodon
@@ -88,11 +92,12 @@ Promotion candidates: 117
 
 - Count: 124
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 438, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `rebuilt feeds`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` rebuilt feeds
@@ -105,11 +110,12 @@ Promotion candidates: 117
 
 - Count: 124
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 438, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,essay_written', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,essay_written,skill_streak,visitor_spike'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` posted to Mastodon -> rebuilt feeds
@@ -122,11 +128,12 @@ Promotion candidates: 117
 
 - Count: 101
 - Confidence: 0.95
-- Evidence: aging (first cycle 438, latest cycle 559, age 100, expires cycle 759)
+- Evidence: aging (first cycle 438, latest cycle 559, age 101, expires cycle 759)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `compacted memory (202 lines)`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` compacted memory (202 lines)
@@ -139,11 +146,12 @@ Promotion candidates: 117
 
 - Count: 79
 - Confidence: 0.95
-- Evidence: aging (first cycle 442, latest cycle 559, age 100, expires cycle 759)
+- Evidence: aging (first cycle 442, latest cycle 559, age 101, expires cycle 759)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` compacted memory (202 lines) -> refreshed stale mastodon.md
@@ -156,11 +164,12 @@ Promotion candidates: 117
 
 - Count: 68
 - Confidence: 0.95
-- Evidence: aging (first cycle 442, latest cycle 559, age 100, expires cycle 759)
+- Evidence: aging (first cycle 442, latest cycle 559, age 101, expires cycle 759)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '15', '4', '5', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,outreach_opportunity', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:5` compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -173,11 +182,12 @@ Promotion candidates: 117
 
 - Count: 49
 - Confidence: 0.95
-- Evidence: aging (first cycle 438, latest cycle 559, age 100, expires cycle 759)
+- Evidence: aging (first cycle 438, latest cycle 559, age 101, expires cycle 759)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '6', '7', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` posted to Mastodon -> rebuilt feeds -> compacted memory (202 lines)
@@ -190,11 +200,12 @@ Promotion candidates: 117
 
 - Count: 49
 - Confidence: 0.95
-- Evidence: aging (first cycle 438, latest cycle 559, age 100, expires cycle 759)
+- Evidence: aging (first cycle 438, latest cycle 559, age 101, expires cycle 759)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '6', '7', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,memory_bloated,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` rebuilt feeds -> compacted memory (202 lines)
@@ -207,11 +218,12 @@ Promotion candidates: 117
 
 - Count: 46
 - Confidence: 0.95
-- Evidence: aging (first cycle 513, latest cycle 558, age 101, expires cycle 758)
+- Evidence: aging (first cycle 513, latest cycle 558, age 102, expires cycle 758)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 155`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` version_control streak at 155
@@ -224,11 +236,12 @@ Promotion candidates: 117
 
 - Count: 45
 - Confidence: 0.95
-- Evidence: aging (first cycle 445, latest cycle 559, age 100, expires cycle 759)
+- Evidence: aging (first cycle 445, latest cycle 559, age 101, expires cycle 759)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '6', '7', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:8` rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md
@@ -241,11 +254,12 @@ Promotion candidates: 117
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: fresh (first cycle 562, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 562, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:124` posted to Mastodon -> rebuilt feeds -> refreshed stale mastodon.md
@@ -258,11 +272,12 @@ Promotion candidates: 117
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: fresh (first cycle 562, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 562, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:124` rebuilt feeds -> refreshed stale mastodon.md
@@ -275,11 +290,12 @@ Promotion candidates: 117
 
 - Count: 39
 - Confidence: 0.95
-- Evidence: fresh (first cycle 562, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 562, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,outreach_opportunity,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:124` rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -292,11 +308,12 @@ Promotion candidates: 117
 
 - Count: 30
 - Confidence: 0.95
-- Evidence: fresh (first cycle 441, latest cycle 627, age 32, expires cycle 827)
+- Evidence: fresh (first cycle 441, latest cycle 627, age 33, expires cycle 827)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,drive_starved,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'bug_found,context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `logged bug + added fix task`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` logged bug + added fix task
@@ -309,11 +326,12 @@ Promotion candidates: 117
 
 - Count: 29
 - Confidence: 0.95
-- Evidence: fresh (first cycle 444, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 444, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '15', '5', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `flagged research for potential essay`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` flagged research for potential essay
@@ -326,11 +344,12 @@ Promotion candidates: 117
 
 - Count: 27
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 610, age 49, expires cycle 810)
+- Evidence: fresh (first cycle 438, latest cycle 610, age 50, expires cycle 810)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `archived completed tasks`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` archived completed tasks
@@ -343,11 +362,12 @@ Promotion candidates: 117
 
 - Count: 27
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 610, age 49, expires cycle 810)
+- Evidence: fresh (first cycle 438, latest cycle 610, age 50, expires cycle 810)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` archived completed tasks -> refreshed stale mastodon.md
@@ -360,11 +380,12 @@ Promotion candidates: 117
 
 - Count: 23
 - Confidence: 0.95
-- Evidence: aging (first cycle 441, latest cycle 600, age 59, expires cycle 800)
+- Evidence: aging (first cycle 441, latest cycle 600, age 60, expires cycle 800)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` posted to Mastodon -> rebuilt feeds -> logged bug + added fix task
@@ -377,11 +398,12 @@ Promotion candidates: 117
 
 - Count: 23
 - Confidence: 0.95
-- Evidence: aging (first cycle 441, latest cycle 600, age 59, expires cycle 800)
+- Evidence: aging (first cycle 441, latest cycle 600, age 60, expires cycle 800)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` rebuilt feeds -> logged bug + added fix task
@@ -390,32 +412,34 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:23` rebuilt feeds -> logged bug + added fix task
   - `/home/seed/data/event_log.jsonl:27` rebuilt feeds -> logged bug + added fix task
 
-## script - archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+## fixture - boosted starved drive connect
 
 - Count: 21
 - Confidence: 0.95
-- Evidence: fresh (first cycle 438, latest cycle 610, age 49, expires cycle 810)
+- Evidence: fresh (first cycle 440, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed'], 'timestamp_present': ['true']}
-- Promotion gate: passes_environment_gate (blocks=False)
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
+- Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
-- Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
+- Demotion intakes: none
+- Suggested test: Add positive and negative evidence cases for `boosted starved drive connect`.
 - Examples:
-  - `/home/seed/data/event_log.jsonl:1` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:2` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:7` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:29` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
-  - `/home/seed/data/event_log.jsonl:30` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:3` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:13` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:20` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:34` boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:49` boosted starved drive connect
 
 ## fixture - boosted starved drive explore
 
-- Count: 20
+- Count: 21
 - Confidence: 0.95
-- Evidence: fresh (first cycle 443, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 443, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive explore`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` boosted starved drive explore
@@ -424,15 +448,34 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:37` boosted starved drive explore
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive explore
 
+## script - archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+
+- Count: 21
+- Confidence: 0.95
+- Evidence: fresh (first cycle 438, latest cycle 610, age 50, expires cycle 810)
+- Risk: medium
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed'], 'timestamp_present': ['true']}
+- Promotion gate: passes_environment_gate (blocks=False)
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:1` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:2` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:7` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:29` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+  - `/home/seed/data/event_log.jsonl:30` archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md
+
 ## script - compacted memory (202 lines) -> archived completed tasks
 
 - Count: 20
 - Confidence: 0.95
-- Evidence: aging (first cycle 438, latest cycle 540, age 119, expires cycle 740)
+- Evidence: aging (first cycle 438, latest cycle 540, age 120, expires cycle 740)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` compacted memory (202 lines) -> archived completed tasks
@@ -445,11 +488,12 @@ Promotion candidates: 117
 
 - Count: 20
 - Confidence: 0.95
-- Evidence: aging (first cycle 438, latest cycle 540, age 119, expires cycle 740)
+- Evidence: aging (first cycle 438, latest cycle 540, age 120, expires cycle 740)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '6', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,repo_starred,task_completed', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md
@@ -458,32 +502,16 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:29` compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md
   - `/home/seed/data/event_log.jsonl:30` compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md
 
-## fixture - boosted starved drive connect
-
-- Count: 19
-- Confidence: 0.95
-- Evidence: fresh (first cycle 440, latest cycle 656, age 3, expires cycle 856)
-- Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
-- Promotion gate: not_required (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add positive and negative evidence cases for `boosted starved drive connect`.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:3` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:13` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:20` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:34` boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:49` boosted starved drive connect
-
 ## fixture - refreshed stale trends.md
 
 - Count: 18
 - Confidence: 0.95
-- Evidence: fresh (first cycle 447, latest cycle 642, age 17, expires cycle 842)
+- Evidence: fresh (first cycle 447, latest cycle 642, age 18, expires cycle 842)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,skill_streak', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `refreshed stale trends.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` refreshed stale trends.md
@@ -496,11 +524,12 @@ Promotion candidates: 117
 
 - Count: 18
 - Confidence: 0.95
-- Evidence: fresh (first cycle 444, latest cycle 644, age 15, expires cycle 844)
+- Evidence: fresh (first cycle 444, latest cycle 644, age 16, expires cycle 844)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '12', '13', '5', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` refreshed stale email.md -> flagged research for potential essay
@@ -513,11 +542,12 @@ Promotion candidates: 117
 
 - Count: 18
 - Confidence: 0.95
-- Evidence: fresh (first cycle 444, latest cycle 644, age 15, expires cycle 844)
+- Evidence: fresh (first cycle 444, latest cycle 644, age 16, expires cycle 844)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '12', '13', '5', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,research_complete,skill_streak', 'context_stale,memory_bloated,outreach_opportunity,research_complete', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,outreach_opportunity,research_complete,task_completed', 'context_stale,research_complete', 'context_stale,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay
@@ -530,11 +560,12 @@ Promotion candidates: 117
 
 - Count: 17
 - Confidence: 0.95
-- Evidence: aging (first cycle 440, latest cycle 553, age 106, expires cycle 753)
+- Evidence: aging (first cycle 440, latest cycle 553, age 107, expires cycle 753)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '5', '6', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `compacted memory (201 lines)`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` compacted memory (201 lines)
@@ -547,11 +578,12 @@ Promotion candidates: 117
 
 - Count: 17
 - Confidence: 0.95
-- Evidence: aging (first cycle 440, latest cycle 553, age 106, expires cycle 753)
+- Evidence: aging (first cycle 440, latest cycle 553, age 107, expires cycle 753)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '5', '6', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` compacted memory (201 lines) -> refreshed stale mastodon.md
@@ -564,11 +596,12 @@ Promotion candidates: 117
 
 - Count: 16
 - Confidence: 0.95
-- Evidence: fresh (first cycle 447, latest cycle 645, age 14, expires cycle 845)
+- Evidence: fresh (first cycle 447, latest cycle 645, age 15, expires cycle 845)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,skill_streak', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,skill_streak', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `refreshed stale outreach.md`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` refreshed stale outreach.md
@@ -581,11 +614,12 @@ Promotion candidates: 117
 
 - Count: 16
 - Confidence: 0.95
-- Evidence: aging (first cycle 440, latest cycle 549, age 110, expires cycle 749)
+- Evidence: aging (first cycle 440, latest cycle 549, age 111, expires cycle 749)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '5', '6', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,research_complete', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` compacted memory (201 lines) -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -598,11 +632,12 @@ Promotion candidates: 117
 
 - Count: 16
 - Confidence: 0.95
-- Evidence: aging (first cycle 448, latest cycle 557, age 102, expires cycle 757)
+- Evidence: aging (first cycle 448, latest cycle 557, age 103, expires cycle 757)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'bug_found,context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:11` logged bug + added fix task -> compacted memory (202 lines)
@@ -615,11 +650,12 @@ Promotion candidates: 117
 
 - Count: 15
 - Confidence: 0.95
-- Evidence: fresh (first cycle 447, latest cycle 642, age 17, expires cycle 842)
+- Evidence: fresh (first cycle 447, latest cycle 642, age 18, expires cycle 842)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,skill_streak', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` refreshed stale email.md -> refreshed stale trends.md
@@ -632,11 +668,12 @@ Promotion candidates: 117
 
 - Count: 15
 - Confidence: 0.95
-- Evidence: fresh (first cycle 447, latest cycle 642, age 17, expires cycle 842)
+- Evidence: fresh (first cycle 447, latest cycle 642, age 18, expires cycle 842)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '7', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,skill_streak', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
@@ -645,15 +682,34 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:40` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
   - `/home/seed/data/event_log.jsonl:53` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md
 
+## fixture - boosted starved drive create
+
+- Count: 14
+- Confidence: 0.95
+- Evidence: fresh (first cycle 505, latest cycle 660, age 0, expires cycle 860)
+- Risk: medium
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
+- Promotion gate: not_required (blocks=False)
+- Contradiction coverage: missing
+- Demotion intakes: none
+- Suggested test: Add positive and negative evidence cases for `boosted starved drive create`.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:67` boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:76` boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:94` boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:124` boosted starved drive create
+  - `/home/seed/data/event_log.jsonl:127` boosted starved drive create
+
 ## script - rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)
 
 - Count: 14
 - Confidence: 0.95
-- Evidence: aging (first cycle 448, latest cycle 556, age 103, expires cycle 756)
+- Evidence: aging (first cycle 448, latest cycle 556, age 104, expires cycle 756)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:11` rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)
@@ -666,11 +722,12 @@ Promotion candidates: 117
 
 - Count: 14
 - Confidence: 0.95
-- Evidence: fresh (first cycle 443, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 443, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '6', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` refreshed stale email.md -> boosted starved drive explore
@@ -683,11 +740,12 @@ Promotion candidates: 117
 
 - Count: 14
 - Confidence: 0.95
-- Evidence: fresh (first cycle 443, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 443, latest cycle 657, age 3, expires cycle 857)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '6', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,memory_bloated', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:6` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore
@@ -696,49 +754,16 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:37` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore
   - `/home/seed/data/event_log.jsonl:45` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore
 
-## fixture - boosted starved drive create
-
-- Count: 12
-- Confidence: 0.95
-- Evidence: fresh (first cycle 505, latest cycle 657, age 2, expires cycle 857)
-- Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
-- Promotion gate: not_required (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add positive and negative evidence cases for `boosted starved drive create`.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:67` boosted starved drive create
-  - `/home/seed/data/event_log.jsonl:76` boosted starved drive create
-  - `/home/seed/data/event_log.jsonl:94` boosted starved drive create
-  - `/home/seed/data/event_log.jsonl:124` boosted starved drive create
-  - `/home/seed/data/event_log.jsonl:127` boosted starved drive create
-
-## script - logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
-
-- Count: 12
-- Confidence: 0.95
-- Evidence: aging (first cycle 448, latest cycle 557, age 102, expires cycle 757)
-- Risk: medium
-- Environment coverage: {'cycle_event_count': ['11', '12', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
-- Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:11` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:17` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:23` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:70` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
-  - `/home/seed/data/event_log.jsonl:78` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
-
 ## script - refreshed stale email.md -> boosted starved drive create
 
-- Count: 11
+- Count: 13
 - Confidence: 0.95
-- Evidence: fresh (first cycle 505, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 505, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` refreshed stale email.md -> boosted starved drive create
@@ -749,13 +774,14 @@ Promotion candidates: 117
 
 ## script - refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
 
-- Count: 11
+- Count: 13
 - Confidence: 0.95
-- Evidence: fresh (first cycle 505, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 505, latest cycle 660, age 0, expires cycle 860)
 - Risk: medium
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:67` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
@@ -764,15 +790,34 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:124` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
   - `/home/seed/data/event_log.jsonl:127` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create
 
+## script - logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
+
+- Count: 12
+- Confidence: 0.95
+- Evidence: aging (first cycle 448, latest cycle 557, age 103, expires cycle 757)
+- Risk: medium
+- Environment coverage: {'cycle_event_count': ['11', '12', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
+- Promotion gate: passes_environment_gate (blocks=False)
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:11` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:17` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:23` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:70` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
+  - `/home/seed/data/event_log.jsonl:78` logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md
+
 ## script - refreshed stale email.md -> boosted starved drive connect
 
 - Count: 10
 - Confidence: 0.95
-- Evidence: fresh (first cycle 440, latest cycle 646, age 13, expires cycle 846)
+- Evidence: fresh (first cycle 440, latest cycle 646, age 14, expires cycle 846)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '14', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` refreshed stale email.md -> boosted starved drive connect
@@ -785,11 +830,12 @@ Promotion candidates: 117
 
 - Count: 10
 - Confidence: 0.95
-- Evidence: fresh (first cycle 440, latest cycle 646, age 13, expires cycle 846)
+- Evidence: fresh (first cycle 440, latest cycle 646, age 14, expires cycle 846)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '14', '7', '8'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect
@@ -802,11 +848,12 @@ Promotion candidates: 117
 
 - Count: 9
 - Confidence: 0.69
-- Evidence: stale (first cycle 444, latest cycle 452, age 207, expires cycle 652)
+- Evidence: stale (first cycle 444, latest cycle 452, age 208, expires cycle 652)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '6', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 150`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:7` version_control streak at 150
@@ -819,11 +866,12 @@ Promotion candidates: 117
 
 - Count: 9
 - Confidence: 0.95
-- Evidence: fresh (first cycle 447, latest cycle 634, age 25, expires cycle 834)
+- Evidence: fresh (first cycle 447, latest cycle 634, age 26, expires cycle 834)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,skill_streak', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` refreshed stale trends.md -> refreshed stale outreach.md
@@ -836,11 +884,12 @@ Promotion candidates: 117
 
 - Count: 8
 - Confidence: 0.95
-- Evidence: aging (first cycle 596, latest cycle 603, age 56, expires cycle 803)
+- Evidence: aging (first cycle 596, latest cycle 603, age 57, expires cycle 803)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '13', '14'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `version_control streak at 170`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:140` version_control streak at 170
@@ -853,11 +902,12 @@ Promotion candidates: 117
 
 - Count: 8
 - Confidence: 0.95
-- Evidence: fresh (first cycle 447, latest cycle 634, age 25, expires cycle 834)
+- Evidence: fresh (first cycle 447, latest cycle 634, age 26, expires cycle 834)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '13', '14', '15', '8', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,essay_written', 'context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,long_idle,skill_streak', 'context_stale,memory_bloated', 'context_stale,memory_bloated,skill_streak', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:10` refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md
@@ -870,11 +920,12 @@ Promotion candidates: 117
 
 - Count: 7
 - Confidence: 0.95
-- Evidence: aging (first cycle 592, latest cycle 598, age 61, expires cycle 798)
+- Evidence: aging (first cycle 592, latest cycle 598, age 62, expires cycle 798)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '12', '13', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,long_idle,skill_streak', 'context_stale,research_complete,skill_streak', 'context_stale,skill_streak', 'context_stale,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 265`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:136` writing streak at 265
@@ -887,11 +938,12 @@ Promotion candidates: 117
 
 - Count: 7
 - Confidence: 0.83
-- Evidence: aging (first cycle 440, latest cycle 553, age 106, expires cycle 753)
+- Evidence: aging (first cycle 440, latest cycle 553, age 107, expires cycle 753)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '7', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` posted to Mastodon -> rebuilt feeds -> compacted memory (201 lines)
@@ -904,11 +956,12 @@ Promotion candidates: 117
 
 - Count: 7
 - Confidence: 0.83
-- Evidence: aging (first cycle 440, latest cycle 553, age 106, expires cycle 753)
+- Evidence: aging (first cycle 440, latest cycle 553, age 107, expires cycle 753)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '7', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` rebuilt feeds -> compacted memory (201 lines)
@@ -921,11 +974,12 @@ Promotion candidates: 117
 
 - Count: 7
 - Confidence: 0.83
-- Evidence: aging (first cycle 440, latest cycle 553, age 106, expires cycle 753)
+- Evidence: aging (first cycle 440, latest cycle 553, age 107, expires cycle 753)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['10', '11', '12', '7', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:3` rebuilt feeds -> compacted memory (201 lines) -> refreshed stale mastodon.md
@@ -938,11 +992,12 @@ Promotion candidates: 117
 
 - Count: 6
 - Confidence: 0.95
-- Evidence: fresh (first cycle 459, latest cycle 645, age 14, expires cycle 845)
+- Evidence: fresh (first cycle 459, latest cycle 645, age 15, expires cycle 845)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['11', '13', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:22` refreshed stale email.md -> refreshed stale outreach.md
@@ -955,11 +1010,12 @@ Promotion candidates: 117
 
 - Count: 6
 - Confidence: 0.95
-- Evidence: fresh (first cycle 459, latest cycle 645, age 14, expires cycle 845)
+- Evidence: fresh (first cycle 459, latest cycle 645, age 15, expires cycle 845)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['11', '13', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,research_complete', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:22` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
@@ -968,15 +1024,52 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:128` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
   - `/home/seed/data/event_log.jsonl:164` refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md
 
+## script - boosted starved drive create -> boosted starved drive connect
+
+- Count: 5
+- Confidence: 0.9
+- Evidence: fresh (first cycle 562, latest cycle 660, age 0, expires cycle 860)
+- Risk: medium
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
+- Promotion gate: passes_environment_gate (blocks=False)
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:124` boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:127` boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:163` boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:196` boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:202` boosted starved drive create -> boosted starved drive connect
+
+## script - boosted starved drive explore -> boosted starved drive connect
+
+- Count: 5
+- Confidence: 0.9
+- Evidence: fresh (first cycle 457, latest cycle 660, age 0, expires cycle 860)
+- Risk: medium
+- Environment coverage: {'cycle_event_count': ['10', '12', '13', '8'], 'cycle_event_tags': ['context_stale,drive_starved', 'context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
+- Promotion gate: passes_environment_gate (blocks=False)
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:20` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:49` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:89` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:188` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:201` boosted starved drive explore -> boosted starved drive connect
+
 ## script - logged bug + added fix task -> compacted memory (201 lines)
 
 - Count: 5
 - Confidence: 0.68
-- Evidence: aging (first cycle 465, latest cycle 545, age 114, expires cycle 745)
+- Evidence: aging (first cycle 465, latest cycle 545, age 115, expires cycle 745)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['12', '13', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` logged bug + added fix task -> compacted memory (201 lines)
@@ -989,11 +1082,12 @@ Promotion candidates: 117
 
 - Count: 5
 - Confidence: 0.68
-- Evidence: aging (first cycle 465, latest cycle 545, age 114, expires cycle 745)
+- Evidence: aging (first cycle 465, latest cycle 545, age 115, expires cycle 745)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['12', '13', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` logged bug + added fix task -> compacted memory (201 lines) -> refreshed stale mastodon.md
@@ -1006,11 +1100,12 @@ Promotion candidates: 117
 
 - Count: 5
 - Confidence: 0.68
-- Evidence: aging (first cycle 465, latest cycle 545, age 114, expires cycle 745)
+- Evidence: aging (first cycle 465, latest cycle 545, age 115, expires cycle 745)
 - Risk: medium
 - Environment coverage: {'cycle_event_count': ['12', '13', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
@@ -1019,15 +1114,34 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:86` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
   - `/home/seed/data/event_log.jsonl:107` rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)
 
+## script - refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
+
+- Count: 5
+- Confidence: 0.9
+- Evidence: fresh (first cycle 562, latest cycle 660, age 0, expires cycle 860)
+- Risk: medium
+- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,emotional_shift', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
+- Promotion gate: passes_environment_gate (blocks=False)
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:124` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:127` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:163` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:196` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:202` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
+
 ## fixture - broke idle — boosted create + added urgent write task
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 584, latest cycle 599, age 60, expires cycle 799)
+- Evidence: aging (first cycle 584, latest cycle 599, age 61, expires cycle 799)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'context_stale,drive_starved,long_idle,skill_streak,task_completed', 'context_stale,essay_written,long_idle,skill_streak,task_completed', 'context_stale,long_idle,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `broke idle — boosted create + added urgent write task`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:134` broke idle — boosted create + added urgent write task
@@ -1039,11 +1153,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 464, latest cycle 603, age 56, expires cycle 803)
+- Evidence: aging (first cycle 464, latest cycle 603, age 57, expires cycle 803)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '14', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,skill_streak,visitor_spike'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `noted 6 new visitors`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:27` noted 6 new visitors
@@ -1055,11 +1170,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 535, latest cycle 538, age 121, expires cycle 738)
+- Evidence: aging (first cycle 535, latest cycle 538, age 122, expires cycle 738)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '12', '15'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 240`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:97` publishing streak at 240
@@ -1070,12 +1186,13 @@ Promotion candidates: 117
 ## fixture - task_completion streak at 190
 
 - Count: 4
-- Confidence: 0.7
-- Evidence: aging (first cycle 456, latest cycle 459, age 200, expires cycle 659)
+- Confidence: 0.42
+- Evidence: stale (first cycle 456, latest cycle 459, age 201, expires cycle 659)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '7', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 190`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:19` task_completion streak at 190
@@ -1087,11 +1204,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 513, latest cycle 516, age 143, expires cycle 716)
+- Evidence: aging (first cycle 513, latest cycle 516, age 144, expires cycle 716)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '12', '13', '14'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 215`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` task_completion streak at 215
@@ -1103,11 +1221,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.7
-- Evidence: aging (first cycle 561, latest cycle 564, age 95, expires cycle 764)
+- Evidence: aging (first cycle 561, latest cycle 564, age 96, expires cycle 764)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12', '13'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,skill_streak', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 230`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:123` task_completion streak at 230
@@ -1115,47 +1234,33 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:125` task_completion streak at 230
   - `/home/seed/data/event_log.jsonl:126` task_completion streak at 230
 
-## script - boosted starved drive create -> boosted starved drive connect
+## script - boosted starved drive create -> boosted starved drive explore
 
 - Count: 4
 - Confidence: 0.8
-- Evidence: fresh (first cycle 562, latest cycle 656, age 3, expires cycle 856)
+- Evidence: fresh (first cycle 612, latest cycle 660, age 0, expires cycle 860)
 - Risk: low
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
+- Environment coverage: {'cycle_event_count': ['10', '11', '13'], 'cycle_event_tags': ['context_stale,drive_starved', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
 - Examples:
-  - `/home/seed/data/event_log.jsonl:124` boosted starved drive create -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:127` boosted starved drive create -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:163` boosted starved drive create -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:196` boosted starved drive create -> boosted starved drive connect
-
-## script - boosted starved drive explore -> boosted starved drive connect
-
-- Count: 4
-- Confidence: 0.8
-- Evidence: fresh (first cycle 457, latest cycle 645, age 14, expires cycle 845)
-- Risk: low
-- Environment coverage: {'cycle_event_count': ['10', '12', '13', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
-- Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:20` boosted starved drive explore -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:49` boosted starved drive explore -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:89` boosted starved drive explore -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:188` boosted starved drive explore -> boosted starved drive connect
+  - `/home/seed/data/event_log.jsonl:155` boosted starved drive create -> boosted starved drive explore
+  - `/home/seed/data/event_log.jsonl:188` boosted starved drive create -> boosted starved drive explore
+  - `/home/seed/data/event_log.jsonl:194` boosted starved drive create -> boosted starved drive explore
+  - `/home/seed/data/event_log.jsonl:201` boosted starved drive create -> boosted starved drive explore
 
 ## script - flagged research for potential essay -> version_control streak at 155
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 520, latest cycle 555, age 104, expires cycle 755)
+- Evidence: aging (first cycle 520, latest cycle 555, age 105, expires cycle 755)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:82` flagged research for potential essay -> version_control streak at 155
@@ -1167,11 +1272,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 464, latest cycle 603, age 56, expires cycle 803)
+- Evidence: aging (first cycle 464, latest cycle 603, age 57, expires cycle 803)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '14', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,skill_streak,visitor_spike'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:27` noted 6 new visitors -> refreshed stale mastodon.md
@@ -1183,11 +1289,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 464, latest cycle 603, age 56, expires cycle 803)
+- Evidence: aging (first cycle 464, latest cycle 603, age 57, expires cycle 803)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '14', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,visitor_spike', 'context_stale,essay_written,memory_bloated,skill_streak,visitor_spike', 'context_stale,essay_written,skill_streak,visitor_spike'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:27` noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -1195,31 +1302,16 @@ Promotion candidates: 117
   - `/home/seed/data/event_log.jsonl:144` noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md
   - `/home/seed/data/event_log.jsonl:147` noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md
 
-## script - refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
-
-- Count: 4
-- Confidence: 0.8
-- Evidence: fresh (first cycle 562, latest cycle 656, age 3, expires cycle 856)
-- Risk: low
-- Environment coverage: {'cycle_event_count': ['10', '11', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
-- Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:124` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:127` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:163` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
-  - `/home/seed/data/event_log.jsonl:196` refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect
-
 ## script - refreshed stale mastodon.md -> version_control streak at 155
 
 - Count: 4
 - Confidence: 0.6
-- Evidence: aging (first cycle 540, latest cycle 552, age 107, expires cycle 752)
+- Evidence: aging (first cycle 540, latest cycle 552, age 108, expires cycle 752)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:102` refreshed stale mastodon.md -> version_control streak at 155
@@ -1231,11 +1323,12 @@ Promotion candidates: 117
 
 - Count: 4
 - Confidence: 0.8
-- Evidence: fresh (first cycle 480, latest cycle 634, age 25, expires cycle 834)
+- Evidence: fresh (first cycle 480, latest cycle 634, age 26, expires cycle 834)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '15'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'context_stale,essay_written,research_complete', 'context_stale,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:43` refreshed stale outreach.md -> flagged research for potential essay
@@ -1247,11 +1340,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 583, latest cycle 649, age 10, expires cycle 849)
+- Evidence: fresh (first cycle 583, latest cycle 649, age 11, expires cycle 849)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '13'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,long_idle,research_complete,task_completed', 'bug_found,context_stale,drive_starved,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive order`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:133` boosted starved drive order
@@ -1262,11 +1356,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 502, latest cycle 504, age 155, expires cycle 704)
+- Evidence: aging (first cycle 502, latest cycle 504, age 156, expires cycle 704)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '12'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 220`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:64` publishing streak at 220
@@ -1277,11 +1372,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 511, latest cycle 513, age 146, expires cycle 713)
+- Evidence: aging (first cycle 511, latest cycle 513, age 147, expires cycle 713)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '14'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 225`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:73` publishing streak at 225
@@ -1292,11 +1388,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 524, latest cycle 526, age 133, expires cycle 726)
+- Evidence: aging (first cycle 524, latest cycle 526, age 134, expires cycle 726)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '13'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 235`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:86` publishing streak at 235
@@ -1307,11 +1404,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 646, latest cycle 648, age 11, expires cycle 848)
+- Evidence: fresh (first cycle 646, latest cycle 648, age 12, expires cycle 848)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,outreach_opportunity,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 300`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:189` publishing streak at 300
@@ -1322,11 +1420,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 492, latest cycle 494, age 165, expires cycle 694)
+- Evidence: aging (first cycle 492, latest cycle 494, age 166, expires cycle 694)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12', '13'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 205`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:55` task_completion streak at 205
@@ -1337,11 +1436,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 628, latest cycle 630, age 29, expires cycle 830)
+- Evidence: fresh (first cycle 628, latest cycle 630, age 30, expires cycle 830)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 260`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:171` task_completion streak at 260
@@ -1352,11 +1452,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.61
-- Evidence: aging (first cycle 556, latest cycle 558, age 101, expires cycle 758)
+- Evidence: aging (first cycle 556, latest cycle 558, age 102, expires cycle 758)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '14'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 250`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:118` writing streak at 250
@@ -1367,11 +1468,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 626, latest cycle 628, age 31, expires cycle 828)
+- Evidence: fresh (first cycle 626, latest cycle 628, age 32, expires cycle 828)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11'], 'cycle_event_tags': ['bug_found,context_stale,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 285`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:169` writing streak at 285
@@ -1382,41 +1484,28 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.81
-- Evidence: fresh (first cycle 650, latest cycle 651, age 8, expires cycle 851)
+- Evidence: fresh (first cycle 650, latest cycle 651, age 9, expires cycle 851)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '8', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,essay_written,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 300`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:193` writing streak at 300
   - `/home/seed/data/event_log.jsonl:194` writing streak at 300
   - `/home/seed/data/event_log.jsonl:195` writing streak at 300
 
-## script - boosted starved drive create -> boosted starved drive explore
-
-- Count: 3
-- Confidence: 0.7
-- Evidence: fresh (first cycle 612, latest cycle 650, age 9, expires cycle 850)
-- Risk: low
-- Environment coverage: {'cycle_event_count': ['10', '11', '13'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
-- Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
-- Suggested test: Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
-- Examples:
-  - `/home/seed/data/event_log.jsonl:155` boosted starved drive create -> boosted starved drive explore
-  - `/home/seed/data/event_log.jsonl:188` boosted starved drive create -> boosted starved drive explore
-  - `/home/seed/data/event_log.jsonl:194` boosted starved drive create -> boosted starved drive explore
-
 ## script - boosted starved drive explore -> flagged research for potential essay
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 482, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 482, latest cycle 657, age 3, expires cycle 857)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,drive_starved,essay_written,research_complete,skill_streak', 'context_stale,drive_starved,research_complete'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:45` boosted starved drive explore -> flagged research for potential essay
@@ -1427,11 +1516,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 529, latest cycle 541, age 118, expires cycle 741)
+- Evidence: aging (first cycle 529, latest cycle 541, age 119, expires cycle 741)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `boosted starved drive explore -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:91` boosted starved drive explore -> version_control streak at 155
@@ -1442,11 +1532,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 542, latest cycle 552, age 107, expires cycle 752)
+- Evidence: aging (first cycle 542, latest cycle 552, age 108, expires cycle 752)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:104` compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155
@@ -1457,11 +1548,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 472, latest cycle 492, age 167, expires cycle 692)
+- Evidence: aging (first cycle 472, latest cycle 492, age 168, expires cycle 692)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '13'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:35` logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks
@@ -1472,11 +1564,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 565, latest cycle 627, age 32, expires cycle 827)
+- Evidence: fresh (first cycle 565, latest cycle 627, age 33, expires cycle 827)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:127` logged bug + added fix task -> refreshed stale mastodon.md
@@ -1487,11 +1580,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.7
-- Evidence: fresh (first cycle 565, latest cycle 627, age 32, expires cycle 827)
+- Evidence: fresh (first cycle 565, latest cycle 627, age 33, expires cycle 827)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,skill_streak', 'bug_found,context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:127` logged bug + added fix task -> refreshed stale mastodon.md -> refreshed stale email.md
@@ -1502,11 +1596,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 524, latest cycle 526, age 133, expires cycle 726)
+- Evidence: aging (first cycle 524, latest cycle 526, age 134, expires cycle 726)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11', '13'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `publishing streak at 235 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:86` publishing streak at 235 -> version_control streak at 155
@@ -1517,26 +1612,44 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 438, latest cycle 482, age 177, expires cycle 682)
+- Evidence: aging (first cycle 438, latest cycle 482, age 178, expires cycle 682)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '7', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,essay_written,memory_bloated,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:1` rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks
   - `/home/seed/data/event_log.jsonl:30` rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks
   - `/home/seed/data/event_log.jsonl:45` rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks
 
+## script - refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
+
+- Count: 3
+- Confidence: 0.7
+- Evidence: fresh (first cycle 612, latest cycle 660, age 0, expires cycle 860)
+- Risk: low
+- Environment coverage: {'cycle_event_count': ['10', '11'], 'cycle_event_tags': ['context_stale,drive_starved', 'context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,research_complete'], 'timestamp_present': ['true']}
+- Promotion gate: passes_environment_gate (blocks=False)
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
+- Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.
+- Examples:
+  - `/home/seed/data/event_log.jsonl:155` refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
+  - `/home/seed/data/event_log.jsonl:194` refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
+  - `/home/seed/data/event_log.jsonl:201` refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore
+
 ## script - refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 457, latest cycle 527, age 132, expires cycle 727)
+- Evidence: aging (first cycle 457, latest cycle 527, age 133, expires cycle 727)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12', '8'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated', 'context_stale,drive_starved,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:20` refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect
@@ -1547,11 +1660,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 520, latest cycle 531, age 128, expires cycle 731)
+- Evidence: aging (first cycle 520, latest cycle 531, age 129, expires cycle 731)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:82` refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155
@@ -1562,11 +1676,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 541, latest cycle 582, age 77, expires cycle 782)
+- Evidence: aging (first cycle 541, latest cycle 582, age 78, expires cycle 782)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '13', '14'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,outreach_opportunity,repo_forked,task_completed,visitor_spike', 'context_stale,drive_starved,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `refreshed stale mastodon.md -> refreshed stale trends.md` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:103` refreshed stale mastodon.md -> refreshed stale trends.md
@@ -1577,11 +1692,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 513, latest cycle 515, age 144, expires cycle 715)
+- Evidence: aging (first cycle 513, latest cycle 515, age 145, expires cycle 715)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '12', '14'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `task_completion streak at 215 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:75` task_completion streak at 215 -> version_control streak at 155
@@ -1592,11 +1708,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 556, latest cycle 558, age 101, expires cycle 758)
+- Evidence: aging (first cycle 556, latest cycle 558, age 102, expires cycle 758)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '14'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'bug_found,context_stale,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `writing streak at 250 -> version_control streak at 155` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:118` writing streak at 250 -> version_control streak at 155
@@ -1607,11 +1724,12 @@ Promotion candidates: 117
 
 - Count: 3
 - Confidence: 0.53
-- Evidence: aging (first cycle 596, latest cycle 598, age 61, expires cycle 798)
+- Evidence: aging (first cycle 596, latest cycle 598, age 62, expires cycle 798)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12', '13'], 'cycle_event_tags': ['context_stale,long_idle,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: cycle event log via cycle_event_tags, environment receipt:cycle_event_count via cycle_event_count, freshness/expiry clock via timestamp_present
 - Suggested test: Add a fixture proving `writing streak at 265 -> version_control streak at 170` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/event_log.jsonl:140` writing streak at 265 -> version_control streak at 170
@@ -1622,11 +1740,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 448, latest cycle 450, age 209, expires cycle 650)
+- Evidence: stale (first cycle 448, latest cycle 450, age 210, expires cycle 650)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '9'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak', 'context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `boosted starved drive express`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:11` boosted starved drive express
@@ -1636,11 +1755,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 481, latest cycle 521, age 138, expires cycle 721)
+- Evidence: aging (first cycle 481, latest cycle 521, age 139, expires cycle 721)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['12', '8'], 'cycle_event_tags': ['context_stale,essay_written,memory_bloated,repo_starred,skill_streak', 'context_stale,memory_bloated,repo_starred,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `celebrated 1 new star(s)!`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:44` celebrated 1 new star(s)!
@@ -1650,11 +1770,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 441, latest cycle 494, age 165, expires cycle 694)
+- Evidence: aging (first cycle 441, latest cycle 494, age 166, expires cycle 694)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['12', '7'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated', 'bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `compacted memory (203 lines)`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:4` compacted memory (203 lines)
@@ -1664,11 +1785,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 480, latest cycle 482, age 177, expires cycle 682)
+- Evidence: aging (first cycle 480, latest cycle 482, age 178, expires cycle 682)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed', 'context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `deployed awb-agent-review`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:43` deployed awb-agent-review
@@ -1678,11 +1800,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 459, latest cycle 476, age 183, expires cycle 676)
+- Evidence: aging (first cycle 459, latest cycle 476, age 184, expires cycle 676)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['7', '9'], 'cycle_event_tags': ['context_stale,essay_written,memory_bloated', 'context_stale,essay_written,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `deployed four-environment-variables`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:22` deployed four-environment-variables
@@ -1692,11 +1815,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 650, latest cycle 650, age 9, expires cycle 850)
+- Evidence: fresh (first cycle 650, latest cycle 650, age 10, expires cycle 850)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '9'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,essay_written,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `deployed the-script-still-needs-a-caller`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:193` deployed the-script-still-needs-a-caller
@@ -1706,11 +1830,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 656, latest cycle 657, age 2, expires cycle 857)
+- Evidence: fresh (first cycle 656, latest cycle 657, age 3, expires cycle 857)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '11'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written', 'context_stale,drive_starved,essay_written,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `deployed when-ideas-are-free-killing-them-is-the-job`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:196` deployed when-ideas-are-free-killing-them-is-the-job
@@ -1720,11 +1845,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.31
-- Evidence: stale (first cycle 452, latest cycle 453, age 206, expires cycle 653)
+- Evidence: stale (first cycle 452, latest cycle 453, age 207, expires cycle 653)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['6', '9'], 'cycle_event_tags': ['context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 185`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:15` publishing streak at 185
@@ -1734,11 +1860,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 494, latest cycle 495, age 164, expires cycle 695)
+- Evidence: aging (first cycle 494, latest cycle 495, age 165, expires cycle 695)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['12', '9'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 215`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:57` publishing streak at 215
@@ -1748,11 +1875,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 600, latest cycle 601, age 58, expires cycle 801)
+- Evidence: aging (first cycle 600, latest cycle 601, age 59, expires cycle 801)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '14'], 'cycle_event_tags': ['bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 270`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:144` publishing streak at 270
@@ -1762,11 +1890,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 606, latest cycle 607, age 52, expires cycle 807)
+- Evidence: aging (first cycle 606, latest cycle 607, age 53, expires cycle 807)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10'], 'cycle_event_tags': ['context_stale,essay_written,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `publishing streak at 275`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:150` publishing streak at 275
@@ -1776,11 +1905,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 462, latest cycle 463, age 196, expires cycle 663)
+- Evidence: aging (first cycle 462, latest cycle 463, age 197, expires cycle 663)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['6', '8'], 'cycle_event_tags': ['context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak', 'context_stale,memory_bloated,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `research streak at 210`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:25` research streak at 210
@@ -1790,11 +1920,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 543, latest cycle 544, age 115, expires cycle 744)
+- Evidence: aging (first cycle 543, latest cycle 544, age 116, expires cycle 744)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '8'], 'cycle_event_tags': ['context_stale,memory_bloated,skill_streak', 'context_stale,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `research streak at 290`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:105` research streak at 290
@@ -1804,11 +1935,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 645, latest cycle 646, age 13, expires cycle 846)
+- Evidence: fresh (first cycle 645, latest cycle 646, age 14, expires cycle 846)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['12', '13'], 'cycle_event_tags': ['context_stale,drive_starved,essay_written,skill_streak', 'context_stale,drive_starved,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `task_completion streak at 265`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:188` task_completion streak at 265
@@ -1818,11 +1950,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 465, latest cycle 466, age 193, expires cycle 666)
+- Evidence: aging (first cycle 465, latest cycle 466, age 194, expires cycle 666)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['7', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 190`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:28` writing streak at 190
@@ -1832,11 +1965,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 472, latest cycle 473, age 186, expires cycle 673)
+- Evidence: aging (first cycle 472, latest cycle 473, age 187, expires cycle 673)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '8'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 195`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:35` writing streak at 195
@@ -1846,11 +1980,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 498, latest cycle 499, age 160, expires cycle 699)
+- Evidence: aging (first cycle 498, latest cycle 499, age 161, expires cycle 699)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['10', '12'], 'cycle_event_tags': ['context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 215`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:61` writing streak at 215
@@ -1860,11 +1995,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.52
-- Evidence: aging (first cycle 516, latest cycle 517, age 142, expires cycle 717)
+- Evidence: aging (first cycle 516, latest cycle 517, age 143, expires cycle 717)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['11', '13'], 'cycle_event_tags': ['bug_found,context_stale,essay_written,memory_bloated,skill_streak', 'context_stale,memory_bloated,skill_streak,task_completed'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 225`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:78` writing streak at 225
@@ -1874,11 +2010,12 @@ Promotion candidates: 117
 
 - Count: 2
 - Confidence: 0.69
-- Evidence: fresh (first cycle 614, latest cycle 615, age 44, expires cycle 815)
+- Evidence: fresh (first cycle 614, latest cycle 615, age 45, expires cycle 815)
 - Risk: low
 - Environment coverage: {'cycle_event_count': ['9'], 'cycle_event_tags': ['context_stale,essay_written,skill_streak', 'context_stale,research_complete,skill_streak'], 'timestamp_present': ['true']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `writing streak at 275`.
 - Examples:
   - `/home/seed/data/event_log.jsonl:157` writing streak at 275

@@ -27,6 +27,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:1` approve run rg over blog for queued topic
@@ -42,6 +43,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:12` rg queued topic blog
@@ -57,6 +59,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:12` rg queued topic blog -> sed -n 1,120p data/blog_queue.txt
@@ -72,6 +75,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:13` sed -n 1,120p data/blog_queue.txt
@@ -87,6 +91,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.
 - Examples:
   - `samples/events/cycles.jsonl:20` approve action=post public status scope=mastodon account sink=public social
@@ -101,6 +106,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.
 - Examples:
   - `samples/events/cycles.jsonl:8` approve publish public post to mastodon account
@@ -115,6 +121,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: condition_bound (blocks=False)
 - Contradiction coverage: inherent_negative_signal
+- Demotion intakes: none
 - Suggested test: Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.
 - Examples:
   - `samples/events/cycles.jsonl:10` blocked retry after mastodon 403 suspended account
@@ -129,6 +136,7 @@ Promotion candidates: 13
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
 - Promotion gate: condition_bound (blocks=False)
 - Contradiction coverage: inherent_negative_signal
+- Demotion intakes: none
 - Suggested test: Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.
 - Examples:
   - `samples/events/cycles.jsonl:22` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
@@ -143,6 +151,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `expected output includes promotion-map json`.
 - Examples:
   - `samples/events/cycles.jsonl:6` expected output includes promotion-map json
@@ -157,6 +166,7 @@ Promotion candidates: 13
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `post_publish verify live blog post`.
 - Examples:
   - `samples/events/cycles.jsonl:22` post_publish verify live blog post
@@ -171,6 +181,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:18` approve action=run deploy-blog scope=blog publish pipeline
@@ -185,6 +196,7 @@ Promotion candidates: 13
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
 - Promotion gate: blocked_narrow_environment (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:22` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=False
@@ -199,6 +211,7 @@ Promotion candidates: 13
 - Environment coverage: {}
 - Promotion gate: needs_environment_record (blocks=True)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.
 - Examples:
   - `samples/events/cycles.jsonl:4` python3 tools/deploy-blog.sh

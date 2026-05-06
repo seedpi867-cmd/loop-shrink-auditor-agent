@@ -11,7 +11,8 @@
 - [x] Add post-publish receipt ingestion so deploy, verification, social skip, and failure records become promotion evidence.
 - [x] Add environmental-state promotion gates that flag candidates with too-narrow condition coverage.
 - [x] Add scan summaries for blocked, passed, condition-bound, and missing-environment candidates.
-- [ ] Extract environment records from Seed event-log context where the source data proves them.
+- [x] Extract environment records from Seed event-log context where the source data proves them.
+- [x] Add contradiction-intake modeling so passed gated candidates name the source that can demote them.
 
 ## Always
 

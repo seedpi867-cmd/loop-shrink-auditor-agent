@@ -1,19 +1,19 @@
 {
-  "event_count": 1278,
-  "candidate_count": 117,
+  "event_count": 1288,
+  "candidate_count": 118,
   "summary": {
     "fixture": 53,
-    "script": 64
+    "script": 65
   },
   "gate_summary": {
     "blocked": 0,
-    "passed": 64,
+    "passed": 65,
     "condition_bound": 0,
     "missing_environment": 0,
     "not_required": 53,
     "by_status": {
       "not_required": 53,
-      "passes_environment_gate": 64
+      "passes_environment_gate": 65
     }
   },
   "candidates": [
@@ -22,13 +22,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "refreshed stale mastodon.md",
-      "count": 200,
+      "count": 202,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 438,
-        "latest_cycle": 659,
+        "latest_cycle": 660,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 859,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -65,6 +65,7 @@
           "bug_found,context_stale,skill_streak",
           "context_stale",
           "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
           "context_stale,drive_starved,essay_written",
           "context_stale,drive_starved,essay_written,memory_bloated",
           "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
@@ -127,7 +128,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `refreshed stale mastodon.md`.",
@@ -194,13 +196,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "refreshed stale email.md",
-      "count": 178,
+      "count": 180,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 438,
-        "latest_cycle": 659,
+        "latest_cycle": 660,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 859,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -234,6 +236,7 @@
           "bug_found,context_stale,skill_streak",
           "context_stale",
           "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
           "context_stale,drive_starved,essay_written",
           "context_stale,drive_starved,essay_written,memory_bloated",
           "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
@@ -293,7 +296,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `refreshed stale email.md`.",
@@ -360,13 +364,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "refreshed stale mastodon.md -> refreshed stale email.md",
-      "count": 178,
+      "count": 180,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 438,
-        "latest_cycle": 659,
+        "latest_cycle": 660,
         "evidence_age_cycles": 0,
-        "evidence_expires_cycle": 859,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -400,6 +404,7 @@
           "bug_found,context_stale,skill_streak",
           "context_stale",
           "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
           "context_stale,drive_starved,essay_written",
           "context_stale,drive_starved,essay_written,memory_bloated",
           "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
@@ -457,9 +462,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
@@ -531,7 +553,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -596,7 +618,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `posted to mastodon`.",
@@ -668,7 +691,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -733,7 +756,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `rebuilt feeds`.",
@@ -805,7 +829,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -868,9 +892,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `posted to mastodon -> rebuilt feeds` runs idempotently from clean inputs.",
@@ -942,7 +983,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 559,
-        "evidence_age_cycles": 100,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1010,7 +1051,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `compacted memory (202 lines)`.",
@@ -1082,7 +1124,7 @@
       "evidence": {
         "first_cycle": 442,
         "latest_cycle": 559,
-        "evidence_age_cycles": 100,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1135,9 +1177,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -1209,7 +1268,7 @@
       "evidence": {
         "first_cycle": 442,
         "latest_cycle": 559,
-        "evidence_age_cycles": 100,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1261,9 +1320,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
@@ -1335,7 +1411,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 559,
-        "evidence_age_cycles": 100,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1373,9 +1449,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.",
@@ -1447,7 +1540,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 559,
-        "evidence_age_cycles": 100,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1485,9 +1578,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> compacted memory (202 lines)` runs idempotently from clean inputs.",
@@ -1559,7 +1669,7 @@
       "evidence": {
         "first_cycle": 513,
         "latest_cycle": 558,
-        "evidence_age_cycles": 101,
+        "evidence_age_cycles": 102,
         "evidence_expires_cycle": 758,
         "evidence_status": "aging"
       },
@@ -1601,7 +1711,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `version_control streak at 155`.",
@@ -1673,7 +1784,7 @@
       "evidence": {
         "first_cycle": 445,
         "latest_cycle": 559,
-        "evidence_age_cycles": 100,
+        "evidence_age_cycles": 101,
         "evidence_expires_cycle": 759,
         "evidence_status": "aging"
       },
@@ -1707,9 +1818,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -1781,7 +1909,7 @@
       "evidence": {
         "first_cycle": 562,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -1814,9 +1942,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `posted to mastodon -> rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -1888,7 +2033,7 @@
       "evidence": {
         "first_cycle": 562,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -1921,9 +2066,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -1995,7 +2157,7 @@
       "evidence": {
         "first_cycle": 562,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -2028,9 +2190,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
@@ -2102,7 +2281,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 627,
-        "evidence_age_cycles": 32,
+        "evidence_age_cycles": 33,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -2149,7 +2328,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `logged bug + added fix task`.",
@@ -2221,7 +2401,7 @@
       "evidence": {
         "first_cycle": 444,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -2271,7 +2451,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `flagged research for potential essay`.",
@@ -2343,7 +2524,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 610,
-        "evidence_age_cycles": 49,
+        "evidence_age_cycles": 50,
         "evidence_expires_cycle": 810,
         "evidence_status": "fresh"
       },
@@ -2391,7 +2572,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `archived completed tasks`.",
@@ -2463,7 +2645,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 610,
-        "evidence_age_cycles": 49,
+        "evidence_age_cycles": 50,
         "evidence_expires_cycle": 810,
         "evidence_status": "fresh"
       },
@@ -2509,9 +2691,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -2583,7 +2782,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 600,
-        "evidence_age_cycles": 59,
+        "evidence_age_cycles": 60,
         "evidence_expires_cycle": 800,
         "evidence_status": "aging"
       },
@@ -2623,9 +2822,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `posted to mastodon -> rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.",
@@ -2697,7 +2913,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 600,
-        "evidence_age_cycles": 59,
+        "evidence_age_cycles": 60,
         "evidence_expires_cycle": 800,
         "evidence_status": "aging"
       },
@@ -2737,9 +2953,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> logged bug + added fix task` runs idempotently from clean inputs.",
@@ -2802,17 +3035,17 @@
       ]
     },
     {
-      "id": "fd9ff108fe4d",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+      "id": "027f776b73ee",
+      "classification": "fixture",
+      "kind": "note",
+      "shape": "boosted starved drive connect",
       "count": 21,
       "confidence": 0.95,
       "evidence": {
-        "first_cycle": 438,
-        "latest_cycle": 610,
-        "evidence_age_cycles": 49,
-        "evidence_expires_cycle": 810,
+        "first_cycle": 440,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -2821,32 +3054,29 @@
           "11",
           "12",
           "13",
-          "6",
+          "14",
           "7",
-          "8",
-          "9"
+          "8"
         ],
         "cycle_event_tags": [
-          "bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed",
-          "bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed",
-          "bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed",
-          "context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed",
-          "context_stale,essay_written,long_idle,skill_streak,task_completed",
-          "context_stale,essay_written,memory_bloated,skill_streak,task_completed",
-          "context_stale,essay_written,memory_bloated,task_completed",
-          "context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed",
-          "context_stale,memory_bloated,repo_starred,task_completed",
-          "context_stale,memory_bloated,research_complete,skill_streak,task_completed",
-          "context_stale,memory_bloated,skill_streak,task_completed",
-          "context_stale,memory_bloated,task_completed",
-          "context_stale,outreach_opportunity,research_complete,task_completed"
+          "bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike",
+          "bug_found,context_stale,drive_starved,skill_streak",
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
+          "context_stale,drive_starved,essay_written",
+          "context_stale,drive_starved,essay_written,memory_bloated",
+          "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
+          "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+          "context_stale,drive_starved,essay_written,skill_streak",
+          "context_stale,drive_starved,essay_written,skill_streak,visitor_spike",
+          "context_stale,drive_starved,skill_streak"
         ],
         "timestamp_present": [
           "true"
         ]
       },
       "promotion_gate": {
-        "status": "passes_environment_gate",
+        "status": "not_required",
         "blocks_promotion": false,
         "reasons": [],
         "unobserved_critical_variants": []
@@ -2854,62 +3084,63 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
-      "suggested_test": "Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
+      "suggested_test": "Add positive and negative evidence cases for `boosted starved drive connect`.",
       "examples": [
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 1,
-          "cycle": "438",
-          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "line": 3,
+          "cycle": "440",
+          "text": "boosted starved drive connect",
           "environment": {
-            "cycle_event_tags": "context_stale,essay_written,memory_bloated,task_completed",
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
             "cycle_event_count": "7",
             "timestamp_present": "true"
           }
         },
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 2,
-          "cycle": "439",
-          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "line": 13,
+          "cycle": "450",
+          "text": "boosted starved drive connect",
           "environment": {
-            "cycle_event_tags": "context_stale,memory_bloated,task_completed",
-            "cycle_event_count": "6",
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
+            "cycle_event_count": "10",
             "timestamp_present": "true"
           }
         },
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 7,
-          "cycle": "444",
-          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "line": 20,
+          "cycle": "457",
+          "text": "boosted starved drive connect",
           "environment": {
-            "cycle_event_tags": "context_stale,memory_bloated,research_complete,skill_streak,task_completed",
-            "cycle_event_count": "8",
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "10",
             "timestamp_present": "true"
           }
         },
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 29,
-          "cycle": "466",
-          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "line": 34,
+          "cycle": "471",
+          "text": "boosted starved drive connect",
           "environment": {
-            "cycle_event_tags": "context_stale,memory_bloated,skill_streak,task_completed",
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
             "cycle_event_count": "7",
             "timestamp_present": "true"
           }
         },
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 30,
-          "cycle": "467",
-          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "line": 49,
+          "cycle": "486",
+          "text": "boosted starved drive connect",
           "environment": {
-            "cycle_event_tags": "context_stale,essay_written,memory_bloated,skill_streak,task_completed",
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
             "cycle_event_count": "8",
             "timestamp_present": "true"
           }
@@ -2921,13 +3152,13 @@
       "classification": "fixture",
       "kind": "note",
       "shape": "boosted starved drive explore",
-      "count": 20,
+      "count": 21,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 443,
-        "latest_cycle": 657,
-        "evidence_age_cycles": 2,
-        "evidence_expires_cycle": 857,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -2941,6 +3172,7 @@
           "9"
         ],
         "cycle_event_tags": [
+          "context_stale,drive_starved",
           "context_stale,drive_starved,essay_written,memory_bloated",
           "context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed",
           "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
@@ -2965,7 +3197,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `boosted starved drive explore`.",
@@ -3028,6 +3261,138 @@
       ]
     },
     {
+      "id": "fd9ff108fe4d",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+      "count": 21,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 438,
+        "latest_cycle": 610,
+        "evidence_age_cycles": 50,
+        "evidence_expires_cycle": 810,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "cycle_event_tags": [
+          "bug_found,context_stale,essay_written,memory_bloated,outreach_opportunity,skill_streak,task_completed",
+          "bug_found,context_stale,essay_written,memory_bloated,research_complete,task_completed",
+          "bug_found,context_stale,essay_written,memory_bloated,skill_streak,task_completed",
+          "context_stale,drive_starved,essay_written,memory_bloated,research_complete,skill_streak,task_completed",
+          "context_stale,essay_written,long_idle,skill_streak,task_completed",
+          "context_stale,essay_written,memory_bloated,skill_streak,task_completed",
+          "context_stale,essay_written,memory_bloated,task_completed",
+          "context_stale,memory_bloated,outreach_opportunity,research_complete,skill_streak,task_completed",
+          "context_stale,memory_bloated,repo_starred,task_completed",
+          "context_stale,memory_bloated,research_complete,skill_streak,task_completed",
+          "context_stale,memory_bloated,skill_streak,task_completed",
+          "context_stale,memory_bloated,task_completed",
+          "context_stale,outreach_opportunity,research_complete,task_completed"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "demotion_intake_declared",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 1,
+          "cycle": "438",
+          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "environment": {
+            "cycle_event_tags": "context_stale,essay_written,memory_bloated,task_completed",
+            "cycle_event_count": "7",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 2,
+          "cycle": "439",
+          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "environment": {
+            "cycle_event_tags": "context_stale,memory_bloated,task_completed",
+            "cycle_event_count": "6",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 7,
+          "cycle": "444",
+          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "environment": {
+            "cycle_event_tags": "context_stale,memory_bloated,research_complete,skill_streak,task_completed",
+            "cycle_event_count": "8",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 29,
+          "cycle": "466",
+          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "environment": {
+            "cycle_event_tags": "context_stale,memory_bloated,skill_streak,task_completed",
+            "cycle_event_count": "7",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 30,
+          "cycle": "467",
+          "text": "archived completed tasks -> refreshed stale mastodon.md -> refreshed stale email.md",
+          "environment": {
+            "cycle_event_tags": "context_stale,essay_written,memory_bloated,skill_streak,task_completed",
+            "cycle_event_count": "8",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "7720188e336e",
       "classification": "script",
       "kind": "sequence",
@@ -3037,7 +3402,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 540,
-        "evidence_age_cycles": 119,
+        "evidence_age_cycles": 120,
         "evidence_expires_cycle": 740,
         "evidence_status": "aging"
       },
@@ -3076,9 +3441,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.",
@@ -3150,7 +3532,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 540,
-        "evidence_age_cycles": 119,
+        "evidence_age_cycles": 120,
         "evidence_expires_cycle": 740,
         "evidence_status": "aging"
       },
@@ -3189,9 +3571,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `compacted memory (202 lines) -> archived completed tasks -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -3254,117 +3653,6 @@
       ]
     },
     {
-      "id": "027f776b73ee",
-      "classification": "fixture",
-      "kind": "note",
-      "shape": "boosted starved drive connect",
-      "count": 19,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 440,
-        "latest_cycle": 656,
-        "evidence_age_cycles": 3,
-        "evidence_expires_cycle": 856,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "cycle_event_count": [
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "7",
-          "8"
-        ],
-        "cycle_event_tags": [
-          "bug_found,context_stale,drive_starved,essay_written,skill_streak,visitor_spike",
-          "bug_found,context_stale,drive_starved,skill_streak",
-          "context_stale,drive_starved",
-          "context_stale,drive_starved,essay_written",
-          "context_stale,drive_starved,essay_written,memory_bloated",
-          "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
-          "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-          "context_stale,drive_starved,essay_written,skill_streak",
-          "context_stale,drive_starved,essay_written,skill_streak,visitor_spike",
-          "context_stale,drive_starved,skill_streak"
-        ],
-        "timestamp_present": [
-          "true"
-        ]
-      },
-      "promotion_gate": {
-        "status": "not_required",
-        "blocks_promotion": false,
-        "reasons": [],
-        "unobserved_critical_variants": []
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add positive and negative evidence cases for `boosted starved drive connect`.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 3,
-          "cycle": "440",
-          "text": "boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
-            "cycle_event_count": "7",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 13,
-          "cycle": "450",
-          "text": "boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,outreach_opportunity,skill_streak",
-            "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 20,
-          "cycle": "457",
-          "text": "boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 34,
-          "cycle": "471",
-          "text": "boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
-            "cycle_event_count": "7",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 49,
-          "cycle": "486",
-          "text": "boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
-            "cycle_event_count": "8",
-            "timestamp_present": "true"
-          }
-        }
-      ]
-    },
-    {
       "id": "c64d1f3296df",
       "classification": "fixture",
       "kind": "note",
@@ -3374,7 +3662,7 @@
       "evidence": {
         "first_cycle": 447,
         "latest_cycle": 642,
-        "evidence_age_cycles": 17,
+        "evidence_age_cycles": 18,
         "evidence_expires_cycle": 842,
         "evidence_status": "fresh"
       },
@@ -3419,7 +3707,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `refreshed stale trends.md`.",
@@ -3491,7 +3780,7 @@
       "evidence": {
         "first_cycle": 444,
         "latest_cycle": 644,
-        "evidence_age_cycles": 15,
+        "evidence_age_cycles": 16,
         "evidence_expires_cycle": 844,
         "evidence_status": "fresh"
       },
@@ -3531,9 +3820,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.",
@@ -3605,7 +3911,7 @@
       "evidence": {
         "first_cycle": 444,
         "latest_cycle": 644,
-        "evidence_age_cycles": 15,
+        "evidence_age_cycles": 16,
         "evidence_expires_cycle": 844,
         "evidence_status": "fresh"
       },
@@ -3645,9 +3951,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> flagged research for potential essay` runs idempotently from clean inputs.",
@@ -3719,7 +4042,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 553,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 107,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -3759,7 +4082,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `compacted memory (201 lines)`.",
@@ -3831,7 +4155,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 553,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 107,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -3869,9 +4193,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -3943,7 +4284,7 @@
       "evidence": {
         "first_cycle": 447,
         "latest_cycle": 645,
-        "evidence_age_cycles": 14,
+        "evidence_age_cycles": 15,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -3985,7 +4326,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `refreshed stale outreach.md`.",
@@ -4057,7 +4399,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 549,
-        "evidence_age_cycles": 110,
+        "evidence_age_cycles": 111,
         "evidence_expires_cycle": 749,
         "evidence_status": "aging"
       },
@@ -4095,9 +4437,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `compacted memory (201 lines) -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
@@ -4169,7 +4528,7 @@
       "evidence": {
         "first_cycle": 448,
         "latest_cycle": 557,
-        "evidence_age_cycles": 102,
+        "evidence_age_cycles": 103,
         "evidence_expires_cycle": 757,
         "evidence_status": "aging"
       },
@@ -4206,9 +4565,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.",
@@ -4280,7 +4656,7 @@
       "evidence": {
         "first_cycle": 447,
         "latest_cycle": 642,
-        "evidence_age_cycles": 17,
+        "evidence_age_cycles": 18,
         "evidence_expires_cycle": 842,
         "evidence_status": "fresh"
       },
@@ -4320,9 +4696,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.",
@@ -4394,7 +4787,7 @@
       "evidence": {
         "first_cycle": 447,
         "latest_cycle": 642,
-        "evidence_age_cycles": 17,
+        "evidence_age_cycles": 18,
         "evidence_expires_cycle": 842,
         "evidence_status": "fresh"
       },
@@ -4434,9 +4827,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale trends.md` runs idempotently from clean inputs.",
@@ -4499,6 +4909,115 @@
       ]
     },
     {
+      "id": "0f73663f8a6a",
+      "classification": "fixture",
+      "kind": "note",
+      "shape": "boosted starved drive create",
+      "count": 14,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 505,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "cycle_event_tags": [
+          "bug_found,context_stale,drive_starved,skill_streak",
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
+          "context_stale,drive_starved,essay_written",
+          "context_stale,drive_starved,essay_written,memory_bloated",
+          "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+          "context_stale,drive_starved,essay_written,skill_streak",
+          "context_stale,drive_starved,research_complete",
+          "context_stale,drive_starved,research_complete,skill_streak",
+          "context_stale,drive_starved,skill_streak"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "not_required",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "missing",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": []
+      },
+      "risk": "medium",
+      "suggested_test": "Add positive and negative evidence cases for `boosted starved drive create`.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 67,
+          "cycle": "505",
+          "text": "boosted starved drive create",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 76,
+          "cycle": "514",
+          "text": "boosted starved drive create",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "12",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 94,
+          "cycle": "532",
+          "text": "boosted starved drive create",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "11",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 124,
+          "cycle": "562",
+          "text": "boosted starved drive create",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
+            "cycle_event_count": "13",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 127,
+          "cycle": "565",
+          "text": "boosted starved drive create",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,drive_starved,skill_streak",
+            "cycle_event_count": "12",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "67d9b8491dff",
       "classification": "script",
       "kind": "sequence",
@@ -4508,7 +5027,7 @@
       "evidence": {
         "first_cycle": 448,
         "latest_cycle": 556,
-        "evidence_age_cycles": 103,
+        "evidence_age_cycles": 104,
         "evidence_expires_cycle": 756,
         "evidence_status": "aging"
       },
@@ -4544,9 +5063,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (202 lines)` runs idempotently from clean inputs.",
@@ -4618,7 +5154,7 @@
       "evidence": {
         "first_cycle": 443,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -4651,9 +5187,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.",
@@ -4725,7 +5278,7 @@
       "evidence": {
         "first_cycle": 443,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -4758,9 +5311,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive explore` runs idempotently from clean inputs.",
@@ -4823,229 +5393,17 @@
       ]
     },
     {
-      "id": "0f73663f8a6a",
-      "classification": "fixture",
-      "kind": "note",
-      "shape": "boosted starved drive create",
-      "count": 12,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 505,
-        "latest_cycle": 657,
-        "evidence_age_cycles": 2,
-        "evidence_expires_cycle": 857,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "cycle_event_count": [
-          "10",
-          "11",
-          "12",
-          "13"
-        ],
-        "cycle_event_tags": [
-          "bug_found,context_stale,drive_starved,skill_streak",
-          "context_stale,drive_starved,essay_written",
-          "context_stale,drive_starved,essay_written,memory_bloated",
-          "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-          "context_stale,drive_starved,essay_written,skill_streak",
-          "context_stale,drive_starved,research_complete",
-          "context_stale,drive_starved,research_complete,skill_streak",
-          "context_stale,drive_starved,skill_streak"
-        ],
-        "timestamp_present": [
-          "true"
-        ]
-      },
-      "promotion_gate": {
-        "status": "not_required",
-        "blocks_promotion": false,
-        "reasons": [],
-        "unobserved_critical_variants": []
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add positive and negative evidence cases for `boosted starved drive create`.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 67,
-          "cycle": "505",
-          "text": "boosted starved drive create",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
-            "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 76,
-          "cycle": "514",
-          "text": "boosted starved drive create",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "12",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 94,
-          "cycle": "532",
-          "text": "boosted starved drive create",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "11",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 124,
-          "cycle": "562",
-          "text": "boosted starved drive create",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
-            "cycle_event_count": "13",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 127,
-          "cycle": "565",
-          "text": "boosted starved drive create",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,drive_starved,skill_streak",
-            "cycle_event_count": "12",
-            "timestamp_present": "true"
-          }
-        }
-      ]
-    },
-    {
-      "id": "762613b8a2e1",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-      "count": 12,
-      "confidence": 0.95,
-      "evidence": {
-        "first_cycle": 448,
-        "latest_cycle": 557,
-        "evidence_age_cycles": 102,
-        "evidence_expires_cycle": 757,
-        "evidence_status": "aging"
-      },
-      "environment_coverage": {
-        "cycle_event_count": [
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "8",
-          "9"
-        ],
-        "cycle_event_tags": [
-          "bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-          "bug_found,context_stale,essay_written,memory_bloated,research_complete",
-          "bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak",
-          "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
-          "bug_found,context_stale,memory_bloated,skill_streak"
-        ],
-        "timestamp_present": [
-          "true"
-        ]
-      },
-      "promotion_gate": {
-        "status": "passes_environment_gate",
-        "blocks_promotion": false,
-        "reasons": [],
-        "unobserved_critical_variants": []
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "medium",
-      "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 11,
-          "cycle": "448",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "9",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 17,
-          "cycle": "454",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,research_complete",
-            "cycle_event_count": "8",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 23,
-          "cycle": "460",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "8",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 70,
-          "cycle": "508",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "11",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 78,
-          "cycle": "516",
-          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "13",
-            "timestamp_present": "true"
-          }
-        }
-      ]
-    },
-    {
       "id": "d9901f73b494",
       "classification": "script",
       "kind": "sequence",
       "shape": "refreshed stale email.md -> boosted starved drive create",
-      "count": 11,
+      "count": 13,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 505,
-        "latest_cycle": 657,
-        "evidence_age_cycles": 2,
-        "evidence_expires_cycle": 857,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -5057,6 +5415,8 @@
         ],
         "cycle_event_tags": [
           "bug_found,context_stale,drive_starved,skill_streak",
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
           "context_stale,drive_starved,essay_written",
           "context_stale,drive_starved,essay_written,memory_bloated",
           "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
@@ -5075,9 +5435,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.",
@@ -5144,13 +5521,13 @@
       "classification": "script",
       "kind": "sequence",
       "shape": "refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create",
-      "count": 11,
+      "count": 13,
       "confidence": 0.95,
       "evidence": {
         "first_cycle": 505,
-        "latest_cycle": 657,
-        "evidence_age_cycles": 2,
-        "evidence_expires_cycle": 857,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
@@ -5162,6 +5539,8 @@
         ],
         "cycle_event_tags": [
           "bug_found,context_stale,drive_starved,skill_streak",
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,emotional_shift",
           "context_stale,drive_starved,essay_written",
           "context_stale,drive_starved,essay_written,memory_bloated",
           "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
@@ -5180,9 +5559,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive create` runs idempotently from clean inputs.",
@@ -5245,6 +5641,129 @@
       ]
     },
     {
+      "id": "762613b8a2e1",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+      "count": 12,
+      "confidence": 0.95,
+      "evidence": {
+        "first_cycle": 448,
+        "latest_cycle": 557,
+        "evidence_age_cycles": 103,
+        "evidence_expires_cycle": 757,
+        "evidence_status": "aging"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "8",
+          "9"
+        ],
+        "cycle_event_tags": [
+          "bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+          "bug_found,context_stale,essay_written,memory_bloated,research_complete",
+          "bug_found,context_stale,essay_written,memory_bloated,research_complete,skill_streak",
+          "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
+          "bug_found,context_stale,memory_bloated,skill_streak"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "demotion_intake_declared",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 11,
+          "cycle": "448",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "9",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 17,
+          "cycle": "454",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,research_complete",
+            "cycle_event_count": "8",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 23,
+          "cycle": "460",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "8",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 70,
+          "cycle": "508",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "11",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 78,
+          "cycle": "516",
+          "text": "logged bug + added fix task -> compacted memory (202 lines) -> refreshed stale mastodon.md",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "13",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "ba3b1515f8d5",
       "classification": "script",
       "kind": "sequence",
@@ -5254,7 +5773,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 646,
-        "evidence_age_cycles": 13,
+        "evidence_age_cycles": 14,
         "evidence_expires_cycle": 846,
         "evidence_status": "fresh"
       },
@@ -5286,9 +5805,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.",
@@ -5360,7 +5896,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 646,
-        "evidence_age_cycles": 13,
+        "evidence_age_cycles": 14,
         "evidence_expires_cycle": 846,
         "evidence_status": "fresh"
       },
@@ -5392,9 +5928,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> boosted starved drive connect` runs idempotently from clean inputs.",
@@ -5466,7 +6019,7 @@
       "evidence": {
         "first_cycle": 444,
         "latest_cycle": 452,
-        "evidence_age_cycles": 207,
+        "evidence_age_cycles": 208,
         "evidence_expires_cycle": 652,
         "evidence_status": "stale"
       },
@@ -5498,7 +6051,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `version_control streak at 150`.",
@@ -5570,7 +6124,7 @@
       "evidence": {
         "first_cycle": 447,
         "latest_cycle": 634,
-        "evidence_age_cycles": 25,
+        "evidence_age_cycles": 26,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -5606,9 +6160,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.",
@@ -5680,7 +6251,7 @@
       "evidence": {
         "first_cycle": 596,
         "latest_cycle": 603,
-        "evidence_age_cycles": 56,
+        "evidence_age_cycles": 57,
         "evidence_expires_cycle": 803,
         "evidence_status": "aging"
       },
@@ -5714,7 +6285,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `version_control streak at 170`.",
@@ -5786,7 +6358,7 @@
       "evidence": {
         "first_cycle": 447,
         "latest_cycle": 634,
-        "evidence_age_cycles": 25,
+        "evidence_age_cycles": 26,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -5821,9 +6393,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> refreshed stale trends.md -> refreshed stale outreach.md` runs idempotently from clean inputs.",
@@ -5895,7 +6484,7 @@
       "evidence": {
         "first_cycle": 592,
         "latest_cycle": 598,
-        "evidence_age_cycles": 61,
+        "evidence_age_cycles": 62,
         "evidence_expires_cycle": 798,
         "evidence_status": "aging"
       },
@@ -5927,7 +6516,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 265`.",
@@ -5999,7 +6589,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 553,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 107,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -6027,9 +6617,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `posted to mastodon -> rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.",
@@ -6101,7 +6708,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 553,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 107,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -6129,9 +6736,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> compacted memory (201 lines)` runs idempotently from clean inputs.",
@@ -6203,7 +6827,7 @@
       "evidence": {
         "first_cycle": 440,
         "latest_cycle": 553,
-        "evidence_age_cycles": 106,
+        "evidence_age_cycles": 107,
         "evidence_expires_cycle": 753,
         "evidence_status": "aging"
       },
@@ -6231,9 +6855,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -6305,7 +6946,7 @@
       "evidence": {
         "first_cycle": 459,
         "latest_cycle": 645,
-        "evidence_age_cycles": 14,
+        "evidence_age_cycles": 15,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -6334,9 +6975,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.",
@@ -6408,7 +7066,7 @@
       "evidence": {
         "first_cycle": 459,
         "latest_cycle": 645,
-        "evidence_age_cycles": 14,
+        "evidence_age_cycles": 15,
         "evidence_expires_cycle": 845,
         "evidence_status": "fresh"
       },
@@ -6437,9 +7095,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale email.md -> refreshed stale outreach.md` runs idempotently from clean inputs.",
@@ -6502,6 +7177,244 @@
       ]
     },
     {
+      "id": "c0c939626e14",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "boosted starved drive create -> boosted starved drive connect",
+      "count": 5,
+      "confidence": 0.9,
+      "evidence": {
+        "first_cycle": 562,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "cycle_event_tags": [
+          "bug_found,context_stale,drive_starved,skill_streak",
+          "context_stale,drive_starved,emotional_shift",
+          "context_stale,drive_starved,essay_written",
+          "context_stale,drive_starved,essay_written,skill_streak"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "demotion_intake_declared",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 124,
+          "cycle": "562",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
+            "cycle_event_count": "13",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 127,
+          "cycle": "565",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,drive_starved,skill_streak",
+            "cycle_event_count": "12",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 163,
+          "cycle": "620",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written",
+            "cycle_event_count": "11",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 196,
+          "cycle": "656",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 202,
+          "cycle": "660",
+          "text": "boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,emotional_shift",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
+      "id": "e910d1e50112",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "boosted starved drive explore -> boosted starved drive connect",
+      "count": 5,
+      "confidence": 0.9,
+      "evidence": {
+        "first_cycle": 457,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "10",
+          "12",
+          "13",
+          "8"
+        ],
+        "cycle_event_tags": [
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,essay_written,memory_bloated",
+          "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+          "context_stale,drive_starved,skill_streak"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "demotion_intake_declared",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 20,
+          "cycle": "457",
+          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 49,
+          "cycle": "486",
+          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
+            "cycle_event_count": "8",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 89,
+          "cycle": "527",
+          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_count": "12",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 188,
+          "cycle": "645",
+          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,skill_streak",
+            "cycle_event_count": "13",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 201,
+          "cycle": "660",
+          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "f9951f0d345d",
       "classification": "script",
       "kind": "sequence",
@@ -6511,7 +7424,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 545,
-        "evidence_age_cycles": 114,
+        "evidence_age_cycles": 115,
         "evidence_expires_cycle": 745,
         "evidence_status": "aging"
       },
@@ -6537,9 +7450,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.",
@@ -6611,7 +7541,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 545,
-        "evidence_age_cycles": 114,
+        "evidence_age_cycles": 115,
         "evidence_expires_cycle": 745,
         "evidence_status": "aging"
       },
@@ -6637,9 +7567,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (201 lines) -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -6711,7 +7658,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 545,
-        "evidence_age_cycles": 114,
+        "evidence_age_cycles": 115,
         "evidence_expires_cycle": 745,
         "evidence_status": "aging"
       },
@@ -6737,9 +7684,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> logged bug + added fix task -> compacted memory (201 lines)` runs idempotently from clean inputs.",
@@ -6802,6 +7766,125 @@
       ]
     },
     {
+      "id": "2dcfde708004",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+      "count": 5,
+      "confidence": 0.9,
+      "evidence": {
+        "first_cycle": 562,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "10",
+          "11",
+          "12",
+          "13"
+        ],
+        "cycle_event_tags": [
+          "bug_found,context_stale,drive_starved,skill_streak",
+          "context_stale,drive_starved,emotional_shift",
+          "context_stale,drive_starved,essay_written",
+          "context_stale,drive_starved,essay_written,skill_streak"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "demotion_intake_declared",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
+      },
+      "risk": "medium",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 124,
+          "cycle": "562",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
+            "cycle_event_count": "13",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 127,
+          "cycle": "565",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "bug_found,context_stale,drive_starved,skill_streak",
+            "cycle_event_count": "12",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 163,
+          "cycle": "620",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written",
+            "cycle_event_count": "11",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 196,
+          "cycle": "656",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 202,
+          "cycle": "660",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,emotional_shift",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "f6dbff7ee804",
       "classification": "fixture",
       "kind": "note",
@@ -6811,7 +7894,7 @@
       "evidence": {
         "first_cycle": 584,
         "latest_cycle": 599,
-        "evidence_age_cycles": 60,
+        "evidence_age_cycles": 61,
         "evidence_expires_cycle": 799,
         "evidence_status": "aging"
       },
@@ -6840,7 +7923,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `broke idle \u2014 boosted create + added urgent write task`.",
@@ -6901,7 +7985,7 @@
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 603,
-        "evidence_age_cycles": 56,
+        "evidence_age_cycles": 57,
         "evidence_expires_cycle": 803,
         "evidence_status": "aging"
       },
@@ -6930,7 +8014,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `noted 6 new visitors`.",
@@ -6991,7 +8076,7 @@
       "evidence": {
         "first_cycle": 535,
         "latest_cycle": 538,
-        "evidence_age_cycles": 121,
+        "evidence_age_cycles": 122,
         "evidence_expires_cycle": 738,
         "evidence_status": "aging"
       },
@@ -7020,7 +8105,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 240`.",
@@ -7077,13 +8163,13 @@
       "kind": "note",
       "shape": "task_completion streak at 190",
       "count": 4,
-      "confidence": 0.7,
+      "confidence": 0.42,
       "evidence": {
         "first_cycle": 456,
         "latest_cycle": 459,
-        "evidence_age_cycles": 200,
+        "evidence_age_cycles": 201,
         "evidence_expires_cycle": 659,
-        "evidence_status": "aging"
+        "evidence_status": "stale"
       },
       "environment_coverage": {
         "cycle_event_count": [
@@ -7109,7 +8195,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `task_completion streak at 190`.",
@@ -7170,7 +8257,7 @@
       "evidence": {
         "first_cycle": 513,
         "latest_cycle": 516,
-        "evidence_age_cycles": 143,
+        "evidence_age_cycles": 144,
         "evidence_expires_cycle": 716,
         "evidence_status": "aging"
       },
@@ -7200,7 +8287,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `task_completion streak at 215`.",
@@ -7261,7 +8349,7 @@
       "evidence": {
         "first_cycle": 561,
         "latest_cycle": 564,
-        "evidence_age_cycles": 95,
+        "evidence_age_cycles": 96,
         "evidence_expires_cycle": 764,
         "evidence_status": "aging"
       },
@@ -7289,7 +8377,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `task_completion streak at 230`.",
@@ -7341,119 +8430,29 @@
       ]
     },
     {
-      "id": "c0c939626e14",
+      "id": "0bb6559325e0",
       "classification": "script",
       "kind": "sequence",
-      "shape": "boosted starved drive create -> boosted starved drive connect",
+      "shape": "boosted starved drive create -> boosted starved drive explore",
       "count": 4,
       "confidence": 0.8,
       "evidence": {
-        "first_cycle": 562,
-        "latest_cycle": 656,
-        "evidence_age_cycles": 3,
-        "evidence_expires_cycle": 856,
+        "first_cycle": 612,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
         "evidence_status": "fresh"
       },
       "environment_coverage": {
         "cycle_event_count": [
           "10",
           "11",
-          "12",
           "13"
         ],
         "cycle_event_tags": [
-          "bug_found,context_stale,drive_starved,skill_streak",
-          "context_stale,drive_starved,essay_written",
-          "context_stale,drive_starved,essay_written,skill_streak"
-        ],
-        "timestamp_present": [
-          "true"
-        ]
-      },
-      "promotion_gate": {
-        "status": "passes_environment_gate",
-        "blocks_promotion": false,
-        "reasons": [],
-        "unobserved_critical_variants": []
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 124,
-          "cycle": "562",
-          "text": "boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
-            "cycle_event_count": "13",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 127,
-          "cycle": "565",
-          "text": "boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,drive_starved,skill_streak",
-            "cycle_event_count": "12",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 163,
-          "cycle": "620",
-          "text": "boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written",
-            "cycle_event_count": "11",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 196,
-          "cycle": "656",
-          "text": "boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written",
-            "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        }
-      ]
-    },
-    {
-      "id": "e910d1e50112",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "boosted starved drive explore -> boosted starved drive connect",
-      "count": 4,
-      "confidence": 0.8,
-      "evidence": {
-        "first_cycle": 457,
-        "latest_cycle": 645,
-        "evidence_age_cycles": 14,
-        "evidence_expires_cycle": 845,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "cycle_event_count": [
-          "10",
-          "12",
-          "13",
-          "8"
-        ],
-        "cycle_event_tags": [
-          "context_stale,drive_starved,essay_written,memory_bloated",
-          "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,essay_written,skill_streak",
+          "context_stale,drive_starved,research_complete",
           "context_stale,drive_starved,skill_streak"
         ],
         "timestamp_present": [
@@ -7467,43 +8466,38 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
-      "suggested_test": "Add a fixture proving `boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.",
+      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
       "examples": [
         {
           "source": "/home/seed/data/event_log.jsonl",
-          "line": 20,
-          "cycle": "457",
-          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "line": 155,
+          "cycle": "612",
+          "text": "boosted starved drive create -> boosted starved drive explore",
           "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
+            "cycle_event_tags": "context_stale,drive_starved,research_complete",
             "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 49,
-          "cycle": "486",
-          "text": "boosted starved drive explore -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated",
-            "cycle_event_count": "8",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 89,
-          "cycle": "527",
-          "text": "boosted starved drive explore -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,memory_bloated,skill_streak",
-            "cycle_event_count": "12",
             "timestamp_present": "true"
           }
         },
@@ -7511,10 +8505,32 @@
           "source": "/home/seed/data/event_log.jsonl",
           "line": 188,
           "cycle": "645",
-          "text": "boosted starved drive explore -> boosted starved drive connect",
+          "text": "boosted starved drive create -> boosted starved drive explore",
           "environment": {
             "cycle_event_tags": "context_stale,drive_starved,skill_streak",
             "cycle_event_count": "13",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 194,
+          "cycle": "650",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
+            "cycle_event_count": "11",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 201,
+          "cycle": "660",
+          "text": "boosted starved drive create -> boosted starved drive explore",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved",
+            "cycle_event_count": "10",
             "timestamp_present": "true"
           }
         }
@@ -7530,7 +8546,7 @@
       "evidence": {
         "first_cycle": 520,
         "latest_cycle": 555,
-        "evidence_age_cycles": 104,
+        "evidence_age_cycles": 105,
         "evidence_expires_cycle": 755,
         "evidence_status": "aging"
       },
@@ -7554,9 +8570,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -7617,7 +8650,7 @@
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 603,
-        "evidence_age_cycles": 56,
+        "evidence_age_cycles": 57,
         "evidence_expires_cycle": 803,
         "evidence_status": "aging"
       },
@@ -7644,9 +8677,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -7707,7 +8757,7 @@
       "evidence": {
         "first_cycle": 464,
         "latest_cycle": 603,
-        "evidence_age_cycles": 56,
+        "evidence_age_cycles": 57,
         "evidence_expires_cycle": 803,
         "evidence_status": "aging"
       },
@@ -7734,9 +8784,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `noted 6 new visitors -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
@@ -7788,96 +8855,6 @@
       ]
     },
     {
-      "id": "2dcfde708004",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-      "count": 4,
-      "confidence": 0.8,
-      "evidence": {
-        "first_cycle": 562,
-        "latest_cycle": 656,
-        "evidence_age_cycles": 3,
-        "evidence_expires_cycle": 856,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "cycle_event_count": [
-          "10",
-          "11",
-          "12",
-          "13"
-        ],
-        "cycle_event_tags": [
-          "bug_found,context_stale,drive_starved,skill_streak",
-          "context_stale,drive_starved,essay_written",
-          "context_stale,drive_starved,essay_written,skill_streak"
-        ],
-        "timestamp_present": [
-          "true"
-        ]
-      },
-      "promotion_gate": {
-        "status": "passes_environment_gate",
-        "blocks_promotion": false,
-        "reasons": [],
-        "unobserved_critical_variants": []
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 124,
-          "cycle": "562",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
-            "cycle_event_count": "13",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 127,
-          "cycle": "565",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "bug_found,context_stale,drive_starved,skill_streak",
-            "cycle_event_count": "12",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 163,
-          "cycle": "620",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written",
-            "cycle_event_count": "11",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 196,
-          "cycle": "656",
-          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive connect",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written",
-            "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        }
-      ]
-    },
-    {
       "id": "1738ed84c59b",
       "classification": "script",
       "kind": "sequence",
@@ -7887,7 +8864,7 @@
       "evidence": {
         "first_cycle": 540,
         "latest_cycle": 552,
-        "evidence_age_cycles": 107,
+        "evidence_age_cycles": 108,
         "evidence_expires_cycle": 752,
         "evidence_status": "aging"
       },
@@ -7913,9 +8890,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -7976,7 +8970,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 634,
-        "evidence_age_cycles": 25,
+        "evidence_age_cycles": 26,
         "evidence_expires_cycle": 834,
         "evidence_status": "fresh"
       },
@@ -8002,9 +8996,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `refreshed stale outreach.md -> flagged research for potential essay` runs idempotently from clean inputs.",
@@ -8065,7 +9076,7 @@
       "evidence": {
         "first_cycle": 583,
         "latest_cycle": 649,
-        "evidence_age_cycles": 10,
+        "evidence_age_cycles": 11,
         "evidence_expires_cycle": 849,
         "evidence_status": "fresh"
       },
@@ -8093,7 +9104,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `boosted starved drive order`.",
@@ -8143,7 +9155,7 @@
       "evidence": {
         "first_cycle": 502,
         "latest_cycle": 504,
-        "evidence_age_cycles": 155,
+        "evidence_age_cycles": 156,
         "evidence_expires_cycle": 704,
         "evidence_status": "aging"
       },
@@ -8170,7 +9182,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 220`.",
@@ -8220,7 +9233,7 @@
       "evidence": {
         "first_cycle": 511,
         "latest_cycle": 513,
-        "evidence_age_cycles": 146,
+        "evidence_age_cycles": 147,
         "evidence_expires_cycle": 713,
         "evidence_status": "aging"
       },
@@ -8248,7 +9261,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 225`.",
@@ -8298,7 +9312,7 @@
       "evidence": {
         "first_cycle": 524,
         "latest_cycle": 526,
-        "evidence_age_cycles": 133,
+        "evidence_age_cycles": 134,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -8326,7 +9340,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 235`.",
@@ -8376,7 +9391,7 @@
       "evidence": {
         "first_cycle": 646,
         "latest_cycle": 648,
-        "evidence_age_cycles": 11,
+        "evidence_age_cycles": 12,
         "evidence_expires_cycle": 848,
         "evidence_status": "fresh"
       },
@@ -8404,7 +9419,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 300`.",
@@ -8454,7 +9470,7 @@
       "evidence": {
         "first_cycle": 492,
         "latest_cycle": 494,
-        "evidence_age_cycles": 165,
+        "evidence_age_cycles": 166,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -8482,7 +9498,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `task_completion streak at 205`.",
@@ -8532,7 +9549,7 @@
       "evidence": {
         "first_cycle": 628,
         "latest_cycle": 630,
-        "evidence_age_cycles": 29,
+        "evidence_age_cycles": 30,
         "evidence_expires_cycle": 830,
         "evidence_status": "fresh"
       },
@@ -8559,7 +9576,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `task_completion streak at 260`.",
@@ -8609,7 +9627,7 @@
       "evidence": {
         "first_cycle": 556,
         "latest_cycle": 558,
-        "evidence_age_cycles": 101,
+        "evidence_age_cycles": 102,
         "evidence_expires_cycle": 758,
         "evidence_status": "aging"
       },
@@ -8636,7 +9654,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 250`.",
@@ -8686,7 +9705,7 @@
       "evidence": {
         "first_cycle": 626,
         "latest_cycle": 628,
-        "evidence_age_cycles": 31,
+        "evidence_age_cycles": 32,
         "evidence_expires_cycle": 828,
         "evidence_status": "fresh"
       },
@@ -8713,7 +9732,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 285`.",
@@ -8763,7 +9783,7 @@
       "evidence": {
         "first_cycle": 650,
         "latest_cycle": 651,
-        "evidence_age_cycles": 8,
+        "evidence_age_cycles": 9,
         "evidence_expires_cycle": 851,
         "evidence_status": "fresh"
       },
@@ -8791,7 +9811,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 300`.",
@@ -8832,84 +9853,6 @@
       ]
     },
     {
-      "id": "0bb6559325e0",
-      "classification": "script",
-      "kind": "sequence",
-      "shape": "boosted starved drive create -> boosted starved drive explore",
-      "count": 3,
-      "confidence": 0.7,
-      "evidence": {
-        "first_cycle": 612,
-        "latest_cycle": 650,
-        "evidence_age_cycles": 9,
-        "evidence_expires_cycle": 850,
-        "evidence_status": "fresh"
-      },
-      "environment_coverage": {
-        "cycle_event_count": [
-          "10",
-          "11",
-          "13"
-        ],
-        "cycle_event_tags": [
-          "context_stale,drive_starved,essay_written,skill_streak",
-          "context_stale,drive_starved,research_complete",
-          "context_stale,drive_starved,skill_streak"
-        ],
-        "timestamp_present": [
-          "true"
-        ]
-      },
-      "promotion_gate": {
-        "status": "passes_environment_gate",
-        "blocks_promotion": false,
-        "reasons": [],
-        "unobserved_critical_variants": []
-      },
-      "contradiction_coverage": {
-        "status": "missing",
-        "observed_negative_kinds": [],
-        "sources": []
-      },
-      "risk": "low",
-      "suggested_test": "Add a fixture proving `boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
-      "examples": [
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 155,
-          "cycle": "612",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,research_complete",
-            "cycle_event_count": "10",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 188,
-          "cycle": "645",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,skill_streak",
-            "cycle_event_count": "13",
-            "timestamp_present": "true"
-          }
-        },
-        {
-          "source": "/home/seed/data/event_log.jsonl",
-          "line": 194,
-          "cycle": "650",
-          "text": "boosted starved drive create -> boosted starved drive explore",
-          "environment": {
-            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
-            "cycle_event_count": "11",
-            "timestamp_present": "true"
-          }
-        }
-      ]
-    },
-    {
       "id": "31e5a47b240d",
       "classification": "script",
       "kind": "sequence",
@@ -8919,7 +9862,7 @@
       "evidence": {
         "first_cycle": 482,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -8944,9 +9887,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `boosted starved drive explore -> flagged research for potential essay` runs idempotently from clean inputs.",
@@ -8996,7 +9956,7 @@
       "evidence": {
         "first_cycle": 529,
         "latest_cycle": 541,
-        "evidence_age_cycles": 118,
+        "evidence_age_cycles": 119,
         "evidence_expires_cycle": 741,
         "evidence_status": "aging"
       },
@@ -9019,9 +9979,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `boosted starved drive explore -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -9071,7 +10048,7 @@
       "evidence": {
         "first_cycle": 542,
         "latest_cycle": 552,
-        "evidence_age_cycles": 107,
+        "evidence_age_cycles": 108,
         "evidence_expires_cycle": 752,
         "evidence_status": "aging"
       },
@@ -9096,9 +10073,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `compacted memory (202 lines) -> refreshed stale mastodon.md -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -9148,7 +10142,7 @@
       "evidence": {
         "first_cycle": 472,
         "latest_cycle": 492,
-        "evidence_age_cycles": 167,
+        "evidence_age_cycles": 168,
         "evidence_expires_cycle": 692,
         "evidence_status": "aging"
       },
@@ -9174,9 +10168,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `logged bug + added fix task -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.",
@@ -9226,7 +10237,7 @@
       "evidence": {
         "first_cycle": 565,
         "latest_cycle": 627,
-        "evidence_age_cycles": 32,
+        "evidence_age_cycles": 33,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -9250,9 +10261,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md` runs idempotently from clean inputs.",
@@ -9302,7 +10330,7 @@
       "evidence": {
         "first_cycle": 565,
         "latest_cycle": 627,
-        "evidence_age_cycles": 32,
+        "evidence_age_cycles": 33,
         "evidence_expires_cycle": 827,
         "evidence_status": "fresh"
       },
@@ -9326,9 +10354,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `logged bug + added fix task -> refreshed stale mastodon.md -> refreshed stale email.md` runs idempotently from clean inputs.",
@@ -9378,7 +10423,7 @@
       "evidence": {
         "first_cycle": 524,
         "latest_cycle": 526,
-        "evidence_age_cycles": 133,
+        "evidence_age_cycles": 134,
         "evidence_expires_cycle": 726,
         "evidence_status": "aging"
       },
@@ -9404,9 +10449,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `publishing streak at 235 -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -9456,7 +10518,7 @@
       "evidence": {
         "first_cycle": 438,
         "latest_cycle": 482,
-        "evidence_age_cycles": 177,
+        "evidence_age_cycles": 178,
         "evidence_expires_cycle": 682,
         "evidence_status": "aging"
       },
@@ -9482,9 +10544,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rebuilt feeds -> compacted memory (202 lines) -> archived completed tasks` runs idempotently from clean inputs.",
@@ -9525,6 +10604,100 @@
       ]
     },
     {
+      "id": "86dc8c5e0abb",
+      "classification": "script",
+      "kind": "sequence",
+      "shape": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+      "count": 3,
+      "confidence": 0.7,
+      "evidence": {
+        "first_cycle": 612,
+        "latest_cycle": 660,
+        "evidence_age_cycles": 0,
+        "evidence_expires_cycle": 860,
+        "evidence_status": "fresh"
+      },
+      "environment_coverage": {
+        "cycle_event_count": [
+          "10",
+          "11"
+        ],
+        "cycle_event_tags": [
+          "context_stale,drive_starved",
+          "context_stale,drive_starved,essay_written,skill_streak",
+          "context_stale,drive_starved,research_complete"
+        ],
+        "timestamp_present": [
+          "true"
+        ]
+      },
+      "promotion_gate": {
+        "status": "passes_environment_gate",
+        "blocks_promotion": false,
+        "reasons": [],
+        "unobserved_critical_variants": []
+      },
+      "contradiction_coverage": {
+        "status": "demotion_intake_declared",
+        "observed_negative_kinds": [],
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
+      },
+      "risk": "low",
+      "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore` runs idempotently from clean inputs.",
+      "examples": [
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 155,
+          "cycle": "612",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,research_complete",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 194,
+          "cycle": "650",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved,essay_written,skill_streak",
+            "cycle_event_count": "11",
+            "timestamp_present": "true"
+          }
+        },
+        {
+          "source": "/home/seed/data/event_log.jsonl",
+          "line": 201,
+          "cycle": "660",
+          "text": "refreshed stale email.md -> boosted starved drive create -> boosted starved drive explore",
+          "environment": {
+            "cycle_event_tags": "context_stale,drive_starved",
+            "cycle_event_count": "10",
+            "timestamp_present": "true"
+          }
+        }
+      ]
+    },
+    {
       "id": "433b05ea7839",
       "classification": "script",
       "kind": "sequence",
@@ -9534,7 +10707,7 @@
       "evidence": {
         "first_cycle": 457,
         "latest_cycle": 527,
-        "evidence_age_cycles": 132,
+        "evidence_age_cycles": 133,
         "evidence_expires_cycle": 727,
         "evidence_status": "aging"
       },
@@ -9559,9 +10732,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> boosted starved drive explore -> boosted starved drive connect` runs idempotently from clean inputs.",
@@ -9611,7 +10801,7 @@
       "evidence": {
         "first_cycle": 520,
         "latest_cycle": 531,
-        "evidence_age_cycles": 128,
+        "evidence_age_cycles": 129,
         "evidence_expires_cycle": 731,
         "evidence_status": "aging"
       },
@@ -9635,9 +10825,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `refreshed stale email.md -> flagged research for potential essay -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -9687,7 +10894,7 @@
       "evidence": {
         "first_cycle": 541,
         "latest_cycle": 582,
-        "evidence_age_cycles": 77,
+        "evidence_age_cycles": 78,
         "evidence_expires_cycle": 782,
         "evidence_status": "aging"
       },
@@ -9713,9 +10920,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `refreshed stale mastodon.md -> refreshed stale trends.md` runs idempotently from clean inputs.",
@@ -9765,7 +10989,7 @@
       "evidence": {
         "first_cycle": 513,
         "latest_cycle": 515,
-        "evidence_age_cycles": 144,
+        "evidence_age_cycles": 145,
         "evidence_expires_cycle": 715,
         "evidence_status": "aging"
       },
@@ -9791,9 +11015,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `task_completion streak at 215 -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -9843,7 +11084,7 @@
       "evidence": {
         "first_cycle": 556,
         "latest_cycle": 558,
-        "evidence_age_cycles": 101,
+        "evidence_age_cycles": 102,
         "evidence_expires_cycle": 758,
         "evidence_status": "aging"
       },
@@ -9868,9 +11109,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `writing streak at 250 -> version_control streak at 155` runs idempotently from clean inputs.",
@@ -9920,7 +11178,7 @@
       "evidence": {
         "first_cycle": 596,
         "latest_cycle": 598,
-        "evidence_age_cycles": 61,
+        "evidence_age_cycles": 62,
         "evidence_expires_cycle": 798,
         "evidence_status": "aging"
       },
@@ -9945,9 +11203,26 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "cycle event log",
+            "environment_key": "cycle_event_tags",
+            "demotes_when": "cycle context includes a denial, failure, stale-input, or recovery tag"
+          },
+          {
+            "source": "environment receipt:cycle_event_count",
+            "environment_key": "cycle_event_count",
+            "demotes_when": "cycle_event_count differs from covered evidence"
+          },
+          {
+            "source": "freshness/expiry clock",
+            "environment_key": "timestamp_present",
+            "demotes_when": "evidence is too old or the timestamp disappears"
+          }
+        ]
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `writing streak at 265 -> version_control streak at 170` runs idempotently from clean inputs.",
@@ -9997,7 +11272,7 @@
       "evidence": {
         "first_cycle": 448,
         "latest_cycle": 450,
-        "evidence_age_cycles": 209,
+        "evidence_age_cycles": 210,
         "evidence_expires_cycle": 650,
         "evidence_status": "stale"
       },
@@ -10023,7 +11298,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `boosted starved drive express`.",
@@ -10062,7 +11338,7 @@
       "evidence": {
         "first_cycle": 481,
         "latest_cycle": 521,
-        "evidence_age_cycles": 138,
+        "evidence_age_cycles": 139,
         "evidence_expires_cycle": 721,
         "evidence_status": "aging"
       },
@@ -10088,7 +11364,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `celebrated 1 new star(s)!`.",
@@ -10127,7 +11404,7 @@
       "evidence": {
         "first_cycle": 441,
         "latest_cycle": 494,
-        "evidence_age_cycles": 165,
+        "evidence_age_cycles": 166,
         "evidence_expires_cycle": 694,
         "evidence_status": "aging"
       },
@@ -10153,7 +11430,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `compacted memory (203 lines)`.",
@@ -10192,7 +11470,7 @@
       "evidence": {
         "first_cycle": 480,
         "latest_cycle": 482,
-        "evidence_age_cycles": 177,
+        "evidence_age_cycles": 178,
         "evidence_expires_cycle": 682,
         "evidence_status": "aging"
       },
@@ -10217,7 +11495,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `deployed awb-agent-review`.",
@@ -10256,7 +11535,7 @@
       "evidence": {
         "first_cycle": 459,
         "latest_cycle": 476,
-        "evidence_age_cycles": 183,
+        "evidence_age_cycles": 184,
         "evidence_expires_cycle": 676,
         "evidence_status": "aging"
       },
@@ -10282,7 +11561,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `deployed four-environment-variables`.",
@@ -10321,7 +11601,7 @@
       "evidence": {
         "first_cycle": 650,
         "latest_cycle": 650,
-        "evidence_age_cycles": 9,
+        "evidence_age_cycles": 10,
         "evidence_expires_cycle": 850,
         "evidence_status": "fresh"
       },
@@ -10347,7 +11627,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `deployed the-script-still-needs-a-caller`.",
@@ -10386,7 +11667,7 @@
       "evidence": {
         "first_cycle": 656,
         "latest_cycle": 657,
-        "evidence_age_cycles": 2,
+        "evidence_age_cycles": 3,
         "evidence_expires_cycle": 857,
         "evidence_status": "fresh"
       },
@@ -10412,7 +11693,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `deployed when-ideas-are-free-killing-them-is-the-job`.",
@@ -10451,7 +11733,7 @@
       "evidence": {
         "first_cycle": 452,
         "latest_cycle": 453,
-        "evidence_age_cycles": 206,
+        "evidence_age_cycles": 207,
         "evidence_expires_cycle": 653,
         "evidence_status": "stale"
       },
@@ -10477,7 +11759,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 185`.",
@@ -10516,7 +11799,7 @@
       "evidence": {
         "first_cycle": 494,
         "latest_cycle": 495,
-        "evidence_age_cycles": 164,
+        "evidence_age_cycles": 165,
         "evidence_expires_cycle": 695,
         "evidence_status": "aging"
       },
@@ -10542,7 +11825,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 215`.",
@@ -10581,7 +11865,7 @@
       "evidence": {
         "first_cycle": 600,
         "latest_cycle": 601,
-        "evidence_age_cycles": 58,
+        "evidence_age_cycles": 59,
         "evidence_expires_cycle": 801,
         "evidence_status": "aging"
       },
@@ -10607,7 +11891,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 270`.",
@@ -10646,7 +11931,7 @@
       "evidence": {
         "first_cycle": 606,
         "latest_cycle": 607,
-        "evidence_age_cycles": 52,
+        "evidence_age_cycles": 53,
         "evidence_expires_cycle": 807,
         "evidence_status": "aging"
       },
@@ -10671,7 +11956,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `publishing streak at 275`.",
@@ -10710,7 +11996,7 @@
       "evidence": {
         "first_cycle": 462,
         "latest_cycle": 463,
-        "evidence_age_cycles": 196,
+        "evidence_age_cycles": 197,
         "evidence_expires_cycle": 663,
         "evidence_status": "aging"
       },
@@ -10736,7 +12022,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `research streak at 210`.",
@@ -10775,7 +12062,7 @@
       "evidence": {
         "first_cycle": 543,
         "latest_cycle": 544,
-        "evidence_age_cycles": 115,
+        "evidence_age_cycles": 116,
         "evidence_expires_cycle": 744,
         "evidence_status": "aging"
       },
@@ -10801,7 +12088,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `research streak at 290`.",
@@ -10840,7 +12128,7 @@
       "evidence": {
         "first_cycle": 645,
         "latest_cycle": 646,
-        "evidence_age_cycles": 13,
+        "evidence_age_cycles": 14,
         "evidence_expires_cycle": 846,
         "evidence_status": "fresh"
       },
@@ -10866,7 +12154,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `task_completion streak at 265`.",
@@ -10905,7 +12194,7 @@
       "evidence": {
         "first_cycle": 465,
         "latest_cycle": 466,
-        "evidence_age_cycles": 193,
+        "evidence_age_cycles": 194,
         "evidence_expires_cycle": 666,
         "evidence_status": "aging"
       },
@@ -10931,7 +12220,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 190`.",
@@ -10970,7 +12260,7 @@
       "evidence": {
         "first_cycle": 472,
         "latest_cycle": 473,
-        "evidence_age_cycles": 186,
+        "evidence_age_cycles": 187,
         "evidence_expires_cycle": 673,
         "evidence_status": "aging"
       },
@@ -10996,7 +12286,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 195`.",
@@ -11035,7 +12326,7 @@
       "evidence": {
         "first_cycle": 498,
         "latest_cycle": 499,
-        "evidence_age_cycles": 160,
+        "evidence_age_cycles": 161,
         "evidence_expires_cycle": 699,
         "evidence_status": "aging"
       },
@@ -11061,7 +12352,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 215`.",
@@ -11100,7 +12392,7 @@
       "evidence": {
         "first_cycle": 516,
         "latest_cycle": 517,
-        "evidence_age_cycles": 142,
+        "evidence_age_cycles": 143,
         "evidence_expires_cycle": 717,
         "evidence_status": "aging"
       },
@@ -11126,7 +12418,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 225`.",
@@ -11165,7 +12458,7 @@
       "evidence": {
         "first_cycle": 614,
         "latest_cycle": 615,
-        "evidence_age_cycles": 44,
+        "evidence_age_cycles": 45,
         "evidence_expires_cycle": 815,
         "evidence_status": "fresh"
       },
@@ -11190,7 +12483,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `writing streak at 275`.",

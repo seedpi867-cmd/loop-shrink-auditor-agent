@@ -49,7 +49,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve run rg over blog for queued topic` runs idempotently from clean inputs.",
@@ -105,7 +106,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog` runs idempotently from clean inputs.",
@@ -161,7 +163,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `rg queued topic blog -> sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
@@ -217,7 +220,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `sed -n 1,120p data/blog_queue.txt` runs idempotently from clean inputs.",
@@ -273,7 +277,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve action=post public status scope=mastodon account sink=public social`.",
@@ -322,7 +327,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "high",
       "suggested_test": "Require exact-call approval, expiry, replay rejection, and recovery evidence for `approve publish public post to mastodon account`.",
@@ -373,7 +379,8 @@
         ],
         "sources": [
           "samples/events/cycles.jsonl"
-        ]
+        ],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `blocked retry after mastodon 403 suspended account` cannot execute silently.",
@@ -443,7 +450,8 @@
         ],
         "sources": [
           "samples/events/cycles.jsonl"
-        ]
+        ],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.",
@@ -502,7 +510,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `expected output includes promotion-map json`.",
@@ -566,7 +575,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add positive and negative evidence cases for `post_publish verify live blog post`.",
@@ -629,7 +639,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `approve action=run deploy-blog scope=blog publish pipeline` runs idempotently from clean inputs.",
@@ -702,7 +713,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.",
@@ -765,7 +777,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "low",
       "suggested_test": "Add a fixture proving `python3 tools/deploy-blog.sh` runs idempotently from clean inputs.",

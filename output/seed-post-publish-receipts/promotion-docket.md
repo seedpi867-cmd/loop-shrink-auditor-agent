@@ -25,7 +25,8 @@ Promotion candidates: 6
 - Risk: medium
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false', 'true'], 'post_slug_present': ['true'], 'social_attempted': ['false', 'true'], 'social_outcome': ['failed', 'skipped_account_suspended', 'unknown_not_recorded']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: post metadata receipt via post_slug_present, post_publish deploy receipt via deploy_ok, post_publish deploy receipt via deploy_returncode, post_publish deploy receipt via deploy_skipped, social action receipt via social_attempted, social action receipt via social_outcome
 - Suggested test: Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/outreach/post-publish-receipts.jsonl:1` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True
@@ -43,6 +44,7 @@ Promotion candidates: 6
 - Environment coverage: {'deploy_ok': ['false', 'true'], 'deploy_returncode': ['0', '127'], 'deploy_skipped': ['false', 'true'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
 - Promotion gate: condition_bound (blocks=False)
 - Contradiction coverage: inherent_negative_signal
+- Demotion intakes: none
 - Suggested test: Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.
 - Examples:
   - `/home/seed/data/outreach/post-publish-receipts.jsonl:1` post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
@@ -60,6 +62,7 @@ Promotion candidates: 6
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false', 'true'], 'post_slug_present': ['true'], 'social_attempted': ['false', 'true'], 'social_outcome': ['failed', 'skipped_account_suspended', 'unknown_not_recorded']}
 - Promotion gate: not_required (blocks=False)
 - Contradiction coverage: missing
+- Demotion intakes: none
 - Suggested test: Add positive and negative evidence cases for `post_publish verify live blog post`.
 - Examples:
   - `/home/seed/data/outreach/post-publish-receipts.jsonl:1` post_publish verify live blog post
@@ -76,7 +79,8 @@ Promotion candidates: 6
 - Risk: medium
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false', 'true'], 'post_slug_present': ['true'], 'social_attempted': ['false', 'true'], 'social_outcome': ['failed', 'skipped_account_suspended', 'unknown_not_recorded']}
 - Promotion gate: passes_environment_gate (blocks=False)
-- Contradiction coverage: missing
+- Contradiction coverage: demotion_intake_declared
+- Demotion intakes: post metadata receipt via post_slug_present, post_publish deploy receipt via deploy_ok, post_publish deploy receipt via deploy_returncode, post_publish deploy receipt via deploy_skipped, social action receipt via social_attempted, social action receipt via social_outcome
 - Suggested test: Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/outreach/post-publish-receipts.jsonl:1` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True -> post_publish verify live blog post
@@ -94,6 +98,7 @@ Promotion candidates: 6
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false', 'true'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
 - Promotion gate: passes_environment_gate (blocks=False)
 - Contradiction coverage: observed
+- Demotion intakes: post metadata receipt via post_slug_present, post_publish deploy receipt via deploy_ok, post_publish deploy receipt via deploy_returncode, post_publish deploy receipt via deploy_skipped, social action receipt via social_attempted, social action receipt via social_outcome
 - Suggested test: Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/outreach/post-publish-receipts.jsonl:1` post_publish deploy blog command=/home/seed/tools/deploy-blog.sh ok=True skipped=True -> post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state
@@ -111,6 +116,7 @@ Promotion candidates: 6
 - Environment coverage: {'deploy_ok': ['true'], 'deploy_returncode': ['0'], 'deploy_skipped': ['false', 'true'], 'post_slug_present': ['true'], 'social_attempted': ['false'], 'social_outcome': ['skipped_account_suspended']}
 - Promotion gate: passes_environment_gate (blocks=False)
 - Contradiction coverage: observed
+- Demotion intakes: post metadata receipt via post_slug_present, post_publish deploy receipt via deploy_ok, post_publish deploy receipt via deploy_returncode, post_publish deploy receipt via deploy_skipped, social action receipt via social_attempted, social action receipt via social_outcome
 - Suggested test: Add a fixture proving `post_publish verify live blog post -> post_publish social outcome=skipped_account_suspended` runs idempotently from clean inputs.
 - Examples:
   - `/home/seed/data/outreach/post-publish-receipts.jsonl:1` post_publish verify live blog post -> post_publish social attempted=False outcome=skipped_account_suspended reason=tasks.md records disabled-login state

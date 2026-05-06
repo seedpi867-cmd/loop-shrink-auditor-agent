@@ -22,6 +22,88 @@ FRESH_EVIDENCE_CYCLES = 50
 STALE_EVIDENCE_CYCLES = 200
 ENVIRONMENT_GATED_CLASSIFICATIONS = {"script", "typed_tool", "approval_budget"}
 NEGATIVE_KINDS = {"denial", "failure"}
+DEMOTION_INTAKE_BY_ENVIRONMENT_KEY = {
+    "account": (
+        "account-state receipt",
+        "account authority changes, disappears, or contradicts the recorded state",
+    ),
+    "cycle_event_tags": (
+        "cycle event log",
+        "cycle context includes a denial, failure, stale-input, or recovery tag",
+    ),
+    "dependency": (
+        "dependency health receipt",
+        "dependency version, availability, or contract differs from covered evidence",
+    ),
+    "deploy_ok": (
+        "post_publish deploy receipt",
+        "deploy_ok is false",
+    ),
+    "deploy_returncode": (
+        "post_publish deploy receipt",
+        "return code differs from a covered passing value",
+    ),
+    "deploy_skipped": (
+        "post_publish deploy receipt",
+        "deploy is skipped or unexpectedly required",
+    ),
+    "network": (
+        "network-state receipt",
+        "network authority or reachability differs from covered evidence",
+    ),
+    "network_state": (
+        "network-state receipt",
+        "network state differs from covered evidence",
+    ),
+    "outcome": (
+        "action outcome receipt",
+        "outcome changes from a covered passing value",
+    ),
+    "phase": (
+        "cycle phase record",
+        "the action appears in an uncovered phase",
+    ),
+    "policy": (
+        "policy feed",
+        "policy changes or rejects the covered action",
+    ),
+    "post_slug_present": (
+        "post metadata receipt",
+        "required post identity is missing",
+    ),
+    "repo": (
+        "repo/CI receipt",
+        "repo identity, branch state, or CI result differs from covered evidence",
+    ),
+    "repository": (
+        "repo/CI receipt",
+        "repo identity, branch state, or CI result differs from covered evidence",
+    ),
+    "returncode": (
+        "command receipt",
+        "return code differs from a covered passing value",
+    ),
+    "social_attempted": (
+        "social action receipt",
+        "social attempt state differs from covered evidence",
+    ),
+    "social_outcome": (
+        "social action receipt",
+        "social outcome changes or becomes a denial/failure",
+    ),
+    "status": (
+        "status receipt",
+        "status changes from a covered passing value",
+    ),
+    "timestamp_present": (
+        "freshness/expiry clock",
+        "evidence is too old or the timestamp disappears",
+    ),
+    "verifier": (
+        "verifier receipt",
+        "verifier fails, disappears, or reports a contradictory result",
+    ),
+}
 
 
 @dataclass(frozen=True)
@@ -478,12 +560,47 @@ def environment_gate(classification: str, coverage: dict[str, list[str]]) -> dic
     }
 
 
-def contradiction_coverage(classification: str, events: list[Event]) -> dict:
+def demotion_intakes(coverage: dict[str, list[str]]) -> list[dict[str, str]]:
+    intakes: dict[tuple[str, str], dict[str, str]] = {}
+    for key in coverage:
+        source, demotes_when = DEMOTION_INTAKE_BY_ENVIRONMENT_KEY.get(
+            key,
+            (
+                f"environment receipt:{key}",
+                f"{key} differs from covered evidence",
+            ),
+        )
+        intakes[(source, key)] = {
+            "source": source,
+            "environment_key": key,
+            "demotes_when": demotes_when,
+        }
+    return [intakes[key] for key in sorted(intakes)]
+
+
+def contradiction_coverage(
+    classification: str,
+    events: list[Event],
+    coverage: dict[str, list[str]],
+    promotion_gate: dict,
+) -> dict:
     observed = sorted({event.kind for event in events if event.kind in NEGATIVE_KINDS})
+    intakes = (
+        demotion_intakes(coverage)
+        if (
+            classification in ENVIRONMENT_GATED_CLASSIFICATIONS
+            and promotion_gate["status"] == "passes_environment_gate"
+        )
+        else []
+    )
     if classification == "deny_or_quarantine":
         status = "inherent_negative_signal"
     elif observed:
         status = "observed"
+    elif intakes:
+        status = "demotion_intake_declared"
+    elif classification in ENVIRONMENT_GATED_CLASSIFICATIONS and promotion_gate["status"] == "passes_environment_gate":
+        status = "missing_demotion_intake"
     else:
         status = "missing"
 
@@ -491,6 +608,7 @@ def contradiction_coverage(classification: str, events: list[Event]) -> dict:
         "status": status,
         "observed_negative_kinds": observed,
         "sources": sorted({event.source for event in events if event.kind in NEGATIVE_KINDS}),
+        "demotion_intakes": intakes,
     }
 
 
@@ -527,6 +645,7 @@ def build_candidates(events: list[Event]) -> list[dict]:
         confidence = confidence_for(0.45 + 0.12 * len(grouped), evidence)
         candidate_id = hashlib.sha256(f"{kind}:{shape}".encode("utf-8")).hexdigest()[:12]
         coverage = environment_coverage(grouped)
+        gate = environment_gate(classification, coverage)
         candidates.append(
             {
                 "id": candidate_id,
@@ -537,8 +656,8 @@ def build_candidates(events: list[Event]) -> list[dict]:
                 "confidence": confidence,
                 "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
                 "environment_coverage": coverage,
-                "promotion_gate": environment_gate(classification, coverage),
-                "contradiction_coverage": contradiction_coverage(classification, grouped),
+                "promotion_gate": gate,
+                "contradiction_coverage": contradiction_coverage(classification, grouped, coverage, gate),
                 "risk": risk_for(classification, len(grouped)),
                 "suggested_test": suggested_test(classification, shape),
                 "examples": [
@@ -592,6 +711,7 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
         evidence = evidence_window(window_events, now_cycle)
         confidence = confidence_for(0.4 + 0.1 * len(windows), evidence)
         coverage = environment_coverage(window_events)
+        gate = environment_gate("script", coverage)
         candidates.append(
             {
                 "id": candidate_id,
@@ -602,8 +722,8 @@ def build_sequence_candidates(events: list[Event], now_cycle: int | None) -> lis
                 "confidence": confidence,
                 "evidence": {key: value for key, value in evidence.items() if key != "freshness_multiplier"},
                 "environment_coverage": coverage,
-                "promotion_gate": environment_gate("script", coverage),
-                "contradiction_coverage": contradiction_coverage("script", window_events),
+                "promotion_gate": gate,
+                "contradiction_coverage": contradiction_coverage("script", window_events, coverage, gate),
                 "risk": risk_for("script", len(windows)),
                 "suggested_test": suggested_test("script", shape),
                 "examples": [
@@ -695,6 +815,14 @@ def write_reports(candidates: list[dict], events: list[Event], output_dir: Path)
                 f"- Promotion gate: {candidate['promotion_gate']['status']}"
                 f" (blocks={candidate['promotion_gate']['blocks_promotion']})",
                 f"- Contradiction coverage: {candidate['contradiction_coverage']['status']}",
+                "- Demotion intakes: "
+                + (
+                    ", ".join(
+                        f"{intake['source']} via {intake['environment_key']}"
+                        for intake in candidate["contradiction_coverage"]["demotion_intakes"]
+                    )
+                    or "none"
+                ),
                 f"- Suggested test: {candidate['suggested_test']}",
                 "- Examples:",
             ]

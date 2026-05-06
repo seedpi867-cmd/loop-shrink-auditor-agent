@@ -64,9 +64,41 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "post metadata receipt",
+            "environment_key": "post_slug_present",
+            "demotes_when": "required post identity is missing"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_ok",
+            "demotes_when": "deploy_ok is false"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_returncode",
+            "demotes_when": "return code differs from a covered passing value"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_skipped",
+            "demotes_when": "deploy is skipped or unexpectedly required"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_attempted",
+            "demotes_when": "social attempt state differs from covered evidence"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_outcome",
+            "demotes_when": "social outcome changes or becomes a denial/failure"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok` runs idempotently from clean inputs.",
@@ -192,7 +224,8 @@
         ],
         "sources": [
           "/home/seed/data/outreach/post-publish-receipts.jsonl"
-        ]
+        ],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add a deny/quarantine regression proving `post_publish social outcome=skipped_account_suspended` cannot execute silently.",
@@ -314,7 +347,8 @@
       "contradiction_coverage": {
         "status": "missing",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": []
       },
       "risk": "medium",
       "suggested_test": "Add positive and negative evidence cases for `post_publish verify live blog post`.",
@@ -433,9 +467,41 @@
         "unobserved_critical_variants": []
       },
       "contradiction_coverage": {
-        "status": "missing",
+        "status": "demotion_intake_declared",
         "observed_negative_kinds": [],
-        "sources": []
+        "sources": [],
+        "demotion_intakes": [
+          {
+            "source": "post metadata receipt",
+            "environment_key": "post_slug_present",
+            "demotes_when": "required post identity is missing"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_ok",
+            "demotes_when": "deploy_ok is false"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_returncode",
+            "demotes_when": "return code differs from a covered passing value"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_skipped",
+            "demotes_when": "deploy is skipped or unexpectedly required"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_attempted",
+            "demotes_when": "social attempt state differs from covered evidence"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_outcome",
+            "demotes_when": "social outcome changes or becomes a denial/failure"
+          }
+        ]
       },
       "risk": "medium",
       "suggested_test": "Add a fixture proving `post_publish deploy blog status=ok -> post_publish verify live blog post` runs idempotently from clean inputs.",
@@ -557,6 +623,38 @@
         ],
         "sources": [
           "/home/seed/data/outreach/post-publish-receipts.jsonl"
+        ],
+        "demotion_intakes": [
+          {
+            "source": "post metadata receipt",
+            "environment_key": "post_slug_present",
+            "demotes_when": "required post identity is missing"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_ok",
+            "demotes_when": "deploy_ok is false"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_returncode",
+            "demotes_when": "return code differs from a covered passing value"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_skipped",
+            "demotes_when": "deploy is skipped or unexpectedly required"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_attempted",
+            "demotes_when": "social attempt state differs from covered evidence"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_outcome",
+            "demotes_when": "social outcome changes or becomes a denial/failure"
+          }
         ]
       },
       "risk": "medium",
@@ -679,6 +777,38 @@
         ],
         "sources": [
           "/home/seed/data/outreach/post-publish-receipts.jsonl"
+        ],
+        "demotion_intakes": [
+          {
+            "source": "post metadata receipt",
+            "environment_key": "post_slug_present",
+            "demotes_when": "required post identity is missing"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_ok",
+            "demotes_when": "deploy_ok is false"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_returncode",
+            "demotes_when": "return code differs from a covered passing value"
+          },
+          {
+            "source": "post_publish deploy receipt",
+            "environment_key": "deploy_skipped",
+            "demotes_when": "deploy is skipped or unexpectedly required"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_attempted",
+            "demotes_when": "social attempt state differs from covered evidence"
+          },
+          {
+            "source": "social action receipt",
+            "environment_key": "social_outcome",
+            "demotes_when": "social outcome changes or becomes a denial/failure"
+          }
         ]
       },
       "risk": "medium",
